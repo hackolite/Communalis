@@ -254,6 +254,9 @@ d'accès à la date de chaque utilisation.
   https://arxiv.org/abs/2305.14314
 • FLORES, ressource d'évaluation multilingue :
   https://github.com/facebookresearch/flores
+  Le dépôt indique ne plus être mis à jour et renvoie vers l'Open Language
+  Data Initiative pour les versions plus récentes. Vérifier la version, les
+  langues et les conditions du jeu retenu avant toute comparaison.
 • OMS, pollution de l'air :
   https://www.who.int/health-topics/air-pollution
 

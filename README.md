@@ -1,6 +1,6 @@
 # Communalis
 
-## Livre en cours de rédaction
+## Livre et édition PDF
 
 Le livre est organisé en fichiers texte modifiables, à lire dans cet ordre :
 
@@ -19,8 +19,20 @@ disponibles. Le registre de suivi, en fin d'annexes, précise les responsables
 à désigner, les déclencheurs et les preuves à réunir. Il ne crée pas de
 notification automatique.
 
-Le plan vise 300 pages, plus l'index et la bibliographie ; ce total reste à
-vérifier après développement et mise en page, sans pages artificiellement
-vides. Les résultats de terrain et les proportions de figures restent à
-compléter. Le [manuscrit initial](Manuscrit_Communalis.txt) est conservé comme
-version de référence antérieure.
+Le [cahier terrain PDF](Communalis_Cahier_Terrain_300p.pdf) est une édition
+de travail paginée sur **300 pages**, couverture et fiches d'annotation
+comprises. Les champs colorés signalent les données, décisions, preuves et
+autorisations réelles à fournir par l'équipe. Aucun résultat de terrain n'a
+été inventé : le livre ne pourra devenir un récit factuel achevé qu'après
+validation de ces éléments. Le [manuscrit initial](Manuscrit_Communalis.txt)
+est conservé comme version de référence antérieure.
+
+Pour régénérer le PDF avec les polices FreeSerif installées :
+
+```sh
+python3 -m venv .venv-pdf
+.venv-pdf/bin/pip install -r requirements-pdf.txt
+.venv-pdf/bin/python build_book.py
+```
+
+Le générateur vérifie que le PDF final compte exactement 300 pages.

@@ -15,11 +15,12 @@ observations, qu'elles confirment ou non les hypothèses initiales. Une
 absence de résultat est une information à expliquer, non une invitation
 à inventer.
 
-Le plan éditorial vise 300 pages pour le corps du livre et 6 à 10 pages
-supplémentaires pour l'index et la bibliographie. Une page n'est cependant
-une unité fiable qu'après choix du format, de la police, des marges, des
-figures et de la mise en page. Les nombres ci-dessous sont des objectifs,
-non une certification de la pagination de cette version.
+Cette édition PDF de travail compte 300 pages, couverture et fiches
+d'annotation comprises ; l'index et la bibliographie détaillée restent à
+valider et à développer. La répartition ci-dessous est le plan éditorial
+initial, pas une carte exacte de la pagination exportée. La mise en page
+peut modifier le nombre de pages sans changer le contenu. Les résultats de
+terrain signalés dans le texte ne sont pas réputés acquis.
 
 PLAN DU LIVRE
 

@@ -1,0 +1,997 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+Manuscrit théorique évolutif — base de travail en français
+
+STATUT DU DOCUMENT
+
+Ce manuscrit suit le plan d'un ouvrage dont la pagination cible est de
+300 pages, hors index et bibliographie. Il constitue une base théorique
+modifiable, non un livre déjà mis en page de 300 pages. Les nombres de pages
+ci-dessous sont des réservations éditoriales et ne correspondent pas au volume
+actuel. Les figures textuelles peuvent être redessinées et complétées par des
+photographies autorisées. Aucun résultat de terrain, coût, performance ou
+partenariat au Togo n'est affirmé ici sans source.
+
+Les indications [À COMPLÉTER — TOGO] réservent les observations pratiques,
+notamment celles de décembre à mars. Elles ne valent ni protocole réalisé ni
+résultat acquis. Les indications « à confirmer » signalent une maturité ou une
+hypothèse à vérifier. Les choix techniques et juridiques doivent être adaptés
+au territoire, aux équipements disponibles et aux personnes concernées.
+
+PLAN ÉDITORIAL ET PAGINATION CIBLE
+
+Avant-propos et introduction                                      20 p.   20
+  Avant-propos et mode d'emploi                                     6
+  Introduction                                                     14
+Partie A — Préparer                                                46 p.   66
+  1. Évaluer son lab                                               12
+  2. Équipe, rôles et partenaires                                  10
+  3. Budget et approvisionnement                                   12
+  4. Éthique, droit et gouvernance des données                    12
+Partie B — Énergie et infrastructure physique                      32 p.   98
+  5. Énergie autonome                                              20
+  6. Matériel de calcul en périphérie                              12
+Partie C — Couche linguistique                                     68 p.  166
+  7. Assistant de connaissances locales : RAG                      18
+  8. Mobiliser la communauté pour un corpus                         18
+  9. Adapter un modèle à une langue peu dotée : QLoRA              20
+ 10. Assistant de traduction éwé, français, anglais                 12
+Partie D — Connecter le territoire                                 44 p.  210
+ 11. Capteurs et acquisition de données                             16
+ 12. Mobilier urbain et végétation intelligents                     16
+ 13. Du flux de données à l'état du monde                           12
+Partie E — Agir en sécurité                                        24 p.  234
+ 14. Chaîne de décision sécurisée                                   12
+ 15. Piloter les actionneurs                                        12
+Partie F — Durer et essaimer                                       30 p.  264
+ 16. Maintenance et dépannage                                       12
+ 17. Apprentissage continu et mémoire d'expérience                   8
+ 18. Réseau de nœuds et réplication                                 10
+Annexes A à H                                                      36 p.  300
+
+Index et bibliographie : prévoir 6 à 10 pages supplémentaires. La cible
+éditoriale est d'environ 30 % de schémas, tableaux et encadrés par chapitre ;
+elle devra être vérifiée à la mise en page. Les tableaux et schémas ci-après
+en sont des propositions, pas une preuve que le quota est déjà atteint.
+
+Maturité de départ : 🟢 accessible ; 🟡 intermédiaire ; 🔴 expérimental.
+Cette légende décrit la difficulté ou l'incertitude, non une validation de
+terrain. Les classements des chapitres 5 et 12 sont à confirmer. Les neuf
+chapitres explicitement marqués 🔴 dans le plan totalisent 114 pages cibles ;
+l'estimation initiale d'environ 130 pages peut inclure d'autres sections
+incertaines, mais doit être arbitrée lors de la mise en page. Leur contenu
+théorique est proposé ici ; leurs résultats et conclusions pratiques restent
+à écrire après les essais.
+
+MODE D'EMPLOI
+
+Un lab peut suivre trois parcours :
+
+• Minimal : choisir un besoin, former une petite équipe, documenter les
+  sources et tester un assistant documentaire sans action physique. Il peut
+  fonctionner hors ligne sur des documents préalablement autorisés, sous
+  réserve des capacités de la machine.
+• Intermédiaire : renforcer la gouvernance, la maintenance et la qualité du
+  corpus ; mesurer l'énergie et expérimenter des capteurs en lecture seule.
+• Complet : évaluer l'adaptation linguistique, relier des observations
+  territoriales et étudier des actionneurs sous règles indépendantes et
+  validation humaine. Aucun passage à l'action n'est automatique.
+
+Les parcours sont des chemins, pas des labels de réussite. Un projet peut
+revenir à une étape précédente si le budget, la confiance ou la sécurité
+l'exigent. Un lecteur élu ou associatif peut commencer par les chapitres 1,
+2, 4 et 14 ; une équipe technique par 3, 5 à 11 et 15 ; les personnes qui
+gèrent un corpus par 4, 7 à 10 et les gabarits de l'annexe F.
+
+Chaque chapitre comporte un objectif, les moyens et compétences nécessaires,
+une démarche pas à pas, un emplacement pour les résultats mesurés, les limites
+et échecs possibles, puis une check-list. Les pages réservées aux résultats
+accueilleront aussi bien les échecs que les réussites.
+
+Communalis peut aider à retrouver des documents, faciliter leur consultation
+multilingue, rendre visibles des mesures situées et préparer des décisions
+humaines. Il ne garantit ni la vérité d'une réponse ni la représentativité
+d'un corpus. Il ne remplace ni les services publics, ni les professionnels,
+ni les personnes concernées. Le modèle de langage ne commande jamais
+directement un équipement ; aucune surveillance individuelle n'est une
+condition nécessaire du projet.
+
+INTRODUCTION — UNE IA TERRITORIALE, DISTRIBUÉE ET FRUGALE
+
+Les grands modèles centralisés offrent des capacités utiles, mais supposent
+souvent une connexion stable, des paiements en devises, des serveurs éloignés
+et une confiance dans des règles de traitement externes. Leurs données
+d'entraînement ne représentent pas également les langues et les savoirs.
+Parler des « Suds » ne signifie pourtant pas décrire un ensemble homogène :
+les besoins, infrastructures, cultures et ressources varient d'un lieu à
+l'autre. Une solution territoriale doit partir d'une enquête locale plutôt
+que d'un déficit supposé.
+
+La frugalité ne consiste pas seulement à réduire la puissance d'un ordinateur.
+Elle invite à comparer le service rendu avec l'énergie, le matériel, la
+maintenance et le travail humain nécessaires. Un catalogue documentaire
+bien organisé peut parfois répondre à un besoin sans modèle génératif. Une
+architecture distribuée permet d'exécuter certaines fonctions localement,
+sans interdire une coopération avec d'autres nœuds ou des services distants
+explicitement choisis.
+
+WoeLab, à Lomé, et la démarche HubCity constituent des points d'ancrage à
+documenter avec leurs acteurs : l'articulation entre fabrication locale,
+réemploi, technologies avancées et usages urbains inspire ici une démarche
+High-Tech / Low-Tech. Ce texte ne présume pas qu'un équipement décrit dans
+ces pages y soit déjà déployé. [À COMPLÉTER — TOGO : histoire du partenariat,
+accord des personnes citées, photographies légendées et sources primaires.]
+
+Figure 1 — Architecture conceptuelle
+
+  Habitants, métiers et institutions
+                 ↕ besoins, consentement, contrôle
+  Documents autorisés ──→ recherche ──→ modèle de langage ──→ réponse sourcée
+  Observations ─────────→ état situé ────────────┘
+                                  ↓ proposition, jamais ordre direct
+                         règles indépendantes
+                                  ↓ autorisation humaine
+                         actionneur + arrêt sûr
+                 ↕
+  Énergie, maintenance, journalisation et gouvernance
+
+Un LLM produit du texte à partir de régularités apprises et d'un contexte.
+Un « modèle du monde réel » désigne ici une représentation révisable
+d'objets, de lieux, d'événements et de mesures, assortie de leur provenance,
+de leurs dates et de leurs incertitudes. Ce n'est pas une conscience du
+territoire ni une copie exhaustive de celui-ci. Relier cette représentation
+à un LLM peut aider à formuler une réponse ; cela n'élimine ni les données
+fausses ni les mauvaises interprétations.
+
+La souveraineté est progressive et multidimensionnelle : exécution
+(pouvoir choisir où tourne le service), données (accès, retrait et usage),
+architecture (comprendre et remplacer les composants), gouvernance (décider
+collectivement des finalités et des recours). Héberger localement ne suffit
+pas si une communauté ne peut ni contrôler les usages ni maintenir le système.
+
+PARTIE A — PRÉPARER
+
+CHAPITRE 1 — ÉVALUER SON LAB (12 p. ; 🟢)
+
+Objectif. Déterminer ce qui est faisable avant l'achat de matériel. Le
+diagnostic décrit les ressources disponibles et leurs incertitudes ; il ne
+classe pas la valeur d'un territoire.
+
+Matériel et compétences. Une personne facilitatrice, les futurs utilisateurs,
+un relevé des équipements, des factures ou estimations disponibles, et de quoi
+consigner les réponses. L'enquête doit inclure celles et ceux qui assureront
+la maintenance et les personnes dont les données pourraient être concernées.
+
+Pas à pas.
+1. Réunir les parties prenantes et définir le périmètre : lieu, durée et
+   service envisagé. Identifier les personnes absentes et comment les consulter.
+2. Noter pour chaque domaine « disponible », « partiel », « absent » ou
+   « inconnu » : compétences numériques et linguistiques ; stabilité de
+   l'électricité ; connexion ; budget ; accès au matériel ; partenaires ;
+   maintenance ; règles de protection des données.
+3. Vérifier les réponses avec des éléments datés : mesures, devis, entretiens
+   ou inventaire. Ne pas transformer une supposition en disponibilité acquise.
+4. Choisir le parcours minimal si la capacité de maintenance ou le besoin
+   n'est pas établi. Le parcours intermédiaire exige en plus un responsable
+   des données et des mesures ; le parcours complet exige une évaluation
+   spécifique de sécurité et des ressources durables.
+5. Décrire un premier usage : public, question, documents autorisés, réponse
+   attendue, langue, fréquence et solution actuelle. Exemple hypothétique :
+   retrouver les horaires d'un service local dans un document validé.
+6. Fixer un critère d'arrêt et un indicateur simple, comme la proportion de
+   questions dont la source correcte est retrouvée sur un jeu de questions
+   préparé avec les utilisateurs.
+
+Tableau à remplir : domaine | état | preuve/date | responsable | prochaine action
+Énergie | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Compétences | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Données et autorisations | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+
+Résultats mesurés. [À COMPLÉTER — TOGO : grille datée, nombre et diversité
+des participants, choix du parcours, justification et indicateur initial.]
+Limites et échecs. Un questionnaire rempli uniquement par l'équipe technique
+peut manquer les contraintes des usagers. Une ressource ponctuelle n'est pas
+un budget récurrent. Réviser l'évaluation après toute panne ou changement.
+Check-list. □ Besoin formulé □ Acteurs consultés □ Ressources vérifiées
+□ Responsable nommé □ Critère d'arrêt défini.
+
+CHAPITRE 2 — ÉQUIPE, RÔLES ET PARTENAIRES (10 p. ; 🟢)
+
+Objectif. Répartir les responsabilités, y compris celles qui ne sont pas
+techniques, et établir une coopération compréhensible et révocable.
+
+Matériel et compétences. Temps de concertation, animation en langues
+pertinentes, compétences juridiques accessibles et budget de participation.
+Une même personne peut tenir plusieurs rôles dans un petit lab, à condition
+que les conflits d'intérêts et les surcharges soient discutés.
+
+Pas à pas.
+1. Désigner une coordination, une responsabilité des données, une personne
+   chargée de la maintenance, des référents linguistiques, une animation
+   communautaire et une responsabilité de sécurité. Identifier des
+   remplaçants ; les droits d'accès suivent les fonctions et sont retirés
+   lorsque celles-ci cessent.
+2. Écrire pour chaque rôle : mission, temps disponible, compétences,
+   décisions autorisées, interlocuteurs, rémunération éventuelle et relève.
+   Une validation de sécurité ne doit pas dépendre du seul développeur.
+3. Consulter séparément, puis collectivement, habitants, associations,
+   universités, artisans et collectivités, selon le cas d'usage. Préciser
+   qui décide et qui est seulement consulté ; permettre un désaccord documenté.
+4. Avant tout partage, rédiger une convention : objet, durée, ressources,
+   propriété et accès aux données, sécurité, financement, communication,
+   gestion des différends, sortie et restitution. Le gabarit F est un point
+   de départ, pas un avis juridique.
+5. Prévoir des réunions accessibles, une restitution dans les langues
+   appropriées et un canal de réclamation sans obligation d'utiliser l'outil.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : rôles effectivement pourvus,
+heures rémunérées, comptes rendus autorisés et accords signés.]
+Limites et échecs. Une institution partenaire ne représente pas
+automatiquement tous les habitants. Les engagements bénévoles ne garantissent
+pas la continuité ; une convention doit aussi prévoir le retrait.
+Check-list. □ Rôles et suppléants □ Rémunération discutée □ Partenaires
+consultés □ Convention validée □ Recours accessibles.
+
+CHAPITRE 3 — BUDGET ET APPROVISIONNEMENT (12 p. ; 🟡)
+
+Objectif. Comparer les coûts complets et la disponibilité locale, sans
+confondre investissement initial et fonctionnement.
+
+Matériel et compétences. Inventaire, devis comparables, estimation des heures,
+compétences d'achat et de maintenance. Utiliser une monnaie et une date
+explicites ; ne pas convertir sans indiquer le taux et sa date.
+
+Pas à pas.
+1. Pour le parcours minimal, chiffrer machine disponible ou à acquérir,
+   stockage et sauvegarde, alimentation protégée, documentation et formation.
+   Ajouter au parcours intermédiaire capteurs de lecture, communications
+   et maintenance ; au parcours complet, les essais de modèles, protections,
+   expertise de sécurité et dispositifs de validation.
+2. Pour chaque ligne, demander quantité, prix unitaire, fournisseur, délai,
+   garantie, réparabilité, disponibilité des pièces et frais de transport.
+   Comparer le matériel neuf, reconditionné et déjà disponible.
+3. Estimer les coûts récurrents : électricité mesurée ou estimée, connexion,
+   licences, hébergement éventuel, rémunération, consommables, remplacement
+   des batteries et visites d'entretien. Électricité = énergie consommée
+   en kWh × tarif applicable ; distinguer abonnement, taxes et incertitudes.
+4. Prévoir une réserve pour ruptures et réparations, et un matériel de
+   remplacement compatible. Faire valider les hypothèses avant commande.
+5. Calculer plusieurs scénarios, y compris une interruption du financement.
+   Un composant moins cher à l'achat peut coûter davantage en maintenance.
+
+Tableau de coût : poste | quantité | prix daté | périodicité | source | incertitude
+[À COMPLÉTER — TOGO : devis locaux et coûts observés, sans prix inventés.]
+
+Résultats mesurés. Comparer le budget initial et les dépenses réelles par
+poste, date et parcours. [À COMPLÉTER — TOGO.]
+Limites et échecs. Les prix et délais changent ; les dons ne remplacent pas
+une filière de réparation. Les coûts humains ne sont pas gratuits.
+Check-list. □ Devis datés □ Coûts récurrents □ Pièces disponibles
+□ Réserve □ Plan en cas de rupture.
+
+CHAPITRE 4 — ÉTHIQUE, DROIT ET GOUVERNANCE DES DONNÉES (12 p. ; 🟡)
+
+Objectif. Permettre un usage légitime et contrôlable des données, depuis la
+collecte jusqu'à la suppression ou à l'archivage.
+
+Matériel et compétences. Référent données, participation des communautés
+concernées, conseil juridique local et inventaire des traitements. Une
+traduction compréhensible des informations et des modalités de recours est
+nécessaire lorsque plusieurs langues sont utilisées.
+
+Pas à pas.
+1. Définir finalité, catégories de données, personnes concernées, base légale,
+   durée de conservation, responsables et destinataires. Vérifier les textes
+   applicables au Togo et à chaque partenaire, notamment pour tout transfert.
+   Ce chapitre ne remplace pas un conseil juridique.
+2. Lorsque le consentement est la base retenue, l'obtenir de manière libre,
+   spécifique et informée, documenter ses modalités et expliquer comment le
+   retirer. Distinguer consultation, publication, entraînement et partage :
+   un accord pour l'un ne vaut pas accord pour tous. Vérifier les effets et
+   limites du retrait pour les modèles déjà entraînés et les copies diffusées.
+3. Établir une rémunération juste, annoncée avant contribution et indépendante
+   du droit de refuser lorsque la loi et le dispositif l'exigent. Prévoir
+   une procédure adaptée aux mineurs et aux personnes vulnérables avec
+   conseil spécialisé ; en cas de doute, ne pas collecter.
+4. Pour chaque source, vérifier droits, autorisation, licence, conditions de
+   modification, redistribution et usage commercial. La présence en ligne
+   ou dans l'espace public ne signifie pas que la réutilisation est libre.
+5. Minimiser les données personnelles, limiter les accès, chiffrer et
+   sauvegarder selon les risques, journaliser les accès pertinents et fixer
+   une procédure d'incident. L'anonymisation doit être évaluée, non supposée.
+6. Adopter une charte communautaire : composition et mandat du comité,
+   décision, accès, partage des bénéfices, plaintes, audit et retrait. Définir
+   qui peut arrêter une collecte ou un déploiement.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : charte approuvée, registre des
+sources et autorisations, formations et demandes traitées, sans données
+personnelles dans le livre.]
+Limites et échecs. Un formulaire signé ne rend pas un rapport de force
+équitable. La suppression d'un document ne garantit pas l'effacement de son
+influence dans un modèle entraîné ; cette limite doit être annoncée avant
+collecte et traitée avec les responsables compétents.
+Check-list. □ Finalité et base légale □ Droits vérifiés □ Rémunération
+□ Conservation et retrait □ Gouvernance et recours.
+
+PARTIE B — ÉNERGIE ET INFRASTRUCTURE PHYSIQUE
+
+CHAPITRE 5 — S'ALIMENTER EN ÉNERGIE DE FAÇON AUTONOME (20 p. ; 🟢 À CONFIRMER)
+
+Objectif. Estimer les besoins et discuter une alimentation résiliente avant
+de choisir une solution ; faire concevoir et installer tout système électrique
+par une personne qualifiée selon les règles locales.
+
+Matériel et compétences. Inventaire des charges, wattmètre adapté, données
+locales d'ensoleillement, compétence électrique et budget de maintenance.
+Les batteries présentent des risques d'incendie, de court-circuit et de
+blessure ; le présent texte n'est pas un plan de câblage exécutable.
+
+Pas à pas.
+1. Mesurer la puissance de chaque appareil dans ses états réels : repos,
+   charge, démarrage. Pour chaque état, énergie quotidienne en Wh =
+   puissance moyenne en W × heures d'utilisation. Additionner les charges,
+   puis ajouter les pertes mesurées ou justifiées des convertisseurs.
+2. Définir l'autonomie souhaitée et les charges prioritaires pendant une
+   coupure. La capacité utile indicative de stockage doit couvrir l'énergie
+   quotidienne multipliée par les jours d'autonomie, ajustée aux pertes et à
+   la part réellement utilisable de la batterie. Une capacité nominale n'est
+   pas nécessairement disponible en totalité.
+3. Estimer la production solaire à partir du rayonnement local et des
+   conditions réelles : orientation, chaleur, ombrage, saison et rendement.
+   Comparer le mois défavorable au besoin ; faire vérifier le dimensionnement
+   et les protections par un installateur qualifié.
+4. Comparer batterie certifiée du commerce et assemblage LFP avec BMS :
+   disponibilité, garantie, protection, qualité des cellules et réparabilité.
+   Un BMS ne remplace pas les protections, le confinement approprié ni les
+   essais professionnels. Ne pas assembler de batterie sur la seule foi de
+   cet ouvrage.
+5. Évaluer le petit éolien seulement si des mesures de vent au site et une
+   étude de sécurité le justifient. Un micro-réseau suppose une étude de
+   raccordement, de protection, de responsabilité et d'autorisation.
+6. Tester une coupure de manière planifiée : sauvegarde, arrêt ordonné,
+   redémarrage, protection des données et maintien des charges essentielles.
+
+Figure 2 — Bilan conceptuel, non schéma de câblage
+  Ressource solaire → conversion et protections → stockage protégé
+                                                  → charges prioritaires
+                                                  → charges non essentielles
+
+Résultats mesurés. [À COMPLÉTER — TOGO : périodes, météo, charges en W et
+Wh, disponibilité, coupures, autonomie observée et limites de mesure.]
+Limites et échecs. Les saisons, la poussière et la température modifient la
+production. Un wattmètre ou une estimation non étalonnés introduisent une
+incertitude. Une panne de batterie peut rendre un service indisponible.
+Check-list. □ Bilan de charges □ Mois défavorable □ Protections vérifiées
+□ Installation qualifiée □ Essai de coupure □ Maintenance financée.
+
+CHAPITRE 6 — MATÉRIEL DE CALCUL EN EDGE (12 p. ; 🔴)
+
+Objectif. Choisir un matériel de calcul au plus près des usages lorsque cela
+apporte un avantage mesurable, sans supposer qu'un petit appareil exécutera
+tous les modèles.
+
+Matériel et compétences. Machines candidates, documentation constructeur,
+wattmètre, outils existants de mesure et compétences système. Les essais
+doivent utiliser les mêmes tâches, paramètres et jeux de questions.
+
+Pas à pas.
+1. Comparer mini-PC, carte embarquée et serveur selon mémoire réellement
+   disponible, stockage, connectique, consommation, prix, support logiciel,
+   disponibilité des pièces, bruit et réparation.
+2. Vérifier que le modèle quantifié, son contexte, le système et la base
+   documentaire tiennent ensemble en mémoire. La taille du fichier seul ne
+   décrit pas toute la mémoire nécessaire à l'exécution.
+3. Choisir un boîtier qui respecte les préconisations thermiques et protège
+   de la poussière sans obstruer les aérations. Prévoir nettoyage hors tension,
+   inspection et contrôle de température. En environnement chaud et humide,
+   faire valider l'installation et les conditions par un technicien.
+4. Mesurer consommation au repos et sous charge, temps de réponse, erreurs,
+   température et durée de fonctionnement, avec période et conditions notées.
+   Tester également le redémarrage après interruption.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : matériel exact, versions, conditions
+ambiantes, protocole, puissance, latence, incidents et incertitudes.]
+Limites et échecs. Les mesures d'un modèle ne valent pas pour un autre. La
+chaleur peut réduire les performances ; un matériel local reste dépendant de
+pièces et de logiciels externes.
+Check-list. □ Mémoire vérifiée □ Température et poussière □ Mesures comparables
+□ Pièces et support □ Reprise après coupure.
+
+PARTIE C — LA COUCHE LINGUISTIQUE
+
+CHAPITRE 7 — ASSISTANT DE CONNAISSANCES LOCALES, RAG (18 p. ; 🟡)
+
+Objectif. Construire un assistant documentaire qui retrouve des passages
+autorisés avant de formuler une réponse, et qui signale ses limites.
+
+Matériel et compétences. Documents utilisables, responsable éditorial,
+machine compatible, outil de recherche, modèle local si nécessaire et
+personnes capables d'évaluer les réponses. RAG signifie génération augmentée
+par recherche : on cherche d'abord des sources, puis on les fournit au modèle.
+
+Pas à pas.
+1. Définir les questions couvertes et exclues. Constituer un inventaire
+   indiquant titre, auteur, date, version, langue, licence, autorisation,
+   niveau d'accès et responsable de mise à jour.
+2. Extraire le texte en conservant la référence de page ou de section.
+   Contrôler les erreurs de numérisation et séparer les versions obsolètes.
+   Découper les documents en passages cohérents, indexés avec leurs métadonnées.
+3. Tester une recherche par mots puis, si utile, une recherche sémantique.
+   L'accès aux passages doit respecter les droits de l'utilisateur ; un
+   moteur de recherche n'autorise pas à exposer un document privé.
+4. Choisir et tester un modèle local quantifié, dont la licence et les
+   ressources nécessaires sont vérifiées. La quantification réduit la
+   précision numérique et souvent les besoins matériels, avec un éventuel
+   effet sur la qualité.
+5. Présenter l'assistant dans une interface, par exemple Gradio ou
+   Streamlit si ces outils sont disponibles et autorisés. Afficher les
+   extraits et leurs références ; protéger l'accès au service et ne pas
+   exposer par défaut l'interface sur un réseau public.
+6. Demander au modèle de répondre à partir des passages fournis et de dire
+   « information insuffisante » lorsque les sources ne répondent pas. Une
+   consigne seule ne garantit pas ce comportement ; mesurer les erreurs.
+7. Préparer des questions connues, inconnues et ambiguës. Faire vérifier
+   par des lecteurs si la source existe, soutient la réponse et est à jour.
+
+Figure 3 — Question → recherche autorisée → passages + références
+                      → génération → réponse, citations ou absence d'information
+
+Résultats mesurés. [À COMPLÉTER — TOGO : nombre de questions, couverture,
+sources correctement retrouvées, réponses étayées, abstentions et erreurs,
+par langue et type de question.] Définir chaque dénominateur avant l'essai.
+Limites et échecs. Une citation peut être réelle sans soutenir la phrase.
+Un document source peut lui-même être erroné. Les textes récupérés sont des
+données, pas des instructions autorisées à modifier les règles du système.
+Check-list. □ Sources autorisées □ Droits d'accès □ Références affichées
+□ Absence d'information testée □ Mise à jour et correction prévues.
+
+CHAPITRE 8 — MOBILISER LA COMMUNAUTÉ POUR UN CORPUS (18 p. ; 🟡)
+
+Objectif. Constituer un corpus traçable et représentatif des usages visés,
+en reconnaissant le travail et les choix des locuteurs.
+
+Matériel et compétences. Référents linguistiques, contributeurs rémunérés
+ou indemnisés selon un accord explicite, outil de saisie, espace protégé et
+protocole de consentement. Dix mille phrases sont un objectif de travail,
+non un seuil garantissant la qualité.
+
+Pas à pas.
+1. Définir les usages et les variantes linguistiques recherchées avec les
+   locuteurs. Documenter les sources autorisées, les domaines, les lacunes
+   et les conventions d'écriture ; ne pas imposer une variante comme unique
+   norme sans discussion.
+2. Attribuer à chaque contribution un identifiant et relier dans un registre
+   protégé la source, la date, les droits et les conditions de retrait. Le
+   fichier de travail n'a pas besoin de contenir l'identité des contributeurs.
+3. Diviser l'objectif de 10 000 phrases en lots. Indiquer durée estimée,
+   rémunération, procédure de paiement, formation et possibilité de pause.
+   Prévoir une seconde lecture indépendante et une procédure de désaccord.
+4. Utiliser une interface de correction simple et accessible : phrase
+   d'origine, correction, indication d'incertitude et motif si nécessaire.
+   Les règles de qualité doivent préserver les variantes valides.
+5. Vérifier par échantillons la cohérence, les doublons, les caractères et
+   les droits ; documenter les corrections. Une expression régulière peut
+   repérer un motif suspect, mais elle peut aussi supprimer des formes
+   linguistiques légitimes : vérifier les faux positifs avec des locuteurs.
+6. Séparer entraînement, validation et test avant les ajustements, en gardant
+   ensemble les documents, sources ou variantes proches pour éviter les
+   fuites. Conserver le test final à part et ne pas le réutiliser pour choisir
+   les réglages. Vérifier également les doublons entre partitions.
+7. Publier seulement les données autorisées, avec fiche de corpus, limites,
+   licence et procédure de contact. Prévoir le cas où une source est retirée.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : volume accepté et refusé, diversité,
+heures et rémunérations, accords entre correcteurs, désaccords, répartition
+et méthode de déduplication.] Ne pas publier d'identifiants personnels.
+Limites et échecs. Un grand corpus peut rester biaisé ; les locuteurs ne
+parlent pas d'une seule voix. La double correction coûte du temps et les
+désaccords ne sont pas nécessairement des erreurs.
+Check-list. □ Droits et rémunération □ Variantes documentées □ Double lecture
+□ Filtres vérifiés □ Partitions étanches □ Retrait et publication définis.
+
+CHAPITRE 9 — ADAPTER UN MODÈLE À UNE LANGUE PEU DOTÉE, QLORA (20 p. ; 🔴)
+
+Objectif. Étudier si une adaptation améliore un usage défini par rapport à
+un modèle de base et à des solutions plus simples. Un résultat négatif est
+un résultat utile.
+
+Matériel et compétences. Corpus autorisé et partitions séparées, référents
+linguistiques, machine adaptée ou accès de calcul explicitement autorisé,
+compétences d'entraînement et budget. QLoRA combine une base quantifiée et
+de petits paramètres adaptatifs entraînables ; il ne rend pas l'entraînement
+gratuit et ne corrige pas automatiquement les biais du corpus.
+
+Pas à pas.
+1. Définir la tâche, les langues, les risques et les métriques avant de
+   choisir un modèle. Qwen3.5-4B est une piste proposée par le plan, pas une
+   dépendance garantie : vérifier son existence, son identifiant exact, sa
+   disponibilité, sa licence et sa compatibilité au moment des essais. Sinon,
+   choisir un modèle documenté comparable et justifier le remplacement.
+2. Enregistrer versions du système, bibliothèques, pilote et matériel ; figer
+   le jeu de données et ses droits. Séparer les secrets d'accès des journaux
+   et des fichiers partagés. Documenter la graine et les paramètres, sans
+   promettre un déterminisme parfait entre matériels.
+3. Établir une référence sans adaptation sur validation et conserver le test
+   final isolé. Comparer aussi une recherche documentaire ou une traduction
+   existante si elles répondent au même besoin.
+4. Charger la base en 4 bits uniquement avec une chaîne compatible et
+   documenter sa configuration. Entraîner des adapters sur le seul ensemble
+   d'entraînement ; consigner taille des lots, durée, réglages, mémoire,
+   consommation si mesurable et critères d'arrêt. Ne pas réentraîner sur le
+   jeu de test pour améliorer le score publié.
+5. Sauvegarder périodiquement les adapters, la configuration, l'état de
+   l'optimiseur et les informations nécessaires à la reprise si l'outil le
+   permet. Vérifier une restauration effective après interruption ; protéger
+   les checkpoints comme le corpus.
+6. Comparer avant/après sur le même test final, sans sélectionner la
+   meilleure configuration sur ce test. Utiliser si pertinent FLORES-200,
+   après vérification des langues, de la licence et du chevauchement avec les
+   données, et compléter par des tests locaux conçus avec des locuteurs.
+   Indiquer métriques automatiques, taille de l'échantillon et limites ;
+   évaluer aussi fidélité, omissions, variantes et conséquences d'erreurs.
+7. Sans GPU puissant, comparer exécution locale sans adaptation, corpus
+   documentaire, petit modèle, calcul partagé autorisé ou externalisation
+   consentie. Examiner coûts, confidentialité et dépendance avant transfert.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : modèle et versions, droits, taille
+des partitions, protocole, référence, résultats avant/après, erreurs,
+ressources, interruptions et avis des locuteurs.]
+Limites et échecs. Une meilleure métrique peut masquer une dégradation pour
+un groupe ou un domaine. Si l'adaptation n'améliore pas l'usage, conserver
+les 20 pages prévues pour un retour d'expérience : hypothèses, tentatives,
+mesures, causes possibles, coûts et décision de ne pas déployer.
+Check-list. □ Licence et modèle vérifiés □ Test isolé □ Référence mesurée
+□ Reprise essayée □ Évaluation native □ Décision documentée.
+
+CHAPITRE 10 — ASSISTANT DE TRADUCTION ÉWÉ, FRANÇAIS, ANGLAIS (12 p. ; 🔴)
+
+Objectif. Concevoir un prototype d'aide à la traduction, non un traducteur
+assermenté ni une garantie de compréhension entre toutes les variantes.
+
+Matériel et compétences. Locuteurs des langues concernées, exemples autorisés,
+machine adaptée, modèle ou service choisi pour ses droits et ses performances
+réelles, et interface qui indique clairement le sens de traduction.
+
+Pas à pas.
+1. Choisir un contexte limité et les directions linguistiques à tester :
+   éwé → français, français → éwé, anglais → éwé et leurs inverses selon les
+   besoins. Les performances peuvent différer à chaque direction.
+2. Sélectionner des phrases représentatives et autorisées, avec contexte,
+   variantes, traductions de référence et exemples ambigus. Garder un jeu
+   final séparé de tout réglage.
+3. Déployer localement un outil compatible, ou utiliser une solution
+   documentaire si aucun modèle disponible n'est satisfaisant. Afficher le
+   texte source, la traduction proposée, la langue et un avertissement.
+4. Faire examiner les sorties par des locuteurs indépendants : sens,
+   omissions, noms propres, nombres, registre et contexte. Prévoir correction
+   humaine et signalement, particulièrement pour les usages sensibles.
+5. Comparer aux pratiques existantes et ne retenir un usage communautaire
+   que si les personnes concernées jugent le risque acceptable.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : directions, échantillons, critères,
+accords et désaccords entre évaluateurs, erreurs et décision de déploiement.]
+Limites et échecs. Une traduction plausible peut inverser une consigne.
+Ne pas utiliser sans validation qualifiée pour santé, droit ou sécurité.
+Check-list. □ Directions définies □ Variantes représentées □ Test indépendant
+□ Correction humaine □ Usages sensibles exclus ou encadrés.
+
+PARTIE D — CONNECTER LE TERRITOIRE
+
+CHAPITRE 11 — CAPTEURS ET ACQUISITION DE DONNÉES (16 p. ; 🔴)
+
+Objectif. Observer un phénomène défini et comprendre ce qu'un capteur mesure
+réellement, sans transformer un dispositif exploratoire en réseau de
+surveillance des personnes.
+
+Matériel et compétences. Responsable de mesure, autorisations, capteurs
+adaptés, compétence réseau et protocole de calibration. ESP32, MQTT et LoRa
+sont des options possibles, non des obligations ; leur compatibilité et les
+fréquences autorisées doivent être vérifiées localement.
+
+Pas à pas.
+1. Définir question, lieu, durée, unité, intervalle, précision requise et
+   usage prévu avant de choisir le capteur. Privilégier des mesures agrégées
+   sans identification personnelle.
+2. Concevoir une chaîne minimale : capteur → microcontrôleur → transport
+   local ou radio → stockage daté. MQTT est un protocole de messages ;
+   LoRa est une technologie radio et ne remplace pas à elle seule une
+   architecture complète de transport et de gestion.
+3. Étudier alimentation, portée réelle, pertes, authentification, chiffrement
+   lorsque disponible, mises à jour et accès. Ne pas exposer un courtier MQTT
+   ouvert sur Internet ; appliquer les obligations radio locales.
+4. Pour lumière et température, noter emplacement et protection contre le
+   soleil direct selon la grandeur recherchée. Pour PM2.5, préciser unité,
+   humidité, limites du capteur et comparaison à une référence appropriée.
+   Pour bruit, mesurer des niveaux agrégés sans enregistrer de conversations ;
+   une mesure acoustique dépend de l'étalonnage et du contexte.
+5. Une caméra thermique fournit des températures apparentes de surface selon
+   ses réglages et conditions, non directement la température de l'air ni
+   une carte exhaustive des îlots de chaleur. Éviter la captation identifiable
+   et obtenir les autorisations nécessaires.
+6. Décrire les points d'intégration envisagés dans HubCity avec ses
+   responsables : format, propriété, contrôle d'accès et maintenance.
+   N'affirmer une intégration effective qu'après vérification.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : sites autorisés, capteurs et
+étalonnage, périodes, données manquantes, incertitudes, incidents et limites.]
+Limites et échecs. Un capteur bon marché n'est pas automatiquement conforme
+à un usage réglementaire. Les erreurs de placement, d'horloge ou de réseau
+peuvent rendre une série trompeuse.
+Check-list. □ Question et unité □ Autorisations □ Protection réseau
+□ Calibration □ Données manquantes □ Aucun suivi individuel implicite.
+
+CHAPITRE 12 — MOBILIER URBAIN ET VÉGÉTATION INTELLIGENTS (16 p. ; 🟢 À CONFIRMER)
+
+Objectif. Concevoir avec les usagers un mobilier et une végétalisation
+adaptés au lieu ; les capteurs ne doivent pas être une fin en soi.
+
+Matériel et compétences. Habitants, artisans, compétences de conception
+accessible, horticulture locale et vérification structurelle. Obtenir les
+autorisations d'occupation et identifier la personne responsable de l'entretien.
+
+Pas à pas.
+1. Observer les usages, l'ombre, les circulations, l'accessibilité et les
+   contraintes du site. Co-dessiner plusieurs solutions, y compris une
+   solution sans électronique, puis consulter les personnes concernées.
+2. Pour des matériaux récupérés, vérifier provenance, état, traitement,
+   absence de contamination, échardes et fixations. Faire vérifier stabilité,
+   résistance, sécurité et accessibilité par des personnes compétentes.
+   Une palette de provenance inconnue ne doit pas être présumée sûre.
+3. Évaluer pluie, chaleur, corrosion, drainage et entretien ; prévoir
+   remplacement et fin de vie. Tester un prototype avant toute installation
+   ouverte au public.
+4. Choisir les espèces avec des spécialistes locaux selon eau disponible,
+   sol, racines, ombrage, biodiversité et entretien. Ne pas promettre une
+   réduction de pollution ou de bruit sans mesures adaptées ; éviter les
+   espèces invasives ou dangereuses pour le site.
+5. Si une micro-irrigation est envisagée, établir d'abord les besoins
+   horticoles et une option manuelle. Les capteurs d'humidité nécessitent une
+   calibration ; toute commande d'électrovanne suit les chapitres 14 et 15.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : plans approuvés, espèces réellement
+plantées, retours d'usage, entretien, eau consommée et état dans le temps.]
+Limites et échecs. Un banc inutilisé ou une plante morte doit conduire à
+revoir le projet. Un effet sur l'air ou le bruit ne se déduit pas de la seule
+présence de végétation.
+Check-list. □ Co-conception □ Matériaux contrôlés □ Sécurité et accessibilité
+□ Espèces adaptées □ Entretien financé □ Autorisation du site.
+
+CHAPITRE 13 — DU FLUX DE DONNÉES À L'ÉTAT DU MONDE (12 p. ; 🔴)
+
+Objectif. Relier des observations datées à des lieux et à des objets sans
+présenter une estimation comme un fait certain.
+
+Matériel et compétences. Données autorisées, dictionnaire de données,
+compétences spatiales et référent de qualité. Définir le niveau de précision
+spatiale nécessaire afin de ne pas exposer inutilement des personnes.
+
+Pas à pas.
+1. Décrire chaque observation : quoi (grandeur, unité), où (lieu ou zone),
+   quand (date, fuseau, intervalle), source, méthode, qualité et autorisation.
+   Distinguer une valeur absente de zéro et une date d'observation d'une date
+   d'importation.
+2. Conserver l'observation originale et produire séparément les valeurs
+   corrigées ou agrégées, avec méthode et version. Une donnée périmée ou
+   contradictoire doit rester identifiable.
+3. Pour un RAG spatial, transformer la question en contraintes de lieu,
+   temps et thème ; rechercher les données et documents autorisés pertinents,
+   puis fournir au modèle des résultats avec provenance et limites. Vérifier
+   coordonnées, système de référence et incertitude avant tout rapprochement.
+4. La vision par ordinateur peut proposer une catégorie ou un comptage, mais
+   nécessite validation sur les conditions locales. Une image peut contenir
+   des personnes identifiables ; minimiser collecte, accès et conservation.
+5. Présenter au lecteur ce qui est observé, inféré ou inconnu. Ne pas laisser
+   le LLM inventer une mesure manquante ou décider seul d'une intervention.
+
+Figure 4 — Observation + lieu + temps + provenance → état révisable
+           → recherche contrôlée → explication et incertitude
+
+Résultats mesurés. [À COMPLÉTER — TOGO : dictionnaire, couverture spatio-
+temporelle, données manquantes, erreurs de localisation et validations.]
+Limites et échecs. Un état du monde est partiel ; des mesures proches ne sont
+pas forcément comparables. Une carte précise peut produire une fausse certitude.
+Check-list. □ Quoi/où/quand □ Provenance et qualité □ Droits d'accès
+□ Données périmées signalées □ Inférences distinguées des mesures.
+
+PARTIE E — AGIR EN SÉCURITÉ
+
+CHAPITRE 14 — LA CHAÎNE DE DÉCISION SÉCURISÉE (12 p. ; 🔴)
+
+Objectif. Séparer une recommandation linguistique de toute action physique,
+et rendre les responsabilités et les limites vérifiables.
+
+Matériel et compétences. Analyse de risques, expertise du procédé, personnes
+habilitées, système de règles indépendant et dispositif d'arrêt approprié.
+Un prototype logiciel ne remplace pas une étude de sécurité professionnelle.
+
+Pas à pas.
+1. Définir les actions permises, interdites et leurs conséquences ; documenter
+   dangers, personnes exposées, limites physiques et état sûr en cas de panne.
+2. Le LLM produit une proposition lisible et ses sources. Il ne dispose ni
+   d'un accès direct à l'actionneur ni du pouvoir de modifier les règles.
+3. Un moteur indépendant vérifie une liste d'actions autorisées, les valeurs
+   et durées limites, l'état des capteurs, la fraîcheur des données et les
+   conditions de sécurité. Toute entrée invalide, inconnue ou périmée
+   conduit au refus et à l'état sûr défini pour le dispositif.
+4. Une personne habilitée examine la proposition et les contrôles avant
+   chaque activation ; son approbation ne contourne jamais un verrou de
+   sécurité. Les protections physiques restent indépendantes du modèle et du
+   logiciel de recommandation.
+5. Journaliser proposition, données utiles, contrôle, décision et résultat,
+   en limitant les données personnelles. Tester refus, coupures, perte réseau
+   et arrêt d'urgence dans un environnement protégé.
+
+Figure 5 — LLM : proposition → règles indépendantes → validation humaine
+           → commande autorisée → protections physiques → action
+           Toute anomalie → refus / état sûr défini
+
+Résultats mesurés. [À COMPLÉTER — TOGO : scénarios testés, refus attendus,
+anomalies, délais et validation par les responsables de sécurité.]
+Limites et échecs. Un humain peut se tromper ou devenir inattentif ; une
+validation humaine ne remplace ni un verrou physique ni un entretien régulier.
+Check-list. □ Analyse de risques □ Séparation des accès □ Limites indépendantes
+□ Validation humaine □ Arrêt testé □ Journal protégé.
+
+CHAPITRE 15 — PILOTER LES ACTIONNEURS (12 p. ; 🔴)
+
+Objectif. Étudier, puis éventuellement piloter une électrovanne ou une
+ventilation sans compromettre la sécurité des personnes et du site.
+
+Matériel et compétences. Professionnels qualifiés pour l'installation,
+responsable du site, composants adaptés et protections certifiées selon les
+exigences applicables. Aucun schéma de puissance de ce livre n'autorise une
+installation sans étude ni contrôle.
+
+Pas à pas.
+1. Définir le scénario, la charge, les risques électriques et mécaniques,
+   les conditions d'accès et le comportement sûr à la perte d'alimentation.
+   L'état sûr dépend du procédé : « tout arrêter » n'est pas universel.
+2. Sélectionner électrovanne, relais ou commande de ventilation avec un
+   professionnel : compatibilité, isolation, protection, environnement et
+   maintenance. Prévoir des protections indépendantes et un arrêt d'urgence
+   accessible lorsque l'analyse de risques l'exige.
+3. En environnement protégé, tester d'abord une charge simulée ; vérifier
+   les règles, la validation humaine, l'arrêt et l'impossibilité d'une
+   commande directe par le modèle.
+4. Tester perte réseau, capteur défaillant, alimentation interrompue,
+   commande répétée et reprise. Le redémarrage ne doit pas provoquer une
+   action non autorisée ; toute nouvelle activation suit la chaîne complète.
+5. Ne passer à un dispositif réel qu'après validation documentée, autorisation
+   du responsable et formation des opérateurs. Journaliser les essais et
+   définir les inspections et la procédure de mise hors service.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : protocole protégé, incidents,
+temps d'arrêt, essais de panne et autorisations, sans conclure au déploiement
+avant les contrôles.]
+Limites et échecs. Un relais soudé ou une vanne bloquée peut résister à une
+commande logicielle. Prévoir des protections et une intervention adaptées au
+risque physique ; ne pas faire confiance au seul journal logiciel.
+Check-list. □ Professionnel qualifié □ État sûr spécifique □ Charge simulée
+□ Pannes testées □ Arrêt accessible □ Autorisation avant usage réel.
+
+PARTIE F — DURER ET ESSAIMER
+
+CHAPITRE 16 — MAINTENANCE ET DÉPANNAGE (12 p. ; 🟡)
+
+Objectif. Maintenir un service utile et arrêter proprement un système qui ne
+peut plus être entretenu.
+
+Matériel et compétences. Inventaire, documentation, sauvegardes testées,
+pièces de rechange, budget et personnes formées. Les opérations électriques
+ou sur batteries sont réservées aux professionnels compétents.
+
+Pas à pas.
+1. Établir un registre des équipements, versions, garanties, responsabilités
+   et contacts. Prévoir des contrôles périodiques adaptés aux préconisations
+   des fabricants et aux conditions locales.
+2. Documenter les symptômes, date, impact, diagnostic, solution et temps
+   d'interruption : panne d'alimentation, stockage plein, réseau indisponible,
+   capteur hors plage, document périmé ou modèle inaccessible.
+3. Protéger les sauvegardes, vérifier régulièrement leur restauration et
+   distinguer incident de sécurité et simple panne. Prévoir une procédure
+   de notification conforme aux obligations applicables.
+4. Former une relève, organiser les achats de consommables et décider quand
+   réparer, remplacer ou retirer. Ne jamais improviser une réparation sous
+   tension ou neutraliser une protection.
+5. Consigner les échecs réels avec contexte et accord des personnes
+   concernées, sans chercher un responsable individuel.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : incidents réels, durée, coût,
+restaurations essayées, tâches préventives et enseignements.]
+Limites et échecs. Une sauvegarde non restaurée peut être inutilisable.
+Un calendrier sans budget ni responsable n'est pas un plan de maintenance.
+Check-list. □ Inventaire □ Responsables et relève □ Sauvegarde restaurée
+□ Pièces et budget □ Arrêt et incident documentés.
+
+CHAPITRE 17 — APPRENTISSAGE CONTINU ET MÉMOIRE D'EXPÉRIENCE (8 p. ; 🔴)
+
+Objectif. Tirer des leçons des usages et des conséquences sans apprendre
+automatiquement de toutes les interactions.
+
+Matériel et compétences. Processus de retour accessible, responsable de
+validation, registre d'incidents et politique de conservation. Une correction
+doit être distinguée d'une opinion et reliée à sa source.
+
+Pas à pas.
+1. Recueillir, avec information et autorisation appropriées, le contexte,
+   la réponse ou proposition, la correction, les conséquences observées et
+   la date. Éviter la collecte inutile de données personnelles.
+2. Vérifier les retours avec les personnes compétentes et donner un droit de
+   contestation. Classer les erreurs par gravité et interrompre l'usage si
+   les risques le nécessitent.
+3. Préparer une nouvelle version du corpus, de l'index ou du modèle hors
+   production. La tester sur des jeux appropriés, dont des cas de régression,
+   et faire approuver la mise en service par les responsables.
+4. Conserver versions, paramètres, droits, justification et possibilité de
+   retour arrière. Une mise à jour ne modifie pas les règles de sécurité ou
+   les droits d'accès sans validation distincte.
+
+Résultats mesurés. [À COMPLÉTER — TOGO : retours reçus, corrections
+acceptées ou refusées, tests de régression et décisions de version.]
+Limites et échecs. Les retours ne représentent pas tous les usagers ; ils
+peuvent contenir des erreurs ou des instructions malveillantes. Ne pas
+réentraîner automatiquement sur des données non vérifiées.
+Check-list. □ Retours autorisés □ Vérification humaine □ Tests hors production
+□ Version et retour arrière □ Règles de sécurité inchangées.
+
+CHAPITRE 18 — RÉSEAU DE NŒUDS ET RÉPLICATION (10 p. ; 🔴)
+
+Objectif. Permettre à plusieurs labs de coopérer sans imposer une base de
+données centrale ni effacer leurs règles locales.
+
+Matériel et compétences. Accords entre nœuds, interlocuteurs locaux,
+documentation, moyens de communication et responsabilités financières.
+Une fédération est une organisation d'échanges convenus, non une obligation
+de partager toutes les données.
+
+Pas à pas.
+1. Définir pour chaque nœud ses services, données, compétences, responsable,
+   droits et contraintes de disponibilité. Distinguer partage de méthodes,
+   de modèles et de données : chacun nécessite ses propres autorisations.
+2. Fixer formats, versions, authentification, sécurité, fréquence d'échange
+   et procédure de retrait. En cas de conflit, conserver provenance et
+   décision locale plutôt que fusionner silencieusement.
+3. Pour un deuxième lab, refaire le diagnostic du chapitre 1, adapter les
+   langues et le matériel, former une équipe locale et tester la maintenance.
+   Ne pas copier des données personnelles ou des secrets avec le logiciel.
+4. Pour un pont Caraïbes–Afrique de l'Ouest, organiser des échanges de
+   savoir-faire et comparer les contextes linguistiques, juridiques et
+   climatiques ; les partenariats restent à confirmer par les acteurs.
+5. Construire un budget pluriannuel et une gouvernance des contributions,
+   des coûts et des départs. Prévoir le maintien local si un partenaire part.
+
+Résultats mesurés. [À COMPLÉTER — TOGO ET PARTENAIRES : nœuds effectivement
+actifs, accords, échanges autorisés, incidents, coûts et capacité de reprise.]
+Limites et échecs. Une réplication technique sans appropriation locale peut
+échouer. La fédération ne dispense ni de sécurité ni de contrôle des transferts.
+Check-list. □ Accords distincts □ Diagnostic local □ Échanges sécurisés
+□ Formation et maintenance □ Budget □ Sortie possible.
+
+ANNEXES — 36 PAGES RÉSERVÉES
+
+ANNEXE A — CALENDRIER TYPE DE DÉPLOIEMENT (3 p.)
+
+Ce calendrier est indicatif, non la preuve qu'une phase a eu lieu.
+Phase 1 : diagnostic, consultation, choix d'un usage et cadre de données.
+Phase 2 : inventaire, budget, sources autorisées et prototype documentaire.
+Phase 3 : évaluation avec utilisateurs, corrections et décision de poursuivre.
+Phase 4, conditionnelle : corpus, mesures de terrain et essais protégés.
+Phase 5 : bilan, maintenance, gouvernance et décision de réplication.
+
+Tableau : phase | responsable | début/fin prévus | livrable | critère de passage
+[À COMPLÉTER — TOGO : dates effectives, y compris la période décembre–mars
+concernée, jalons, retards et motifs des changements.]
+
+ANNEXE B — LISTES DE MATÉRIEL ET COÛTS (5 p.)
+
+Minimal : ordinateur adapté à l'usage choisi ; stockage et sauvegarde ;
+alimentation protégée ; documents autorisés ; formation.
+Intermédiaire : éléments précédents, instruments de mesure adaptés, capteurs
+en lecture, réseau protégé et pièces de rechange.
+Complet : éléments précédents, capacité de calcul évaluée, dispositifs de
+sécurité et d'essai, expertise professionnelle et maintenance renforcée.
+
+Gabarit : article | spécification | quantité | fournisseur | devis et date
+        | coût initial | coût récurrent | délai | garantie | responsable.
+[À COMPLÉTER — TOGO : devis locaux, monnaie, taxes, incertitude et total par
+scénario.] Ne pas présenter ces catégories comme une liste d'achat définitive.
+
+ANNEXE C — SCHÉMAS DE CÂBLAGE ET PLANS DE MOBILIER (8 p.)
+
+Figure C1 — Architecture de principe, non câblage de puissance
+  Capteur → acquisition → réseau protégé → stockage → consultation
+  Proposition → règles → accord humain → interface de commande protégée
+
+Figure C2 — Plan de mobilier à compléter
+  Vue de dessus : [emplacement, dimensions, circulation accessible]
+  Vue de face   : [hauteur, appuis, fixations, drainage]
+  Vue de côté   : [stabilité, ancrage, espace libre, matériaux]
+
+[À COMPLÉTER — TOGO : plans cotés, provenance et autorisation des images,
+calculs et validation par des professionnels.] Les schémas de câblage
+exécutables et les plans structurels doivent être produits et vérifiés pour
+le matériel et le site réels ; les figures ci-dessus ne suffisent pas.
+
+ANNEXE D — DÉPÔT DE CODE, NOTEBOOKS, JEU DE DONNÉES (3 p.)
+
+Pour chaque ressource : nom, version ou identifiant de révision, responsable,
+adresse si elle existe, licence, prérequis, procédure de reproduction,
+limites et contact. Séparer données publiques, données à accès restreint et
+secrets. Documenter les données exclues ou retirées et les conditions
+d'utilisation des modèles. [À COMPLÉTER : liens vérifiés et versions réellement
+utilisées ; aucun dépôt ou jeu de données expérimental n'est supposé exister.]
+
+ANNEXE E — CHECK-LISTS (5 p.)
+
+Démarrage : □ Besoin et public □ Diagnostic □ Budget □ Responsables
+□ Autorisations □ Sources vérifiées □ Critère de réussite et d'arrêt.
+Sécurité : □ Risques évalués □ Droits limités □ Données minimisées
+□ Règles indépendantes □ Validation humaine □ État sûr et arrêt testés.
+Maintenance : □ Inventaire □ Sauvegarde restaurée □ Mise à jour contrôlée
+□ Pièces et budget □ Relève □ Procédure de panne et de retrait.
+Avant publication : □ Sources et licences □ Consentements pertinents
+□ Pas de données personnelles non autorisées □ Limites et dates indiquées
+□ Validation des personnes et partenaires concernés.
+
+ANNEXE F — GABARITS (6 p.)
+
+F1. Charte communautaire — à adapter et faire valider localement
+Objet et finalités : [à compléter]
+Membres et représentation : [à compléter]
+Décisions, désaccords et droit d'arrêt : [à compléter]
+Accès, conservation, partage et retrait des données : [à compléter]
+Rémunération, bénéfices et responsabilités : [à compléter]
+Réclamations, révision et date d'entrée en vigueur : [à compléter]
+
+F2. Information et consentement — seulement si cette base est appropriée
+Responsable et contact : [à compléter]
+Contribution et finalités distinctes : [à compléter]
+Qui accède aux données et combien de temps : [à compléter]
+Publication / partage / entraînement : [choix distincts à définir]
+Rémunération, risques, droit de refuser et modalités de retrait : [à compléter]
+Limites pratiques du retrait après diffusion ou entraînement : [à compléter]
+Langue, date, mode de recueil et preuve appropriée : [à compléter]
+Faire vérifier ce gabarit par un conseil compétent avant utilisation.
+
+F3. Convention de partenariat — à adapter
+Parties et contacts : [à compléter]
+Objet, activités, durée et lieu : [à compléter]
+Apports, financement, responsabilités et propriété : [à compléter]
+Données, droits, sécurité et communication : [à compléter]
+Décision, suivi, différends, sortie et restitution : [à compléter]
+Dates et signatures selon les règles applicables : [à compléter]
+
+ANNEXE G — GLOSSAIRE (3 p.)
+
+Adapter : petits paramètres ajoutés à un modèle de base pour une adaptation.
+BMS : système de gestion et de surveillance d'une batterie ; il ne remplace
+pas l'ensemble des protections d'une installation.
+Corpus : ensemble organisé de données linguistiques ou documentaires.
+Edge : traitement réalisé près du lieu d'utilisation ou d'acquisition.
+LLM : modèle de langage capable de générer ou transformer du texte.
+LoRa : technologie de communication radio longue portée à faible débit.
+MQTT : protocole de publication et d'abonnement à des messages.
+PM2.5 : particules en suspension de diamètre aérodynamique jusqu'à 2,5 µm.
+QLoRA : méthode d'adaptation utilisant une base quantifiée et des adapters.
+Quantification : représentation numérique moins précise de paramètres.
+RAG : recherche de documents pertinents suivie d'une génération contextualisée.
+État sûr : comportement défini par l'analyse de risques pour une situation donnée.
+
+ANNEXE H — RESSOURCES POUR ALLER PLUS LOIN (3 p.)
+
+À consulter et vérifier selon la version et la licence applicables :
+• NIST AI Risk Management Framework : https://www.nist.gov/itl/ai-risk-management-framework
+• UNESCO, Recommandation sur l'éthique de l'intelligence artificielle :
+  https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
+• Datasheets for Datasets, Gebru et al. : https://arxiv.org/abs/1803.09010
+• QLoRA, Dettmers et al. : https://arxiv.org/abs/2305.14314
+• FLORES-200, NLLB : https://github.com/facebookresearch/flores
+• Organisation mondiale de la santé, qualité de l'air :
+  https://www.who.int/health-topics/air-pollution
+• Documents officiels togolais applicables aux données, à l'énergie, aux
+  fréquences et à l'occupation de l'espace : [références à vérifier localement].
+• Sources primaires WoeLab et HubCity : [à documenter avec les partenaires].
+
+Une bibliographie détaillée et un index seront ajoutés hors des 300 pages
+cibles. Chaque source utilisée pour une affirmation de terrain devra être
+datée, vérifiable et publiée avec les autorisations nécessaires.

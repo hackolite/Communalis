@@ -1,0 +1,309 @@
+COMMUNALIS — ANNEXES ET SUIVI ÉDITORIAL
+
+Les annexes sont des outils à adapter, pas des preuves d'un déploiement.
+Les 36 pages annoncées dans le plan sont une réservation de mise en page.
+Les données, dates, noms, coûts, accords et mesures restent à compléter
+après vérification et avec les autorisations nécessaires.
+
+ANNEXE A — CALENDRIER TYPE DE DÉPLOIEMENT (3 PAGES CIBLES)
+
+Le calendrier suit des décisions plutôt qu'une durée imposée. Chaque phase
+se termine par une revue qui peut décider de revenir en arrière ou d'arrêter.
+
+Phase | Travaux | Livrable | Décision de passage
+1 | Écouter, identifier le besoin et les risques | Diagnostic partagé |
+    Un usage prioritaire et ses responsables sont-ils définis ?
+2 | Vérifier les droits, les moyens et les coûts | Registre et budget |
+    Les ressources et autorisations sont-elles suffisantes ?
+3 | Préparer un prototype limité | Version documentée | Peut-on l'évaluer
+    sans exposer des personnes à un risque disproportionné ?
+4 | Tester avec les personnes concernées | Mesures et retours | Le service
+    est-il utile, compréhensible et maintenable ?
+5 | Décider d'une évolution ou d'un arrêt | Bilan et plan de maintenance |
+    Qui finance et assume les responsabilités dans la durée ?
+6 | Éventuellement répliquer | Accord et diagnostic du second site |
+    Le nouveau lab a-t-il les moyens d'adapter et de refuser ?
+
+Fiche de jalon
+Date prévue : [À ACTUALISER — date]
+Date effective et motif d'écart : [À ACTUALISER — après revue]
+Responsable et suppléant : [À ACTUALISER — nomination]
+Décision : poursuivre / corriger / suspendre / arrêter.
+Preuves consultées, restrictions et prochaine revue : [à compléter].
+
+[RÉSULTATS TOGO À INSÉRER] Dates réelles de la période décembre–mars
+concernée, sans présumer l'année ; jalons atteints, reports, décisions et
+personnes autorisées à valider leur publication.
+
+ANNEXE B — LISTES DE MATÉRIEL ET COÛTS (5 PAGES CIBLES)
+
+La liste est une base de comparaison et non un bon de commande. Les devis
+datés, la disponibilité et la compatibilité effective priment.
+
+Parcours minimal :
+• ordinateur existant ou adapté à la tâche retenue ;
+• support de stockage, sauvegarde et protection d'alimentation adaptés ;
+• documents autorisés, temps de préparation, formation et maintenance.
+Parcours intermédiaire :
+• éléments du parcours minimal ;
+• moyens de mesure choisis selon le protocole et réseau protégé ;
+• pièces de rechange, contrôle de qualité et compétences correspondantes.
+Parcours complet, si autorisé :
+• capacité de calcul adaptée à l'expérience linguistique ;
+• dispositifs de test et protections indépendantes selon l'analyse de risques ;
+• expertise et contrôle professionnels des installations concernées.
+
+Fiche d'achat
+Poste : [à compléter] ; usage : [à compléter] ; quantité : [à compléter].
+Spécification utile et compatibilité vérifiée : [à compléter].
+Prix unitaire, monnaie, taxes, livraison et date : [à compléter].
+Fournisseur, garantie, délai et pièces disponibles : [à compléter].
+Coûts d'installation, d'énergie, d'entretien et de fin de vie : [à compléter].
+Alternative réparable ou matériel déjà disponible : [à compléter].
+Décision et responsable : [à compléter].
+
+Tableau budgétaire à renseigner :
+Poste | Initial | Périodique | Fréquence | Source | Incertitude | Responsable
+Matériel | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Électricité | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Connexion et hébergement | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Temps des contributeurs | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Entretien et remplacement | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Formation et sécurité | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+
+[À ACTUALISER — devis, tarifs, taux de change et budget de remplacement.]
+[RÉSULTATS TOGO À INSÉRER] Dépenses réelles, écarts et motifs.
+
+ANNEXE C — SCHÉMAS ET PLANS (8 PAGES CIBLES)
+
+Ces figures sont conceptuelles. Les plans de puissance, les protections,
+les ancrages et les dimensions destinés à une installation doivent être
+établis puis contrôlés par les professionnels compétents pour le site.
+
+C1. Énergie : bilan sans câblage
+
+  Production ──→ conversion et protections ──→ stockage protégé
+                                                  │
+                          ┌───────────────────────┴────────────────────┐
+                          ↓                                            ↓
+                   charges prioritaires                      autres charges
+
+À documenter : puissance et énergie de chaque charge ; fonctionnement
+simultané ; pertes ; saison défavorable ; protections ; personne qualifiée ;
+procédure d'arrêt et d'entretien.
+
+C2. Acquisition en lecture seule
+
+  Grandeur → capteur → acquisition → transport protégé → stockage
+                                                    ↓
+                              date, lieu, unité, qualité et autorisation
+
+À documenter : position, intervalle, mesure de référence, valeurs absentes,
+droits d'accès et fréquence de vérification. La transmission réussie ne
+prouve pas l'exactitude de la mesure.
+
+C3. Chaîne d'action autorisée
+
+  proposition du LLM → règles indépendantes → validation humaine
+                     → interface contrôlée → protection physique → action
+  anomalie → refus et état sûr spécifié par l'analyse de risques
+
+À documenter : action permise, limite, contrôle, autorité de validation,
+arrêt, panne de communication, reprise et preuve du test protégé. Le LLM ne
+dispose pas d'un accès direct à l'actionneur.
+
+C4. Mobilier — emplacement de plan à établir
+
+  Vue de dessus : [dimensions, circulation et accès]
+  Vue de face   : [hauteurs, assise et points de fixation]
+  Vue de côté   : [stabilité, supports et drainage]
+  Matériaux     : [provenance, état, traitement et entretien]
+
+[À ACTUALISER — plans cotés, calculs, autorisations, légendes et crédits.]
+[RÉSULTATS TOGO À INSÉRER] Plans réalisés, retours d'usage et contrôles,
+uniquement après accord de publication.
+
+ANNEXE D — CODE, NOTEBOOKS ET DONNÉES (3 PAGES CIBLES)
+
+Fiche de ressource
+Nom et fonction : [à compléter].
+Adresse ou lieu de conservation : [à compléter].
+Version exacte, date et responsable : [à compléter].
+Licence du code, du modèle et des données : [à vérifier séparément].
+Prérequis matériels et logiciels : [à compléter].
+Procédure de reproduction et paramètres : [à compléter].
+Jeux d'entraînement, validation et test : [versions et accès à compléter].
+Restrictions, risques, limites et contact : [à compléter].
+
+Ne pas placer les mots de passe, clés ou données personnelles dans les
+notebooks ou les dépôts publics. Vérifier les droits avant toute
+redistribution. Un lien vers un dépôt ou un modèle ne confirme ni son
+maintien, ni sa licence future, ni son adéquation à une langue.
+[À ACTUALISER — liens et identifiants réellement utilisés par le projet.]
+
+ANNEXE E — CHECK-LISTS (5 PAGES CIBLES)
+
+Avant le lancement
+□ Le problème est formulé avec les personnes concernées.
+□ Une solution existante et une solution sans modèle ont été comparées.
+□ Les responsables, suppléants, budgets et critères d'arrêt sont connus.
+□ Les finalités et les droits des données ont été vérifiés.
+□ Les risques, les personnes absentes et les moyens de recours sont notés.
+
+Avant une collecte
+□ Les finalités et les bases légales sont explicitées.
+□ L'information est compréhensible dans les langues pertinentes.
+□ La rémunération et les conditions de refus sont annoncées.
+□ L'accès, la conservation, le retrait et les limites sont documentés.
+□ Les autorisations distinctes de publication et d'entraînement sont traitées.
+
+Avant la mise à disposition d'un assistant
+□ Les documents sont autorisés et leur version est connue.
+□ Les utilisateurs n'accèdent qu'aux sources permises.
+□ Les réponses, citations et abstentions ont été évaluées.
+□ Une procédure de correction et de suspension est accessible.
+□ Les limites linguistiques et les usages exclus sont affichés.
+
+Avant une action physique
+□ L'analyse de risques et l'état sûr sont propres au procédé.
+□ Le modèle ne commande jamais directement l'équipement.
+□ Les règles et protections sont indépendantes du modèle.
+□ Une personne habilitée valide chaque activation.
+□ Arrêt, panne, perte réseau et reprise sont testés en milieu protégé.
+□ L'installation et les contrôles sont confiés à des professionnels qualifiés.
+
+À chaque revue de maintenance
+□ Inventaire, responsables et contacts à jour.
+□ Sauvegarde restaurée à l'essai et accès vérifiés.
+□ Incidents, pièces et dépenses consignés.
+□ Documents, licences et logiciels revus.
+□ Procédure de mise hors service disponible.
+
+ANNEXE F — GABARITS DE GOUVERNANCE (6 PAGES CIBLES)
+
+Ces modèles doivent être adaptés et vérifiés au regard du droit applicable.
+Ils ne constituent pas un avis juridique et ne garantissent pas la validité
+d'une collecte ou d'une convention.
+
+F1. Charte communautaire
+Objet et territoire concernés : [à compléter].
+Finalités autorisées et exclues : [à compléter].
+Membres, représentation, durée des mandats et modalités de renouvellement :
+[à compléter].
+Décisions, quorum, traitement des désaccords et droit d'arrêt : [à compléter].
+Accès aux données, sécurité, partage et retrait : [à compléter].
+Rémunération, bénéfices, plaintes et communication : [à compléter].
+Procédure et date de révision : [à compléter].
+Validation et version : [à compléter].
+
+F2. Notice d'information et recueil du consentement, si approprié
+Responsable, contact et finalité : [à compléter].
+Contribution demandée et durée : [à compléter].
+Choix distincts pour consultation, publication, partage et entraînement :
+[à compléter ; ne pas présumer qu'un choix vaut pour les autres].
+Destinataires, conservation et transferts : [à compléter].
+Rémunération, risques, refus et modalités de retrait : [à compléter].
+Limites du retrait après publication ou entraînement : [à compléter].
+Langue, date, moyen de preuve et procédure adaptée : [à compléter].
+Faire valider la base légale et les modalités par un conseil compétent.
+
+F3. Convention de partenariat
+Parties, représentants et contacts : [à compléter].
+Objet, activités, durée et zone : [à compléter].
+Ressources, dépenses, rémunérations et obligations : [à compléter].
+Droits sur les contributions, accès aux données et sécurité : [à compléter].
+Décisions, suivi, communication et traitement des différends : [à compléter].
+Fin de l'accord, restitution, conservation et sortie : [à compléter].
+Date, validation juridique et signatures : [à compléter].
+
+ANNEXE G — GLOSSAIRE (3 PAGES CIBLES)
+
+Actionneur : dispositif transformant une commande en effet physique.
+Adapter : ensemble de paramètres supplémentaires servant à adapter un modèle.
+Anonymisation : traitement visant à empêcher l'identification ; son
+efficacité dépend du contexte et ne peut pas être simplement présumée.
+BMS : système de gestion d'une batterie ; il ne remplace pas toutes les
+protections ni l'expertise d'installation.
+Corpus : ensemble organisé de documents ou de données linguistiques.
+Edge : calcul réalisé près du lieu de collecte ou d'utilisation.
+État sûr : comportement défini par une analyse des risques pour un procédé.
+LLM : modèle de langage capable de générer ou transformer du texte.
+LoRa : technologie radio longue portée ; ne décrit pas à elle seule toute
+une architecture réseau.
+MQTT : protocole de publication et d'abonnement à des messages.
+PM2.5 : particules en suspension de diamètre aérodynamique jusqu'à 2,5 µm.
+QLoRA : méthode d'adaptation utilisant une base quantifiée et des adapters.
+Quantification : représentation numérique moins précise de paramètres.
+RAG : recherche de sources pertinentes suivie d'une génération contextualisée.
+Traçabilité : possibilité de relier une donnée ou une décision à son origine
+et aux opérations qu'elle a subies.
+
+ANNEXE H — RESSOURCES ET BIBLIOGRAPHIE À COMPLÉTER (3 PAGES CIBLES)
+
+Les ressources suivantes constituent des points de départ, non une
+certification du projet. Vérifier les versions, licences et conditions
+d'accès à la date de chaque utilisation.
+
+• NIST, AI Risk Management Framework :
+  https://www.nist.gov/itl/ai-risk-management-framework
+• UNESCO, recommandation sur l'éthique de l'intelligence artificielle :
+  https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
+• Gebru et al., Datasheets for Datasets :
+  https://arxiv.org/abs/1803.09010
+• Dettmers et al., QLoRA :
+  https://arxiv.org/abs/2305.14314
+• FLORES, ressource d'évaluation multilingue :
+  https://github.com/facebookresearch/flores
+  Le dépôt indique ne plus être mis à jour et renvoie vers l'Open Language
+  Data Initiative pour les versions plus récentes. Vérifier la version, les
+  langues et les conditions du jeu retenu avant toute comparaison.
+• OMS, pollution de l'air :
+  https://www.who.int/health-topics/air-pollution
+
+[À ACTUALISER — références officielles applicables au Togo, sources
+primaires WoeLab et HubCity, licences et références effectivement utilisées.]
+Une bibliographie détaillée et un index sont prévus hors des 300 pages
+cibles ; chaque résultat de terrain doit renvoyer à une preuve autorisée.
+
+REGISTRE DE SUIVI DES PASSAGES ÉVOLUTIFS
+
+Ce registre central facilite la revue : les marqueurs présents dans le
+texte indiquent l'endroit exact à reprendre. Une notification ne se réduit
+pas à supprimer un crochet : elle déclenche une décision documentée.
+
+Sujet | Où chercher | Déclencheur | Responsable à désigner | Preuve attendue
+Partenaires et gouvernance | Introduction, 2, 4, 18, F |
+  signature ou changement d'accord | [à désigner] | convention et validation.
+Budget et matériel | 3, 5, 6, B | devis, achat, panne ou changement de prix |
+  [à désigner] | devis daté, facture ou relevé autorisé.
+Énergie et disponibilité | 5, 6, A | fin d'une campagne ou panne |
+  [à désigner] | protocole, mesures et conditions.
+Corpus et langues | 7 à 10, D, F | collecte, correction ou retrait |
+  [à désigner] | registre de droits et bilan anonymisé.
+Modèle et évaluation | 9, 10, D | nouveau modèle, test ou licence |
+  [à désigner] | version, partitions, résultats et avis des locuteurs.
+Capteurs et aménagement | 11 à 13, C | installation, mesure ou changement |
+  [à désigner] | autorisation, méthode, séries et incertitudes.
+Sécurité et action | 14, 15, C, E | modification ou essai de dispositif |
+  [à désigner] | analyse de risques et validation qualifiée.
+Maintenance et réplication | 16 à 18, A | incident, revue ou nouveau site |
+  [à désigner] | journal, budget et décision locale.
+Droit, licences et sources | 4, D, F, H | revue périodique ou changement |
+  [à désigner] | texte applicable et avis compétent datés.
+
+Procédure de mise à jour
+1. Rechercher les expressions « À ACTUALISER », « À CONFIRMER » et
+   « RÉSULTATS TOGO À INSÉRER » dans tous les fichiers du livre.
+2. Identifier un responsable, une échéance ou un événement déclencheur
+   et une preuve pour chaque repère ; consigner les décisions dans le
+   registre local du projet sans y publier de données personnelles.
+3. Vérifier les droits de citation, les variantes linguistiques et la
+   confidentialité. Présenter les résultats négatifs et les incertitudes.
+4. Faire relire le passage par les personnes compétentes et concernées.
+   Enregistrer la date, la version de la source et la décision.
+5. Remplacer le repère par le texte validé ; si la preuve manque, conserver
+   le repère et expliquer pourquoi. Revoir la pagination et la table des
+   matières après mise en page.
+
+Ce registre ne crée pas d'alerte automatique : le projet doit désigner
+une personne responsable de la revue et organiser ses propres notifications.

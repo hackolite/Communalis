@@ -1,0 +1,845 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+
+PARTIE B — ÉNERGIE ET INFRASTRUCTURE PHYSIQUE
+
+Cette partie développe les chapitres 5 et 6 du plan de Communalis. Le livre
+vise 300 pages, dont 32 sont réservées à cette partie dans le plan éditorial :
+ces chiffres sont des objectifs de mise en page, non une description du volume
+atteint ici. Les tableaux et schémas sont des outils de travail ; leur présence
+ne prouve pas qu'une proportion donnée de la maquette finale est atteinte.
+
+Les chiffres explicitement présentés comme hypothèses servent uniquement à
+illustrer un calcul. Ils ne décrivent ni une installation existante, ni un
+prix, ni une performance observée. Les champs [RÉSULTATS TOGO À INSÉRER]
+réservent les observations qui restent inconnues. Les mentions
+[À ACTUALISER — ...] signalent les informations dépendant du temps, du lieu,
+d'une version ou d'une décision extérieure. Les dates, sources et personnes
+responsables de leur vérification seront consignées au moment de les renseigner.
+
+L'énergie et le calcul ne sont pas deux achats indépendants. Une machine rapide
+qui ne fonctionne que lorsque le réseau électrique est stable ne rend pas le
+même service qu'une machine modeste disponible pendant les heures convenues.
+À l'inverse, une alimentation surdimensionnée pour un usage mal défini
+immobilise des ressources qui pourraient financer la formation, la maintenance
+ou l'accès à des documents. La première infrastructure à construire est donc
+un accord sur le service : à qui sert-il, à quel moment, et que fait-on quand
+il s'arrête ?
+
+La partie A fournit le diagnostic, les rôles, le budget et les règles de
+gouvernance. Ici, ces décisions deviennent des contraintes vérifiables. Un
+service documentaire hors ligne, par exemple, peut être important sans être
+vital : ses responsables peuvent convenir qu'il s'arrête pendant une coupure
+prolongée. Si une activité concerne la sécurité ou la santé, elle exige une
+analyse et des dispositifs spécialisés ; rien dans ce livre ne permet de
+présumer qu'un ordinateur de lab ou une alimentation autonome conviennent à
+un usage vital.
+
+
+CHAPITRE 5 — S'ALIMENTER EN ÉNERGIE DE FAÇON AUTONOME
+Maturité : accessible pour le bilan ; installation et maturité globale à
+confirmer selon les conditions locales.
+
+OBJECTIF
+
+Établir un besoin énergétique réaliste, choisir collectivement le service à
+maintenir pendant une interruption, puis faire étudier une alimentation
+adaptée par des professionnels qualifiés. L'autonomie n'est pas une promesse
+d'indépendance absolue : elle désigne ici la capacité, mesurée dans des
+conditions précisées, à assurer des fonctions définies sans une source
+extérieure donnée et pendant une durée donnée.
+
+La décision peut être de ne pas installer de production propre. Réduire les
+heures de fonctionnement, utiliser une machine moins gourmande, conserver une
+copie papier ou organiser un arrêt sûr peut répondre au besoin avec moins de
+complexité. Une alimentation de secours n'a d'intérêt que si elle est sûre,
+entretenue et suffisamment fiable pour le service attendu.
+
+MATÉRIEL ET COMPÉTENCES
+
+Pour l'enquête : inventaire des appareils et de leurs alimentations, cahier
+de relevés, calendrier d'utilisation, documentation disponible, outil de
+mesure de consommation adapté à l'usage et à l'installation, ainsi qu'une
+personne capable de relever les heures et d'interpréter les unités. Un
+wattmètre enfichable approprié peut mesurer certains appareils accessibles ;
+il ne convient pas nécessairement aux charges fixes, aux pointes rapides ou à
+toutes les formes de courant. Son domaine d'emploi et son incertitude doivent
+être vérifiés. Ne pas ouvrir de tableau ni manipuler de conducteur pour
+compléter un inventaire.
+
+Pour la décision : personnes utilisant le service, responsable du lieu,
+personne chargée du budget, mainteneur et professionnel de l'électricité
+qualifié pour le contexte. Selon le projet, associer installateur solaire,
+assureur, fournisseur et autorités compétentes. La personne qui utilise les
+mesures et celle qui garantit la conformité électrique ne sont pas forcément
+les mêmes.
+
+ENCADRÉ — FRONTIÈRE DE SÉCURITÉ
+
+Une installation électrique, même dite basse tension, peut provoquer choc,
+brûlure ou incendie. Les panneaux peuvent produire dès qu'ils sont éclairés ;
+une batterie peut fournir un courant dangereux même lorsque le réseau est
+absent. Ne pas improviser de raccordement, de protection, de mise à la terre,
+de modification d'onduleur, ni ouvrir ou assembler des batteries. Ne pas
+réutiliser des cellules de provenance ou d'état inconnus. La conception,
+l'installation, les essais électriques, la consignation, les réparations et
+les interventions sur les éléments sous tension relèvent de professionnels
+qualifiés, conformément aux prescriptions applicables et aux notices.
+
+En présence de fumée, odeur anormale, gonflement, chaleur inhabituelle ou
+bruit suspect, éloigner les personnes, ne pas toucher l'équipement, faire
+appliquer le plan d'urgence du site et prévenir les services compétents.
+Ne pas tenter une remise en marche. Les moyens d'extinction et d'évacuation
+doivent être déterminés localement avec les professionnels concernés.
+
+1. DÉFINIR LE SERVICE AVANT LA SOURCE
+
+Commencer par une conversation avec les usagers et les personnes qui portent
+les conséquences d'une interruption. Quelles tâches doivent rester possibles ?
+Qui décide qu'elles sont prioritaires ? Un assistant documentaire utilisé deux
+heures par jour n'a pas le même profil qu'un enregistrement continu. Un routeur
+indispensable au réseau local n'est pas nécessairement indispensable à une
+recherche sur une machine isolée. Les charges de ventilation, d'éclairage et
+de communication comptent aussi : une unité centrale alimentée dans une
+pièce inaccessible ou surchauffée ne constitue pas un service disponible.
+
+Décrire trois situations au minimum : fonctionnement ordinaire, coupure courte
+et coupure prolongée. Pour chacune, préciser les heures de service, les
+appareils simultanés, les utilisateurs attendus et les fonctions suspendues.
+Il est souvent plus prudent de garantir un arrêt ordonné et l'accès à une
+copie des documents essentiels que de prétendre maintenir toutes les fonctions.
+Les priorités sont une décision sociale, à revoir avec les personnes concernées.
+
+TABLEAU 5.1 — Contrat de service à compléter
+
+Situation | Fonction maintenue | Durée visée | Fonction suspendue | Décideur
+Ordinaire | [à définir] | [à définir] | [à définir] | [à définir]
+Coupure courte | [à définir] | [à définir] | [à définir] | [à définir]
+Coupure prolongée | [à définir] | [à définir] | [à définir] | [à définir]
+Arrêt sûr | sauvegarde et fermeture selon procédure | [à définir] |
+  calcul non prioritaire | [à définir]
+
+Ne pas confondre objectif et preuve. Une autonomie visée de plusieurs heures
+ne devient une autonomie observée qu'après un essai documenté, dans les
+conditions pertinentes et sans dépasser les limites autorisées du matériel.
+
+2. COMPRENDRE PUISSANCE ET ÉNERGIE
+
+La puissance, en watts (W), indique la vitesse instantanée à laquelle l'énergie
+est utilisée ou fournie. L'énergie, en wattheures (Wh), correspond à la
+puissance intégrée sur une durée. Une puissance constante de 50 W pendant
+quatre heures représente 200 Wh : 50 W × 4 h = 200 Wh. C'est une illustration
+arithmétique, non une mesure du projet. Mille wattheures font un kilowattheure
+(kWh). Quand la puissance varie, il faut la mesurer ou découper le temps en
+états suffisamment représentatifs ; une valeur lue une seconde ne décrit pas
+une journée.
+
+La somme des énergies quotidiennes donne un besoin en Wh par jour. Pour
+choisir une alimentation capable de supporter le fonctionnement simultané,
+il faut aussi examiner les puissances au même instant, notamment le démarrage,
+les pointes et les charges susceptibles de se chevaucher. Additionner les
+puissances maximales inscrites sur toutes les étiquettes peut beaucoup
+surestimer l'usage habituel ; additionner seulement les moyennes peut masquer
+une pointe qui provoquera l'arrêt. Les deux vues sont utiles et ne répondent
+pas à la même question.
+
+Les alimentations, convertisseurs et dispositifs de secours consomment eux
+aussi de l'énergie. Une mesure à la prise peut déjà inclure les pertes du
+bloc d'alimentation d'un ordinateur ; les ajouter une seconde fois fausserait
+le bilan. À l'inverse, mesurer uniquement la consommation interne de la
+machine peut laisser de côté les pertes en amont. Pour chaque chiffre, noter
+où il a été mesuré : prise de l'appareil, sortie d'un équipement, entrée
+réseau ou autre point accessible au professionnel.
+
+3. CONSTITUER L'INVENTAIRE ET MESURER LES USAGES
+
+Étape 1 — Lister chaque charge. Inclure ordinateur, écran, réseau, stockage,
+ventilation, éclairage nécessaire au service, chargeurs et équipements
+annexes. Mentionner les appareils partagés et éviter de compter deux fois
+une même alimentation. Relever le modèle et la plaque signalétique sans la
+traiter automatiquement comme une consommation moyenne.
+
+Étape 2 — Décrire les états. Pour une machine de calcul : éteinte mais
+branchée si pertinent, repos, recherche documentaire, génération, mise à jour
+et sauvegarde. Pour chaque état, estimer sa durée puis la confronter à un
+relevé. Des usages intermittents ou une tâche de sauvegarde nocturne peuvent
+inverser les conclusions d'un bilan fondé sur la seule journée de travail.
+
+Étape 3 — Mesurer sans créer de danger. Utiliser uniquement des points de
+branchement accessibles et un instrument adapté ; suivre sa notice. Faire
+mesurer les charges fixes ou les pointes que l'instrument ne sait pas saisir
+par une personne qualifiée. Noter date, durée, instrument, lieu de mesure,
+incertitude connue, activité et conditions. Si l'instrument donne directement
+des Wh sur la période, conserver cette valeur et la durée ; elle intègre mieux
+les variations qu'une lecture instantanée isolée.
+
+Étape 4 — Répéter sur des journées représentatives : journée calme, journée
+chargée et, si elle existe, journée de mise à jour ou de maintenance. En
+l'absence de mesure, inscrire une estimation comme telle et prévoir sa
+vérification. Une moyenne hebdomadaire ne suffit pas à garantir une journée
+exceptionnelle ; conserver aussi le profil de pointe et les périodes sans
+production.
+
+TABLEAU 5.2 — Registre de charges
+
+Appareil | État | W moyen ou Wh relevés | Durée | Wh de l'état |
+  mesure/estimation | point et date | priorité
+[à compléter] | repos | [à compléter] | [à compléter] | [à calculer] |
+  [à préciser] | [à préciser] | [à décider]
+[à compléter] | travail | [à compléter] | [à compléter] | [à calculer] |
+  [à préciser] | [à préciser] | [à décider]
+[à compléter] | sauvegarde | [à compléter] | [à compléter] | [à calculer] |
+  [à préciser] | [à préciser] | [à décider]
+
+Exemple fictif, exclusivement pour comprendre la méthode : une machine est
+supposée consommer 50 W pendant 4 h et 10 W pendant 2 h. L'énergie de ces
+deux états est de 50 × 4 + 10 × 2 = 220 Wh. Si un écran supposé à 20 W
+fonctionne pendant les mêmes 4 h de travail, il ajoute 80 Wh ; le total
+illustratif est 300 Wh, avant les autres charges et les pertes non déjà
+comptées. La puissance simultanée pendant le travail est ici supposée égale
+à 70 W, sans préjuger des pointes. Les chiffres ne sont ni des recommandations
+de matériel ni des observations au Togo.
+
+Étape 5 — Dresser une courbe simple par tranche horaire. La courbe révèle les
+chevauchements que le total journalier cache. Elle permet de discuter le
+déplacement volontaire des tâches non urgentes vers les heures où une source
+est disponible. Ne jamais programmer une opération risquée uniquement parce
+que l'énergie semble abondante : les autorisations et la supervision restent
+nécessaires.
+
+SCHÉMA 5.1 — Exemple de lecture d'une journée, sans échelle de puissance
+
+Heures       matin          milieu de journée       soir / nuit
+Service      consultation   consultation + travaux  arrêt ou veille
+Charges      essentielles   essentielles + différ.  [à mesurer]
+Questions    démarrage ?    simultanéité ?          veille nécessaire ?
+
+Le relevé des interruptions du réseau complète ce tableau : heure de début,
+durée, conséquence sur les usages, méthode de constat et éventuelle
+incertitude. Une série courte ne représente pas nécessairement toute une
+saison. Les événements rares mais importants doivent être signalés séparément
+plutôt que noyés dans une moyenne.
+
+4. TRADUIRE LE BESOIN EN CAHIER DES CHARGES
+
+Le cahier des charges distingue l'énergie nécessaire, la puissance simultanée
+et la qualité de service. Il décrit aussi les tolérances : interruption
+acceptable ou non, temps de reprise, pertes de données acceptables, niveau de
+bruit et espace disponible. Le professionnel étudiera les caractéristiques
+électriques, la compatibilité des équipements et les protections appropriées.
+
+Pour un premier ordre de grandeur, on peut multiplier l'énergie quotidienne
+des seules charges prioritaires par le nombre de jours d'autonomie souhaité.
+Ce produit est une demande d'énergie au niveau considéré, pas une capacité
+nominale de batterie prête à acheter. Le calcul professionnel doit ensuite
+tenir compte des pertes entre stockage et charges, de la fraction utilisable
+autorisée par le fabricant, du vieillissement, de la température, de la
+puissance et des conditions de recharge. Il ne faut pas appliquer deux fois
+une correction déjà incluse. La capacité utilisable réelle varie avec le
+système et son état ; elle ne se déduit pas de l'étiquette seule.
+
+La durée d'autonomie dépend également du point de départ. Un stockage
+partiellement chargé au moment de la coupure ne garantit pas la même durée
+qu'un stockage pleinement disponible. En présence de production pendant la
+coupure, le résultat dépend de son calendrier : une énergie journalière
+totale suffisante ne garantit pas que la puissance sera disponible au bon
+moment. Demander une simulation ou un bilan horaire pour les scénarios
+défavorables, puis conserver les hypothèses pour pouvoir les contester.
+
+ENCADRÉ — MARGES ET INCERTITUDES
+
+Une marge n'est pas une formule magique. Si le besoin augmente, si la saison
+défavorable est sous-représentée ou si la batterie vieillit, le service peut
+échouer malgré une marge arbitraire. Inscrire séparément les incertitudes de
+mesure, de comportement des usagers, de météo et de vieillissement. Demander
+au professionnel une analyse de sensibilité et les conditions qui feraient
+changer sa recommandation. Comparer les solutions à périmètre et exigences de
+service identiques.
+
+5. COMPARER LES SOURCES ET LE STOCKAGE
+
+Le raccordement existant, lorsqu'il est disponible et approprié, peut rester
+la source principale avec un dispositif de secours. Une production solaire
+peut réduire certaines interruptions ou certains achats d'énergie, mais
+elle n'est pas garantie par la seule présence de panneaux. Le choix dépend
+de l'usage, de la saison, de la maintenance et du cadre réglementaire.
+
+Pour examiner le solaire, demander des données de rayonnement pertinentes
+pour le site et leur période de référence. L'ensoleillement d'une ville
+voisine, une moyenne annuelle ou la puissance nominale d'un panneau ne
+décrivent pas directement la production utilisable sur un toit précis. Ombres
+à différentes heures et saisons, orientation, inclinaison, température,
+salissures, vieillissement, conversion et disponibilité interviennent. Un
+professionnel doit vérifier les hypothèses, la structure porteuse, l'accès
+sécurisé et la production attendue pour les périodes difficiles.
+[À ACTUALISER — sources de rayonnement local, périodes couvertes et méthode
+de calcul retenue ; date et incertitude.]
+
+Le petit éolien ne doit pas être acheté sur la base d'une impression de vent.
+Il nécessite des mesures adaptées au site et à la hauteur envisagée, une étude
+des obstacles, des contraintes mécaniques, des nuisances et de la sécurité.
+Un micro-réseau ou tout partage d'énergie entre bâtiments ajoute des questions
+de propriété, de protection, de responsabilité et d'autorisation. Le
+raccordement ou l'interaction avec le réseau public requiert une étude par
+des professionnels et l'accord des organismes compétents.
+[À ACTUALISER — règles locales de raccordement, autorisations, normes,
+assurance et interlocuteurs applicables au site.]
+
+Le stockage peut faciliter un arrêt ordonné ou prolonger le service ; il
+introduit aussi des risques et des charges de maintenance. Comparer les
+solutions comme des systèmes complets, non comme des cellules isolées :
+documentation, certification applicable, compatibilité, garantie, état
+initial, conditions d'utilisation, lieu d'installation, assistance et
+filière de fin de vie. Une solution commerciale complète avec protections
+intégrées peut simplifier l'exploitation, sans supprimer le besoin d'une
+installation qualifiée. Les technologies, dont le lithium-fer-phosphate,
+présentent des caractéristiques différentes : aucune n'est dispensée d'une
+analyse de risques.
+
+Un système de gestion de batterie, ou BMS, surveille et gère certaines
+limites selon sa conception ; il ne remplace ni l'ensemble des protections,
+ni un confinement approprié, ni les essais et l'installation professionnels.
+La comparaison avec un assemblage spécialisé ne constitue pas une invitation
+à fabriquer un pack. Sans fournisseur compétent, documentation vérifiable et
+prise en charge des risques, renoncer à cette option.
+
+TABLEAU 5.3 — Comparaison à documenter, non classement universel
+
+Option | Question de service | Dépendances et risques | Preuves à demander
+Réseau existant | Disponibilité aux heures utiles ? | Coupures, qualité,
+  raccordement | relevés et conditions locales
+Secours commercial adapté | Arrêt sûr ou continuité ? | Entretien, autonomie
+  réelle, remplacement | notice, essai encadré, garantie
+Solaire avec stockage | Production au moment utile ? | Saison, ombre,
+  installation, batterie | étude de site, hypothèses, maintenance
+Petit éolien | Ressource effectivement suffisante ? | Site, structure,
+  nuisances et sécurité | mesures et étude indépendante
+Organisation sans secours | Interruption acceptable ? | Service suspendu,
+  accès aux documents | procédure et accord des usagers
+
+[À ACTUALISER — disponibilité, conditions de garantie, coûts complets,
+délais, assurance et filières de reprise des options effectivement proposées.]
+Les prix doivent provenir de devis datés, comparables et obtenus localement ;
+aucun prix n'est avancé ici. Inclure étude, installation, exploitation,
+remplacement, transport, formation et retrait, en précisant qui paie.
+
+6. ORGANISER L'INSTALLATION ET SA RÉCEPTION
+
+Transmettre au professionnel le contrat de service, les profils de charge,
+les relevés de coupures et les contraintes du lieu. Demander un dossier qui
+identifie les équipements, leurs limites et leurs protections, les conditions
+d'implantation et d'aération, les responsabilités et les documents de
+conformité applicables. Le site doit permettre un accès sûr aux personnes
+autorisées, protéger le matériel contre l'eau et les accès non maîtrisés, et
+respecter les instructions des fabricants. Ces critères ne remplacent pas une
+visite ni une conception qualifiée.
+
+Avant la mise en service, convenir de la réception : conformité vérifiée par
+la personne compétente, identification des circuits et charges dans la
+documentation remise, démonstration des commandes destinées aux utilisateurs,
+coordonnées d'urgence, garantie et calendrier d'entretien. Les schémas
+techniques d'exécution appartiennent au dossier établi par les professionnels ;
+la figure ci-dessous décrit seulement des fonctions.
+
+SCHÉMA 5.2 — Bilan fonctionnel, PAS un schéma de câblage
+
+Source(s) autorisée(s) → conversion et protections professionnelles
+                              ↕
+                      stockage protégé, si retenu
+                              ↓
+                  service prioritaire défini ensemble
+                  service différable ou interrompu
+                              ↓
+             relevés, maintenance et décision humaine
+
+L'équipe reçoit une explication compréhensible de ce qu'elle peut faire
+elle-même : par exemple lire un indicateur prévu par le fabricant ou arrêter
+normalement un logiciel. Elle reçoit aussi une liste explicite de ce qu'elle
+ne doit pas faire. Un dossier rangé près du matériel ne suffit pas : une
+copie accessible, protégée et connue de plusieurs responsables évite qu'un
+départ de personnel paralyse le service.
+
+7. PRÉPARER ET ÉVALUER UNE COUPURE
+
+L'essai de coupure doit être autorisé, planifié et encadré par les personnes
+compétentes. Il ne consiste pas à provoquer une panne de manière improvisée.
+Vérifier préalablement qu'aucune charge critique ou personne ne sera mise en
+danger, qu'une sauvegarde utilisable existe, qu'un retour à l'état normal est
+prévu et que le fabricant autorise l'essai. Le professionnel définit la
+méthode et les limites ; arrêter l'essai en cas d'anomalie.
+
+Avant l'essai, noter les fonctions retenues, l'état initial indiqué par les
+équipements, les charges réellement actives et les conditions ambiantes.
+Pendant l'essai, relever les heures, les interruptions, les alertes et les
+fonctions effectivement accessibles. Ne pas extrapoler une autonomie totale
+à partir d'un indicateur instantané ou prolonger l'essai au-delà des limites
+convenues. Après l'essai, contrôler la reprise du service, l'intégrité des
+fichiers et l'état des sauvegardes. Une autonomie de secours réussie inclut
+la capacité de recharger avant la coupure suivante.
+
+Mesurer séparément la disponibilité du service et la présence de courant.
+Une machine sous tension peut être inutilisable si son stockage est corrompu
+ou si le réseau local ne répond plus. La disponibilité observée pendant un
+intervalle se calcule comme la durée où la fonction définie a été vérifiée
+accessible, divisée par la durée où elle devait l'être. Indiquer l'intervalle,
+la fréquence des vérifications et les interruptions non observées possibles ;
+un pourcentage calculé sur une courte période ne prédit pas l'année suivante.
+
+8. EXPLOITER, ENTRETENIR ET RENOUVELER
+
+Désigner un responsable et un suppléant ; inscrire au calendrier les contrôles
+autorisés, les visites professionnelles et les échéances de garantie. Suivre
+les alertes, l'évolution de l'autonomie observée, les interruptions et les
+interventions, sans demander aux utilisateurs d'ouvrir des équipements.
+Le nettoyage de panneaux ou d'équipements en hauteur n'est pas une tâche
+anodine : sa méthode et les moyens de protection doivent être définis par des
+personnes compétentes. Suivre les consignes du fabricant pour tout nettoyage
+accessible et ne pas obstruer les aérations.
+
+Prévoir qui déclenche une intervention, qui autorise la dépense et quelle
+solution temporaire permet de poursuivre ou de suspendre l'activité. Le budget
+de remplacement et la reprise en fin de vie font partie de la décision
+initiale, pas d'une note ajoutée après l'achat. Conserver les documents
+nécessaires à la garantie et aux interventions ; ne pas stocker de données
+personnelles dans un journal technique sans raison définie.
+
+RÉSULTATS MESURÉS — GABARIT À REMPLIR
+
+[RÉSULTATS TOGO À INSÉRER] Site et période ; responsables des relevés ;
+méthode et instrument ; journées ou saisons représentées et non représentées.
+
+[RÉSULTATS TOGO À INSÉRER] Par charge et par état : puissance, durée,
+énergie et point de mesure ; puissance simultanée et pointes capturées ou
+non capturées ; pertes incluses et exclusions ; incertitude connue.
+
+[RÉSULTATS TOGO À INSÉRER] Coupures observées, conditions météo, état initial
+du stockage, service demandé et service effectivement rendu, durée d'essai,
+arrêt éventuel et résultats de reprise. Joindre les données brutes autorisées,
+leur date et les limites ; distinguer essai encadré et événement réel.
+
+[RÉSULTATS TOGO À INSÉRER] Écarts entre cahier des charges et observations,
+incidents, décisions prises avec les utilisateurs et date de réévaluation.
+Une absence de relevés ou un essai interrompu doivent être publiés comme tels,
+pas convertis en réussite.
+
+LIMITES ET ÉCHECS POSSIBLES
+
+Un appareil de mesure inadapté peut manquer une pointe ; une mesure correcte
+mais prise un jour atypique peut conduire au même mauvais choix. La poussière,
+la chaleur, l'ombre et le vieillissement peuvent réduire la production ou
+modifier la capacité disponible. Les utilisateurs peuvent aussi adopter un
+nouveau service plus consommateur que celui initialement prévu. Comparer les
+relevés au cahier des charges chaque fois que les usages changent.
+
+Une batterie indisponible, un convertisseur en panne ou une pièce introuvable
+peut interrompre toute la chaîne. L'autonomie affichée ne protège pas contre
+une mauvaise maintenance ni contre une erreur humaine. Si le service ne tient
+pas les conditions convenues, suspendre les fonctions non essentielles,
+examiner les mesures avec le professionnel et les usagers, puis revoir le
+périmètre ; ne pas compenser en contournant une protection. Si les risques ou
+le financement ne sont pas maîtrisés, revenir à une solution plus simple,
+voire renoncer à l'installation.
+
+CHECK-LIST DU CHAPITRE 5
+
+□ Service prioritaire, heures et durée d'interruption acceptable décidés.
+□ Charges, états, simultanéité et pointes recensés sans double comptage.
+□ Wh et W distingués ; dates, instruments et incertitudes conservés.
+□ Scénarios de coupure et période défavorable examinés.
+□ Production et stockage étudiés avec hypothèses locales documentées.
+□ Conformité, protections, implantation et interventions confiées à des
+  professionnels qualifiés ; aucune batterie assemblée sur la foi du livre.
+□ Devis datés, maintenance, remplacement et fin de vie prévus.
+□ Essai encadré, sauvegarde et reprise vérifiés, ou essai non réalisé signalé.
+□ Responsables, suppléants, limites d'intervention et urgence connus.
+□ Observations et échecs conservés ; révision prévue si le service change.
+
+
+CHAPITRE 6 — MATÉRIEL DE CALCUL EN PÉRIPHÉRIE
+Maturité : expérimentale pour les usages et performances à vérifier.
+
+OBJECTIF
+
+Choisir, installer et évaluer une capacité de calcul proche des usages lorsque
+cette proximité apporte un bénéfice démontrable. Le choix doit servir une tâche
+précise et rester compatible avec l'énergie, les compétences, les droits sur
+les données et les moyens de maintenance. « En périphérie » ou « edge »
+décrit le lieu et l'organisation du traitement, pas une garantie automatique
+de confidentialité, de souveraineté, de faible consommation ou de qualité.
+
+Le résultat recherché peut être un service documentaire local utilisable sans
+connexion extérieure, un poste de consultation ou un traitement limité de
+mesures. Il peut aussi être la décision de conserver une recherche classique
+sans modèle génératif. On ne suppose ni qu'un ordinateur compact exécutera
+tous les modèles, ni que la génération de texte améliorera toute recherche.
+
+MATÉRIEL ET COMPÉTENCES
+
+Il faut une description du besoin, les machines candidates effectivement
+accessibles, leurs notices, un instrument adapté à la mesure d'énergie, des
+documents autorisés, un jeu de tâches de référence et les moyens existants
+pour relever les temps et incidents. Une personne compétente en systèmes
+installe et maintient les logiciels ; une autre, ou la même si elle possède
+les compétences, vérifie les sauvegardes et les accès. Les utilisateurs
+participent à l'évaluation de l'utilité et de la qualité des réponses.
+
+Les choix électriques et les interventions sur une installation fixe restent
+du ressort d'un professionnel qualifié, comme au chapitre 5. Les notices et
+les limites de température et d'humidité des fabricants prévalent sur une
+habitude locale ou une règle générale imaginée.
+
+1. DESSINER LES FRONTIÈRES DU SERVICE
+
+Le calcul local rapproche certaines opérations des personnes et des données.
+Il peut permettre un fonctionnement sans réseau extérieur, réduire des
+transferts ou rendre possible un contrôle direct du matériel. Il transfère
+aussi au lab la responsabilité des mises à jour, accès, sauvegardes, pannes
+et remplacements. Si l'authentification, les modèles ou les licences exigent
+une connexion, le service n'est pas entièrement autonome même si l'interface
+se trouve sur place.
+
+Décrire séparément les opérations qui restent locales et celles qui sortent :
+téléchargement de logiciel, récupération d'une mise à jour, requête à un
+service externe, diagnostic, synchronisation ou sauvegarde distante. Une
+architecture hybride peut être pertinente si ces flux sont explicitement
+choisis et autorisés. Préciser ce qui se passe quand chacun d'eux est absent.
+La sauvegarde locale est commode mais insuffisante si elle partage le même
+risque physique que la machine principale.
+
+SCHÉMA 6.1 — Frontières à examiner
+
+Personne → interface → recherche dans documents autorisés → réponse + sources
+                         |                         |
+                    stockage local            calcul local, si retenu
+                         |
+            sauvegarde séparée et restauration vérifiée
+
+   Connexion extérieure éventuelle ↔ mises à jour / synchronisation autorisées
+   Coupure extérieure → mode local défini OU suspension annoncée du service
+
+La séparation des données ne découle pas de ce schéma : il faut encore
+configurer les droits, contrôler les accès physiques et logiciels et décider
+des durées de conservation. Une machine locale compromise ou volée expose
+les données qu'elle contient ; une journalisation excessive peut exposer les
+questions des usagers. Les règles du chapitre 4 restent applicables.
+
+2. FORMULER DES TÂCHES COMPARABLES
+
+Un banc d'essai commence avec un usage : qui pose quelle question, dans
+quelle langue, sur quels documents, avec quelle exigence de source et de
+temps ? Décrire les conditions de réussite avant de mesurer. Pour une
+recherche documentaire, les critères peuvent inclure la présence de la bonne
+source, la fidélité de la réponse, la possibilité de dire « je ne sais pas »
+et la facilité de consultation. Pour un traitement de capteurs, ils peuvent
+inclure la perte de données et la date de la dernière mesure valide.
+
+Constituer un jeu de tâches autorisées et représentatives avec les futurs
+utilisateurs. Inclure des questions dont la réponse se trouve dans les
+documents, des formulations variées, des questions ambiguës et des questions
+sans réponse dans le corpus. Documenter les langues, la taille et la version
+du corpus, les réponses de référence et la manière de traiter les désaccords.
+Éviter de placer des informations sensibles dans un jeu partagé ; si leur
+emploi est nécessaire et autorisé, limiter les accès et la conservation.
+Ne pas choisir le matériel en évaluant seulement les exemples qu'il réussit.
+
+Comparer au moins une solution de référence adaptée : recherche documentaire
+sans génération, procédure manuelle ou système déjà utilisé. Si les tâches
+ou les niveaux de qualité diffèrent, le résultat ne permet pas de classer
+directement les équipements. Une réponse rapide mais sans source ou erronée
+ne vaut pas une réponse correcte simplement parce qu'elle arrive plus tôt.
+
+TABLEAU 6.1 — Fiche de tâche
+
+Champ | À préciser avant l'essai
+Usage et public | [à définir avec les utilisateurs]
+Question ou opération | [à consigner, sans donnée sensible inutile]
+Corpus et autorisation | [version, date et périmètre]
+Résultat attendu | [source ou critères de réussite, y compris absence de réponse]
+Conditions | [langue, contexte, nombre d'utilisateurs simultanés]
+Critères | [qualité, délai acceptable, énergie et disponibilité]
+Référence | [recherche manuelle ou autre méthode, même tâche]
+
+3. CHOISIR UNE FAMILLE DE MATÉRIEL, PAS UNE PROMESSE
+
+Une carte embarquée peut être compacte et adaptée à certaines tâches simples ;
+ses limites de mémoire, de stockage, de connectique et de support doivent être
+vérifiées. Un mini-PC peut offrir davantage de souplesse dans un faible
+encombrement, mais son refroidissement et ses possibilités de réparation
+varient. Un ordinateur de bureau réemployé peut être accessible et réparable,
+mais son état, sa consommation et les pièces de rechange demandent examen.
+Un serveur peut accueillir davantage de charges ou d'utilisateurs, au prix
+éventuel d'une alimentation, d'un refroidissement et d'une administration
+plus exigeants. Ces descriptions ne sont pas un classement des performances.
+
+Pour chaque candidat, relever le modèle exact, l'état neuf ou réemployé,
+le processeur, la mémoire utilisable, le stockage, les interfaces, le support
+logiciel et les limites environnementales. Si un accélérateur est envisagé,
+vérifier le support réel de la pile logicielle et la mémoire accessible à la
+tâche ; une capacité annoncée sur une fiche ne signifie pas que tout le
+modèle ou son contexte y tiendra. Vérifier également l'alimentation livrée,
+les mises à jour, la disponibilité des pièces et la possibilité d'une
+réparation locale compétente.
+
+TABLEAU 6.2 — Comparaison de candidats
+
+Critère | Candidat A | Candidat B | Référence / preuve
+Tâche et qualité obtenue | [à mesurer] | [à mesurer] | jeu commun
+Mémoire réellement disponible | [à relever] | [à relever] | outil et date
+Stockage et sauvegarde | [à relever] | [à relever] | configuration
+Wh par tâche et repos | [à mesurer] | [à mesurer] | point de mesure
+Temps de réponse et échecs | [à mesurer] | [à mesurer] | protocole commun
+Température et bruit | [à mesurer] | [à mesurer] | conditions ambiantes
+Support et pièces | [à vérifier] | [à vérifier] | fournisseur et date
+Coût complet | [devis] | [devis] | périmètre et validité
+
+[À ACTUALISER — modèles disponibles, versions compatibles, garanties,
+licences, prix, support et conditions de réparation ; citer les sources et
+leurs dates.] Un matériel offert n'est pas nécessairement gratuit à exploiter :
+transport, alimentation, maintenance, formation et remplacement comptent.
+Le réemploi impose de vérifier l'état, l'effacement autorisé des données
+précédentes, la provenance, la sécurité et le support restant ; refuser un
+équipement dangereux ou impossible à maintenir.
+
+4. ESTIMER LA MÉMOIRE SANS CONFONDRE FICHIER ET EXÉCUTION
+
+La taille d'un fichier de modèle n'est qu'une partie du besoin. Pendant
+l'exécution s'ajoutent notamment le système d'exploitation, le programme,
+les bibliothèques, les documents et index, les données temporaires, le
+contexte de la requête et les opérations simultanées. Selon l'architecture,
+une partie peut résider dans une mémoire d'accélérateur et une autre en
+mémoire principale ; le partage et les copies dépendent des logiciels et du
+matériel. Une machine qui charge un modèle au démarrage peut manquer de
+mémoire dès qu'une requête plus longue ou un second utilisateur arrive.
+
+La quantification représente certains paramètres avec une précision réduite
+et peut diminuer les besoins de stockage ou de mémoire. Elle peut aussi
+modifier la qualité, la vitesse et la compatibilité. Son effet ne se déduit
+pas du seul nombre de bits : comparer les versions avec les mêmes tâches et
+examiner les réponses, en particulier dans les langues concernées. Le contexte
+maximal annoncé n'est pas nécessairement utilisable avec la mémoire disponible
+ou à un délai acceptable.
+
+Faire un inventaire au repos, après chargement et pendant les tâches les plus
+exigeantes prévues. Relever mémoire utilisée, mémoire réellement disponible,
+utilisation éventuelle du stockage comme mémoire de secours, erreurs et
+fermetures. Inclure le corpus et les autres services nécessaires. Une forte
+utilisation du stockage comme mémoire peut permettre le démarrage tout en
+rendant le service impraticable ; mesurer la latence et l'énergie plutôt que
+conclure que « ça tient ». Conserver une marge adaptée à l'incertitude et aux
+évolutions, justifiée par des essais ; aucune valeur universelle n'est imposée.
+
+ENCADRÉ — LA MACHINE QUI DÉMARRE N'EST PAS ENCORE UN SERVICE
+
+Le chargement initial ne prouve ni la qualité d'une réponse, ni la capacité
+à servir plusieurs personnes, ni la stabilité au chaud, ni la possibilité
+de récupérer après une coupure. Ne valider un candidat qu'après des essais
+correspondant au service convenu et après vérification des sauvegardes.
+
+5. PRÉPARER LE LIEU ET L'EXPLOITATION
+
+L'implantation doit concilier sécurité physique, aération, accès pour la
+maintenance et protection contre poussière, humidité et projections.
+Consulter les notices : un boîtier trop fermé, un filtre non entretenu ou
+une machine placée au soleil peuvent faire monter la température. À l'inverse,
+laisser une machine sans protection dans un passage fréquenté l'expose aux
+chocs et aux accès non autorisés. Une solution adaptée au site doit être
+validée par une personne compétente, sans obstruer les entrées et sorties
+d'air ni modifier les protections électriques.
+
+Relever l'environnement pendant les essais, avec l'emplacement et l'instrument
+utilisés. La température indiquée par un capteur interne n'est pas la
+température ambiante : consigner les deux séparément quand elles sont
+disponibles. Un ventilateur plus bruyant ou une baisse de fréquence peuvent
+signaler une contrainte thermique ; ces signes ne suffisent pas à diagnostiquer
+seuls une panne. Prévoir un nettoyage hors tension uniquement dans les limites
+autorisées par la notice et les compétences de la personne ; toute intervention
+électrique ou ouverture non autorisée revient au professionnel.
+
+Attribuer un responsable de l'exploitation et un suppléant. Inventorier
+machine, numéro d'identification approprié, versions, supports, configuration
+et contacts de maintenance ; protéger ce registre s'il facilite un accès
+non autorisé. Établir des comptes individuels lorsque possible, limiter les
+privilèges et retirer les accès devenus inutiles. Ne jamais inscrire de mot
+de passe dans un cahier accessible à tous. Le chiffrement, lorsqu'il est
+pertinent, exige une gestion des clés et une procédure de récupération :
+une clé perdue peut rendre une sauvegarde inutilisable.
+
+6. MESURER LA QUALITÉ, LE TEMPS ET L'ÉNERGIE
+
+Étape 1 — Geler le scénario d'essai. Noter matériel, alimentation, système,
+versions des logiciels et du modèle, quantification, paramètres de génération,
+longueur de contexte, corpus, index, connectivité et nombre d'utilisateurs.
+Utiliser le même jeu de tâches, les mêmes règles et, autant que possible, le
+même ordre ou un ordre documenté. Si une différence est inévitable, la noter
+et ne pas attribuer automatiquement l'écart au matériel.
+
+Étape 2 — Définir les temps. Pour une requête, mesurer le délai entre la
+soumission et l'apparition de la première réponse, puis jusqu'à la réponse
+complète si l'interface le permet. Préciser si la recherche documentaire,
+le chargement du modèle et l'attente dans une file sont inclus. Un démarrage
+à froid et une requête après chargement sont deux situations différentes.
+Conserver aussi les délais des échecs et des interruptions ; les exclure
+sans le signaler rendrait artificiellement le système plus rapide.
+
+Étape 3 — Mesurer l'énergie au même périmètre. Relever les Wh à la prise
+appropriée pour une série de tâches, si l'instrument est adapté, et préciser
+si écran, réseau ou stockage externe sont inclus. Diviser l'énergie totale
+de la série par le nombre de tâches effectivement accomplies donne des Wh
+par tâche réussie ; rapporter aussi le nombre de tentatives et d'échecs.
+Ne pas comparer ce chiffre avec celui d'un autre système dont la qualité
+ou le périmètre diffère. Pour isoler approximativement le supplément dû à
+la tâche, on peut comparer à un repos mesuré sur une durée équivalente, en
+indiquant la méthode et l'incertitude ; ne pas présenter cette différence
+comme une mesure exacte.
+
+Étape 4 — Évaluer les réponses. Faire examiner les résultats avec une grille
+préétablie et les sources accessibles. Définir ce qui constitue une réponse
+correcte, une source pertinente, une abstention justifiée et une erreur.
+Noter le nombre évalué et les désaccords, puis calculer les proportions avec
+leurs dénominateurs. Une petite série peut montrer un problème mais ne prouve
+pas une fiabilité générale ; ne pas extrapoler à d'autres langues ou corpus.
+
+Étape 5 — Répéter et documenter. Inclure des périodes de repos, de charge
+soutenue et les conditions de chaleur réellement rencontrées, dans les
+limites du fabricant. Rapporter le nombre d'essais, la médiane des délais
+et leur dispersion ou les valeurs individuelles si l'échantillon est petit.
+Un percentile élevé calculé sur très peu d'essais serait trompeur ; signaler
+plutôt le maximum observé et la taille de l'échantillon. Consigner également
+erreurs, redémarrages et baisse éventuelle des performances au fil du temps.
+
+TABLEAU 6.3 — Journal d'essai
+
+Essai/date | Tâche et version | Conditions et charge | Début/fin |
+  délai première/complète | Wh et périmètre | résultat et source |
+  erreur ou interruption
+[à remplir] | [à remplir] | [à remplir] | [à remplir] | [à calculer] |
+  [à mesurer] | [à évaluer] | [à décrire]
+
+La consommation d'une tâche ne se résume pas à la puissance maximale.
+À titre purement arithmétique, une puissance moyenne supposée de 60 W pendant
+une demi-heure représente 30 Wh. Ce chiffre inventé pour le calcul ne mesure
+aucune machine. En usage réel, le temps de repos, le refroidissement, les
+équipements associés et les tentatives ratées peuvent modifier le bilan.
+Transmettre au chapitre 5 les profils réellement mesurés, pas une seule
+valeur publicitaire.
+
+7. TESTER L'ABSENCE DE CONNEXION ET LA REPRISE
+
+Préparer l'essai avec l'équipe et les usagers, sans interrompre une activité
+critique. Vérifier que les fichiers et modèles nécessaires sont présents,
+que leurs droits d'utilisation permettent le scénario et que les mises à
+jour ou l'authentification ne sont pas supposées disponibles. Utiliser une
+méthode de déconnexion autorisée par le responsable du réseau, sans toucher
+à l'installation électrique. Exécuter le jeu de tâches local ; observer
+quelles fonctions échouent, quels messages sont affichés et si les données
+restent accessibles aux seules personnes autorisées.
+
+Pour la reprise après interruption de courant, coordonner l'essai encadré
+avec le professionnel du chapitre 5. Avant l'essai, vérifier une sauvegarde
+séparée et une procédure de restauration. Après le redémarrage, contrôler
+le système de fichiers par les moyens prévus, l'accès aux documents, la
+cohérence de l'index, la date des données et la fonctionnalité du service.
+Comparer les fichiers restaurés ou leurs contrôles d'intégrité à un état de
+référence connu, selon la procédure retenue. Un démarrage de l'écran ne prouve
+pas la restauration des données.
+
+Une sauvegarde n'est démontrée que si une restauration testée retrouve les
+données nécessaires dans un délai acceptable et avec les autorisations
+correctes. Indiquer ce qui est sauvegardé, la fréquence, le lieu séparé,
+la personne responsable, le délai de restauration visé et la perte maximale
+de données acceptée. Protéger les copies et leurs clés ; respecter les droits
+de retrait et les règles de conservation. Tester la restauration sur un
+environnement approprié sans écraser les données de production.
+
+8. PRENDRE UNE DÉCISION ET SUIVRE LE MATÉRIEL
+
+Une fois les mesures recueillies, réunir utilisateurs, maintenance et
+responsables du budget. Écarter d'abord les options qui ne respectent pas
+les exigences de sécurité, de droits ou de service ; comparer ensuite les
+compromis des options restantes. Une machine moins rapide peut suffire si
+le délai reste acceptable et si elle facilite maintenance et autonomie.
+Une machine plus rapide peut être préférable pour une tâche nécessaire,
+mais seulement si l'alimentation, la chaleur et le support suivent.
+
+Consigner la décision et ses conditions : usage accepté, volume de requêtes,
+mode hors ligne, limite de simultanéité constatée, responsable, pièces et
+prochaine évaluation. Prévoir une voie de retour vers la procédure de
+référence. Une modification du corpus, du modèle, du nombre d'utilisateurs
+ou du logiciel justifie de refaire au moins les essais concernés :
+[À ACTUALISER — versions, correctifs de sécurité, compatibilités et conditions
+de support des composants effectivement retenus.]
+
+La maintenance n'est pas seulement une liste de mises à jour. Il faut
+surveiller les supports de stockage, contrôler l'espace libre, vérifier les
+sauvegardes, appliquer les correctifs selon une procédure testée, suivre les
+incidents et former une seconde personne. Une mise à jour peut casser une
+compatibilité ; prévoir une sauvegarde et un retour arrière appropriés avant
+de la déployer. Si le service est isolé d'Internet, organiser un transfert
+des mises à jour vérifiées qui respecte les règles de sécurité du lab.
+
+RÉSULTATS MESURÉS — GABARIT À REMPLIR
+
+[RÉSULTATS TOGO À INSÉRER] Site, dates, matériel exact et état, configuration,
+versions, corpus, autorisations, langues, conditions ambiantes et instruments.
+
+[RÉSULTATS TOGO À INSÉRER] Tâches prévues et réellement exécutées ; nombre
+de tentatives, réussites, erreurs et abandons ; méthode d'évaluation, qualité,
+sources et désaccords. Conserver le dénominateur de chaque proportion.
+
+[RÉSULTATS TOGO À INSÉRER] Mémoire, stockage, puissance et énergie au repos
+et pendant les tâches ; périmètre de mesure, délais, dispersion, température,
+durée de charge et incertitudes. Mentionner les mesures impossibles ou absentes.
+
+[RÉSULTATS TOGO À INSÉRER] Fonctionnement sans connexion, interruptions,
+reprise, restauration et incidents ; décisions prises avec les utilisateurs,
+limites et comparaison avec la solution de référence.
+
+LIMITES ET ÉCHECS POSSIBLES
+
+Un résultat sur un modèle, une langue et un corpus ne s'applique pas
+automatiquement à un autre. Un changement de version peut modifier la
+mémoire, la qualité ou les délais. Une mesure courte peut manquer une
+surchauffe, une panne intermittente ou une saturation à plusieurs utilisateurs.
+La moyenne d'un ensemble de requêtes ne décrit pas l'attente de la personne
+qui a subi un échec. Conserver les données de contexte et les cas difficiles
+pour éviter qu'un seul chiffre masque les problèmes.
+
+Le calcul local ne garantit pas que les données soient bien protégées ni que
+le service soit maintenable : une dépendance logicielle non documentée, une
+licence restrictive, un disque défaillant ou une personne seule détentrice
+des accès peut le rendre indisponible. Un modèle peut produire une réponse
+plausible mais fausse, y compris lorsqu'il cite une source. Si les critères
+de qualité ne sont pas atteints, utiliser la recherche classique, corriger
+le corpus ou suspendre la génération ; ne pas confier au système une décision
+ou une action physique pour compenser son manque de fiabilité.
+
+La chaleur, la poussière, l'humidité et les coupures peuvent se combiner.
+Lorsqu'une machine dépasse les limites du fabricant ou présente une anomalie,
+arrêter son utilisation selon la procédure sûre et faire intervenir la
+personne compétente. Si les pièces, l'énergie ou les compétences manquent,
+réduire le périmètre ou choisir une autre organisation plutôt que de promettre
+un service que personne ne peut maintenir.
+
+CHECK-LIST DU CHAPITRE 6
+
+□ Usage, utilisateurs, critères de qualité et méthode de référence définis.
+□ Flux locaux et extérieurs identifiés ; mode sans connexion explicité.
+□ Données et jeu d'essai autorisés ; questions difficiles et sans réponse incluses.
+□ Machines comparées avec la même tâche et des configurations documentées.
+□ Mémoire, contexte, corpus, simultanéité et stockage réellement testés.
+□ Temps, énergie, qualité, échecs et conditions ambiantes relevés ensemble.
+□ Implantation et limites thermiques conformes aux notices ; sécurité électrique
+  confiée à des professionnels qualifiés.
+□ Sauvegarde séparée et restauration testée ; reprise après coupure vérifiée.
+□ Support, pièces, coûts complets, accès et responsabilités examinés.
+□ Décision, limites, solution de repli et conditions de réévaluation consignées.
+
+
+PASSAGE À LA PARTIE C
+
+L'infrastructure n'est prête pour un assistant linguistique que si ses limites
+sont connues : documents et usages autorisés, capacité de calcul mesurée,
+énergie disponible, sauvegarde vérifiée et personnes responsables. La partie C
+pourra alors examiner la recherche documentaire, la constitution d'un corpus
+et les modèles linguistiques. Les mesures de la partie B devront être reprises
+si ces nouveaux usages modifient sensiblement la charge ou les risques.

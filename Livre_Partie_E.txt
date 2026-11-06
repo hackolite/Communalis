@@ -1,0 +1,792 @@
+PARTIE E — AGIR EN SÉCURITÉ
+
+De l'observation à l'action, un changement de responsabilité
+
+Les parties précédentes ont montré comment rechercher des documents, recueillir
+des observations et construire une représentation située et révisable du
+territoire. Cette partie traite d'un autre geste : modifier une situation
+physique. Ouvrir une vanne ou mettre un ventilateur en marche ne se réduit pas
+à afficher une réponse. Une erreur peut gaspiller une ressource, endommager
+une installation ou exposer quelqu'un à un danger. Elle peut aussi détériorer
+la confiance dans un projet qui se voulait utile.
+
+Il faut donc distinguer trois phrases : « une mesure indique que le sol est
+sec », « une personne propose d'arroser » et « l'arrosage a effectivement eu
+lieu ». La première dépend de la qualité d'une mesure située ; la deuxième est
+une hypothèse d'action ; la troisième exige une observation de l'effet, et non
+seulement une trace informatique de la commande. Aucune de ces phrases ne
+garantit les deux autres.
+
+La démarche de Communalis ne fait jamais commander directement un équipement
+par un modèle de langage. Le modèle peut contribuer à présenter des éléments
+et à formuler une proposition, mais il ne détient ni la voie de commande ni le
+pouvoir de changer les règles de sécurité. Des règles indépendantes, une
+validation humaine avant chaque activation et des protections physiques
+appropriées constituent des conditions distinctes. Les installations et
+interventions sur les équipements sont confiées à du personnel qualifié.
+L'ensemble reste subordonné à une analyse des risques propre au site.
+
+Dans cette partie, les exemples sont fictifs et servent à raisonner ; ils ne
+décrivent pas des installations effectivement réalisées au Togo. Les champs
+de résultats sont volontairement vides. Les indications « à définir » ne sont
+pas des consignes universelles : elles désignent des décisions à prendre avec
+les responsables du procédé avant un essai. Les textes réglementaires, normes,
+caractéristiques de produits, prix et disponibilités changent : leurs références
+doivent être vérifiées au moment du projet.
+
+
+CHAPITRE 14 — LA CHAÎNE DE DÉCISION SÉCURISÉE
+Maturité : 🔴 expérimental
+
+Objectif
+
+Construire une chaîne dans laquelle une proposition d'action reste distincte
+de son autorisation et de son exécution. Le lecteur doit pouvoir identifier
+qui décide, quelles conditions sont vérifiées indépendamment du modèle, ce qui
+se produit lorsqu'une information manque et comment une décision est ensuite
+examinée. L'objectif n'est pas d'automatiser le jugement humain, mais de lui
+donner une place réelle, située entre des contrôles techniques et des
+responsabilités clairement attribuées.
+
+Une chaîne sûre n'est pas simplement une succession d'écrans de confirmation.
+Elle est une organisation de pouvoirs : le droit de proposer n'est pas celui
+de modifier une limite ; le droit d'approuver n'est pas celui de contourner
+une protection ; l'accès au journal ne donne pas le droit d'en effacer les
+traces. Une personne habilitée peut refuser une action même si toutes les
+règles indiquent qu'elle est admissible. À l'inverse, son accord ne rend pas
+admissible une action que les règles ou les protections interdisent.
+
+Matériel et compétences
+
+Il faut d'abord une description du procédé et de son environnement, un plan
+des personnes exposées, les documents disponibles sur les équipements et un
+lieu pour conserver les décisions. L'équipe réunit au minimum une personne
+responsable du site, une compétence sur le procédé concerné, du personnel
+qualifié pour les installations, une compétence d'analyse de risques, une
+personne capable de vérifier les règles et une personne chargée de la
+gouvernance des données. Les futurs opérateurs et les personnes susceptibles
+d'être affectées participent à la définition du besoin et aux essais
+d'interface. Leur connaissance des horaires, des passages et des pratiques
+locales peut révéler un danger absent d'un plan technique.
+
+Un environnement de simulation séparé, des données de test identifiées comme
+telles et des moyens de consigner les essais permettent de commencer sans
+charge réelle. Pour une installation physique, il faut en outre des
+protections adaptées, conçues et vérifiées par des professionnels qualifiés,
+ainsi qu'un dispositif d'arrêt ou une autre mesure de réduction du risque
+selon l'analyse du procédé. Un ordinateur, un relais et un programme ne
+constituent pas à eux seuls un système de sécurité.
+
+Encadré — Une limite de ce chapitre
+
+Ce texte aide à poser les bonnes questions et à organiser les preuves ; il ne
+certifie aucune architecture. Les exigences applicables, y compris les
+autorisations, la protection des personnes et la conformité des installations,
+doivent être identifiées localement par les personnes compétentes.
+[À ACTUALISER — textes, normes et procédures applicables au site, versions,
+autorités compétentes et date de vérification.]
+
+14.1  Partir d'une décision, pas d'un modèle
+
+Une commune ou un collectif peut vouloir préserver un jardin, assurer une
+ventilation ou simplement éviter des déplacements inutiles. Avant de choisir
+un actionneur, il faut décrire le service actuel : qui constate le besoin,
+comment l'intervention est décidée, quelles sont les interruptions
+acceptables et qui peut réparer. Une solution manuelle peut rester préférable
+si elle répond au besoin avec moins de dépendances. Une recommandation
+documentaire sans commande peut aussi suffire.
+
+L'analyse commence par une question vérifiable : « Dans quelles conditions
+une personne peut-elle demander une courte intervention sur cet équipement ? »
+Elle ne commence pas par « Que pourrait contrôler le modèle ? ». Le périmètre
+comprend la source d'énergie, le matériel, les capteurs, l'interface, le
+réseau, les personnes présentes et l'environnement. Les effets indirects
+comptent : une vanne ouverte peut modifier une disponibilité d'eau ailleurs ;
+un ventilateur peut déplacer de la poussière ou gêner une activité voisine.
+
+Pour chaque conséquence redoutée, l'équipe décrit une situation de départ,
+une cause, les personnes ou biens exposés, puis les mesures de prévention et
+de protection. Elle cherche aussi les causes communes : une même alimentation,
+une horloge erronée ou un mauvais identifiant peuvent affecter simultanément
+plusieurs contrôles apparemment distincts. Deux vérifications qui utilisent
+la même donnée non fiable ne sont pas nécessairement deux protections.
+
+Tableau 14.1 — Exemple de registre de décision à compléter
+
+Élément                     | Question à documenter
+----------------------------|-----------------------------------------------
+Service attendu             | Quelle intervention, pour quel besoin ?
+Périmètre                   | Quel lieu, équipement, période et public ?
+Personnes exposées          | Qui utilise, entretient ou traverse le lieu ?
+Actions permises            | Quelles actions précisément identifiées ?
+Actions interdites          | Quelles actions ou circonstances exclure ?
+Sources et incertitudes     | Quelles mesures et quels documents, de quand ?
+État sûr                    | Quel comportement pour chaque panne envisagée ?
+Autorité                    | Qui peut refuser, approuver ou arrêter ?
+Preuve et révision          | Quels essais, quelle date, quel responsable ?
+
+La ligne « état sûr » mérite une attention particulière. Pour certains
+procédés, couper une énergie peut réduire le danger ; pour d'autres, maintenir
+une fonction ou suivre une séquence de mise en sécurité peut être nécessaire.
+La perte d'alimentation peut produire un état différent de celui demandé par
+le logiciel. L'équipe doit donc décrire l'état physique recherché, les moyens
+effectifs de l'obtenir et ce qui se passe si ces moyens échouent. Si elle ne
+peut pas démontrer une réponse acceptable à une panne importante, elle ne
+passe pas à l'action réelle.
+
+14.2  Séparer les pouvoirs et les voies techniques
+
+Le modèle de langage travaille sur une copie des informations qu'il est
+autorisé à consulter. Il peut rédiger une proposition lisible : objet
+concerné, intervention suggérée, raisons, sources, incertitudes et points à
+vérifier. Il peut aussi conclure qu'il ne sait pas. Ce texte est une entrée
+non fiable pour la suite, même lorsqu'il paraît convaincant. Un document
+récupéré peut être faux, périmé ou contenir une instruction hostile ; une
+traduction peut être ambiguë ; une mesure peut appartenir à un autre lieu.
+La présence d'une citation ne transforme pas une recommandation en commande
+autorisée.
+
+La proposition ne doit disposer d'aucun accès direct au contrôleur, à
+l'alimentation de l'actionneur, aux identifiants de commande ou à la
+configuration des règles. La séparation doit être effective dans les accès
+et les connexions, pas seulement promise dans une phrase adressée au modèle.
+Un composant distinct reçoit éventuellement une demande structurée limitée
+à une liste fermée d'actions et de cibles. Il vérifie cette demande sans
+demander au modèle de juger sa propre sécurité. Les champs inconnus, les
+identifiants ambigus et les valeurs hors du domaine explicitement admis
+entraînent un refus.
+
+Schéma 14.1 — De la proposition à l'effet, sans voie directe
+
+  Documents autorisés + observations qualifiées
+                       |
+                       v
+  LLM : texte, sources, incertitudes, proposition
+                       |
+                       v
+  Demande structurée à liste fermée
+                       |
+                       v
+  Règles indépendantes : admissible ? ---- non / inconnu ---> refus
+                       |
+                      oui
+                       v
+  Personne habilitée : approuve cette demande ? ---- non ---> refus
+                       |
+                      oui
+                       v
+  Recontrôle indépendant des conditions juste avant l'activation
+                       |
+                       v
+  Voie de commande autorisée + protections physiques indépendantes
+                       |
+                       v
+  Équipement ----> effet physique observé, ou effet inconnu
+
+  Arrêt, panne ou anomalie : appliquer l'état sûr défini pour le procédé ;
+  une nouvelle activation exige à nouveau toute la chaîne.
+
+Le schéma représente des fonctions, pas un câblage ni une certification.
+Les protections physiques sont conçues pour le danger réel et ne doivent pas
+dépendre du bon fonctionnement du modèle ou de son logiciel de recommandation.
+L'équipe vérifie également que le moteur de règles ne peut être modifié par
+le LLM ni par une simple proposition. Ses paramètres ont un propriétaire,
+un historique, une procédure de revue et des droits d'accès distincts de
+ceux de l'interface de proposition.
+
+14.3  Des règles indépendantes et explicites
+
+Une règle utile exprime une condition contrôlable et une réponse en cas de
+non-respect. Elle porte sur l'action et la cible, la plage et la durée
+autorisées, l'état de l'équipement, les protections requises, la qualité des
+mesures et leur âge maximal admissible. Ces paramètres dépendent du procédé :
+ils ne sont pas fournis par le modèle, ni déduits d'une valeur générique
+présente dans ce livre. Ils sont établis et approuvés par les personnes
+compétentes, à partir de l'étude de risques et des contraintes du fabricant.
+
+La fraîcheur d'une donnée ne se limite pas à l'heure affichée. Il faut
+connaître l'heure de mesure, celle de réception, le fuseau si nécessaire et
+la fiabilité de l'horloge. Une valeur récemment reçue peut être une ancienne
+mesure retransmise. Un capteur en défaut peut répéter une valeur plausible :
+le contrôle de plage ne suffit donc pas. Les divergences entre sources, les
+données manquantes, une unité inconnue, une calibration échue ou une horloge
+incertaine doivent être traitées selon des règles explicites ; par défaut,
+une condition nécessaire non vérifiable bloque une nouvelle activation.
+
+Tableau 14.2 — Questions minimales pour les règles
+
+Contrôle                  | Refus ou mise en attente si
+--------------------------|-------------------------------------------------
+Cible et action           | inconnues, ambiguës ou non autorisées
+Paramètres                | absents, mal formés, hors limites ou sans unité
+État du procédé           | incompatible, indisponible ou non vérifiable
+Mesures nécessaires       | périmées, incohérentes, non qualifiées ou absentes
+Protection requise        | défaut signalé ou disponibilité non confirmée
+Approbation               | absente, expirée, révoquée ou liée à autre chose
+Contexte avant activation | modifié depuis l'examen ou impossible à vérifier
+Règles et configuration  | version non approuvée ou intégrité incertaine
+
+Le refus d'une nouvelle commande et la réaction à une panne pendant une
+action sont deux problèmes différents. Le premier empêche l'activation ; le
+second exige de mettre le procédé dans l'état sûr défini et de signaler la
+situation. On ne suppose pas que l'absence de commande suffira à obtenir cet
+état. En cas de doute sur l'état physique, le système indique « inconnu » et
+alerte les personnes compétentes plutôt que d'afficher « arrêté » sans preuve.
+
+14.4  Une validation humaine qui a du sens
+
+La personne habilitée ne devrait pas voir un simple bouton « confirmer ».
+L'interface doit lui présenter la cible et le lieu en termes compréhensibles,
+l'action et ses paramètres, les raisons proposées, les sources et leurs dates,
+les données absentes ou contradictoires, les contrôles réussis et les risques
+résiduels pertinents. Elle doit pouvoir refuser, demander une vérification
+sur place ou abandonner la demande. Les informations sont présentées dans
+une langue et sous une forme accessibles aux opérateurs concernés ; une
+traduction incertaine doit être signalée et vérifiée.
+
+L'approbation est attachée à une demande précise : identité de l'équipement,
+action, paramètres, contexte pertinent, version des règles et durée de
+validité déterminée pour le cas. Elle est attribuable à une personne habilitée.
+Si l'un de ces éléments change, si l'approbation expire ou si la personne la
+retire avant l'activation, il faut une nouvelle évaluation et une nouvelle
+approbation. Il ne faut pas transformer un accord ponctuel en autorisation
+permanente ou en approbation implicite d'une série d'actions.
+
+Le recontrôle juste avant l'activation réduit le risque qu'une condition ait
+changé entre la lecture et l'exécution : une zone peut être devenue
+inaccessible, un capteur peut être tombé en panne ou une protection peut
+signaler un défaut. Il ne supprime pas tous les changements possibles après
+ce contrôle. C'est pourquoi la surveillance de l'action et les protections
+physiques restent nécessaires pendant son déroulement.
+
+Tableau 14.3 — Répartition indicative des responsabilités
+
+Rôle                      | Décision ou contribution
+--------------------------|-------------------------------------------------
+Responsable du site       | autorise le périmètre, les moyens et l'arrêt
+Expert du procédé         | définit les conditions et l'état sûr spécifiques
+Personnel qualifié        | installe, inspecte et intervient sur le matériel
+Référent des règles       | prépare et fait vérifier les changements de règles
+Personne habilitée        | examine chaque demande, approuve ou refuse
+Responsable des données   | encadre accès, conservation et traitement des traces
+Personnes concernées      | signalent usages, risques et effets non anticipés
+
+Ces rôles peuvent être regroupés dans une petite équipe, mais les conflits
+doivent être reconnus et compensés. Par exemple, la personne qui modifie une
+règle ne devrait pas être la seule à approuver cette modification. Si aucune
+personne habilitée n'est disponible, la demande attend ou est refusée : un
+service dégradé ne donne pas au modèle le droit de prendre sa place. Une
+absence prolongée de personnel ou de budget peut conduire à retirer la
+fonction d'actionnement.
+
+14.5  Pas à pas : construire et éprouver la chaîne
+
+1. Décrire le besoin et comparer les options. Écrire ce que fait déjà l'équipe
+   sans automatisation, ce que l'outil apporterait et les conséquences d'une
+   indisponibilité. Consulter les personnes qui utilisent ou entretiennent le
+   lieu. Choisir au besoin une simple alerte ou une procédure manuelle.
+
+2. Délimiter les actions. Pour chaque équipement, rédiger une liste fermée
+   d'actions admissibles, leurs paramètres, les interdictions et les
+   conditions nécessaires. Définir les limites à partir de l'étude du
+   procédé, pas d'une suggestion du LLM. Toute action extérieure à la liste
+   est refusée, même si sa formulation paraît proche d'une action permise.
+
+3. Analyser les dangers et les défaillances. Examiner les scénarios normaux,
+   les erreurs humaines, les défaillances de capteur et d'actionneur, les
+   pannes communes et les interventions de maintenance. Pour chacun, préciser
+   les personnes exposées, l'état sûr recherché, les protections et la
+   personne qui doit être alertée. Faire revoir cette analyse par les
+   compétences nécessaires ; consigner les points non résolus.
+
+4. Dessiner les frontières. Identifier les processus, comptes, équipements
+   et connexions qui constituent le chemin de commande. Retirer au modèle
+   tout accès direct à ce chemin et à la modification des règles. Distinguer
+   les comptes de consultation, d'exploitation et d'administration ; limiter
+   leurs droits et prévoir leur retrait. Un modèle arrêté ou compromis ne doit
+   pas pouvoir fabriquer une autorisation.
+
+5. Formaliser la demande et les règles. Prévoir des champs typés, des unités,
+   une identité de cible sans ambiguïté et des valeurs explicitement
+   admissibles. Vérifier la provenance et la fraîcheur des observations.
+   Documenter les conditions de refus et le comportement pendant l'action.
+   Protéger les versions approuvées, leurs changements et leur restauration.
+
+6. Préparer l'examen humain. Former les personnes habilitées sur le procédé,
+   l'interface et les limites du système. Leur permettre de voir les
+   incertitudes et de refuser sans pression. Tester l'interface avec elles :
+   une personne doit pouvoir expliquer ce qu'elle approuve et distinguer une
+   observation d'une recommandation.
+
+7. Tester à blanc. Dans un environnement séparé de toute charge réelle,
+   injecter des demandes valides et invalides, des mesures périmées ou
+   contradictoires et des changements de contexte. Vérifier l'absence de
+   voie directe depuis le modèle, le refus par défaut et l'invalidation
+   d'une approbation devenue inappropriée. Conserver les entrées, les
+   résultats attendus et les résultats effectivement observés.
+
+8. Faire examiner les preuves. Une personne compétente indépendante de la
+   seule rédaction du modèle examine les écarts. Une panne, un refus manqué
+   ou un comportement impossible à expliquer suspend la progression.
+   Corriger, reprendre les essais concernés et obtenir les autorisations du
+   site avant tout essai physique tel que décrit au chapitre 15.
+
+9. Organiser l'exploitation et la sortie. Fixer la périodicité de révision
+   selon le risque, le matériel et les responsabilités disponibles ; prévoir
+   l'arrêt après incident, changement important ou absence de maintenance.
+   Le retrait de la fonction d'actionnement doit rester possible sans
+   supprimer l'accès aux informations utiles aux personnes concernées.
+
+14.6  Journaliser pour comprendre, sans surveiller inutilement
+
+Un journal doit permettre de reconstruire une décision : demande identifiée,
+date et heure avec indication de leur fiabilité, source et âge des données
+nécessaires, version des règles, contrôles et motifs de refus, identité ou
+identifiant de la personne habilitée, approbation, tentative de commande,
+retour de l'équipement, anomalie et intervention. La trace d'une commande
+émise doit être distinguée d'un accusé de réception, d'un changement d'état
+et d'une observation de l'effet. Chaque étape peut manquer ou contredire la
+précédente.
+
+Il n'est pas nécessaire de conserver tous les échanges avec un assistant pour
+comprendre une action. Réduire les données personnelles, limiter les accès,
+protéger les journaux contre l'altération et documenter leur durée de
+conservation. Prévoir une procédure de consultation, de correction d'une
+erreur de contexte et de signalement d'un incident. Ne pas effacer
+silencieusement la trace initiale : une correction peut être reliée à elle
+selon les règles de conservation applicables.
+[À ACTUALISER — obligations locales de protection des données, durées
+applicables et modalités de recours, avec source et date.]
+
+Encadré — Cas fictif : une recommandation qui doit être refusée
+
+Un assistant résume une observation d'humidité et suggère d'arroser un
+massif. La mesure provient d'un capteur dont la dernière observation est trop
+ancienne au regard de la limite approuvée pour ce site. Le texte peut être
+clair et citer une source, mais le contrôle indépendant refuse l'activation.
+La personne responsable peut organiser une vérification sur place ; elle ne
+peut pas rendre la mesure fraîche par sa seule approbation. Après une nouvelle
+mesure qualifiée, une nouvelle demande et toute la chaîne d'autorisation sont
+nécessaires. Cet exemple ne donne aucun seuil d'humidité ni délai réel.
+
+14.7  Résultats mesurés : protocole et emplacement
+
+Les résultats ne sont pas les intentions de l'équipe. Avant les essais,
+préparer un tableau de scénarios avec un identifiant, les conditions
+initiales, la version de configuration, le résultat attendu, la méthode
+d'observation et le critère de réussite approuvé. Un observateur note ensuite
+ce qui s'est réellement produit, y compris les hésitations humaines et les
+résultats non concluants. Répéter les scénarios après correction, sans
+remplacer les anciens résultats par les nouveaux.
+
+On peut suivre le nombre de demandes interdites effectivement refusées sur
+le nombre de demandes interdites testées, en donnant les deux nombres et la
+liste des scénarios ; ce rapport ne démontre pas à lui seul l'absence de
+danger. Mesurer aussi les refus injustifiés, les demandes dont l'effet reste
+inconnu, le temps entre signalement et décision, et le temps de mise en
+sécurité lorsque la méthode de mesure est adaptée. Les temps doivent avoir
+un point de départ, un point d'arrivée, un instrument et une incertitude
+documentés. Un essai en simulation ne prouve pas la performance d'un matériel
+réel, et une série finie d'essais ne prouve pas l'absence de panne.
+
+Tableau 14.4 — Registre de résultats, à remplir après les essais
+
+Scénario | Attendu | Observé | Données et méthode | Écart | Suite
+---------|---------|---------|--------------------|-------|----------------
+Demande hors liste | refus | [à mesurer] | [à renseigner] | [à noter] | [à décider]
+Donnée périmée | refus | [à mesurer] | [à renseigner] | [à noter] | [à décider]
+Contexte changé | réévaluation | [à mesurer] | [à renseigner] | [à noter] | [à décider]
+Panne pendant action | état sûr défini | [à mesurer] | [à renseigner] | [à noter] | [à décider]
+
+[RÉSULTATS TOGO À INSÉRER] : site et dates, autorisations, protocole,
+versions, nombre et description des essais, résultats bruts et écarts,
+temps mesurés avec méthode et incertitude, incidents, corrections, avis des
+opérateurs et décision motivée de poursuite ou d'arrêt.
+
+14.8  Limites et échecs
+
+Une liste de règles peut omettre une situation ; un capteur peut être
+plausible mais faux ; une personne peut approuver trop vite ; une protection
+physique peut être absente, défaillante ou mal entretenue. Un même défaut
+peut toucher la mesure et le contrôle censé la vérifier. Le fait que
+plusieurs couches existent ne permet pas de multiplier arbitrairement leurs
+fiabilités ni de déclarer l'ensemble sûr.
+
+Un échec de conception typique consiste à laisser une interface transformer
+une phrase du modèle directement en appel de commande, puis à demander au
+même modèle de vérifier cet appel. Un autre consiste à conserver une
+approbation après modification de la cible. Dans les deux cas, la correction
+porte sur les frontières et les responsabilités, non sur une formulation plus
+persuasive du prompt. Si les moyens de corriger et de vérifier manquent, le
+mode sans actionneur est la décision prudente.
+
+Check-list du chapitre 14
+
+□ Besoin comparé à une solution manuelle ou sans action physique.
+□ Procédé, personnes exposées, dangers et état sûr documentés.
+□ Liste fermée des actions, cibles et limites approuvées.
+□ LLM privé de voie directe vers la commande et la modification des règles.
+□ Règles indépendantes vérifiant qualité, fraîcheur et cohérence des données.
+□ Refus si condition nécessaire inconnue, invalide ou non vérifiable.
+□ Personne habilitée informée, libre de refuser, avant chaque activation.
+□ Approbation liée à la demande précise et invalidée si le contexte change.
+□ Conditions recontrôlées avant activation ; protections physiques adaptées.
+□ Essais de panne et de refus documentés, écarts traités avant progression.
+□ Journal limité, protégé et distinguant commande, retour et effet observé.
+□ Autorités, maintenance, arrêt et retrait attribués à des responsables.
+
+
+CHAPITRE 15 — PILOTER LES ACTIONNEURS
+Maturité : 🔴 expérimental
+
+Objectif
+
+Étudier le pilotage éventuel d'une électrovanne ou d'une ventilation en
+partant de la sécurité du procédé et non de la facilité de programmation.
+Le chapitre conduit du choix d'un usage à l'essai sur charge simulée, puis,
+uniquement si les conditions sont réunies, à un essai physique autorisé et
+encadré. Il apprend à distinguer la commande envoyée, la position réelle du
+dispositif et l'effet obtenu. Il fournit un cadre de décision et de mesure,
+non un plan d'installation.
+
+Matériel et compétences
+
+Une description du site et du procédé, l'analyse de risques du chapitre 14,
+les notices des équipements envisagés, un environnement de simulation
+séparé et des instruments de mesure adaptés sont nécessaires. Le responsable
+du site, l'expert du procédé, les opérateurs et le personnel qualifié pour
+l'installation et la maintenance doivent être associés dès la conception.
+Selon les risques, d'autres compétences peuvent être nécessaires : hydraulique,
+électricité, mécanique, ventilation, protection incendie ou sécurité des
+personnes. Il faut aussi les moyens de signaler une anomalie et de suspendre
+les essais.
+
+La sélection des composants, le dimensionnement, l'isolation, les
+protections, les raccordements et leur vérification relèvent des professionnels
+compétents. Ils appliquent les exigences et prescriptions pertinentes au
+site et au matériel. Le texte qui suit ne doit pas servir à câbler une
+charge, à contourner une protection ou à intervenir sous tension.
+[À ACTUALISER — normes, autorisations, références de matériel, notices et
+exigences de contrôle applicables, avec versions et dates.]
+
+15.1  Ce que fait réellement un actionneur
+
+Un actionneur transforme une commande en effet physique. Une électrovanne
+modifie un passage de fluide ; une commande de ventilation agit sur un
+équipement qui déplace de l'air. Entre l'ordre et l'effet se trouvent
+l'alimentation, l'organe de commutation, les mécanismes, le fluide ou l'air
+et le milieu. Chacun peut empêcher l'effet attendu ou produire un effet
+différent. Une indication logicielle « ouvert » n'atteste ni l'ouverture
+mécanique d'une vanne ni la présence du débit attendu.
+
+Il faut donc définir trois niveaux d'observation :
+
+• Commande : la demande autorisée a-t-elle été transmise au bon équipement ?
+• État : un retour fiable indique-t-il la position ou la marche réelle ?
+• Effet : une observation appropriée montre-t-elle le débit ou le mouvement
+  d'air recherché, dans les limites du protocole ?
+
+Un retour d'état peut lui-même être défectueux. Une mesure de débit n'explique
+pas automatiquement où l'eau est allée ; la rotation d'un ventilateur ne
+garantit pas la qualité de l'air. Lorsque la mesure de l'effet n'est pas
+disponible ou fiable, on écrit « effet non vérifié ». On ne remplace pas
+cette incertitude par une conclusion tirée du seul journal de commande.
+
+Schéma 15.1 — Deux chemins à ne pas confondre
+
+  Demande approuvée → commande → interface de puissance → actionneur → milieu
+                               |                         |             |
+  Journal de commande <--------+      retour d'état <----+             |
+  Observation indépendante de l'effet <--------------------------------+
+
+  Une absence, une contradiction ou une panne appelle la réponse prévue
+  dans l'analyse de risques, pas une affirmation de fonctionnement normal.
+
+15.2  Choisir l'usage et définir les conditions d'arrêt
+
+Pour un jardin, la question est d'abord horticole et organisationnelle :
+qui décide de l'arrosage, de quelle eau dispose-t-on, qui constate une fuite
+et qui entretient les plantations ? Pour une ventilation, il faut comprendre
+le local, sa fréquentation, les sources de chaleur ou de contaminants et la
+fonction exacte de l'équipement. Une simple ventilation de confort ne doit
+pas être assimilée à un dispositif de sécurité des personnes. Les usages
+critiques ou dont la fonction n'est pas suffisamment comprise sortent du
+cadre d'un prototype expérimental.
+
+Le responsable du procédé définit les conditions de fonctionnement, la durée
+admissible, la disponibilité des ressources, les zones accessibles et les
+signes qui imposent l'arrêt ou une autre mise en sécurité. Il précise ce que
+signifie « état sûr » pour une coupure d'énergie, une perte de commande, une
+mesure absente et un défaut mécanique. Ces états peuvent différer ; ils
+doivent être compatibles avec le fonctionnement réel des composants.
+
+L'arrêt d'urgence, lorsqu'il est requis par l'analyse et les exigences
+applicables, doit être accessible et approprié au danger. Sa présence ne
+dispense pas de protections contre l'accès aux parties dangereuses, les
+défaillances électriques, les surpressions ou autres risques identifiés.
+Son réarmement n'autorise pas à lui seul une reprise : les causes sont
+examinées et chaque nouvelle activation passe à nouveau par les règles
+indépendantes et la validation humaine.
+
+Tableau 15.1 — Questions à résoudre avant le choix du matériel
+
+Sujet                  | À documenter avec les personnes compétentes
+-----------------------|----------------------------------------------------
+Fonction               | Service attendu, alternatives et limites d'usage
+Charge et milieu       | Caractéristiques, environnement, interactions
+Alimentation           | Disponibilité, coupures, remise sous tension
+Danger                 | Personnes exposées, accès, panne et conséquence
+État sûr               | Comportement physique pour chaque scénario pertinent
+Retour                 | Ce qui peut être observé et ce qui reste inconnu
+Protection             | Dispositifs indépendants, inspection et essai
+Maintenance            | Compétence, accès sécurisé, pièces et responsable
+
+Les caractéristiques nominales d'un composant ne suffisent pas à établir
+son adéquation. Le personnel qualifié vérifie leur compatibilité avec la
+charge réelle, les conditions ambiantes, l'humidité, la poussière, les
+efforts mécaniques et les instructions du fabricant. Les composants de
+réemploi exigent une identification et une évaluation de leur état ; leur
+présence dans un stock ne prouve ni leur conformité ni leur durée de service.
+[À ACTUALISER — caractéristiques documentées, disponibilité et conditions
+de maintenance des équipements effectivement retenus.]
+
+15.3  Cas fictif : une électrovanne pour un massif
+
+Supposons qu'une équipe envisage de distribuer de l'eau à un massif commun.
+Le but n'est pas d'ouvrir la vanne dès qu'un modèle lit le mot « sec ».
+L'équipe décrit la ressource, les autres usages de l'eau, le réseau existant,
+les conditions d'accès et les conséquences d'une ouverture prolongée, d'une
+fuite ou d'une absence d'arrosage. Elle consulte la personne qui entretient
+le massif et conserve une solution manuelle appropriée si elle est possible.
+
+L'expert du procédé détermine quelles observations sont nécessaires et quelles
+limites d'utilisation sont acceptables. Un capteur d'humidité a besoin d'une
+méthode de vérification adaptée au sol et à son emplacement ; une seule
+mesure ne décrit pas nécessairement tout le massif. Le responsable de l'eau
+peut interdire l'usage à certaines périodes ou lorsque la ressource n'est
+pas disponible. Les conditions sont inscrites dans les règles indépendantes,
+puis vérifiées avant qu'une personne habilitée approuve une demande précise.
+
+La conception examine notamment une vanne bloquée ouverte ou fermée, une
+commande répétée, un retour d'état faux, une fuite en aval et une coupure
+d'alimentation. La position obtenue à la perte d'énergie dépend du matériel ;
+elle doit être vérifiée pour le procédé et ne doit pas être supposée d'après
+son nom. Une commande de fermeture ne démontre pas que l'eau a cessé de
+circuler. Les moyens indépendants de limitation, d'isolement et de
+constatation de l'effet sont choisis et vérifiés par les professionnels selon
+les risques. Aucun seuil d'humidité, débit ou durée n'est fixé ici.
+
+Encadré — Si l'eau continue de couler
+
+Si l'effet observé contredit l'arrêt demandé, l'opérateur applique la
+procédure du site, éloigne les personnes si nécessaire et alerte le personnel
+qualifié. Il ne démonte pas l'équipement et ne contourne pas une protection
+pour « essayer encore ». L'installation reste hors service jusqu'au diagnostic,
+à la correction et à la validation de la remise en service. Les moyens
+pratiques d'isolement et les responsabilités doivent avoir été définis avant
+l'essai, pas pendant l'incident.
+
+15.4  Cas fictif : une ventilation non critique
+
+Supposons maintenant un espace pour lequel une équipe étudie une ventilation
+de confort. Avant tout pilotage, une personne compétente examine l'équipement
+existant, les accès, la présence de personnes, le bruit, les poussières et
+les effets sur les espaces voisins. Les besoins et les risques peuvent varier
+selon l'occupation ou l'activité. Une mesure ponctuelle de température ne
+décrit pas toute l'ambiance et ne suffit pas à conclure qu'une mise en marche
+est appropriée.
+
+L'équipe distingue l'autorisation de marche, le retour de fonctionnement et
+l'effet réellement observable. Un ventilateur peut ne pas démarrer malgré la
+commande, continuer à tourner malgré une demande d'arrêt ou déplacer de l'air
+dans une direction non souhaitée. Un protecteur mécanique, une protection
+électrique et les autres mesures nécessaires sont définis selon le matériel
+et le risque ; la simple désactivation logicielle ne les remplace pas.
+
+Si une ventilation contribue à une fonction de sécurité ou à la maîtrise
+d'une atmosphère dangereuse, son étude relève de spécialistes et d'exigences
+adaptées ; un exemple de confort ne constitue pas un plan applicable à cet
+usage. L'équipe ne doit pas expérimenter sur une fonction critique en
+comptant sur une approbation humaine pour compenser une conception
+insuffisante.
+
+15.5  Pas à pas : de la simulation à un essai encadré
+
+1. Constituer un dossier de procédé. Rassembler la description du service,
+   les plans disponibles, les responsabilités, les dangers et les modes de
+   fonctionnement. Faire préciser par l'expert ce qui rend l'action
+   admissible, ce qui la rend interdite et comment reconnaître un effet
+   inattendu. Noter les inconnues qui empêchent l'essai.
+
+2. Faire étudier l'installation. Le personnel qualifié vérifie l'adéquation
+   des composants, les interfaces, l'environnement, les protections et
+   l'état obtenu lors des pannes. Il définit les opérations de contrôle et
+   les conditions de mise hors service. Aucun raccordement de puissance ou
+   modification d'une installation existante ne doit être improvisé à
+   partir de ce texte.
+
+3. Mettre en place une charge simulée séparée. Elle doit permettre
+   d'observer les demandes et les réponses du logiciel sans provoquer
+   d'action sur l'équipement réel. Vérifier physiquement et
+   organisationnellement cette séparation avant l'essai. Utiliser des
+   étiquettes et des données qui empêchent de confondre simulation et
+   exploitation.
+
+4. Tester la chaîne complète en simulation. Pour chaque demande, vérifier
+   l'identification de la cible, les règles indépendantes, la présentation à
+   la personne habilitée, son accord ou son refus et le recontrôle avant
+   activation. Confirmer que le modèle ne peut ni commander directement ni
+   modifier les règles. Tester aussi la perte de disponibilité du modèle :
+   elle ne doit pas ouvrir une voie de commande de remplacement non autorisée.
+
+5. Tester les modes dégradés prévus. Introduire séparément, puis lorsque
+   pertinent en combinaison, une donnée absente ou ancienne, un retour
+   incohérent, une interruption réseau, une perte d'alimentation simulée,
+   une demande répétée et une reprise. Vérifier les attentes propres à chaque
+   scénario. Une demande reçue plusieurs fois ne doit pas créer plusieurs
+   activations ; une demande conservée pendant une panne ne doit pas être
+   exécutée au retour du réseau sans nouvelle chaîne complète d'autorisation.
+
+6. Examiner les résultats et les écarts. Faire vérifier le dossier par les
+   responsables du site et les compétences concernées. Une simulation
+   réussie ne valide pas le câblage, les protections ni le comportement
+   mécanique réels. Tout résultat inattendu est analysé, corrigé et retesté ;
+   un risque non maîtrisé met fin à la progression.
+
+7. Préparer, si justifié, un essai physique limité. Le responsable du site
+   autorise le périmètre et les personnes présentes. Le personnel qualifié
+   contrôle l'installation et les protections selon le protocole approuvé.
+   Définir avant l'essai les conditions initiales, la durée et les limites
+   d'essai, les points d'observation, les moyens de communication, les
+   critères d'interruption et la personne qui peut arrêter. Ne pas exposer
+   le public à un essai non maîtrisé.
+
+8. Réaliser l'essai sous contrôle. Chaque activation suit la chaîne du
+   chapitre 14. Observer et consigner séparément la commande, le retour
+   d'état et l'effet physique. En cas d'incertitude ou d'écart, appliquer la
+   procédure prévue et suspendre l'essai. Ne pas répéter une activation
+   simplement pour faire disparaître une alerte.
+
+9. Décider de la suite. Comparer les observations aux critères approuvés,
+   consigner les incidents et demander les avis des opérateurs. L'autorisation
+   d'un essai ne vaut pas autorisation d'exploitation. Une éventuelle mise
+   en service exige une décision distincte, des contrôles réglementaires
+   applicables, une formation et des moyens de maintenance.
+
+15.6  Pannes, reprises et intervention
+
+La perte de réseau ne signifie pas nécessairement perte d'alimentation ni
+arrêt de l'actionneur. L'analyse doit décrire ce que fait le contrôleur local
+pendant la coupure et comment les protections continuent de remplir leur
+fonction. Une mesure invalide avant activation interdit la demande ; une
+mesure qui devient invalide pendant l'action déclenche la réponse prévue
+pour ce procédé. Si le retour de l'actionneur est absent, l'état réel reste
+inconnu jusqu'à vérification appropriée.
+
+Après une coupure électrique ou un redémarrage, la dernière intention
+informatique ne constitue pas une autorisation actuelle. Le système doit
+retrouver un état connu ou signaler qu'il ne le connaît pas, appliquer la
+mise en sécurité prévue et empêcher toute reprise non autorisée. Une
+activation nouvelle nécessite des données valides, le passage des règles,
+une nouvelle approbation humaine et le recontrôle juste avant la commande.
+La même exigence s'applique après une modification de configuration ou une
+intervention de maintenance.
+
+Tableau 15.2 — Plan d'essais de panne à adapter
+
+Scénario             | Observation attendue à spécifier avant l'essai
+---------------------|------------------------------------------------------
+Capteur absent       | refus d'activer ; réaction définie si action en cours
+Retour contradictoire| état signalé inconnu ; mise en sécurité prévue
+Perte réseau         | comportement local et alerte définis pour le procédé
+Coupure / retour     | état sûr prévu ; aucune reprise non autorisée
+Demande répétée      | absence d'activations supplémentaires non approuvées
+Arrêt actionné       | réponse physique vérifiée selon la procédure du site
+Organe bloqué        | détection et intervention prévues ; pas de faux succès
+Protection en défaut | refus ou mise en sécurité selon le scénario approuvé
+
+Ces lignes sont des familles de tests, non des résultats. Certains défauts
+physiques ne peuvent pas être provoqués sans danger sur l'installation
+réelle : les professionnels choisissent une simulation, un banc adapté ou
+une autre méthode d'évaluation. Il faut documenter ce que la méthode ne
+permet pas de démontrer.
+
+La maintenance commence par une préparation : signaler l'indisponibilité,
+empêcher les nouvelles demandes, identifier les sources d'énergie et les
+dangers résiduels, puis appliquer les procédures de mise hors énergie et de
+vérification appropriées par du personnel qualifié. Une interface affichant
+« arrêt » n'est pas une preuve d'isolement. Après intervention, les
+protections, les retours et la configuration sont vérifiés avant une
+autorisation distincte de remise en service.
+
+15.7  Résultats mesurés : distinguer preuve et intention
+
+Le protocole d'essai précise l'instrument, son état de vérification, la
+grandeur, l'unité, le lieu et l'instant de mesure. Pour un temps d'arrêt,
+définir par exemple le signal de départ et le constat physique d'arrivée,
+ainsi que la méthode et l'incertitude. Pour un volume d'eau, préciser le
+point de mesure et la période ; pour une ventilation, indiquer ce que
+l'instrument mesure effectivement. Un indicateur n'est pas interchangeable
+avec un autre : un temps de réponse logiciel n'est pas un temps d'arrêt
+physique, et un fonctionnement observé ne démontre pas un bénéfice sanitaire.
+
+Conserver pour chaque essai les conditions initiales, la configuration, les
+limites approuvées, les entrées, les événements horodatés, les observations,
+les écarts et les éventuelles interruptions. Un essai interrompu compte
+comme résultat à examiner, pas comme donnée à éliminer. Présenter les
+valeurs individuelles utiles et les incertitudes avant de calculer une
+synthèse ; indiquer combien d'essais étaient prévus, réalisés et exploitables.
+Une mesure manquante reste manquante.
+
+Tableau 15.3 — Fiche d'essai à compléter
+
+Champ                         | À renseigner
+------------------------------|----------------------------------------------
+Identifiant et date           | [à renseigner]
+Site et autorisation          | [à renseigner]
+Équipement et configuration  | [à renseigner]
+Scénario et conditions       | [à renseigner]
+Critère décidé avant essai   | [à renseigner]
+Commande / retour / effet    | [à observer séparément]
+Instrument et incertitude    | [à renseigner]
+Écart, incident, interruption| [à consigner même si aucun résultat exploitable]
+Décision et responsable      | [à renseigner]
+
+[RÉSULTATS TOGO À INSÉRER] : description et dates des éventuels essais,
+autorisations, qualifications mobilisées, scénarios, méthode, mesures brutes
+et incertitudes, refus observés, incidents, corrections, conditions de
+maintenance et décision de poursuite ou d'arrêt. Ne rien inférer d'un champ
+non renseigné.
+
+15.8  Limites et échecs
+
+Une vanne bloquée, un organe de commutation défaillant ou un ventilateur qui
+continue à tourner peut rendre inefficace une instruction logicielle.
+Inversement, un retour peut indiquer une anomalie alors que l'équipement
+semble fonctionner : il faut comprendre la contradiction, non l'ignorer.
+La corrosion, la poussière, l'humidité, les variations d'alimentation et
+l'usure peuvent modifier le comportement au cours du temps. Un essai initial
+ne remplace pas les inspections et la maintenance.
+
+Les défaillances organisationnelles sont tout aussi importantes : départ de
+la seule personne habilitée, absence d'une pièce, procédure inaccessible,
+budget interrompu ou usages du lieu modifiés. Le projet doit pouvoir
+revenir à une procédure manuelle appropriée ou rester hors service sans
+mettre les personnes en danger. Si l'état sûr ne peut être maintenu, si les
+protections ne sont pas vérifiables ou si l'entretien n'est pas assuré,
+la fonction d'actionnement ne doit pas être exploitée.
+
+Check-list du chapitre 15
+
+□ Usage défini et solution sans actionneur comparée.
+□ Procédé, dangers, accès et états sûrs étudiés pour le site.
+□ Matériel choisi, installé et contrôlé par du personnel qualifié.
+□ Protections physiques indépendantes adaptées et vérifiables.
+□ Arrêt approprié et accessible lorsque l'analyse l'exige.
+□ Modèle sans commande directe ; règles et validation humaine à chaque activation.
+□ Charge simulée séparée ; essais de refus et de pannes documentés.
+□ Reprise après panne sans activation non autorisée ni demande en attente rejouée.
+□ Commande, retour d'état et effet physique observés séparément.
+□ Essai réel limité et autorisé seulement après examen des preuves.
+□ Critères d'interruption, alerte et intervention préparés avant l'essai.
+□ Maintenance, mise hors service, remise en service et financement attribués.

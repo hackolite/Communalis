@@ -1,0 +1,321 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+
+Avant-propos, mode d'emploi et introduction
+Version de travail évolutive
+
+NOTE AU LECTEUR
+
+Ce livre s'écrit en même temps que le projet. Il présente des principes,
+des méthodes et des outils de discussion ; il n'annonce pas comme acquis
+des résultats qui n'ont pas encore été observés. Les passages marqués
+[À ACTUALISER — ...] dépendent d'une décision, d'une vérification ou d'un
+changement futur. Les repères [RÉSULTATS TOGO À INSÉRER] réservent les
+observations, qu'elles confirment ou non les hypothèses initiales. Une
+absence de résultat est une information à expliquer, non une invitation
+à inventer.
+
+Le plan éditorial vise 300 pages pour le corps du livre et 6 à 10 pages
+supplémentaires pour l'index et la bibliographie. Une page n'est cependant
+une unité fiable qu'après choix du format, de la police, des marges, des
+figures et de la mise en page. Les nombres ci-dessous sont des objectifs,
+non une certification de la pagination de cette version.
+
+PLAN DU LIVRE
+
+Avant-propos et introduction : 20 pages
+  Avant-propos et mode d'emploi : 6
+  Introduction : une IA territoriale, distribuée et frugale : 14
+Partie A — Préparer : 46 pages
+  1. Évaluer son lab : 12 ; 2. Équipe, rôles et partenaires : 10 ;
+  3. Budget et approvisionnement : 12 ; 4. Éthique, droit et données : 12.
+Partie B — Énergie et infrastructure physique : 32 pages
+  5. Énergie autonome : 20 ; 6. Matériel de calcul en périphérie : 12.
+Partie C — Couche linguistique : 68 pages
+  7. Assistant documentaire et RAG : 18 ; 8. Corpus communautaire : 18 ;
+  9. Adaptation linguistique et QLoRA : 20 ; 10. Traduction : 12.
+Partie D — Connecter le territoire : 44 pages
+  11. Capteurs : 16 ; 12. Mobilier et végétation : 16 ;
+  13. Du flux de données à l'état du monde : 12.
+Partie E — Agir en sécurité : 24 pages
+  14. Chaîne de décision : 12 ; 15. Actionneurs : 12.
+Partie F — Durer et essaimer : 30 pages
+  16. Maintenance : 12 ; 17. Mémoire d'expérience : 8 ;
+  18. Réseau de nœuds : 10.
+Annexes A à H : 36 pages
+  Calendrier 3 ; matériel et coûts 5 ; schémas et plans 8 ; ressources
+  techniques 3 ; check-lists 5 ; gabarits 6 ; glossaire 3 ; ressources 3.
+
+L'objectif est de consacrer environ 30 % de chaque chapitre aux schémas,
+tableaux et encadrés. Les proportions et le total devront être mesurés dans
+une maquette, sans augmenter artificiellement les espaces ou multiplier les
+pages vides. Les chapitres expérimentaux 6, 9 à 11, 13 à 15, 17 et 18
+totalisent 114 pages dans la répartition proposée ; l'estimation initiale
+d'environ 130 pages demande donc un arbitrage éditorial si d'autres
+sections doivent être comptées. Les chapitres 5 et 12 ont un niveau de
+maturité à confirmer.
+
+AVANT-PROPOS — UN LIVRE QUI ACCOMPAGNE UN PROJET
+
+Un territoire ne se réduit ni à une carte ni aux données qu'un capteur peut
+enregistrer. Il est fait de personnes, de relations, d'habitudes, de
+langues, de ressources et de conflits d'usage. Un outil numérique peut
+contribuer à mieux comprendre une partie de cette réalité ; il ne possède
+pas pour autant l'autorité de parler à la place de celles et ceux qui y
+vivent.
+
+Communalis explore la possibilité d'une intelligence territoriale
+construite avec les acteurs locaux. Le mot « intelligence » ne désigne pas
+ici une machine omnisciente. Il désigne la capacité collective de poser des
+questions, d'organiser des connaissances, d'observer des situations et de
+prendre des décisions en connaissant leurs limites. Une documentation
+accessible, un artisan capable de réparer, un locuteur qui corrige une
+traduction et une personne qui refuse une collecte participent tous à cette
+intelligence.
+
+Le projet se situe à la rencontre de plusieurs mondes. Il emprunte aux
+modèles de langage leur capacité à reformuler et à chercher dans des
+documents. Il emprunte à la fabrication locale la possibilité de réparer
+et d'adapter. Il s'intéresse aux mesures environnementales, aux lieux et
+aux usages urbains, sans supposer que tout ce qui importe est mesurable.
+Son ambition n'est pas de remplacer les institutions ou les métiers ;
+elle est de créer des moyens supplémentaires d'agir et de débattre.
+
+Ce livre n'est pas un catalogue de promesses. Un système peut ne pas
+reconnaître une variante de langue, tomber en panne pendant une coupure,
+fournir une source qui ne répond pas à la question ou imposer un coût
+supérieur à son bénéfice. Un projet responsable écrit ces difficultés et
+donne à ses partenaires le pouvoir d'interrompre, de modifier ou de refuser
+une expérimentation. Les retours de terrain au Togo devront occuper une
+place substantielle dans les chapitres concernés.
+
+MODE D'EMPLOI
+
+Trois parcours, et la possibilité de changer de direction
+
+Le parcours minimal commence par un problème précis et des ressources
+existantes. Une équipe peut, par exemple, organiser des documents publics
+autorisés et vérifier si une recherche simple rend un service. Elle choisit
+ses indicateurs avant d'attribuer le résultat à une technologie. Aucun
+actionneur ni réseau de capteurs n'est nécessaire pour démarrer.
+
+Le parcours intermédiaire ajoute des responsabilités clairement réparties,
+un inventaire de données, une maintenance et des mesures. Il peut inclure
+un assistant documentaire ou une acquisition environnementale en lecture
+seule, si ces éléments répondent au besoin. Il suppose des moyens pour
+évaluer les réponses et corriger les erreurs.
+
+Le parcours complet examine les étapes les plus incertaines : adaptation
+d'un modèle à une langue, rapprochement de données spatiales et, dans des
+conditions strictes, proposition d'actions physiques. Il exige une
+compétence de sécurité indépendante, un budget d'entretien et une
+gouvernance capables d'arrêter l'expérience. Il ne représente ni un
+passage obligé ni une récompense pour les autres parcours.
+
+La maturité indiquée par 🟢, 🟡 ou 🔴 correspond respectivement à une
+entrée supposée accessible, intermédiaire ou expérimentale. Elle ne
+certifie pas que les procédures sont sûres ou éprouvées au Togo. Les
+ressources disponibles dans chaque lab peuvent changer l'ordre réel des
+difficultés.
+
+Chaque chapitre distingue son objectif, les moyens, la démarche, les
+résultats, les limites et une check-list. Une phrase comme « mesurer le
+temps de réponse » indique une méthode ; elle n'indique pas que la mesure
+a eu lieu. Pour transformer une réservation en résultat publié, il faut
+préciser le lieu ou le niveau d'agrégation autorisé, la date, le protocole,
+les instruments, le nombre d'essais, les unités, les données manquantes et
+les limites. La personne responsable valide la formulation et les droits
+de publication.
+
+Tableau — Lire les marqueurs
+
+Repère                        | Sens                       | Action
+[À ACTUALISER — sujet]       | Élément susceptible        | Vérifier la source,
+                              | de changer                 | dater et remplacer.
+[RÉSULTATS TOGO À INSÉRER]   | Fait non encore établi     | Insérer les mesures,
+                              |                            | y compris les échecs.
+[À CONFIRMER]                 | Hypothèse ou maturité      | Décider avec les
+                              | non validée                | personnes concernées.
+
+Les schémas textuels sont des supports de discussion et de future
+illustration. Ils ne constituent pas des plans d'installation électrique,
+des plans structurels ou des recommandations juridiques. Une photographie
+ne sera ajoutée qu'avec une source, une légende, une date et les
+autorisations nécessaires.
+
+À QUI S'ADRESSE CE LIVRE ?
+
+Une association ou un collectif peut commencer par le diagnostic et la
+gouvernance. Une collectivité peut examiner les objectifs territoriaux,
+les responsabilités et la protection des données. Une équipe technique
+peut utiliser les chapitres sur l'énergie, les modèles et les capteurs
+comme cadres de travail, sans les confondre avec des prescriptions
+adaptées à tout matériel. Les locuteurs et contributeurs d'un corpus
+doivent pouvoir discuter les finalités, les conditions de rémunération
+et le droit de refus avant toute collecte.
+
+Les expériences relatives à la santé, au droit, à la sécurité physique ou
+aux données sensibles demandent une expertise spécifique. Les exemples
+du livre ne constituent pas des conseils professionnels pour une situation
+particulière. Les lois et les règles locales évoluent ; leur vérification
+doit être effectuée par des personnes compétentes.
+
+INTRODUCTION — UNE IA TERRITORIALE, DISTRIBUÉE ET FRUGALE
+
+1. Partir d'une question, pas d'une machine
+
+Une mairie souhaite retrouver une décision publique ; une association veut
+expliquer une procédure dans plusieurs langues ; un collectif s'interroge
+sur l'ombre disponible dans un espace partagé. Ces situations hypothétiques
+ne demandent pas forcément le même équipement. La première peut se résoudre
+par un index, la deuxième par une traduction humaine ou assistée, la
+troisième par une observation de terrain et une discussion sur les usages.
+Un modèle génératif n'est pertinent que s'il apporte un bénéfice identifiable
+par rapport aux autres solutions.
+
+Le choix d'un cas d'usage commence par quatre questions : qui rencontre une
+difficulté, que fait cette personne aujourd'hui, quels résultats souhaite-t-elle
+obtenir, et quel risque une erreur ferait-elle courir ? À ces questions
+s'ajoutent le coût de la solution, la possibilité de la maintenir et le
+pouvoir des personnes concernées sur son évolution. Un dispositif ne
+devient pas utile parce qu'il est sophistiqué.
+
+2. Le paradoxe des grandes infrastructures
+
+Les modèles de langage centralisés peuvent produire rapidement des textes
+utiles et faciliter l'accès à des outils puissants. En revanche, leur usage
+peut dépendre d'une connexion stable, de conditions tarifaires changeantes,
+d'une entreprise distante ou d'une infrastructure difficile à auditer.
+Les données envoyées à un service externe peuvent être soumises à des
+conditions de conservation et de traitement qui exigent un examen attentif.
+
+Ces contraintes ne concernent pas tous les territoires de la même façon.
+Le mot « Suds » rassemble des réalités différentes, et ne doit pas servir
+à présenter les communautés comme dépourvues de ressources ou de savoirs.
+De nombreux acteurs y fabriquent, réparent, traduisent et inventent déjà
+des solutions. La question est de savoir comment un dispositif numérique
+peut renforcer ces capacités plutôt que les rendre dépendantes d'une
+technologie qu'elles ne maîtrisent pas.
+
+L'exécution locale est une option, pas une garantie absolue de souveraineté.
+Un système installé sur place peut dépendre de matériel importé, de
+bibliothèques dont les versions changent et de licences restrictives. Un
+service distant peut parfois être choisi parce qu'il est plus efficace ou
+mieux maintenu, à condition que les risques et les conditions du transfert
+soient explicitement acceptés. Le choix doit rester réversible autant que
+possible.
+
+3. High-Tech / Low-Tech : une articulation, pas une opposition
+
+L'expression High-Tech / Low-Tech invite à choisir les moyens en fonction
+de leur utilité et de leur entretien. Une documentation papier bien
+classée, un meuble réparable et un modèle informatique peuvent coexister.
+La frugalité n'est pas une obligation de renoncer aux technologies
+complexes ; elle impose d'examiner leur coût complet et les alternatives.
+
+Un outil frugal rend ses besoins visibles. Il indique l'énergie qu'il
+consomme ou la façon de la mesurer, la durée de vie attendue des composants,
+les compétences nécessaires à la réparation, le travail de mise à jour et
+les données qu'il utilise. Il est acceptable de conclure qu'une solution
+numérique est trop chère, trop fragile ou insuffisamment utile.
+
+WoeLab et HubCity, à Lomé, sont des points d'ancrage proposés pour la
+réflexion sur la fabrication locale et l'espace urbain. Leur histoire, leurs
+activités actuelles et leurs rôles dans ce livre doivent être confirmés
+avec les personnes concernées.
+[À ACTUALISER — ajouter des sources primaires datées et validées par les
+acteurs, ainsi que les autorisations de citation et d'image.]
+[RÉSULTATS TOGO À INSÉRER — témoignages autorisés, observations et limites.]
+
+4. Du modèle de langage à une représentation du territoire
+
+Un grand modèle de langage, ou LLM, prédit des suites de texte à partir
+d'exemples appris et du contexte qu'on lui fournit. Il peut reformuler une
+question, résumer un document ou produire une traduction. Une réponse
+fluide peut toutefois contenir une affirmation fausse, une source mal
+citée ou une généralisation abusive. La lisibilité ne remplace donc pas la
+vérification.
+
+La recherche augmentée, ou RAG, introduit une étape intermédiaire. Les
+documents autorisés sont préparés et indexés ; une question déclenche la
+recherche de passages ; ces passages sont ensuite fournis au modèle pour
+qu'il rédige une réponse assortie de références. Il faut vérifier à la
+fois si la recherche a trouvé les bons documents et si la réponse respecte
+leur contenu. Un document périmé ou erroné peut produire une réponse
+incorrecte même si le mécanisme fonctionne comme prévu.
+
+Dans ce livre, l'expression « modèle du monde réel » désigne une
+représentation révisable d'observations, d'objets, de lieux et de dates.
+Elle peut relier une mesure de température à un capteur, une position, une
+heure et une méthode. Elle ne signifie pas que le système comprend tout
+le territoire. Elle doit conserver l'incertitude et rendre visibles les
+informations manquantes.
+
+Schéma — Des observations à la discussion
+
+  Documents autorisés ──→ index ──→ passages et références ──┐
+                                                             │
+  Mesures situées ──→ données datées et qualifiées ──────────┤
+                                                             ↓
+  Question humaine ──────────────────────────────→ aide à la formulation
+                                                             ↓
+                                      vérification et décision humaine
+
+Une réponse fondée sur une représentation du territoire reste une
+interprétation. Une mesure à un endroit et à une heure ne prouve pas une
+situation générale ; deux phénomènes proches ne sont pas forcément liés
+par une relation de cause à effet. Les chapitres sur les capteurs et la
+recherche spatiale reviennent sur ces distinctions.
+
+5. La souveraineté comme ensemble de capacités
+
+La souveraineté d'exécution concerne le lieu et les conditions du calcul :
+peut-on fonctionner hors connexion, changer de fournisseur ou restaurer
+le service ? La souveraineté des données concerne les droits, les accès,
+la conservation, la suppression et les conditions de partage. La
+souveraineté d'architecture concerne la compréhension des composants et
+la possibilité de les remplacer. La souveraineté de gouvernance concerne
+les personnes qui définissent les objectifs, évaluent les risques et
+peuvent arrêter ou modifier le dispositif.
+
+Ces dimensions ne progressent pas toujours ensemble. Une machine locale
+avec un logiciel impossible à maintenir peut réduire la dépendance au
+réseau tout en créant une autre dépendance. Un corpus collecté localement
+peut rester hors du contrôle des contributeurs si ses conditions de
+réutilisation ne sont pas discutées. Il est donc préférable de décrire
+des capacités vérifiables plutôt que d'apposer une étiquette « souverain ».
+
+6. Des limites explicites à l'action
+
+Le modèle de langage formule des réponses ou des propositions ; il ne
+commande jamais directement un actionneur. Toute expérimentation physique
+requiert des règles indépendantes, une validation humaine, des protections
+adaptées et une analyse de risques. Le comportement sûr dépend du procédé
+et doit être établi par des professionnels qualifiés. Une installation
+réelle ne découle pas automatiquement d'un prototype qui fonctionne.
+
+La même prudence vaut pour les langues et les savoirs. Une traduction
+générée peut aider à préparer un échange, mais elle peut aussi altérer
+une négation, un nombre ou une nuance. Les locuteurs concernés sont
+nécessaires pour définir les critères et juger les résultats. Le projet
+doit leur donner la possibilité de contester une sortie et d'expliquer
+les variantes qu'un score unique ne représente pas.
+
+7. Comment lire les preuves
+
+Une bonne évaluation présente la question, le protocole et ses conditions,
+puis les résultats avec leur dénominateur. Elle indique les situations
+non testées et les erreurs rencontrées. Les impressions des utilisateurs
+sont précieuses, mais elles ne sont pas interchangeables avec une mesure
+instrumentale ; toutes deux doivent être décrites sans leur faire dire
+plus qu'elles ne montrent.
+
+Si l'adaptation d'un modèle n'améliore pas les résultats, le chapitre 9
+restera consacré à l'expérience : hypothèses, choix, coût, évaluation et
+raisons de poursuivre ou d'arrêter. Un échec documenté peut éviter à un
+autre lab de répéter une dépense inutile. L'intégrité de ce récit compte
+davantage que la démonstration d'une réussite à tout prix.
+
+[À ACTUALISER — version du projet, responsables éditoriaux, calendrier
+effectif et méthode de revue.] Voir l'annexe de suivi pour savoir qui
+doit remplacer chaque repère, avec quelle preuve et à quel moment.

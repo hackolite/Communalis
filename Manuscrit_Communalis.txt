@@ -162,6 +162,19 @@ un relevé des équipements, des factures ou estimations disponibles, et de quoi
 consigner les réponses. L'enquête doit inclure celles et ceux qui assureront
 la maintenance et les personnes dont les données pourraient être concernées.
 
+Éclairage théorique. Un diagnostic de capacité porte sur un système
+sociotechnique : l'électricité et les machines comptent autant que la
+disponibilité des personnes et la confiance entre partenaires. Une capacité
+présente aujourd'hui peut disparaître avec le départ d'un bénévole ou la fin
+d'une subvention. L'évaluation doit donc distinguer ce qui est possédé,
+ce qui est accessible sous conditions et ce qui reste inconnu.
+
+Le cas d'usage formule une décision ou une tâche concrète, non une technologie
+à déployer. On peut comparer le temps de recherche d'une information avec
+et sans assistant, mais aussi la qualité de la source et le coût de
+correction. Ces critères peuvent conduire à garder une solution non
+numérique ; la réussite n'est pas forcément l'installation d'un modèle.
+
 Pas à pas.
 1. Réunir les parties prenantes et définir le périmètre : lieu, durée et
    service envisagé. Identifier les personnes absentes et comment les consulter.
@@ -205,6 +218,19 @@ pertinentes, compétences juridiques accessibles et budget de participation.
 Une même personne peut tenir plusieurs rôles dans un petit lab, à condition
 que les conflits d'intérêts et les surcharges soient discutés.
 
+Éclairage théorique. Une responsabilité n'est effective que si la personne
+dispose du temps, des moyens et de l'autorité nécessaires. La coordination
+décide du déroulement ; la responsabilité des données veille aux droits et à
+la traçabilité ; les référents linguistiques discutent les usages de la
+langue ; la maintenance assure la continuité ; la sécurité peut imposer un
+arrêt. Chacun doit savoir à qui transmettre un problème qui dépasse son rôle.
+
+La participation ne se réduit pas à recueillir une approbation au début.
+Elle peut porter sur le choix du problème, la conception, l'évaluation et
+le retrait. Une convention rend visibles les contributions et les pouvoirs
+respectifs, mais elle ne garantit pas à elle seule une représentation
+équitable : il faut vérifier qui parle, qui est rémunéré et qui peut refuser.
+
 Pas à pas.
 1. Désigner une coordination, une responsabilité des données, une personne
    chargée de la maintenance, des référents linguistiques, une animation
@@ -240,6 +266,19 @@ confondre investissement initial et fonctionnement.
 Matériel et compétences. Inventaire, devis comparables, estimation des heures,
 compétences d'achat et de maintenance. Utiliser une monnaie et une date
 explicites ; ne pas convertir sans indiquer le taux et sa date.
+
+Éclairage théorique. Le coût total de possession comprend l'acquisition,
+l'installation, l'exploitation, la réparation et la fin de vie. Un ordinateur
+offert peut donc avoir un coût réel élevé si ses pièces ne sont pas
+disponibles. À l'inverse, un investissement initial supérieur peut être
+justifié par une durée de vie ou une réparation mieux assurée ; cette hypothèse
+doit être comparée à des devis et non admise d'avance.
+
+Un scénario budgétaire associe des quantités et des prix à une durée, puis
+fait varier les postes incertains. Un fonds de réserve ne doit pas masquer
+des dépenses prévisibles comme la rémunération ou le remplacement d'une
+batterie. Distinguer coûts en monnaie et temps de travail permet de rendre
+visible une partie des contributions autrement invisibles.
 
 Pas à pas.
 1. Pour le parcours minimal, chiffrer machine disponible ou à acquérir,
@@ -278,6 +317,20 @@ Matériel et compétences. Référent données, participation des communautés
 concernées, conseil juridique local et inventaire des traitements. Une
 traduction compréhensible des informations et des modalités de recours est
 nécessaire lorsque plusieurs langues sont utilisées.
+
+Éclairage théorique. Une donnée a plusieurs dimensions de gouvernance : le
+droit de la collecter, celui de l'utiliser pour une finalité précise, celui
+de la conserver et celui de la communiquer. La propriété d'un support ne
+donne pas automatiquement les droits sur tous les textes, voix ou images
+qu'il contient. Une licence de diffusion et une autorisation relative aux
+données personnelles répondent à des questions différentes.
+
+La minimisation réduit la quantité de données exposées mais ne supprime pas
+tous les risques : des informations apparemment banales peuvent devenir
+identifiantes lorsqu'elles sont rapprochées. Une gouvernance communautaire
+répartit les décisions et organise les recours ; elle doit aussi expliciter
+ses limites si des tiers ont déjà reçu des copies ou si un modèle a été
+entraîné. Aucun formulaire ne remplace cette discussion.
 
 Pas à pas.
 1. Définir finalité, catégories de données, personnes concernées, base légale,
@@ -325,6 +378,20 @@ Matériel et compétences. Inventaire des charges, wattmètre adapté, données
 locales d'ensoleillement, compétence électrique et budget de maintenance.
 Les batteries présentent des risques d'incendie, de court-circuit et de
 blessure ; le présent texte n'est pas un plan de câblage exécutable.
+
+Éclairage théorique. La puissance, exprimée en watts, décrit un débit
+d'énergie à un instant ; l'énergie, en wattheures, dépend aussi de la durée.
+Une machine de 50 W utilisée quatre heures consomme idéalement 200 Wh, avant
+pertes et autres charges. Cet exemple arithmétique ne dimensionne aucune
+installation. Les pointes de démarrage et les usages simultanés comptent
+également pour le choix des équipements.
+
+Une batterie stocke une quantité nominale d'énergie, dont seule une partie
+peut être utilisée selon sa technologie, ses limites de fonctionnement et
+son vieillissement. De même, la puissance nominale d'un panneau n'est pas
+sa production continue : l'ensoleillement, la température et l'orientation
+varient. Le bon dimensionnement confronte donc un profil de consommation à
+une production saisonnière et aux exigences de sécurité.
 
 Pas à pas.
 1. Mesurer la puissance de chaque appareil dans ses états réels : repos,
@@ -374,6 +441,19 @@ Matériel et compétences. Machines candidates, documentation constructeur,
 wattmètre, outils existants de mesure et compétences système. Les essais
 doivent utiliser les mêmes tâches, paramètres et jeux de questions.
 
+Éclairage théorique. Le traitement en périphérie rapproche le calcul du lieu
+de production ou d'utilisation des données. Il peut réduire la dépendance à
+une connexion et limiter certains transferts, mais il déplace aussi vers le
+lab les responsabilités de sécurité, de sauvegarde et de remplacement.
+Un système hybride peut être préférable si ses flux de données sont compris
+et autorisés.
+
+La performance se mesure selon l'usage : une réponse rapide n'est pas utile
+si elle est fausse ou si la machine s'arrête sous la chaleur. La mémoire
+nécessaire inclut les poids du modèle, le contexte traité et les logiciels
+en cours d'exécution. Comparer les équipements exige donc un même scénario,
+une durée suffisante et une mesure des conditions d'environnement.
+
 Pas à pas.
 1. Comparer mini-PC, carte embarquée et serveur selon mémoire réellement
    disponible, stockage, connectique, consommation, prix, support logiciel,
@@ -408,6 +488,19 @@ Matériel et compétences. Documents utilisables, responsable éditorial,
 machine compatible, outil de recherche, modèle local si nécessaire et
 personnes capables d'évaluer les réponses. RAG signifie génération augmentée
 par recherche : on cherche d'abord des sources, puis on les fournit au modèle.
+
+Éclairage théorique. Un modèle de langage seul produit une réponse probable
+à partir de ses paramètres et du contexte reçu ; il ne consulte pas
+nécessairement un document à jour. Le RAG ajoute une étape de recherche :
+les passages retrouvés sont placés dans le contexte de génération. Cette
+séparation permet de mettre à jour les documents sans réentraîner le modèle
+et d'examiner les sources proposées.
+
+Deux erreurs différentes peuvent survenir : le moteur ne retrouve pas le bon
+passage, ou le modèle répond mal malgré un passage pertinent. Il faut donc
+évaluer la recherche et la réponse séparément. Une référence affichée n'est
+pas une preuve automatique : elle doit soutenir précisément l'affirmation.
+L'absence de réponse documentée est préférable à une réponse inventée.
 
 Pas à pas.
 1. Définir les questions couvertes et exclues. Constituer un inventaire
@@ -455,6 +548,20 @@ ou indemnisés selon un accord explicite, outil de saisie, espace protégé et
 protocole de consentement. Dix mille phrases sont un objectif de travail,
 non un seuil garantissant la qualité.
 
+Éclairage théorique. Un corpus reflète les personnes, les situations et les
+choix de transcription qui l'ont produit. Dix mille phrases similaires
+peuvent représenter moins de contextes qu'un ensemble plus petit mais varié.
+La qualité se discute donc en termes de pertinence, de provenance, de droits
+et de diversité, plutôt qu'en nombre de phrases seulement.
+
+Les partitions servent des fonctions distinctes : l'entraînement ajuste les
+paramètres, la validation aide à choisir une configuration, et le test
+final estime le comportement sur des données réservées. Si des phrases
+presque identiques ou issues du même document apparaissent des deux côtés,
+le résultat peut surestimer la capacité à traiter de nouveaux exemples.
+L'accord entre correcteurs est utile à examiner mais ne rend pas une variante
+minoritaire incorrecte par définition.
+
 Pas à pas.
 1. Définir les usages et les variantes linguistiques recherchées avec les
    locuteurs. Documenter les sources autorisées, les domaines, les lacunes
@@ -500,6 +607,21 @@ linguistiques, machine adaptée ou accès de calcul explicitement autorisé,
 compétences d'entraînement et budget. QLoRA combine une base quantifiée et
 de petits paramètres adaptatifs entraînables ; il ne rend pas l'entraînement
 gratuit et ne corrige pas automatiquement les biais du corpus.
+
+Éclairage théorique. Adapter un modèle consiste à modifier son comportement
+pour une tâche ou un domaine à partir d'exemples. Avec LoRA, on apprend de
+petites matrices associées à certains paramètres plutôt que de réentraîner
+tous les poids. QLoRA conserve en plus une représentation quantifiée de la
+base pendant cet apprentissage. Le résultat dépend du modèle initial, des
+exemples, des réglages et de la méthode d'évaluation ; il ne suffit pas de
+produire un fichier d'adapter pour démontrer une amélioration.
+
+Une comparaison valide garde fixes la tâche, les données de test et les
+conditions de jugement entre modèle initial et modèle adapté. Les métriques
+automatiques facilitent la comparaison mais ne captent pas toujours le sens,
+la politesse, les variantes ou les conséquences d'une omission. L'évaluation
+par des locuteurs documente ces dimensions, sans prétendre qu'un petit panel
+représente tous les usages d'une langue.
 
 Pas à pas.
 1. Définir la tâche, les langues, les risques et les métriques avant de
@@ -552,6 +674,18 @@ Matériel et compétences. Locuteurs des langues concernées, exemples autorisé
 machine adaptée, modèle ou service choisi pour ses droits et ses performances
 réelles, et interface qui indique clairement le sens de traduction.
 
+Éclairage théorique. Traduire ne revient pas à remplacer chaque mot par un
+équivalent : le sens dépend du contexte, du registre, des noms, des nombres
+et des relations entre les personnes. Une phrase correcte grammaticalement
+peut omettre une négation ou changer le destinataire d'une instruction. La
+validation doit donc porter sur la fidélité et non seulement sur la fluidité.
+
+Les directions de traduction ne sont pas symétriques. Un système capable de
+produire du français compréhensible depuis l'éwé peut échouer dans l'autre
+sens, ou pour une variante particulière. L'interface doit préserver le texte
+source et permettre une correction humaine ; les exemples et les évaluateurs
+doivent correspondre aux situations envisagées.
+
 Pas à pas.
 1. Choisir un contexte limité et les directions linguistiques à tester :
    éwé → français, français → éwé, anglais → éwé et leurs inverses selon les
@@ -587,6 +721,20 @@ Matériel et compétences. Responsable de mesure, autorisations, capteurs
 adaptés, compétence réseau et protocole de calibration. ESP32, MQTT et LoRa
 sont des options possibles, non des obligations ; leur compatibilité et les
 fréquences autorisées doivent être vérifiées localement.
+
+Éclairage théorique. Une mesure n'est pas le phénomène lui-même : elle est
+produite par un instrument, placé quelque part, à un moment donné et selon
+une méthode. La précision annoncée par un fabricant ne remplace pas une
+vérification dans les conditions d'utilisation. La calibration compare la
+réponse d'un dispositif à une référence appropriée ; l'incertitude exprime
+les limites de l'estimation.
+
+Le transport des données et la qualité de mesure sont deux problèmes
+distincts. Un message transmis correctement peut contenir une valeur erronée,
+et une valeur juste peut arriver en retard ou être perdue. Identifier le
+capteur, dater la mesure et enregistrer les absences aide à distinguer ces
+cas. Les besoins de confidentialité doivent être examinés dès le choix du
+phénomène observé.
 
 Pas à pas.
 1. Définir question, lieu, durée, unité, intervalle, précision requise et
@@ -629,6 +777,18 @@ Matériel et compétences. Habitants, artisans, compétences de conception
 accessible, horticulture locale et vérification structurelle. Obtenir les
 autorisations d'occupation et identifier la personne responsable de l'entretien.
 
+Éclairage théorique. Le mobilier urbain est une intervention dans un espace
+partagé : sa valeur dépend de l'usage réel, de l'accès, de la sécurité et de
+l'entretien, pas seulement de son apparence. Un objet fabriqué en réemploi
+peut économiser des matériaux, mais sa provenance et sa résistance doivent
+être vérifiées. La conception avec les usagers permet de repérer des
+contraintes que le dessin seul ne révèle pas.
+
+La végétation agit selon l'espèce et le contexte. Son ombre peut améliorer
+le confort d'un lieu, mais l'effet sur la pollution ou le bruit ne peut être
+déduit du seul nombre d'arbres. Une irrigation pilotée ne devient pertinente
+que si elle apporte un bénéfice mesurable et si son entretien est possible.
+
 Pas à pas.
 1. Observer les usages, l'ombre, les circulations, l'accessibilité et les
    contraintes du site. Co-dessiner plusieurs solutions, y compris une
@@ -664,6 +824,19 @@ présenter une estimation comme un fait certain.
 Matériel et compétences. Données autorisées, dictionnaire de données,
 compétences spatiales et référent de qualité. Définir le niveau de précision
 spatiale nécessaire afin de ne pas exposer inutilement des personnes.
+
+Éclairage théorique. Une observation prend sens dans un système de référence :
+une température relevée à l'ombre à midi ne décrit pas nécessairement toute
+une rue ni toute une journée. La provenance relie la valeur à son instrument,
+sa méthode et sa date ; la qualité indique les contrôles effectués et les
+incertitudes connues. Une base sans ces éléments risque de rendre des
+comparaisons impossibles ou trompeuses.
+
+Le RAG spatial ajoute des contraintes géographiques et temporelles à la
+recherche documentaire. Il peut retrouver des observations près d'un lieu,
+mais la proximité ne prouve pas une relation causale. Le modèle de langage
+formule ensuite une explication à partir des éléments retrouvés ; il ne
+transforme pas des données incomplètes en connaissance exhaustive du terrain.
 
 Pas à pas.
 1. Décrire chaque observation : quoi (grandeur, unité), où (lieu ou zone),
@@ -704,6 +877,18 @@ Matériel et compétences. Analyse de risques, expertise du procédé, personnes
 habilitées, système de règles indépendant et dispositif d'arrêt approprié.
 Un prototype logiciel ne remplace pas une étude de sécurité professionnelle.
 
+Éclairage théorique. Une recommandation et une commande n'ont pas les mêmes
+conséquences. Un LLM peut produire une proposition incohérente, mal
+interpréter un capteur ou suivre des instructions présentes dans un document.
+Il faut donc que des protections extérieures au modèle vérifient ce qui peut
+être fait, par qui et dans quelles conditions.
+
+La défense en profondeur combine des contrôles de nature différente : droits
+d'accès, règles indépendantes, validation humaine et protections physiques.
+Elle ne signifie pas que chaque couche est infaillible. L'analyse de risques
+doit examiner leurs défaillances communes, définir un état sûr pour le
+procédé et prévoir des essais de panne et une maintenance.
+
 Pas à pas.
 1. Définir les actions permises, interdites et leurs conséquences ; documenter
    dangers, personnes exposées, limites physiques et état sûr en cas de panne.
@@ -741,6 +926,18 @@ Matériel et compétences. Professionnels qualifiés pour l'installation,
 responsable du site, composants adaptés et protections certifiées selon les
 exigences applicables. Aucun schéma de puissance de ce livre n'autorise une
 installation sans étude ni contrôle.
+
+Éclairage théorique. Un actionneur transforme une commande en effet physique :
+une vanne modifie un débit, un relais commute une charge et un ventilateur
+déplace de l'air. L'effet réel peut différer de la commande si une pièce
+reste bloquée ou si un capteur est défectueux. Une journalisation de la
+commande ne prouve donc pas à elle seule que l'effet attendu s'est produit.
+
+Les modes dégradés décrivent le comportement lorsque certaines conditions
+ne sont plus réunies : absence de réseau, coupure ou mesure invalide. Leur
+conception dépend du danger considéré et ne peut pas être déduite d'une
+règle générale. La remise sous tension est elle aussi une situation à
+tester, afin d'éviter une reprise d'action non autorisée.
 
 Pas à pas.
 1. Définir le scénario, la charge, les risques électriques et mécaniques,
@@ -780,6 +977,18 @@ Matériel et compétences. Inventaire, documentation, sauvegardes testées,
 pièces de rechange, budget et personnes formées. Les opérations électriques
 ou sur batteries sont réservées aux professionnels compétents.
 
+Éclairage théorique. La disponibilité d'un service dépend autant du temps
+nécessaire à réparer une panne que de la fréquence des pannes. Une pièce
+rare, une documentation absente ou un mot de passe détenu par une seule
+personne peuvent prolonger une interruption. Le suivi des incidents aide à
+prioriser les corrections et à estimer les ressources de maintenance.
+
+La maintenance préventive vise à réduire certains risques avant la panne ;
+elle ne dispense pas de prévoir une restauration et un retrait. Une
+sauvegarde testée doit permettre de retrouver à la fois les données
+autorisées et la configuration utile, sans exposer des informations à des
+personnes non habilitées.
+
 Pas à pas.
 1. Établir un registre des équipements, versions, garanties, responsabilités
    et contacts. Prévoir des contrôles périodiques adaptés aux préconisations
@@ -812,6 +1021,19 @@ Matériel et compétences. Processus de retour accessible, responsable de
 validation, registre d'incidents et politique de conservation. Une correction
 doit être distinguée d'une opinion et reliée à sa source.
 
+Éclairage théorique. Une mémoire d'expérience est un registre de décisions
+et de conséquences, pas simplement un historique de conversations. Elle
+permet de savoir pourquoi une version a été retenue et quels problèmes ont
+été signalés. Les retours doivent rester contextualisés : une correction
+appropriée pour un lieu, une date ou une variante ne vaut pas nécessairement
+pour tous les cas.
+
+Apprentissage continu ne signifie pas modification continue et automatique.
+Un cycle maîtrisé sépare collecte, vérification, préparation, test,
+approbation et déploiement. Des versions identifiées et un retour arrière
+réduisent le risque d'une régression silencieuse ; ils ne remplacent pas
+l'évaluation humaine des conséquences.
+
 Pas à pas.
 1. Recueillir, avec information et autorisation appropriées, le contexte,
    la réponse ou proposition, la correction, les conséquences observées et
@@ -843,6 +1065,19 @@ Matériel et compétences. Accords entre nœuds, interlocuteurs locaux,
 documentation, moyens de communication et responsabilités financières.
 Une fédération est une organisation d'échanges convenus, non une obligation
 de partager toutes les données.
+
+Éclairage théorique. Dans une architecture fédérée, chaque nœud conserve
+une capacité de décision sur ses ressources et accepte des règles communes
+pour certains échanges. La fédération peut concerner la documentation, les
+méthodes ou des logiciels sans entraîner la centralisation des corpus.
+Elle suppose cependant des accords précis sur les versions, les droits et
+la résolution des désaccords.
+
+La réplication n'est pas la copie conforme d'un équipement : elle exige une
+appropriation, des compétences et un financement adaptés au nouvel endroit.
+Une méthode peut voyager d'un territoire à l'autre alors que ses données
+restent locales. Le partenariat entre régions doit aussi permettre à chaque
+nœud de se retirer sans perdre l'accès à ses propres ressources.
 
 Pas à pas.
 1. Définir pour chaque nœud ses services, données, compétences, responsable,

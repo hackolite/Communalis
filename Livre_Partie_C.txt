@@ -1,0 +1,1036 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+
+PARTIE C — LA COUCHE LINGUISTIQUE
+
+Texte de travail en français
+
+Cette partie développe les chapitres 7 à 10 du plan de Communalis. L'ouvrage
+vise 300 pages hors index et bibliographie ; le présent fichier n'est ni une
+mise en pages ni la preuve que cette cible est atteinte. Les figures, tableaux
+et encadrés sont des propositions éditoriales et des instruments de travail.
+
+La couche linguistique relie des personnes, des documents, des langues et des
+outils. Elle ne commence pas par le choix d'un modèle : elle commence par la
+question de savoir qui veut accomplir quoi, avec quelles sources, pour quel
+public et sous quelle responsabilité. Retrouver un règlement, préparer une
+traduction et entraîner un modèle sont trois activités différentes. Chacune
+mérite ses propres critères de réussite, ses limites et sa possibilité d'arrêt.
+
+Aucun essai ni résultat de terrain au Togo n'est présenté comme acquis. Les
+emplacements [RÉSULTATS TOGO À INSÉRER] accueillent des observations vérifiées,
+y compris négatives. Les mentions [À ACTUALISER — ...] désignent des éléments
+susceptibles de changer : une personne désignée les vérifiera et les datera
+avant usage. Les exemples de procédures, de fiches et de tableaux ci-dessous
+sont des propositions, non des résultats.
+
+Les communautés linguistiques ne sont pas homogènes. Les noms de langues,
+variantes et pratiques d'écriture doivent être discutés avec les personnes
+concernées, sans attribuer à quelques participants la capacité de représenter
+tous les locuteurs. Un système peut échouer même lorsque son interface paraît
+fluide. Dans les situations à conséquence importante, l'expertise humaine et
+les procédures officielles priment toujours sur sa sortie.
+
+---------------------------------------------------------------------------
+CHAPITRE 7 — ASSISTANT DE CONNAISSANCES LOCALES : RAG
+---------------------------------------------------------------------------
+
+OBJECTIF
+
+Construire, pour un périmètre documentaire précis, un assistant capable de
+retrouver des passages autorisés et de présenter une réponse vérifiable ou une
+absence d'information. RAG signifie « génération augmentée par recherche » :
+avant de formuler une réponse, le système recherche des extraits et les fournit
+à un modèle de langage. Le projet réussit seulement si les personnes peuvent
+retrouver et vérifier l'information plus sûrement ou plus utilement qu'avec
+une solution plus simple, pas parce qu'un modèle produit du texte.
+
+L'assistant est un outil de consultation. Il ne rend pas un document officiel
+plus récent, ne décide pas à la place d'un service compétent et ne met pas
+un équipement en action. Une recherche ordinaire, un répertoire papier ou un
+accueil humain peuvent constituer une meilleure solution pour certains usages.
+
+MATÉRIEL ET COMPÉTENCES
+
+Il faut un responsable du périmètre et des sources, une personne capable de
+préparer et de vérifier les documents, des lecteurs représentant les usages
+visés, ainsi qu'une compétence technique pour l'installation et la
+maintenance. Un ordinateur adapté au volume documentaire suffit pour une
+première recherche textuelle ; la génération locale exige en outre une machine
+compatible avec le modèle choisi. Prévoir un stockage protégé, une sauvegarde
+restaurable, un moyen de mesure du temps et, si possible, de l'énergie.
+
+[À ACTUALISER — Inventaire du matériel disponible, capacité, consommation,
+versions des logiciels et compatibilité effective du modèle choisi.]
+[À ACTUALISER — Droits, licences, conditions d'accès et dates de validité
+des documents et composants utilisés.]
+
+Pourquoi séparer recherche et génération ?
+
+Un modèle seul peut produire une phrase plausible sans avoir consulté la
+source actuelle. Dans un RAG, une recherche fournit d'abord des passages
+susceptibles de répondre. Le modèle reçoit ensuite la question et ces
+passages. Mettre à jour l'index permet en principe de changer les sources
+consultées sans réentraîner le modèle. Mais ni la présence d'un extrait ni
+l'affichage d'une citation ne prouvent que la réponse est exacte. Le passage
+peut être incomplet, périmé, non pertinent ou mal interprété.
+
+Il faut distinguer au moins trois choses : trouver un document pertinent,
+trouver le passage qui répond réellement à la question, puis produire une
+réponse dont chaque affirmation importante est soutenue par ce passage. Le
+test doit permettre de localiser l'erreur au lieu d'attribuer toute mauvaise
+réponse au modèle.
+
+Schéma 7.1 — Un chemin vérifiable
+
+ Question + identité et droits de la personne
+                    |
+                    v
+       Recherche dans les seuls contenus autorisés
+                    |
+             passages + références
+                    |
+       +------------+------------------+
+       |                               |
+       v                               v
+ passages insuffisants          passages exploitables
+       |                               |
+       v                               v
+ abstention + orientation      réponse proposée + citations
+                                       |
+                                       v
+                          lecture humaine des passages
+
+ÉTAPE 1 — DÉFINIR LE SERVICE ET SES FRONTIÈRES
+
+Commencer par un atelier court avec les futurs utilisateurs et les personnes
+responsables des documents. Demander quelles questions reviennent, ce qu'une
+réponse utile permet de faire et où se trouve aujourd'hui la réponse fiable.
+Transformer les besoins en un périmètre : par exemple, aider à retrouver des
+horaires ou des procédures publiées par un organisme donné, sans prétendre
+couvrir toute l'administration du territoire. Cet exemple est fictif ; les
+services, horaires et procédures réels restent à documenter.
+
+Rédiger aussi une liste d'exclusions. Une question juridique ou médicale,
+une donnée personnelle, une demande qui exige une décision individuelle ou
+un document non autorisé peut nécessiter un renvoi vers un service ou une
+personne compétente. Décider qui reçoit les signalements, sous quel délai
+indicatif et comment l'utilisateur est informé si aucun suivi n'est possible.
+
+Encadré 7.1 — Une réponse utile n'est pas nécessairement générée
+
+Une liste de documents avec titre, date et extrait peut suffire. Avant
+d'ajouter un modèle, demander à quelques lecteurs d'accomplir la même tâche
+avec un classement manuel ou une recherche par mots. La comparaison doit
+inclure le temps humain et les erreurs, pas seulement la vitesse de la machine.
+Si le classement suffit, le conserver est une décision technique valable.
+
+ÉTAPE 2 — INVENTORIER ET AUTORISER LES SOURCES
+
+Créer un registre distinct des fichiers publics. Une ligne correspond à une
+version d'une source, non simplement à son titre. Identifier le titulaire ou
+responsable, l'origine et le mode d'obtention ; conserver la preuve de
+l'autorisation et ses éventuelles restrictions. L'autorisation de lire un
+document n'implique pas automatiquement le droit de le copier, l'indexer,
+l'envoyer à un fournisseur externe ou en reproduire des extraits.
+
+Tableau 7.1 — Registre documentaire minimal
+
+Champ                         | Question à renseigner
+----------------------------- | --------------------------------------------
+Identifiant et version        | Quel document exact et quelle version ?
+Titre, auteur, organisme      | Qui est responsable de son contenu ?
+Date et période de validité   | Quand a-t-il été produit et quand vérifier ?
+Origine et preuve des droits  | D'où vient-il et quels usages sont permis ?
+Langue et variante si connue  | Que sait-on, sans supposer une norme unique ?
+Accès                         | Qui peut rechercher et lire cette version ?
+Emplacement et empreinte      | Quel fichier contrôlé a été indexé ?
+Responsable et révision       | Qui vérifie, corrige ou retire la source ?
+Statut                        | Actif, à vérifier, archivé ou retiré ?
+
+[À ACTUALISER — Dates de révision, responsables, périmètres d'accès et
+autorisations de chaque source.] Les dates ou les licences trouvées dans une
+copie doivent être vérifiées auprès d'une source faisant autorité lorsque
+c'est nécessaire. Conserver la version consultée afin qu'une réponse passée
+puisse être auditée, sous réserve des droits de conservation et de retrait.
+
+ÉTAPE 3 — PRÉPARER LE TEXTE ET SON INDEX
+
+Extraire le texte sans perdre le lien avec le fichier d'origine, sa page ou
+sa section. Lorsqu'un document est scanné, contrôler la reconnaissance des
+caractères sur des passages variés : titres, tableaux, noms, chiffres et
+signes propres aux langues concernées. Une erreur de reconnaissance sur une
+négation ou un nombre peut suffire à inverser le sens. Corriger le texte de
+travail en gardant trace de la correction et, lorsque les droits le
+permettent, de la page originale pour vérification.
+
+Découper ensuite par unités de sens : rubrique, paragraphe ou passage court
+qui garde son contexte. Une phrase seule peut perdre une condition énoncée
+dans la phrase précédente ; un très long bloc peut noyer la réponse ou
+dépasser la capacité du modèle. Enregistrer pour chaque passage l'identifiant
+du document, la version, les pages, les titres et les droits. Si des blocs
+se chevauchent pour préserver le contexte, conserver leur filiation afin de
+ne pas compter plusieurs fois la même preuve.
+
+Commencer par une recherche par mots. Observer les synonymes, les variantes
+d'écriture et les termes absents de l'index. Une recherche sémantique peut
+compléter cette base si elle améliore l'accès aux formulations différentes.
+Elle ajoute toutefois un modèle de représentation, ses ressources, ses droits
+et ses biais linguistiques. Comparer les deux méthodes sur les mêmes questions
+avant de conserver une complexité supplémentaire.
+
+Une modification de source n'est pas une simple copie dans un dossier : il
+faut reconstruire ou mettre à jour l'index, vérifier que les passages retirés
+ne ressortent plus, invalider les caches concernés et tester les droits. Les
+versions anciennes peuvent être archivées séparément si leur conservation est
+autorisée ; elles ne doivent pas apparaître comme texte en vigueur.
+
+ÉTAPE 4 — CONTRÔLER L'ACCÈS AVANT LA RECHERCHE
+
+La permission de voir une réponse ne se déduit pas de la capacité du moteur à
+la générer. Appliquer les droits à la sélection des documents et des extraits,
+avant leur fourniture au modèle ; vérifier aussi les aperçus, citations,
+journaux, caches et sauvegardes. Une interface locale peut quand même être
+accessible à d'autres personnes sur un réseau partagé. Limiter l'exposition
+par défaut, authentifier les accès lorsque nécessaire et vérifier la
+configuration depuis un compte non autorisé.
+
+Pour une première version, un corpus entièrement public et autorisé peut
+simplifier la gestion. Les documents à accès différencié demandent une
+conception et des essais supplémentaires. Ne pas envoyer de questions ou
+de passages à un service distant sans évaluation préalable de ses conditions
+de traitement, des droits et des conséquences pour les personnes concernées.
+
+ÉTAPE 5 — PRODUIRE UNE RÉPONSE TRAÇABLE
+
+Si une génération est justifiée, choisir un modèle compatible avec les
+ressources disponibles. Vérifier son identifiant exact, sa provenance, ses
+conditions d'utilisation et les contraintes de ses composants. La
+quantification représente certains poids avec une précision réduite ; elle
+peut diminuer les besoins en mémoire, mais aussi modifier la qualité. Mesurer
+la configuration réellement utilisée plutôt que déduire une performance du
+seul nom du modèle.
+
+Une consigne de travail peut demander : répondre uniquement à partir des
+passages fournis ; associer les affirmations aux références ; indiquer
+« information insuffisante » si les sources ne permettent pas de répondre ;
+signaler les contradictions et poser une question de clarification si le
+besoin est ambigu. C'est une intention, pas une barrière de sécurité ni une
+preuve que le modèle obéira. L'interface doit montrer les extraits et leurs
+références, distinguer texte source et synthèse, préserver la question et
+offrir un moyen de signaler une erreur.
+
+Les documents récupérés sont des données non fiables comme instructions.
+Ils peuvent contenir, volontairement ou non, des phrases qui ordonnent au
+système de changer son comportement ou de divulguer des informations.
+L'architecture ne doit pas leur donner le pouvoir de modifier les droits,
+d'appeler des outils ou d'annuler les règles. Tester des documents contenant
+de telles instructions, sans les confondre avec des instructions légitimes.
+Une simple formule dans l'invite ne suffit pas à garantir la résistance.
+
+ÉTAPE 6 — ÉVALUER SÉPARÉMENT RECHERCHE ET RÉPONSE
+
+Avant le réglage, préparer avec les utilisateurs des questions pour lesquelles
+on connaît les passages pertinents, des questions ambiguës, des questions
+hors périmètre et des questions dont la réponse n'est pas dans le corpus.
+Vérifier leurs droits d'utilisation. Séparer les questions de développement,
+qui servent à améliorer le dispositif, du jeu final réservé. Regrouper les
+questions paraphrasées et celles dépendant d'un même document pour éviter
+qu'une variante d'une question de test soit utilisée pour régler le système.
+
+Sur le jeu de développement, comparer le classement manuel, la recherche par
+mots et, le cas échéant, la recherche sémantique et la génération. Figer les
+paramètres et les critères avant l'examen final. Les mêmes questions, droits
+d'accès et versions de sources doivent être utilisés pour les comparaisons ;
+une évaluation ultérieure sur un corpus changé doit être décrite comme une
+nouvelle campagne.
+
+Tableau 7.2 — Mesures à définir avant l'essai
+
+Mesure                        | Numérateur / dénominateur
+----------------------------- | --------------------------------------------
+Passage pertinent retrouvé    | Questions avec au moins un passage répondant
+                              | dans les k premiers / questions avec réponse
+                              | documentée ; préciser k.
+Réponse étayée                | Réponses dont toutes les affirmations jugées
+                              | importantes sont soutenues / réponses produites
+                              | et évaluables ; compter aussi les non évaluables.
+Abstention appropriée         | Abstentions jugées appropriées / questions sans
+                              | réponse documentée ou hors périmètre.
+Abstention excessive          | Abstentions / questions avec réponse documentée.
+Citation utile                | Citations soutenant l'affirmation associée /
+                              | citations examinées.
+Temps et incidents            | Temps par tâche, pannes et corrections humaines ;
+                              | préciser début, fin et conditions de mesure.
+
+Indiquer les effectifs bruts, les proportions, les langues, les types de
+questions et les désaccords des évaluateurs. Les taux sur de petits effectifs
+ne doivent pas être interprétés comme des garanties générales. Une réponse
+correcte par hasard mais appuyée sur une citation hors sujet n'est pas une
+réponse traçable. Prévoir une catégorie distincte pour les sources elles-mêmes
+incorrectes ou contradictoires.
+
+RÉSULTATS MESURÉS ET DÉCISION
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Fiche de restitution à remplir après l'essai : période et lieu ; personnes
+ayant défini le besoin ; version du corpus et droits ; langues et variantes
+effectivement testées ; nombre de questions par catégorie ; méthode de
+séparation ; résultats bruts et dénominateurs du tableau 7.2 ; temps de
+recherche, d'attente et de vérification ; incidents d'accès ; avis divergents ;
+ressources mesurées et méthode ; comparaison avec la pratique existante ;
+décision de poursuivre, modifier ou arrêter. Ne publier que les éléments
+autorisés, sans questions personnelles identifiantes.
+
+LIMITES ET ÉCHECS
+
+Un passage peut être retrouvé sans être compris ; une réponse peut citer le
+bon document mais la mauvaise page ; une source peut elle-même être dépassée.
+Les documents rares ou les variantes peu présentes seront moins bien servis.
+L'absence de réponse dans le corpus n'établit pas l'absence de réponse dans
+le monde. Une panne électrique, un index périmé ou une suppression incomplète
+peuvent aussi rendre l'assistant indisponible ou trompeur.
+
+En cas d'erreur, conserver une trace protégée, retrouver la version des
+sources, déterminer si le défaut vient de la source, de l'extraction, de la
+recherche, de la génération ou de l'interface, puis corriger et retester.
+Pour une fuite ou un contenu retiré, suspendre l'accès concerné, appliquer la
+procédure convenue et vérifier index, caches et sauvegardes. Si la confiance
+ou la maintenance manque, revenir à la consultation directe.
+
+CHECK-LIST DU CHAPITRE 7
+
+□ Besoin, public, exclusions et solution sans génération décrits.
+□ Sources, droits, versions et responsable de révision enregistrés.
+□ Extraction, découpage et références contrôlés avec des lecteurs.
+□ Accès appliqué avant recherche et vérifié aussi pour caches et journaux.
+□ Textes retrouvés traités comme données, non comme instructions.
+□ Questions de développement et test final séparés par groupe pertinent.
+□ Recherche, citations, abstentions, temps et erreurs mesurés séparément.
+□ Mise à jour, retrait, sauvegarde et retour à une solution simple prévus.
+
+---------------------------------------------------------------------------
+CHAPITRE 8 — MOBILISER LA COMMUNAUTÉ POUR UN CORPUS
+---------------------------------------------------------------------------
+
+OBJECTIF
+
+Construire avec les contributeurs un corpus utile à une tâche définie,
+traçable, utilisable selon des droits explicites et accompagné d'une
+description honnête de ses lacunes. Un objectif de dix mille phrases peut
+servir à organiser le travail ; il ne constitue ni une obligation, ni un
+seuil scientifique de qualité. Un corpus plus petit, bien documenté et
+diversifié pour l'usage visé, peut être préférable à une accumulation de
+phrases répétitives ou mal autorisées.
+
+Le corpus est une relation de travail autant qu'un fichier. Il engage les
+personnes qui fournissent des textes, celles qui les corrigent et celles qui
+seront concernées par les usages futurs. Elles doivent pouvoir comprendre ce
+qui est demandé, poser des questions et refuser sans conséquence abusive.
+
+MATÉRIEL ET COMPÉTENCES
+
+Réunir des contributeurs et référents linguistiques rémunérés ou indemnisés
+selon un accord explicite ; une personne responsable des droits et des
+retraits ; des relecteurs indépendants ; une personne chargée de la gestion
+technique et des sauvegardes. Prévoir un moyen de saisie accessible, du papier
+si nécessaire, une transcription contrôlée, un espace de travail protégé et
+un budget pour la formation, la double lecture et la résolution de désaccords.
+
+[À ACTUALISER — Budget, modalités de rémunération, droit applicable,
+autorisations, conservation et moyens matériels convenus localement.]
+La validation juridique et éthique doit correspondre au contexte réel ; une
+case cochée dans ce chapitre ne remplace pas un avis compétent.
+
+ÉTAPE 1 — NÉGOCIER L'USAGE ET LA GOUVERNANCE
+
+Décrire l'usage prévu : recherche documentaire, traduction d'un domaine
+limité, évaluation ou adaptation d'un modèle. Demander qui bénéficie du
+travail, qui peut accéder aux données, qui décidera de leur diffusion et ce
+qui se passera si un partenaire se retire. Distinguer une consultation
+communautaire de l'autorisation individuelle de chaque contribution :
+l'accord d'un responsable ne remplace pas nécessairement celui des personnes
+concernées ni les droits d'autres titulaires.
+
+Rendre les décisions compréhensibles dans les langues et formats accessibles
+aux participants. Définir une représentation des désaccords et une voie de
+recours. Aucune personne ne doit être présentée comme porte-parole de toute
+une langue. Chercher plusieurs expériences, y compris celles de personnes
+dont les pratiques sont moins visibles, sans collecter de caractéristiques
+personnelles inutiles ou exposer un groupe à un risque.
+
+Encadré 8.1 — Questions à traiter avant toute collecte
+
+• Quelle tâche et quels usages sont autorisés ou exclus ?
+• Les textes seront-ils seulement consultés, partagés, publiés ou utilisés
+  pour entraîner un modèle ? Un transfert externe est-il envisagé ?
+• Qui peut accéder aux originaux et aux coordonnées ? Combien de temps ?
+• Quels risques subsistent malgré la suppression des noms ?
+• Comment demander la correction ou le retrait, et jusqu'à quelle limite
+  technique et juridique peut-on le garantir ?
+• Quel paiement, quelle reconnaissance et quel retour sont prévus ?
+
+Le consentement ou une autre base appropriée doit être documenté selon le
+contexte et les droits applicables. Expliquer séparément les usages ; ne
+pas promettre qu'un retrait effacera automatiquement toute influence d'un
+texte déjà utilisé pour entraîner un modèle ou déjà partagé. Documenter les
+limites avant la contribution, prévoir une date et un canal de contact, puis
+mettre en œuvre les mesures effectivement promises.
+
+ÉTAPE 2 — DÉFINIR L'ÉCHANTILLON ET LES UNITÉS
+
+Une phrase n'est pas toujours une unité linguistique suffisante : le contexte,
+le locuteur, le destinataire et la situation peuvent déterminer le sens.
+Selon la tâche, conserver des paragraphes, des dialogues ou des paires
+source-traduction accompagnés d'un contexte minimal autorisé. Une même
+conversation, un même document ou une même famille de phrases peut former un
+groupe. Cette notion servira ensuite à éviter les fuites entre partitions.
+
+Établir une matrice de collecte par domaine, situation, langue, variante
+autodécrite lorsque pertinente, type de source et registre. Ce n'est pas un
+quota de représentativité : c'est un moyen de voir ce qui manque. Demander
+aux participants quelles catégories sont utiles et lesquelles sont
+intrusives. Si une catégorie risque d'identifier une personne, l'omettre ou
+la regrouper ; conserver les informations sensibles seulement si elles sont
+nécessaires et autorisées.
+
+Tableau 8.1 — Plan de collecte à compléter, sans effectifs supposés
+
+Usage ou domaine | Situation | Langue / variante | Source autorisée | Lacune
+---------------- | --------- | ----------------- | ---------------- | --------
+À définir        | À définir | À discuter        | À vérifier       | À noter
+
+Pour chaque source, consigner la provenance, le titulaire des droits, les
+autorisations, la date et les restrictions. Les textes récupérés en ligne ne
+sont pas libres d'utilisation du seul fait qu'ils sont accessibles. Les
+conversations, messages personnels et récits sur des tiers exigent une
+prudence particulière. Éviter la collecte de noms, de coordonnées, de
+diagnostics ou de détails identifiants lorsqu'ils ne sont pas indispensables.
+L'anonymisation réduit certains risques mais ne garantit pas l'impossibilité
+de reconnaître une personne à partir du contexte.
+
+ÉTAPE 3 — ORGANISER DES LOTS DE TRAVAIL JUSTES
+
+Transformer le plan en lots de taille raisonnable, avec une personne
+référente, un objectif, une date de retour et un temps payé pour l'apprentissage
+des règles. Présenter le prix ou l'indemnité, le mode et le calendrier de
+paiement avant de commencer. Prévoir pauses, accessibilité, matériel et
+possibilité de signaler un contenu difficile. Ne pas rémunérer uniquement au
+nombre de phrases si cela encourage à négliger le contexte ou la qualité.
+
+Former les contributeurs à partir d'exemples autorisés distincts du test final.
+Une séance de calibration permet de comparer les décisions et de clarifier
+les consignes, sans imposer systématiquement une seule réponse. La personne
+qui corrige doit pouvoir marquer « incertain », laisser plusieurs formes
+acceptables ou demander une discussion. La fatigue et le travail de médiation
+doivent figurer dans le budget, pas seulement la saisie.
+
+ÉTAPE 4 — SAISIR, RELIRE ET RÉSOUDRE LES DÉSACCORDS
+
+Attribuer un identifiant stable à chaque unité et à son groupe d'origine.
+Séparer le registre associant identifiants et identités du fichier de travail ;
+restreindre son accès. Le fichier de travail garde les informations nécessaires
+à l'usage : texte, contexte autorisé, langue déclarée, source, droits, état
+de relecture et historique de correction. Un pseudonyme ne rend pas un texte
+nécessairement anonyme.
+
+Tableau 8.2 — Parcours d'une unité
+
+État              | Action attendue
+----------------- | --------------------------------------------------------
+Reçue             | Vérifier provenance, droits et présence de contexte.
+À relire          | Deux lectures indépendantes selon les moyens prévus.
+Désaccord         | Noter les propositions et le motif sans effacer l'une
+                  | d'elles ; demander une médiation si nécessaire.
+Acceptée          | Conserver la ou les formes valides et leur statut.
+Refusée / retirée | Motiver, limiter l'accès et appliquer la procédure.
+
+La première lecture peut corriger une faute de saisie ; la seconde examine
+indépendamment la fidélité, la lisibilité et la pertinence pour la tâche. Une
+divergence peut venir d'une erreur, d'un contexte insuffisant ou de variantes
+également légitimes. Conserver la raison de l'arbitrage et, si les droits le
+permettent, plusieurs références plutôt que d'effacer une forme minoritaire.
+Mesurer les accords sur des catégories clairement définies et rapporter les
+désaccords : un taux d'accord élevé ne prouve ni la représentativité ni la
+validité d'une norme unique.
+
+ÉTAPE 5 — CONTRÔLER SANS APPAUVRIR
+
+Vérifier l'encodage, les caractères, les champs manquants et les doublons
+exacts. Chercher aussi les quasi-doublons : une phrase avec une ponctuation
+différente, une traduction reformulée ou un extrait repris ailleurs. Un outil
+automatique propose des candidats ; une personne compétente vérifie les cas
+ambigus. Une expression régulière ou une normalisation peut effacer une
+distinction utile. Conserver l'original autorisé, la transformation et sa
+justification ; ne jamais supprimer une forme uniquement parce qu'elle semble
+rare à un outil.
+
+Consigner les taux de refus et leurs motifs, sans exposer de données
+personnelles. Examiner si un filtre rejette davantage certaines sources ou
+variantes. Vérifier également que les exemples réservés à l'évaluation ne
+sont pas déjà publiés dans un jeu d'entraînement connu : les recoupements
+peuvent être difficiles à détecter, en particulier dans les données initiales
+d'un modèle. Documenter ce qui a été vérifié et ce qui reste inconnu.
+
+ÉTAPE 6 — SCELLER ENTRAÎNEMENT, VALIDATION ET TEST
+
+Définir l'objectif de généralisation avant de répartir les données. Si l'on
+veut mesurer la capacité à traiter de nouveaux documents, tenir ensemble
+toutes les phrases d'un document et ses copies ; si l'on vise de nouveaux
+contributeurs ou de nouvelles sources, regrouper selon ces unités aussi.
+Un groupe peut relier plusieurs documents par une personne, une conversation,
+une traduction ou un quasi-doublon. Résoudre ces liens avant l'affectation,
+sinon une répartition phrase par phrase produira une estimation trop optimiste.
+
+Schéma 8.1 — Du corpus à une évaluation indépendante
+
+ Sources autorisées → groupes liés et quasi-doublons identifiés
+                            |
+                 affectation des groupes
+                  /           |           \
+        entraînement      validation      test final scellé
+        ajuster poids     choisir choix    évaluer après gel
+                  \           |           /
+                   contrôle de chevauchement
+
+L'entraînement sert à ajuster les paramètres ; la validation sert à choisir
+les réglages et à comparer les prototypes ; le test final sert à évaluer une
+configuration figée. Garder les références et les réponses du test hors de
+l'accès des personnes qui règlent le système, dans la mesure praticable.
+Documenter l'algorithme ou la méthode d'affectation, la graine éventuelle,
+les groupes, les effectifs et les droits d'accès. Tester les chevauchements
+exacts et approximatifs entre partitions, puis faire examiner les alertes.
+Une répartition équilibrée peut être impossible pour des groupes rares :
+le signaler plutôt que casser les groupes pour améliorer les chiffres.
+
+Si le test final révèle un problème et conduit à modifier le système, ce jeu
+est désormais informatif pour le développement. Le conserver pour une analyse
+historique, mais réserver un nouveau test indépendant pour une nouvelle
+estimation finale. Éviter de faire passer des exemples de test dans des
+supports de formation, invites, lexiques ou corrections utilisés pour régler
+le modèle. Ce principe s'applique aussi aux chapitres 9 et 10.
+
+ÉTAPE 7 — DOCUMENTER, PUBLIER OU RETIRER
+
+Rédiger une fiche de corpus avec les usages prévus et interdits, sources et
+dates, droits, langues et variantes telles que décrites par les participants,
+méthode de collecte, critères d'acceptation, partitions, contrôles et lacunes.
+Préciser qui peut obtenir les données, sous quelle licence ou autorisation,
+et comment signaler un problème. Une fiche publique peut décrire un corpus
+sans publier les textes ni les coordonnées privées.
+
+Tester la procédure de retrait : retrouver les unités liées à une source,
+retirer ou restreindre les copies de travail, prévenir les destinataires
+identifiés lorsque possible, reconstruire les index concernés et enregistrer
+les actions. Traiter les sauvegardes selon une politique documentée et
+vérifier les contraintes applicables ; ne pas prétendre supprimer des copies
+hors de son contrôle. Pour un modèle déjà entraîné, consigner la décision
+possible : retrait de la distribution, réentraînement sans les données ou
+autre mesure examinée avec les personnes concernées. Aucune de ces options
+ne doit être promise comme immédiate sans vérification.
+
+RÉSULTATS MESURÉS ET DÉCISION
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Documenter après collecte les effectifs proposés, acceptés, refusés et retirés
+avec leurs dénominateurs ; la diversité observée selon les catégories
+autorisées ; les heures de collecte, de formation, de relecture et de
+médiation ; les conditions de rémunération réellement appliquées ; les
+désaccords et leur résolution ; les tailles des partitions par groupe et
+unité ; les recoupements détectés et les limites de détection. Rapporter
+aussi les demandes non satisfaites et les raisons de ne pas publier certaines
+données. Ne pas exposer les identités ou caractéristiques permettant une
+réidentification.
+
+LIMITES ET ÉCHECS
+
+Un corpus peut refléter surtout les personnes disponibles, alphabétisées ou
+à l'aise avec une interface. La recherche d'un grand volume peut favoriser
+des formules répétées au détriment de situations rares. Les droits peuvent
+être incomplets, les rémunérations insuffisantes ou le retrait techniquement
+difficile. Une partition étanche ne corrige pas un corpus biaisé ; elle évite
+seulement certaines surestimations de l'évaluation.
+
+Si les conditions de participation sont contestées, suspendre la collecte,
+écouter les personnes concernées et réviser l'accord. Si les droits d'une
+source sont incertains, isoler les unités avant tout usage ou diffusion.
+Si la double lecture manque de moyens, réduire le périmètre ou signaler
+précisément les unités non revues plutôt que déclarer tout le corpus validé.
+
+CHECK-LIST DU CHAPITRE 8
+
+□ Usages, gouvernance, droits et retrait expliqués avant collecte.
+□ Rémunération, formation, pauses et voie de recours convenues.
+□ Sources et contextes documentés avec minimisation des données personnelles.
+□ Variantes et désaccords reconnus, sans norme unique supposée.
+□ Relecture indépendante et contrôles automatiques vérifiés par des humains.
+□ Groupes liés et quasi-doublons répartis sans fuite entre partitions.
+□ Test final protégé de la formation, des invites et des réglages.
+□ Fiche, accès, sauvegarde et procédure de retrait effectivement testés.
+
+---------------------------------------------------------------------------
+CHAPITRE 9 — ADAPTER UN MODÈLE À UNE LANGUE PEU DOTÉE : QLORA
+---------------------------------------------------------------------------
+
+OBJECTIF
+
+Examiner si une adaptation améliore une tâche linguistique définie, pour des
+personnes et des situations précises, par rapport à des solutions plus simples
+et à un modèle de base. Le résultat attendu est une décision informée, non
+l'obligation de produire un modèle adapté. Un échec mesuré, une amélioration
+trop faible ou un coût humain disproportionné sont des conclusions utiles.
+
+« Peu dotée » décrit ici la disponibilité limitée de certaines ressources
+numériques pour une tâche, pas une propriété intrinsèque ni une déficience
+d'une langue. Les ressources et usages varient selon les communautés et
+évoluent. Les personnes concernées doivent pouvoir discuter la définition
+du problème, les exemples et les critères de réussite.
+
+MATÉRIEL ET COMPÉTENCES
+
+Il faut un corpus autorisé et partitionné comme au chapitre 8, des
+compétences en préparation de données et entraînement, des locuteurs ou
+relecteurs qualifiés pour la tâche, un responsable des droits, une capacité
+de calcul compatible et un budget couvrant aussi l'évaluation et la reprise.
+Le calcul peut être local ou partagé ; un transfert vers un prestataire
+nécessite une autorisation distincte et un examen de la confidentialité.
+
+[À ACTUALISER — Capacité de calcul, disponibilité, versions des pilotes et
+bibliothèques, coûts, énergie et conditions d'accès au moment de l'essai.]
+[À ACTUALISER — Existence, identifiant exact, provenance, disponibilité,
+licence et conditions d'utilisation de Qwen3.5-4B ; compatibilité effective
+avec la tâche, le matériel et la chaîne envisagée.] Qwen3.5-4B est une piste
+du plan, non une existence, une licence ou une capacité présumée. Si les
+vérifications échouent ou restent incomplètes, ne pas l'utiliser ; choisir
+éventuellement un autre modèle documenté et justifier ce choix.
+
+COMPRENDRE L'ADAPTATION AVANT DE LA LANCER
+
+Un modèle de base a déjà des paramètres appris sur des données qui peuvent
+être imparfaitement documentées. Une adaptation supervisée lui présente des
+exemples de la tâche souhaitée. LoRA ajoute à certains poids des mises à jour
+paramétrées par de petites matrices entraînables : on ajuste ces paramètres
+additionnels plutôt que tous les poids. QLoRA combine cette approche avec une
+base représentée en faible précision, souvent en quatre bits, dans une
+chaîne compatible. La représentation, les calculs intermédiaires et les
+paramètres entraînables n'ont pas nécessairement tous la même précision.
+
+Cette technique peut réduire certains besoins de mémoire ; elle ne supprime
+ni le coût de calcul, ni la mémoire des activations et de l'optimiseur, ni le
+travail de préparation. Elle ne garantit pas qu'un modèle connaisse une langue,
+respecte une variante ou produise des réponses fidèles. Un fichier d'adapter
+est un artefact technique, pas une preuve d'amélioration.
+
+Schéma 9.1 — Comparaison et décision
+
+ Besoin → références simples et modèle de base → validation → choix figé
+                         |                                |
+                         +→ adaptation sur entraînement --+
+                                                          |
+                                                  test final isolé
+                                                          |
+                                  comparaison, risques, coûts → décision
+
+ÉTAPE 1 — FORMULER UNE HYPOTHÈSE RÉFUTABLE
+
+Choisir une seule tâche initiale, son domaine, les directions linguistiques
+si nécessaire, les personnes utilisatrices et les conséquences d'une erreur.
+Une hypothèse utile prend la forme : « dans ce périmètre, l'adaptation pourrait
+réduire tel type d'erreur par rapport à la base, sans dégrader tel autre
+critère ». Définir avant l'entraînement ce qui compterait comme amélioration
+pratique et ce qui imposerait l'arrêt : erreurs graves, absence de droits,
+ressources insuffisantes ou refus des personnes concernées.
+
+Fixer une référence correspondant réellement au besoin : consultation d'un
+document, lexique, traduction humaine ou outil existant autorisé. Comparer
+aussi le modèle initial sans adapter, avec la même tâche et des conditions
+d'inférence explicitées. Une comparaison juste ne consiste pas à donner au
+modèle adapté des informations ou un contexte refusés à la référence.
+Noter ce qui ne peut pas être rendu identique et son effet possible.
+
+ÉTAPE 2 — VÉRIFIER LE MODÈLE ET LES DROITS
+
+Consulter les sources officielles disponibles au moment de l'essai pour
+identifier précisément le modèle, les fichiers de poids, leur version ou
+empreinte, la licence et les éventuelles restrictions. Vérifier séparément
+les conditions des logiciels, des données, des adapters produits et de leur
+distribution. Une licence de code n'est pas nécessairement celle des poids ;
+la possibilité de télécharger un fichier ne suffit pas à autoriser tous les
+usages. En cas d'incertitude, demander une validation compétente et différer
+l'usage concerné.
+
+Vérifier la capacité du modèle sur la tâche, son vocabulaire ou sa
+tokenisation pour les écritures concernées, ainsi que l'acceptation effective
+de sa configuration par la chaîne d'entraînement. Ne pas présumer que des
+performances dans une langue se transfèrent à une autre ni qu'une étiquette
+de langue couvre toutes ses variantes.
+
+ÉTAPE 3 — PRÉPARER LES DONNÉES SANS FUITE
+
+Utiliser la version figée du corpus et les groupes définis au chapitre 8.
+Chaque exemple doit comporter l'entrée, la sortie attendue ou les références
+acceptables, le contexte nécessaire et une provenance reliée à ses droits.
+Contrôler le format, la longueur, les caractères, les données personnelles et
+les contenus qui ne correspondent pas à la tâche. Consigner les exclusions
+et leurs motifs.
+
+La partition d'entraînement seule alimente les mises à jour des poids. La
+validation sert à choisir les hyperparamètres, le moment d'arrêt et les
+invites. Le test final reste isolé de ces décisions, y compris des exemples
+affichés dans une invite. Rechercher les doublons et quasi-doublons entre
+partitions, entre corpus local et benchmarks accessibles, ainsi qu'avec les
+autres données d'entraînement connues. Une contamination antérieure de la
+base peut être impossible à exclure ; l'indiquer explicitement.
+
+FLORES-200 peut être envisagé comme complément si ses langues, variantes,
+licence, versions et conditions sont vérifiées et si ses exemples n'ont pas
+servi aux réglages. Il ne remplace pas un jeu local pertinent ; la présence
+éventuelle de ses données dans l'entraînement initial peut limiter
+l'interprétation. [À ACTUALISER — Disponibilité, droits, couverture et
+risques de chevauchement du benchmark effectivement retenu.]
+
+ÉTAPE 4 — MESURER LA RÉFÉRENCE
+
+Avant l'adaptation, exécuter la tâche avec les solutions retenues sur la
+validation. Enregistrer les entrées, sorties, versions, paramètres de
+génération, temps et incidents, sous contrôle d'accès. Faire examiner les
+sorties sans révéler inutilement leur origine aux évaluateurs. Préserver les
+désaccords et distinguer erreurs de sens, omissions, registre inapproprié,
+réponses hors sujet et absence de réponse.
+
+Une métrique automatique peut aider à comparer des sorties à des références,
+mais une formulation différente peut être correcte et une phrase proche
+peut contenir une négation erronée. Prévoir plusieurs références lorsque
+c'est justifié et une appréciation humaine. Fixer la grille, l'échantillon,
+les catégories de gravité et les modalités d'arbitrage avant de voir les
+résultats finaux. La qualité linguistique n'est pas réductible à un seul score.
+
+ÉTAPE 5 — ENTRAÎNER AVEC UN BUDGET ET UN ARRÊT
+
+Après vérification de la compatibilité, charger une représentation quantifiée
+de la base et configurer les adapters sur les modules pris en charge par la
+chaîne. Vérifier que seuls les paramètres prévus sont entraînables. Effectuer
+un petit essai sur des données d'entraînement autorisées : chargement,
+quelques mises à jour, sauvegarde et rechargement. Contrôler qu'une sortie
+peut être produite, sans confondre ce contrôle de fonctionnement avec une
+évaluation de qualité.
+
+Consigner la version exacte du modèle et du corpus, les composants logiciels,
+le matériel, les modules adaptés, le rang et les autres réglages de l'adapter,
+la quantification, la précision des calculs, la longueur des séquences, la
+taille des lots, l'accumulation éventuelle, le taux d'apprentissage, le
+nombre de passages, la graine et les critères d'arrêt. Ces champs sont à
+remplir pour l'essai réel, non des valeurs universelles. La graine facilite
+la comparaison sans garantir une reproduction bit à bit entre matériels.
+
+Surveiller la perte d'entraînement et les critères de validation, ainsi que
+la mémoire, la durée, les interruptions et, si possible, l'énergie mesurée.
+Une perte qui baisse ne prouve pas une amélioration dans l'usage. Arrêter
+selon le budget et la règle décidés, notamment si la validation se dégrade.
+Éviter de multiplier les essais jusqu'à trouver par hasard un bon score :
+tenir un journal de toutes les configurations et des décisions prises.
+
+Encadré 9.1 — Reprise après interruption
+
+Sauvegarder périodiquement les adapters, leur configuration, la référence
+exacte de la base et, si la chaîne le permet, l'état de l'optimiseur, du
+planificateur et les informations nécessaires à la reprise. Protéger ces
+fichiers comme le corpus : ils peuvent contenir ou révéler des informations.
+Tester réellement le rechargement et une reprise sur un essai contrôlé.
+Une sauvegarde des seuls adapters peut suffire à l'inférence mais pas à
+reprendre fidèlement un entraînement interrompu.
+
+ÉTAPE 6 — FIGER ET ÉVALUER
+
+Sélectionner la configuration sur la validation, puis figer modèle, adapter,
+invite, paramètres d'inférence, grille et règles d'analyse. Évaluer une fois
+sur le test final isolé les systèmes comparés, avec les mêmes exemples et
+conditions autant que possible. Enregistrer les échecs techniques et les
+abstentions : ne pas les exclure silencieusement du dénominateur. Un nouveau
+réglage après consultation des résultats exige un nouveau test indépendant.
+
+Faire examiner les sorties par des locuteurs compétents pour les contextes
+et variantes effectivement étudiés. Quand c'est possible, attribuer deux
+lectures indépendantes, masquer l'identité des systèmes, puis consigner les
+désaccords et l'arbitrage. Le panel et l'échantillon ont leurs limites : ne
+pas généraliser d'une poignée de phrases à tous les locuteurs ou domaines.
+Comparer aussi les catégories où le modèle adapté se dégrade ; un score
+global peut masquer une régression grave.
+
+Tableau 9.1 — Cadre de comparaison à remplir
+
+Élément             | Référence simple | Base | Base + adapter
+------------------- | --------------- | ---- | --------------
+Version et droits   | À renseigner    | À renseigner | À renseigner
+Exemples évaluables | À compter       | À compter | À compter
+Erreurs par gravité | À compter       | À compter | À compter
+Omissions / refus   | À compter       | À compter | À compter
+Temps et ressources | À mesurer       | À mesurer | À mesurer
+Avis des relecteurs | À documenter    | À documenter | À documenter
+
+Rapporter pour chaque taux le nombre d'événements et le nombre d'exemples
+évaluables, les cas exclus et les incertitudes liées à l'échantillon. Une
+différence observée sur peu d'exemples peut être due au choix des cas ; si
+des intervalles ou analyses statistiques sont utilisés, préciser leur méthode
+et l'unité d'échantillonnage, notamment lorsque plusieurs phrases proviennent
+d'un même document.
+
+ÉTAPE 7 — CHOISIR UNE ISSUE ET ORGANISER LA SUITE
+
+La décision appartient aux responsables du service et aux personnes
+concernées, à la lumière des droits, des risques, des mesures et du coût
+complet. Les issues comprennent le déploiement limité avec supervision, une
+nouvelle collecte, une recherche documentaire sans adaptation ou l'arrêt.
+Définir la personne chargée de maintenir la base et l'adapter, de traiter
+les retraits, de vérifier les mises à jour et de suspendre l'usage si des
+erreurs apparaissent.
+
+RÉSULTATS MESURÉS ET RETOUR D'EXPÉRIENCE
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Renseigner : hypothèse initiale ; versions et droits vérifiés ; taille et
+composition autorisée des partitions ; méthode de contrôle des fuites ;
+références et paramètres figés ; mesures avant et après avec effectifs et
+dénominateurs ; erreurs graves, désaccords et limites du panel ; durée,
+mémoire, énergie si mesurée, coûts et travail humain ; incidents, reprise
+testée et décision. [À ACTUALISER — Versions et droits des artefacts
+conservés, personne responsable et date prévue de réexamen.]
+
+Si l'adaptation n'améliore pas l'usage, réserver la place à un retour négatif
+complet : ce qui était espéré, les essais réellement menés, leurs échecs ou
+interruptions, ce que les données permettent ou non de conclure, les
+explications possibles sans les présenter comme des causes prouvées, les
+ressources engagées et la raison de ne pas déployer. Indiquer ce qui aurait
+été nécessaire pour poursuivre et ce qui restera utile, par exemple un
+corpus mieux documenté ou une procédure d'évaluation. Ne pas inventer un
+succès pour remplir l'espace éditorial.
+
+LIMITES ET ÉCHECS
+
+Le modèle initial peut mémoriser des données, échouer sur une variante ou
+produire des réponses assurées mais fausses. Un adapter peut améliorer des
+exemples fréquents et dégrader des cas rares. Une évaluation humaine limitée
+ne couvre pas tous les risques ; une métrique automatique ne remplace pas
+la vérification du sens. Une panne, une licence incompatible ou un retrait
+de données peut rendre impossible la poursuite. Un modèle adapté n'autorise
+pas non plus la prise de décision automatique dans un domaine sensible.
+
+Sans GPU adapté, comparer d'abord la recherche documentaire, une exécution
+locale sans entraînement ou une aide humaine. Un calcul partagé ou distant
+n'est acceptable qu'après examen des droits, des transferts, des coûts et
+des conditions de suppression. Ne pas transférer un corpus privé simplement
+pour terminer un essai.
+
+CHECK-LIST DU CHAPITRE 9
+
+□ Tâche, hypothèse, critères d'arrêt et références simples définis.
+□ Modèle, poids, licence et compatibilité vérifiés sans supposition.
+□ Corpus autorisé, groupes et partitions scellés ; recoupements examinés.
+□ Base mesurée avant adaptation ; validation seule utilisée pour les choix.
+□ Paramètres, budget, ressources et incidents enregistrés.
+□ Sauvegarde protégée et reprise effectivement essayée.
+□ Test final indépendant, erreurs et désaccords rapportés par catégorie.
+□ Décision, maintenance, retrait et éventuel retour négatif documentés.
+
+---------------------------------------------------------------------------
+CHAPITRE 10 — ASSISTANT DE TRADUCTION ÉWÉ, FRANÇAIS, ANGLAIS
+---------------------------------------------------------------------------
+
+OBJECTIF
+
+Concevoir une aide à la traduction pour des situations choisies avec ses
+utilisateurs. Elle propose un texte à examiner ; elle ne certifie pas une
+traduction, ne remplace pas un interprète et ne garantit pas la compréhension
+de toutes les variantes. Le chapitre traite de l'éwé, du français et de
+l'anglais parce qu'ils figurent dans le plan, sans supposer qu'ils couvrent
+les langues du territoire ni qu'un participant les maîtrise toutes.
+
+MATÉRIEL ET COMPÉTENCES
+
+Prévoir des personnes compétentes dans chaque direction étudiée, y compris
+pour la relecture dans la langue d'arrivée ; des textes et références
+autorisés ; une interface permettant la lecture et la correction ; une
+machine compatible ou un service dont les conditions ont été vérifiées ;
+un responsable de l'évaluation et des usages sensibles. Le modèle, adapté
+ou non au chapitre 9, n'est retenu que pour les directions effectivement
+testées. [À ACTUALISER — Disponibilité, licence, versions, capacité
+linguistique et conditions de traitement de l'outil choisi.]
+
+TRADUIRE, CE N'EST PAS SEULEMENT SUBSTITUER DES MOTS
+
+Le sens dépend de la situation, de la relation entre les personnes, du
+registre, de la négation, des nombres et de ce qui reste implicite. Une
+phrase fluide peut omettre une condition ou attribuer une instruction à la
+mauvaise personne. La direction compte : un résultat acceptable de l'éwé
+vers le français ne prouve rien, à lui seul, sur le français vers l'éwé.
+Une même étiquette linguistique ne garantit pas l'acceptabilité pour chaque
+variante ou chaque communauté.
+
+Schéma 10.1 — Une proposition, pas une certification
+
+ Texte source + contexte autorisé + direction explicitée
+                         |
+                  outil de traduction
+                         |
+          source conservée + proposition + avertissement
+                         |
+      relecture compétente → correction ou rejet → usage autorisé
+
+ÉTAPE 1 — CHOISIR UN USAGE ET SES DIRECTIONS
+
+Partir d'un petit ensemble de situations où une proposition imparfaite peut
+être relue avant usage. Définir le public, la nature des textes et le délai
+disponible pour la vérification. Examiner les six directions possibles entre
+les trois langues, mais n'en retenir pour l'essai que celles demandées et
+pour lesquelles des relecteurs compétents sont disponibles.
+
+Tableau 10.1 — Registre des directions
+
+Direction           | Besoin local | Relecture compétente | Statut
+------------------- | ------------ | -------------------- | ----------------
+Éwé → français      | À préciser   | À confirmer          | À évaluer
+Français → éwé      | À préciser   | À confirmer          | À évaluer
+Éwé → anglais       | À préciser   | À confirmer          | À évaluer
+Anglais → éwé       | À préciser   | À confirmer          | À évaluer
+Français → anglais  | À préciser   | À confirmer          | À évaluer
+Anglais → français  | À préciser   | À confirmer          | À évaluer
+
+Ne pas activer une direction simplement parce qu'elle apparaît dans un menu.
+Pour les contenus de santé, de droit, de sécurité ou toute consigne pouvant
+causer un préjudice, exclure l'usage autonome. Si le traitement de tels
+contenus est envisagé, il exige une procédure distincte et une validation
+humaine qualifiée avant toute utilisation ; l'outil ne doit jamais être
+présenté comme une traduction assermentée.
+
+ÉTAPE 2 — CONSTITUER DES EXEMPLES PERTINENTS
+
+Avec les personnes concernées, sélectionner des textes autorisés couvrant
+les situations, registres et variantes réellement visés. Joindre un contexte
+minimal lorsque l'interprétation en dépend. Prévoir des cas difficiles :
+négation, nombre, date, nom propre, destinataire, ambiguïté, expression
+locale et formulation où une omission change la consigne. Ne pas introduire
+de données sensibles réelles pour rendre l'essai plus vivant.
+
+Les références sont des traductions acceptables dans un contexte, pas
+forcément une phrase unique. Lorsque plusieurs formulations sont valables,
+les conserver avec l'avis des relecteurs. Regrouper les phrases issues d'un
+même document, dialogue ou famille de paraphrases avant séparation, selon
+la méthode du chapitre 8. Le jeu de développement sert à régler l'interface
+et les consignes ; le test final reste isolé, y compris de l'entraînement
+éventuel du chapitre 9. Vérifier les recoupements connus avec les corpus de
+la base, sans prétendre exclure une contamination impossible à observer.
+
+ÉTAPE 3 — METTRE EN PLACE UNE INTERFACE QUI PERMET LE DOUTE
+
+Afficher la langue source et la langue cible explicitement ; demander à
+l'utilisateur de les confirmer plutôt que de faire confiance à une détection
+automatique. Conserver le texte source à côté de la proposition, avec le
+contexte autorisé. Prévoir une zone de correction, une possibilité de rejeter
+la proposition et un moyen de demander une aide humaine. Ne pas remplacer
+silencieusement l'original par la traduction.
+
+Indiquer clairement qu'il s'agit d'une suggestion non certifiée. Ne pas
+présenter une valeur de confiance produite par le modèle comme une probabilité
+d'exactitude si elle n'a pas été validée pour cet usage. Éviter la sauvegarde
+automatique des textes personnels ; si des journaux sont nécessaires, limiter
+leur contenu, leur accès et leur durée selon les règles convenues. Un service
+distant reçoit potentiellement le texte et son contexte : vérifier les droits
+et obtenir les autorisations appropriées avant tout envoi.
+
+Encadré 10.1 — Exemple de parcours, sans traduction inventée
+
+Une personne saisit un texte autorisé et choisit une direction testée. Le
+système affiche le texte intact et une proposition. La personne constate
+qu'un nom, un nombre ou une négation semble douteux ; elle marque le passage
+et sollicite une relecture compétente. La correction est adoptée ou la
+traduction rejetée. Cet exemple décrit une procédure possible, non un essai
+réalisé ni une affirmation sur les performances d'une langue.
+
+ÉTAPE 4 — ÉVALUER PAR DIRECTION ET PAR RISQUE
+
+Comparer chaque direction retenue aux pratiques existantes : par exemple
+traduction humaine ou consultation d'un document bilingue autorisé. Utiliser
+les mêmes textes, contextes et consignes lorsque la comparaison le permet ;
+indiquer toute différence. Figer la configuration avant le test final et
+faire examiner les sorties indépendamment, si possible sans identifier le
+système. Les relecteurs doivent connaître la langue d'arrivée et disposer du
+contexte nécessaire pour juger la fidélité à la source.
+
+Tableau 10.2 — Grille de relecture proposée
+
+Critère                | Question
+---------------------- | ---------------------------------------------------
+Sens et complétude     | Une idée, condition ou négation a-t-elle changé ?
+Éléments sensibles     | Noms, nombres, dates et destinataires sont-ils fidèles ?
+Registre et contexte   | Le ton convient-il à la situation et au public ?
+Variante               | La formulation convient-elle à la variante visée ?
+Action du relecteur    | Accepter, corriger, demander contexte ou rejeter ?
+Gravité                | Quelle conséquence plausible si l'erreur est utilisée ?
+
+Définir les catégories et seuils de décision avant le test. Compter les
+exemples évalués, ceux impossibles à juger, les corrections et les erreurs
+par type et gravité ; rapporter le nombre d'exemples affectés sur le nombre
+examiné pour chaque direction. Indiquer les désaccords et la manière de les
+traiter. Si l'on mesure le temps gagné, inclure la relecture, la correction
+et les cas rejetés, et comparer avec la pratique de référence dans des
+conditions décrites. Un score global ne doit pas cacher une inversion de
+sens ou une performance faible dans une direction.
+
+ÉTAPE 5 — METTRE EN SERVICE OU RENONCER
+
+À partir des résultats, décider séparément pour chaque direction et chaque
+usage. Un déploiement limité doit nommer une personne responsable, rendre
+la relecture possible, préciser les domaines exclus et prévoir la suspension
+si une erreur grave est signalée. Former les utilisateurs à vérifier la
+source et à ne pas confondre fluidité et fidélité. Conserver une solution de
+repli : document bilingue vérifié, traducteur ou médiateur humain, selon les
+ressources et autorisations disponibles.
+
+Un retour d'utilisateur est utile mais ne devient pas automatiquement une
+nouvelle donnée d'entraînement. Demander l'autorisation appropriée, vérifier
+les droits et isoler les données destinées à une future évaluation. Une
+correction issue du test final ne doit pas être incorporée aux réglages tout
+en continuant à présenter ce même test comme indépendant.
+
+RÉSULTATS MESURÉS ET DÉCISION
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Pour chaque direction et usage réellement essayés, renseigner : contexte,
+variantes et sources ; nombre de textes et groupes ; droits et séparation ;
+versions des outils ; composition et rôle du panel sans divulguer d'identités ;
+nombre d'erreurs par catégorie et gravité, cas non évaluables et
+dénominateurs ; temps de traduction et de relecture ; désaccords, retours
+des utilisateurs et limites. Conclure direction par direction : acceptée
+pour un usage limité, à retravailler ou abandonnée, avec justification.
+
+LIMITES ET ÉCHECS
+
+Une traduction fluide peut inverser une consigne ou inventer une précision.
+Une variante absente des exemples peut être mal rendue, même si d'autres
+textes semblent satisfaisants. L'évaluation dépend des textes, du contexte
+et des relecteurs ; elle ne garantit pas le comportement sur des documents
+nouveaux. Une absence de relecteur compétent ou une divergence non résolue
+est une raison de ne pas activer la direction concernée.
+
+En cas d'erreur, conserver seulement les éléments nécessaires et autorisés,
+prévenir le responsable, déterminer si la proposition a été utilisée et
+prendre les mesures appropriées. Corriger l'interface ou retirer la
+fonctionnalité si nécessaire ; une correction technique doit être suivie
+d'une nouvelle évaluation indépendante adaptée au risque.
+
+CHECK-LIST DU CHAPITRE 10
+
+□ Usage, public, directions et variantes à examiner définis avec les locuteurs.
+□ Textes et références autorisés ; contexte et plusieurs formulations prévus.
+□ Groupes et test final séparés des réglages et de tout entraînement.
+□ Source conservée, direction visible, correction et rejet possibles.
+□ Relecture compétente et grille de gravité appliquées par direction.
+□ Temps, erreurs, désaccords et cas non évaluables rapportés.
+□ Usages sensibles exclus ou soumis à une procédure et validation qualifiées.
+□ Décision, responsable, signalement, suspension et solution de repli prévus.
+
+FIN DE LA PARTIE C

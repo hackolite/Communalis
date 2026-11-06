@@ -1,0 +1,1107 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+
+PARTIE A — PRÉPARER
+
+Texte de travail pour les chapitres 1 à 4
+
+Cette partie développe le plan du manuscrit Communalis. L'ouvrage vise
+300 pages hors index et bibliographie ; cette cible est une intention
+éditoriale, non une description du volume déjà écrit. Les indications de
+pagination du plan ne sont pas des mesures du présent fichier.
+
+Les procédures ci-dessous sont des propositions à adapter, pas le récit
+d'un déploiement. Aucun résultat de terrain au Togo n'est supposé acquis.
+Le repère [RÉSULTATS TOGO À INSÉRER] signale les observations qui devront
+être documentées avant publication. Le repère [À ACTUALISER — ...] indique
+une information dépendante du temps, du lieu, d'une source ou d'une décision
+qui doit être vérifiée et datée. Les modèles et seuils suggérés sont des
+outils de discussion, non des normes ni des garanties.
+
+Préparer ne signifie pas retarder indéfiniment l'action. Cela signifie
+donner à une équipe le droit de commencer petit, de vérifier ce qu'elle
+apprend et de s'arrêter sans devoir maquiller une difficulté en succès.
+Les quatre chapitres constituent une boucle : l'évaluation nourrit le
+budget ; le budget détermine les moyens disponibles pour l'équipe ; les
+partenaires définissent les règles de données ; ces règles peuvent à leur
+tour modifier le besoin, le calendrier et les coûts.
+
+  Besoin vécu → diagnostic → responsabilités → budget et achats
+       ↑                                           ↓
+       └──── bilan, recours et révision ← gouvernance des données
+
+Communalis peut être abordé par un parcours minimal, intermédiaire ou
+complet. Le premier vise un usage circonscrit, par exemple la recherche dans
+des documents autorisés, sans action physique. Le deuxième ajoute, si les
+moyens le permettent, des mesures et une organisation plus robuste. Le
+troisième envisage des fonctions expérimentales supplémentaires et, le cas
+échéant, des dispositifs capables d'agir dans le monde physique. Il exige
+une analyse de sécurité particulière : un modèle de langage ne commande
+jamais directement un équipement. Ces parcours ne constituent ni un
+classement des territoires ni une obligation de progression. Un catalogue
+sans intelligence artificielle peut être le meilleur résultat.
+
+
+CHAPITRE 1 — ÉVALUER SON LAB
+
+Objectif
+
+Décider, avant d'acheter ou de développer, quel problème mérite d'être
+traité, avec qui et dans quelles limites. Le diagnostic doit rendre
+visibles aussi bien les capacités que les incertitudes. Il prépare une
+décision réversible : poursuivre à petite échelle, demander des vérifications
+supplémentaires, choisir une autre méthode ou ne pas démarrer.
+
+Matériel et compétences
+
+Il faut un lieu ou un moyen de rencontre accessible, de quoi prendre des
+notes, une grille d'inventaire, les informations disponibles sur les
+équipements et, si cela ne crée pas de risque, un moyen de relever des
+durées ou des interruptions. Une personne facilite sans imposer la réponse.
+Les futurs usagers, les personnes chargées du lieu, de l'électricité, des
+documents et de la maintenance participent ou sont consultés séparément.
+Prévoir l'interprétation, le temps de préparation et la rémunération lorsque
+nécessaire. Une compétence technique aide à examiner les machines ; elle ne
+remplace ni la connaissance des pratiques locales ni le conseil spécialisé
+sur les risques et les droits.
+
+1.1 — Ce qu'on cherche réellement à savoir
+
+Un lab n'est pas seulement une pièce et des ordinateurs. C'est un ensemble
+de personnes, de relations, de services, de savoir-faire, de contraintes
+et de ressources qui changent. Une machine disponible le jour de la visite
+peut appartenir à un partenaire et être reprise le lendemain. Une connexion
+peut exister sans être accessible à l'équipe à l'heure où le service doit
+fonctionner. Une personne peut savoir réparer mais ne pas avoir le temps
+de le faire. Le diagnostic doit donc noter les conditions d'accès et de
+continuité, pas simplement cocher la présence d'un objet.
+
+La question initiale n'est pas « Quel modèle installer ? », mais « Quelle
+tâche pose une difficulté, à qui, et qu'arriverait-il si elle était mieux
+réalisée ? ». Un besoin utile se décrit par une situation observable. Par
+exemple, à titre purement hypothétique, des agents cherchent dans plusieurs
+documents les horaires d'un service ; la difficulté peut venir d'un classement
+confus, de versions contradictoires ou d'un accès insuffisant. Selon la
+cause, un classeur mis à jour, un index consultable hors ligne ou un
+assistant documentaire peuvent être comparés. Si les horaires ne sont pas
+fiables à la source, aucun assistant ne peut les rendre fiables par magie.
+
+La description du besoin doit aussi contenir la conséquence d'une erreur.
+Une mauvaise réponse sur une activité facultative ne se traite pas comme
+une indication susceptible d'influencer une décision médicale ou une
+situation de danger. Plus l'erreur peut porter préjudice, plus il faut
+restreindre le périmètre, prévoir une vérification humaine compétente et,
+si nécessaire, refuser l'automatisation.
+
+ENCADRÉ — QUATRE ÉTATS, PAS UNE NOTE GLOBALE
+
+Disponible : la ressource est utilisable pour l'usage envisagé, avec une
+preuve et des conditions connues. Partiel : elle existe mais ne couvre pas
+encore le besoin. Absent : sa non-disponibilité a été vérifiée. Inconnu :
+l'équipe ne dispose pas d'éléments suffisants. « Inconnu » n'est pas
+synonyme de « absent » et ne doit pas être remplacé par une supposition
+pour faire passer un projet.
+
+1.2 — Pas à pas : construire le diagnostic
+
+Étape 1. Délimiter l'enquête. Inscrire le lieu, les personnes visées, les
+heures et langues d'usage, la période envisagée et la décision à prendre à
+la fin. Préciser si l'on évalue un seul site ou plusieurs. Écrire également
+ce qui reste hors périmètre : par exemple, aucun enregistrement de voix,
+aucune donnée nominative et aucune commande d'équipement pendant cette
+première enquête. Cette frontière évite qu'un prototype documentaire ne soit
+présenté comme une autorisation générale pour toute la suite.
+
+Étape 2. Repérer les personnes concernées. Dresser une carte provisoire :
+qui utilise l'information, qui la produit, qui l'actualise, qui entretient
+le lieu, qui peut subir les conséquences d'une erreur et qui décide des
+ressources ? Ne pas confondre l'invitation d'une organisation avec la
+représentation de toutes les personnes qu'elle accompagne. Chercher aussi
+les absences : personnes non connectées, locuteurs de langues minorées,
+personnes handicapées, travailleurs aux horaires incompatibles ou membres
+qui préfèrent ne pas parler devant une autorité.
+
+Les entretiens séparés peuvent rendre les désaccords audibles. Demander
+l'accord pour prendre des notes ; n'inscrire un nom que s'il est utile et
+autorisé. Restituer ensuite les conclusions dans des formats compréhensibles
+et laisser la possibilité de corriger une interprétation. L'équipe ne doit
+pas promettre l'anonymat si les circonstances permettent de reconnaître
+facilement un participant.
+
+Étape 3. Observer la tâche actuelle avec l'accord des personnes. Demander
+comment une demande arrive, où l'on cherche, qui vérifie et comment la
+réponse est transmise. Relever les points où l'on attend, les documents
+introuvables, les versions divergentes et les solutions déjà inventées
+par les utilisateurs. Faire décrire un échec récent sans exiger d'exposer
+une situation personnelle. Comparer les récits à des documents ou à une
+démonstration volontaire lorsque c'est possible.
+
+Étape 4. Inventorier les ressources et leurs dépendances. Pour une machine,
+noter son propriétaire, son état, sa mémoire et son stockage constatés,
+son système, les accès administrateur et la possibilité de réparation.
+Pour l'électricité, distinguer disponibilité perçue, interruptions
+consignées et mesures instrumentées ; ne pas déduire une autonomie d'un
+simple inventaire de batteries. Pour la connexion, noter les lieux, horaires,
+restrictions et fonctions qui en dépendent. Ne jamais manipuler une
+installation électrique pour les besoins de l'enquête sans compétence
+appropriée ; les mesures et protections sont étudiées avec une personne
+qualifiée au chapitre 5.
+
+Pour les documents, demander qui les tient à jour, quelles versions sont
+autorisées et où elles sont conservées. Pour chaque langue, distinguer les
+personnes capables de parler, lire, écrire, traduire et relire dans le
+contexte considéré : ces compétences ne sont pas interchangeables. Pour
+la maintenance, relever le temps réellement réservé et la relève, et pas
+seulement le nom d'une personne compétente.
+
+Étape 5. Consigner une preuve et sa fragilité. Une facture peut attester
+un achat, mais pas le bon état actuel. Un entretien décrit une expérience,
+mais ne suffit pas à caractériser toutes les périodes. Une démonstration
+prouve qu'une opération a fonctionné dans des conditions données, pas qu'elle
+fonctionnera toujours. Associer chaque constat à sa date, sa source, son
+périmètre et la personne chargée de le vérifier à nouveau.
+
+TABLEAU 1.1 — GRILLE DE CAPACITÉ À REMPLIR
+
+Domaine | État | Preuve et date | Condition ou manque | Responsable | Suite
+Besoin et public | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Électricité | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Machine et stockage | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Connexion | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Langues et accès | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Documents et droits | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Maintenance et relève | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+Budget et gouvernance | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+
+[À ACTUALISER — état des ressources, conditions d'accès et preuves datées
+de la grille avant chaque décision importante.]
+
+Étape 6. Décrire un premier service sous forme de fiche. Indiquer : public
+et situation ; question ou tâche ; solution actuelle ; contenu nécessaire ;
+source de référence et personne qui l'actualise ; langue ; résultat attendu ;
+risque d'erreur ; accès en cas de panne ; personne responsable. Définir les
+questions que le service doit refuser ou renvoyer vers un humain. Une
+réponse doit permettre de retrouver sa source et sa date ; si la source
+est absente ou contradictoire, la bonne sortie peut être « je ne sais pas ».
+
+FICHE D'USAGE — À REMPLIR
+
+Situation et public : [à compléter]
+Tâche actuelle et difficulté : [à compléter]
+Solution sans modèle à comparer : [à compléter]
+Sources autorisées, responsables et dates : [à compléter]
+Langues et conditions d'accès : [à compléter]
+Erreurs importantes et solution de repli : [à compléter]
+Périmètre exclu, notamment décisions sensibles : [à compléter]
+
+Étape 7. Comparer des options sur la même base. Une organisation manuelle,
+un index documentaire et un assistant avec génération peuvent répondre à
+des besoins différents. Comparer la qualité des sources, l'accessibilité,
+le temps de réponse et de correction, la dépendance à l'électricité ou
+au réseau, le coût humain et les droits nécessaires. Si la solution la
+plus simple suffit, la retenir sans la présenter comme une étape ratée
+vers une solution plus complexe.
+
+TABLEAU 1.2 — COMPARAISON DES OPTIONS
+
+Critère | Organisation manuelle | Index documentaire | Assistant avec génération
+Source vérifiable | [à évaluer] | [à évaluer] | [à évaluer]
+Temps, correction comprise | [à mesurer] | [à mesurer] | [à mesurer]
+Accès et langues | [à vérifier] | [à vérifier] | [à vérifier]
+Maintenance et énergie | [à estimer] | [à estimer] | [à estimer]
+Erreurs et recours | [à documenter] | [à documenter] | [à documenter]
+
+Étape 8. Choisir le parcours et une porte de passage. Un parcours minimal
+reste prudent lorsque le besoin est bien circonscrit mais que les capacités
+de maintenance ou les usages futurs sont encore incertains. Il ne commence
+cependant pas sans responsable, sans documents autorisés ou sans moyen de
+traiter un incident. Le parcours intermédiaire suppose en plus une
+responsabilité des données et la capacité de mesurer et d'entretenir les
+éléments ajoutés. Le parcours complet ne s'ouvre qu'après une évaluation
+spécifique des risques, des ressources durables et de la sécurité. Si ces
+conditions manquent, différer ou arrêter est une décision valable.
+
+La porte de passage prend la forme d'une décision écrite : hypothèses,
+preuves, risques non levés, action autorisée, limites, personne responsable,
+date de révision et motif éventuel d'arrêt. Elle ne doit pas dépendre de
+la seule personne qui développe. [À ACTUALISER — décision de passage,
+responsables et échéance de révision selon la situation locale.]
+
+1.3 — Mesurer sans créer une illusion de certitude
+
+Avant le test, constituer avec les utilisateurs un petit ensemble de
+questions représentatives, dans les langues et conditions réellement
+visées. Identifier pour chacune une source de référence autorisée et datée,
+ou marquer explicitement qu'aucune réponse ne devrait être donnée.
+Conserver à part les questions de test et les documents utilisés pour régler
+le système, afin de ne pas confondre adaptation à des exemples connus et
+capacité sur des demandes nouvelles. Définir à l'avance qui juge les
+réponses et comment résoudre un désaccord entre évaluateurs.
+
+Comparer les options sur les mêmes questions et autant que possible dans
+des conditions comparables. Mesurer séparément le temps de recherche, le
+temps de vérification et le temps de correction ; une réponse rapide mais
+longue à contrôler n'est pas nécessairement un gain. Noter les interruptions,
+la langue, la version des documents et les conditions du test. Recueillir
+les difficultés d'accès sans transformer les participants en indicateurs
+de performance : ils peuvent refuser, faire une pause et contester une
+interprétation.
+
+Un indicateur possible est la proportion de questions pour lesquelles la
+bonne source a été retrouvée : nombre de questions jugées correctes divisé
+par nombre de questions évaluables, avec les deux nombres publiés. Une
+question sans source de référence n'entre pas dans ce dénominateur ; elle
+doit être comptée et analysée séparément. Relever aussi les réponses
+fausses, les abstentions appropriées et celles qui privent inutilement
+l'usager d'une information. Un pourcentage sans taille d'échantillon,
+critères de jugement et description des questions serait trompeur.
+
+Le seuil de décision appartient au groupe concerné avant l'essai : par
+exemple, aucune réponse erronée sur une question jugée critique dans le
+jeu de test peut être une condition locale de poursuite. Même si ce seuil
+est atteint, un petit essai ne prouve pas l'absence de risque. Définir
+également l'événement qui impose une suspension immédiate, la personne
+autorisée à l'annoncer et la voie de retour à la procédure habituelle.
+
+Résultats mesurés
+
+[RÉSULTATS TOGO À INSÉRER] Période, lieux et conditions de l'enquête ;
+nombre de personnes consultées et diversité décrite sans les identifier ;
+états de la grille, preuves et inconnues ; options comparées ; critères
+fixés avant l'essai ; nombres de questions évaluables, réponses sourcées,
+erreurs et abstentions ; temps de recherche et de vérification ; décision
+prise et raisons. Les observations absentes restent vides et ne sont pas
+déduites d'un exemple.
+
+Limites et échecs
+
+Un diagnostic fait uniquement avec l'équipe technique ignore parfois les
+horaires, les langues et les responsabilités de celles et ceux qui
+utiliseront le service. Un atelier public peut taire un désaccord à cause
+d'un rapport de pouvoir. Un test effectué pendant une seule période ne
+représente pas nécessairement les autres conditions d'usage. Une ressource
+offerte ponctuellement ne démontre pas la continuité ; une source présente
+ne démontre pas le droit de la réutiliser. Si l'évaluation échoue, noter
+la cause, consulter les personnes concernées et choisir entre correction,
+réduction du périmètre et arrêt. Réexaminer la grille après une panne
+importante, un départ, un changement de financement ou de finalité.
+
+Check-list du chapitre 1
+
+□ La tâche, le public, la solution actuelle et le périmètre sont décrits.
+□ Les personnes absentes ont été identifiées et une consultation adaptée prévue.
+□ Les capacités sont distinguées des inconnues, avec preuves et dates.
+□ Propriété, accès, maintenance et relève sont examinés.
+□ Les documents et leurs responsables de mise à jour sont identifiés.
+□ Une solution sans modèle a été comparée sur des critères communs.
+□ Les critères de mesure et d'arrêt ont été fixés avant l'essai.
+□ La décision, les risques restants et la prochaine révision sont consignés.
+
+
+CHAPITRE 2 — ÉQUIPE, RÔLES ET PARTENAIRES
+
+Objectif
+
+Constituer une équipe capable de prendre des décisions, d'exécuter le
+travail annoncé et de rendre des comptes aux personnes concernées.
+Construire des partenariats dont les apports, les limites, la sortie et
+la gestion des désaccords sont compréhensibles avant toute mise en commun.
+
+Matériel et compétences
+
+Prévoir du temps de concertation, un espace accessible, des supports dans
+les langues appropriées, des moyens de restitution et un budget de
+participation. Il faut une animation attentive aux rapports de pouvoir,
+des compétences de coordination, de maintenance et de gestion des
+données, ainsi qu'un accès à un conseil juridique local lorsque les
+accords ou traitements le nécessitent. Les connaissances des habitants,
+des métiers et des locuteurs sont des compétences de projet, non une
+simple matière première.
+
+2.1 — Une équipe est une organisation de responsabilités
+
+Nommer une personne ne suffit pas à créer une capacité. Une responsabilité
+effective suppose un mandat compréhensible, du temps, des moyens, l'accès
+aux informations nécessaires et le pouvoir de demander de l'aide ou
+d'interrompre une activité. Une personne bénévole peut apporter un savoir
+précieux ; le projet ne doit pas supposer que sa disponibilité est
+illimitée. La documentation et une relève permettent d'éviter qu'un départ
+transforme une compétence en point de défaillance unique.
+
+Dans une petite équipe, plusieurs fonctions peuvent être réunies. Cela doit
+être explicite : la même personne peut coordonner et tenir l'inventaire,
+mais une décision de sécurité ne devrait pas reposer uniquement sur le
+développeur qui souhaite déployer. Si personne d'indépendant ne peut
+examiner une fonction risquée, cette fonction attend. La possibilité de
+signaler une difficulté sans représailles importe autant que l'organigramme.
+
+TABLEAU 2.1 — RÔLES ET QUESTIONS À TRANCHER
+
+Fonction | Mission principale | Pouvoir nécessaire | Relève à prévoir
+Coordination | planifier, arbitrer et rendre compte | convoquer et suspendre une étape | [à désigner]
+Données | tenir le registre, organiser accès et demandes | bloquer un traitement non autorisé | [à désigner]
+Maintenance | inventaire, sauvegardes, réparations | isoler un matériel défaillant | [à désigner]
+Langues | conseiller, traduire et relire dans le contexte | signaler une formulation impropre | [à désigner]
+Animation | organiser la participation et la restitution | remonter un désaccord sans filtrage | [à désigner]
+Sécurité | examiner les risques et conditions de reprise | exiger un arrêt et une vérification | [à désigner]
+Usagers concernés | exprimer besoins, limites et retours | accès aux décisions et recours convenus | [à définir]
+
+Ces intitulés sont des fonctions de travail, non des qualifications
+juridiques automatiquement attribuées. Une mission peut nécessiter une
+compétence professionnelle externe. [À ACTUALISER — titulaires,
+suppléants, disponibilités et coordonnées utiles dans le registre interne.]
+
+2.2 — Pas à pas : répartir le travail
+
+Étape 1. Partir des tâches, non des titres. Dresser la liste des opérations
+de la première phase : consultation, vérification des sources, rédaction
+des notices, achats, installation, sauvegarde, suivi des incidents,
+réponse aux demandes, communication et bilan. Ajouter les tâches
+invisibles : transport, préparation des réunions, traduction, relecture,
+accueil et transmission à une personne qui rejoint l'équipe. Chiffrer
+leur temps dans le budget du chapitre 3, qu'il soit payé ou apporté en
+nature.
+
+Étape 2. Pour chaque tâche, identifier une personne qui réalise, une
+personne qui assume la décision, celles qu'il faut consulter et celles
+qu'il faut informer. Dans une petite équipe, une personne peut occuper
+plusieurs colonnes ; l'important est d'éviter une décision dont personne
+ne répond ou une consultation annoncée comme un partage de pouvoir.
+
+TABLEAU 2.2 — MATRICE DE DÉCISION À COMPLÉTER
+
+Décision | Prépare | Décide | Consulte | Informe | En cas de désaccord
+Choix de l'usage | [ ] | [ ] | [ ] | [ ] | [ ]
+Admission d'une source | [ ] | [ ] | [ ] | [ ] | [ ]
+Commande de matériel | [ ] | [ ] | [ ] | [ ] | [ ]
+Suspension d'un traitement | [ ] | [ ] | [ ] | [ ] | [ ]
+Publication d'un bilan | [ ] | [ ] | [ ] | [ ] | [ ]
+
+La matrice doit correspondre aux engagements réels. Elle ne retire pas
+aux personnes concernées les possibilités de refus ou de recours prévues
+par le dispositif et les règles applicables.
+
+Étape 3. Écrire une fiche de rôle. Indiquer mission, tâches exclues,
+compétences requises, temps disponible, moyens, décision autorisée,
+personne à alerter, conditions de rémunération ou de contribution en
+nature, durée du mandat et suppléance. Demander à la personne pressentie
+si elle accepte ce périmètre. Si elle doit cumuler plusieurs rôles,
+discuter la charge et les conflits d'intérêts ; réduire le périmètre plutôt
+que de prétendre qu'elle peut tout assurer.
+
+Étape 4. Organiser la transmission. Conserver un inventaire et des
+procédures dans un emplacement connu et protégé ; ne pas y déposer de
+secrets en clair. Définir qui peut attribuer et retirer les accès, et
+comment une personne autorisée récupère les informations nécessaires en
+cas d'absence. Tester la relève sur une tâche ordinaire, puis documenter
+les obstacles. Un changement de fonction déclenche la révision des accès
+et la restitution des matériels et documents confiés.
+
+Étape 5. Définir le circuit d'alerte. Toute personne participant au projet
+doit savoir comment signaler une erreur, une panne, une atteinte possible
+aux données ou une inquiétude de sécurité, y compris si son interlocuteur
+habituel est impliqué. L'alerte suit une voie courte ; le responsable
+désigné accuse réception, protège les personnes et décide si l'activité
+doit être suspendue. La reprise requiert une vérification indépendante
+adaptée au risque et une trace de la décision.
+
+  Difficulté ou inquiétude
+            ↓
+  Signalement accessible ──→ personne de remplacement si conflit
+            ↓
+  Protection / suspension si nécessaire
+            ↓
+  Examen, correction, décision de reprise ou arrêt
+            ↓
+  Retour à la personne ayant signalé, sans divulgation excessive
+
+2.3 — Participer n'est pas simplement approuver
+
+Il existe plusieurs niveaux de participation : informer, consulter,
+co-concevoir, partager une décision ou confier une décision à un groupe.
+Ces niveaux n'ont pas la même portée. Avant chaque rencontre, dire ce qui
+est déjà décidé, ce qui peut encore changer et qui prendra la décision.
+Une réunion dont le résultat est fixé à l'avance ne doit pas être présentée
+comme une délibération.
+
+Choisir des horaires et lieux compatibles avec les personnes invitées,
+proposer un autre canal à celles qui ne veulent pas parler en public et
+prévoir l'accessibilité linguistique et matérielle. Une traduction est
+une médiation, pas une opération neutre : prévoir un temps de relecture
+et la possibilité de contester un terme. Ne pas supposer qu'un seul
+locuteur représente toutes les variantes d'une langue. Demander comment
+les participants souhaitent recevoir la restitution et corriger le
+compte rendu avant sa diffusion, dans les limites convenues.
+
+La rémunération doit être discutée avant la contribution. Préciser ce qui
+est rémunéré, les frais pris en charge, les conditions et le calendrier
+envisagé ; consigner séparément les contributions non monétaires.
+L'absence de paiement n'est pas une preuve de consentement. Une personne
+doit pouvoir refuser une activité sans subir de pression ; vérifier avec
+un conseil compétent les implications de la rémunération et du retrait
+dans le dispositif choisi.
+
+ENCADRÉ — QUESTIONS À POSER À UN PARTENAIRE POTENTIEL
+
+Quel problème souhaitez-vous résoudre ? Quel travail pouvez-vous réellement
+fournir, et pendant combien de temps ? Qu'attendez-vous en retour ? Qui,
+chez vous, peut autoriser cet engagement ? Qui manque à la discussion ?
+Quelles informations ne doivent pas circuler ? Comment interrompre la
+coopération sans perdre l'accès à vos propres éléments ? Comment régler
+un désaccord sans imposer le silence aux personnes concernées ?
+
+2.4 — Pas à pas : établir un partenariat
+
+Étape 1. Cartographier les contributions et les dépendances. Une
+association peut aider à organiser des rencontres ; un artisan peut
+conseiller la réparabilité ; une université peut apporter une expertise ;
+une collectivité peut être responsable d'un service ou d'un document.
+Ces exemples ne présument l'accord d'aucune organisation particulière.
+Noter ce que chacun apporte effectivement, les conditions attachées et
+ce qui arriverait si cet apport cessait.
+
+Étape 2. Vérifier les mandats. La personne qui discute peut-elle engager
+son organisation ? Quelles validations internes restent nécessaires ?
+Un accord oral de principe n'est pas une convention signée ni une
+autorisation d'utiliser des données. Consigner les points encore ouverts
+et la date prévue pour y répondre.
+
+Étape 3. Rédiger ensemble une convention adaptée, puis la faire examiner
+par les personnes compétentes. Elle décrit les parties, l'objet, la durée,
+les activités et les livrables ; elle attribue les tâches, ressources,
+financements et responsabilités ; elle fixe les règles de décision, de
+suivi et de communication. Elle distingue droits sur les supports,
+autorisations d'utilisation des contenus et traitement des données
+personnelles. Elle précise aussi sécurité, accès, coûts de maintenance,
+propriété ou droits d'usage des productions, résolution des différends,
+sortie, restitution et traitement des copies. Les droits et obligations
+applicables doivent être vérifiés ; ce canevas n'est pas un contrat prêt
+à signer.
+
+Étape 4. Prévoir la sortie avant l'entrée. Décrire qui reçoit quoi, dans
+quel format utilisable, quelles copies sont supprimées ou conservées pour
+un motif documenté, comment les accès sont retirés et comment les personnes
+affectées sont informées. Identifier les dépendances à un compte ou à une
+machine d'un partenaire ; organiser un transfert autorisé. Une sortie peut
+ne pas permettre de récupérer un contenu déjà diffusé ou l'influence
+d'une donnée sur un modèle entraîné : ces limites sont discutées avant
+le partage, et non découvertes après.
+
+Étape 5. Faire vivre l'accord. Tenir un registre des décisions et des
+engagements, avec responsable et date de revue ; distinguer un compte rendu
+interne d'un document publiable. Réexaminer la coopération si le service,
+les données, les ressources ou les personnes changent. Une nouvelle
+finalité peut nécessiter de nouvelles autorisations et une nouvelle
+validation, même lorsque les mêmes partenaires restent présents.
+
+TABLEAU 2.3 — SUIVI DES ENGAGEMENTS
+
+Engagement | Responsable | Moyens | Échéance | Preuve | État / risque
+[à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter] | [à compléter]
+
+[À ACTUALISER — engagements, mandats, échéances et modalités de contact
+avant chaque revue de partenariat.]
+
+2.5 — Résultats mesurés
+
+[RÉSULTATS TOGO À INSÉRER] Nombre de fonctions pourvues et pourvues avec
+relève ; temps effectivement consacré et rémunéré, par catégorie de
+travail ; nombre de réunions et de restitutions accessibles ; engagements
+tenus, modifiés ou abandonnés ; accords effectivement validés ; demandes
+ou désaccords traités et délais observés. Rapporter séparément les
+contributions bénévoles et les tâches non couvertes. Ne publier aucun
+nom ni compte rendu identifiable sans autorisation appropriée.
+
+Pour suivre la couverture, diviser le nombre de tâches essentielles ayant
+un responsable confirmé et des moyens disponibles par le nombre total de
+tâches essentielles recensées ; fournir les deux nombres et la liste des
+manques. Un taux élevé ne compense pas l'absence du rôle qui peut arrêter
+une activité dangereuse. Les comptages de présence ne prouvent pas non plus
+que les personnes ont pu influencer la décision : vérifier dans le registre
+quelles propositions ont été retenues, modifiées ou refusées, et pourquoi.
+
+Limites et échecs
+
+Une organisation partenaire ne parle pas automatiquement pour tous ses
+membres. Un comité trop occupé peut se limiter à entériner les décisions
+déjà prises. Une convention ne compense ni l'absence de moyens ni un
+rapport de dépendance économique. Lorsqu'une personne concentre les accès
+et les décisions, un départ ou un conflit peut bloquer le service. Si une
+consultation révèle un désaccord sérieux, ne pas le réduire à une
+statistique : documenter les positions avec prudence, suspendre la décision
+concernée si nécessaire, rechercher une médiation et accepter qu'aucun
+accord ne soit possible.
+
+Check-list du chapitre 2
+
+□ Les tâches visibles et invisibles ont été recensées et budgétées.
+□ Chaque rôle essentiel dispose d'un mandat, de moyens et d'une relève.
+□ Les cumuls et conflits d'intérêts ont été examinés.
+□ Les personnes savent qui décide, qui est consulté et qui peut arrêter.
+□ La participation et la restitution sont accessibles et rémunération discutée.
+□ Les mandats des partenaires et leurs contributions sont vérifiés.
+□ La convention traite des données, des coûts, des différends et de la sortie.
+□ Le circuit d'alerte fonctionne aussi lorsqu'un responsable est concerné.
+
+
+CHAPITRE 3 — BUDGET ET APPROVISIONNEMENT
+
+Objectif
+
+Construire un budget vérifiable pour la durée choisie, comparer des
+solutions selon leur coût complet et leur capacité à être maintenues, puis
+organiser des achats et réceptions traçables. Un devis n'est pas un budget
+de fonctionnement ; un don n'est pas nécessairement gratuit à exploiter.
+
+Matériel et compétences
+
+Réunir l'inventaire du chapitre 1, les fiches de rôle et engagements du
+chapitre 2, des spécifications liées à l'usage, des devis datés et les
+données de consommation disponibles. Il faut savoir comparer des offres,
+estimer du temps de travail, examiner la réparabilité et tenir un suivi
+comptable adapté à l'organisation. Faire intervenir une personne qualifiée
+pour les choix et installations électriques. Le budget doit mentionner
+la monnaie, la période et les sources ; aucune valeur locale n'est
+présumée dans ce chapitre.
+
+3.1 — Ce que coûte réellement un service
+
+Le coût total de possession suit le service depuis sa préparation jusqu'à
+son retrait : achat ou remise en état, transport, installation, usage,
+administration, formation, maintenance, réparations, remplacement,
+traitement de fin de vie et fermeture éventuelle. Il comprend également
+la collecte autorisée, la mise à jour et la correction des documents.
+Un ordinateur donné peut nécessiter un stockage, une alimentation protégée,
+du temps d'installation et des pièces indisponibles. À l'inverse, un
+matériel neuf n'est pas nécessairement facile à réparer. Ces possibilités
+doivent être vérifiées dans les offres et auprès des personnes chargées
+de l'entretien.
+
+La frugalité se mesure par rapport à un service rendu. Faire fonctionner
+une machine en permanence pour une consultation rare peut être moins
+pertinent qu'une organisation manuelle ; un équipement sous-dimensionné
+qui impose des reprises incessantes gaspille aussi du travail. Le coût
+monétaire, le temps humain et les impacts matériels doivent être présentés
+distinctement lorsque leur conversion en une seule valeur masquerait des
+choix importants.
+
+3.2 — Pas à pas : établir le budget
+
+Étape 1. Choisir une période et une unité. Le budget couvre une période
+explicite, avec date de début et fin ; inscrire la monnaie de chaque
+montant. Faire apparaître les financements confirmés séparément des
+financements envisagés. Identifier les engagements déjà pris, les dépenses
+que l'on peut différer et celles qui sont nécessaires pour fermer
+proprement le service.
+
+Étape 2. Décomposer le service en postes. Pour un parcours minimal,
+examiner au moins machine, stockage, sauvegarde, alimentation protégée,
+installation, documentation, formation, coordination et entretien.
+Ajouter au parcours intermédiaire les dispositifs de mesure en lecture,
+les communications et leur maintenance, si l'usage le justifie. Un
+parcours complet peut nécessiter des essais, de l'expertise de sécurité,
+des protections et une validation indépendante : aucun de ces postes
+n'est une preuve qu'un dispositif peut être mis en service.
+
+Inclure les frais de participation, interprétation, transport, accès aux
+documents, vérification des droits, conseil et gestion des demandes. Prévoir
+les remplacements dont la nécessité est connue ou plausible, mais ne pas
+annoncer une durée de vie sans source. Le travail de contrôle des réponses
+et la correction du corpus continuent après l'installation.
+
+Étape 3. Construire une ligne par hypothèse utile. Inscrire quantité,
+unité, prix unitaire ou contribution en nature, fréquence, nombre
+d'occurrences dans la période, source et date, incertitude et personne
+responsable. Séparer coût initial et coût récurrent pour éviter de les
+compter deux fois. Une ressource existante figure dans l'inventaire même
+si sa dépense d'acquisition n'entre pas dans le budget de la période ;
+ses coûts futurs d'utilisation et de remplacement restent à estimer.
+
+TABLEAU 3.1 — GABARIT DE COÛT
+
+Poste | Quantité/unité | Coût unitaire et monnaie | Occurrences | Source/date | Initial | Récurrent | Incertitude
+Machine | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Sauvegarde | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Électricité | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Connexion | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Travail et formation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Participation et langues | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Réparation / remplacement | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+Fermeture et restitution | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+
+[À ACTUALISER — prix, taxes, tarifs, devis, disponibilité, monnaie et
+dates de validité de chaque ligne avant engagement.]
+
+Étape 4. Calculer et contrôler. Pour chaque ligne monétaire : quantité ×
+coût unitaire × nombre d'occurrences sur la période, en ajustant l'unité
+pour ne pas multiplier deux fois une fréquence déjà comprise dans le prix.
+La somme des lignes initiales et récurrentes donne le coût prévu avant
+réserve. Ajouter séparément une réserve justifiée pour les événements
+incertains et non déjà inclus ; ne pas y cacher une dépense connue.
+Indiquer ce que la réserve ne couvre pas. Faire vérifier les additions et
+les hypothèses par une seconde personne.
+
+Pour l'énergie, lorsque la puissance moyenne mesurée ou estimée est
+disponible, énergie en kWh = puissance moyenne en kW × durée en heures.
+Le coût variable estimé est cette énergie multipliée par le tarif applicable
+sur la période. Ajouter séparément abonnement, taxes et autres charges
+pertinentes si elles s'appliquent au périmètre ; éviter de les attribuer
+entièrement au projet si le compteur dessert d'autres usages. Une puissance
+nominale n'est pas nécessairement une puissance moyenne mesurée. Indiquer
+la méthode, les appareils inclus, les conditions et l'incertitude.
+[À ACTUALISER — tarifs applicables et règles de facturation vérifiés à la
+date du calcul.]
+
+Étape 5. Comparer plusieurs scénarios avec des hypothèses explicites.
+Préparer au moins un scénario fondé sur les ressources confirmées, un
+scénario prudent pour les postes incertains et un scénario de rupture :
+fin d'un financement, absence d'une pièce ou départ d'un partenaire.
+Faire varier les postes qui comptent réellement, un à un si nécessaire,
+pour identifier ceux qui changent la décision. Les bornes proviennent de
+devis, mesures ou hypothèses justifiées ; aucune marge fixe n'est
+universelle. Si les données manquent, inscrire « inconnu » plutôt que
+d'inventer une fourchette.
+
+Étape 6. Relier budget et service minimal. Déterminer ce qui continue en
+cas de manque de fonds : accès aux documents, sauvegarde, réponse aux
+demandes et fermeture sûre, par exemple. Une ligne de maintenance annulée
+peut rendre tout le dispositif inutilisable ; elle n'est pas forcément
+une économie. Si les ressources confirmées ne couvrent pas les obligations
+essentielles, réduire le périmètre ou différer le démarrage.
+
+ENCADRÉ — TEMPS HUMAIN ET ARGENT
+
+Une feuille de calcul peut afficher séparément les heures payées, les
+heures promises en nature et les dépenses monétaires. Ne pas additionner
+des heures à une somme d'argent. Si l'équipe choisit de valoriser le temps
+en monnaie pour comparer des options, indiquer le taux retenu, son origine,
+la période et les limites ; conserver aussi le nombre d'heures. Un apport
+bénévole n'est pas une ressource garantie pour les années suivantes.
+
+3.3 — Acheter en fonction d'un usage, pas d'une fiche séduisante
+
+Avant de demander des devis, rédiger une spécification fonctionnelle :
+tâche à accomplir, conditions d'usage hors ligne ou connecté, exigences
+d'accessibilité, capacité minimale à vérifier par un essai, sauvegarde,
+maintenance et compatibilité avec les équipements existants. Séparer
+exigences indispensables et préférences. Ne pas confondre la capacité
+annoncée d'une machine avec la performance de l'application choisie ;
+prévoir un essai sur les documents autorisés et dans les conditions
+effectives, sans données personnelles inutiles.
+
+Demander des offres comparables : produit ou service, quantité, état neuf
+ou reconditionné, monnaie, taxes, transport, délai, garantie, conditions
+de retour, formation, documentation et pièces. Faire préciser ce qui est
+exclu. Pour du matériel réemployé, documenter son état, son origine, les
+tests réalisables, l'effacement préalable autorisé des données anciennes
+et la possibilité de l'entretenir. Vérifier les licences des logiciels
+nécessaires et les conditions de mise à jour, sans supposer qu'un logiciel
+gratuit à l'achat ne coûte rien à maintenir.
+
+TABLEAU 3.2 — COMPARER DES OFFRES
+
+Critère | Offre A | Offre B | Matériel déjà disponible
+Répond à l'usage démontré ? | [à vérifier] | [à vérifier] | [à vérifier]
+Coût complet sur la période | [à calculer] | [à calculer] | [à calculer]
+Garantie et recours | [à vérifier] | [à vérifier] | [à vérifier]
+Pièces et réparateur accessibles | [à vérifier] | [à vérifier] | [à vérifier]
+Délai, transport, taxes | [à vérifier] | [à vérifier] | [sans objet ou à vérifier]
+Documentation et licences | [à vérifier] | [à vérifier] | [à vérifier]
+Risques, exclusions et solution de repli | [à noter] | [à noter] | [à noter]
+
+[À ACTUALISER — offres et conditions de marché ; conserver les sources et
+les dates de validité avec la décision.]
+
+Le choix peut être multicritère sans prétendre qu'une note globale efface
+les compromis. Écarter d'abord les offres qui ne satisfont pas une
+condition indispensable ; discuter ensuite coût, délai, entretien et
+risques des offres restantes. Documenter les éventuels liens d'intérêt
+des personnes qui décident et appliquer les règles d'achat de l'organisation
+après vérification. La disponibilité d'un fournisseur aujourd'hui ne
+garantit pas celle d'une pièce plus tard.
+
+3.4 — Réception, stockage et suivi
+
+À la réception, comparer livraison et commande, relever les références et
+numéros utiles dans un inventaire interne, vérifier l'état et les éléments
+manquants, puis conserver les justificatifs et garanties. Tester les
+fonctions convenues avant acceptation définitive selon les conditions
+applicables. Signaler une anomalie dans les délais prévus par l'accord
+vérifié. Ne pas publier des identifiants de matériel ou des coordonnées de
+personnes sans nécessité.
+
+Attribuer un responsable à chaque équipement, enregistrer emplacement,
+état, maintenance prévue et dépendances. Pour les consommables et pièces,
+noter quantité disponible, compatibilité, condition de stockage et point
+de réapprovisionnement choisi par l'équipe. Éviter les stocks dont la
+dégradation rendrait l'achat inutile. Pour une batterie ou une installation
+électrique, les conditions de sécurité, de transport et de fin de vie
+doivent être établies avec des professionnels compétents et les règles
+locales vérifiées ; une liste générique ne constitue pas un plan technique.
+
+  Besoin et spécification → devis comparables → vérification des moyens
+             → décision motivée → commande → réception et essai
+             → inventaire → entretien / remplacement → fin de vie
+
+Chaque transition laisse une trace : qui a décidé, sur quels éléments,
+quels écarts ont été acceptés et où se trouvent les justificatifs. Si une
+livraison diffère de l'offre, ne pas modifier silencieusement le besoin
+pour faire entrer le produit dans le budget.
+
+3.5 — Résultats mesurés
+
+[RÉSULTATS TOGO À INSÉRER] Période et monnaie ; devis reçus et dates ;
+budget approuvé par poste ; dépenses engagées et payées ; heures prévues
+et observées, rémunérées ou non ; énergie et méthode de mesure si disponibles ;
+délais annoncés et constatés ; réparations et indisponibilités ; écarts et
+motifs ; décision de poursuite ou de réduction du service.
+
+Pour chaque poste, écart monétaire = dépense réelle − budget prévu, dans
+la même monnaie et sur la même période. Un écart négatif ne démontre pas
+à lui seul une économie : il peut correspondre à une formation non
+réalisée ou à une facture encore attendue. Distinguer dépenses engagées,
+payées et prévues. Lorsque plusieurs monnaies sont utilisées, présenter
+d'abord les montants d'origine ; toute conversion précise le taux, la
+date, la source et les frais éventuels.
+[À ACTUALISER — taux de change et frais effectivement applicables.]
+
+Limites et échecs
+
+Un devis périmé, une pièce impossible à obtenir ou une réparation plus
+longue que prévu peuvent invalider le budget. Les estimations d'énergie
+varient avec la charge et le temps d'utilisation. Les contributions en
+nature peuvent cesser, et des frais imprévus peuvent toucher les personnes
+plutôt que le projet. Si l'écart compromet la maintenance ou les
+obligations envers les participants, suspendre les nouveaux engagements,
+préserver les fonctions essentielles, informer les partenaires et
+réviser la décision. Le scénario de rupture doit prévoir l'arrêt, pas
+uniquement une recherche optimiste de financement.
+
+Check-list du chapitre 3
+
+□ Période, monnaie et financements confirmés sont explicités.
+□ Investissement, fonctionnement, travail humain et fin de vie sont séparés.
+□ Quantités, fréquences, sources et incertitudes sont indiquées.
+□ Tarifs, taxes, transport, garantie et délais ont été vérifiés et datés.
+□ Les scénarios prudent et de rupture sont comparés au scénario retenu.
+□ La maintenance, les pièces, la sauvegarde et la fermeture sont financées.
+□ La commande repose sur une spécification et une décision motivée.
+□ Réception, inventaire et suivi des écarts ont un responsable.
+
+
+CHAPITRE 4 — ÉTHIQUE, DROIT ET GOUVERNANCE DES DONNÉES
+
+Objectif
+
+Définir et contrôler les conditions d'utilisation des données et des
+documents, depuis la décision de collecter jusqu'à la suppression,
+l'archivage ou la fermeture du service. Les personnes concernées doivent
+comprendre les usages envisagés, pouvoir exprimer un désaccord et disposer
+de voies de recours. L'hébergement local ne suffit pas, à lui seul, à
+garantir la souveraineté ou la sécurité.
+
+Matériel et compétences
+
+Prévoir une responsabilité des données, une participation effective des
+communautés concernées, une aide juridique locale compétente, des
+compétences de sécurité et de documentation, ainsi que l'interprétation
+et la traduction nécessaires. L'équipe tient un registre des traitements,
+des sources, des autorisations, des accès et des incidents dans un endroit
+protégé. Les notices et voies de contact existent aussi hors de l'outil
+numérique lorsque celui-ci n'est pas accessible à tous.
+
+Ce chapitre propose une méthode de travail ; il ne formule pas d'avis
+juridique ni ne déclare une pratique conforme. [À ACTUALISER — textes,
+autorités compétentes, règles de protection des données, propriété
+intellectuelle, transferts, conservation et obligations applicables au
+Togo et à chaque partenaire, avec sources officielles, date de consultation
+et validation par un conseil compétent.]
+
+4.1 — Distinguer les questions avant de demander une signature
+
+Un document peut appartenir matériellement à une organisation tout en
+contenant des textes, images ou données concernant d'autres personnes.
+Il faut distinguer le droit d'accéder au support, celui de reproduire ou
+modifier son contenu, les règles relatives aux données personnelles et
+les conditions convenues avec les personnes ou groupes concernés. Une
+licence de diffusion ne remplace pas nécessairement une autorisation
+relative à une personne ; inversement, l'accord d'une personne ne règle
+pas tous les droits sur une œuvre. La présence d'un texte en ligne ou
+d'une scène dans un espace public ne suffit pas à établir une liberté
+générale de réutilisation.
+
+Les usages doivent eux aussi être séparés. Consulter un document dans un
+service local, le publier, le transmettre à un partenaire, l'utiliser pour
+adapter un modèle et le conserver à des fins d'archivage sont des opérations
+différentes. Elles peuvent avoir des risques, destinataires et conditions
+différents. Une autorisation obtenue pour l'une ne doit pas être étendue
+silencieusement aux autres. Une décision collective concernant un savoir
+partagé ne remplace pas les droits ou choix individuels applicables ; les
+deux dimensions doivent être examinées.
+
+4.2 — Pas à pas : décider si une collecte est nécessaire
+
+Étape 1. Décrire la finalité concrète. « Améliorer l'intelligence
+artificielle » est trop vague pour permettre une discussion utile.
+Préciser le service, les personnes concernées, la tâche, les catégories
+de données, les utilisateurs et les opérations envisagées. Documenter les
+usages exclus. Revenir au chapitre 1 : le service peut-il fonctionner avec
+des documents déjà autorisés, des données moins détaillées ou sans
+collecte nouvelle ?
+
+Étape 2. Cartographier le trajet de chaque catégorie de données. Identifier
+la collecte, les copies de travail, les sauvegardes, les éventuels services
+distants, les personnes qui consultent, les exports et la fin de vie.
+Inclure les journaux techniques et les fichiers temporaires produits par
+les applications s'ils contiennent des informations sur les personnes.
+Un schéma permet de repérer une copie oubliée avant de promettre son
+retrait.
+
+  Source → admission et contrôle → stockage restreint → usage autorisé
+                ↓                         ↓                  ↓
+           registre des droits       sauvegarde         partage éventuel
+                └──────────────→ révision / retrait / fin de conservation
+
+Étape 3. Vérifier la base et les responsabilités applicables avec un
+conseil compétent avant traitement. Inscrire l'identité et les contacts
+des responsables selon le cadre applicable, les destinataires, les
+conditions de transfert et la durée ou les critères de conservation.
+La base retenue dépend du contexte : ne pas présenter le consentement
+comme la seule possibilité ni comme une solution automatique. Pour toute
+utilisation d'un service externe, vérifier quels contenus sont transmis,
+où et sous quelles conditions, y compris les journaux et la sous-traitance.
+[À ACTUALISER — qualification des acteurs, base retenue, règles de transfert
+et obligations vérifiées pour le traitement précis.]
+
+Étape 4. Évaluer les risques avec les personnes concernées. Qui pourrait
+être identifié, exposé, exclu ou mal représenté ? Que se passe-t-il si un
+document est faux, si un accès est abusif ou si une source est retirée ?
+Examiner les effets individuels et collectifs, les rapports de pouvoir,
+la sensibilité du contexte et les possibilités de recours. Pour chaque
+risque, indiquer une mesure, un responsable, un risque restant et une
+décision : accepter dans les limites autorisées, modifier, différer ou
+renoncer. Une donnée apparemment banale peut devenir identifiante par
+recoupement ; retirer les noms ne suffit donc pas à garantir l'anonymat.
+
+Étape 5. Minimiser avant de sécuriser. Ne collecter que ce qui est
+nécessaire à la finalité retenue ; réduire précision, durée et accès quand
+c'est possible sans dénaturer le service. Utiliser des exemples fictifs
+ou des documents publics dont les droits ont été vérifiés pour les essais
+initiaux. Ne pas recueillir des données sensibles simplement parce qu'elles
+pourraient devenir utiles. Pour les mineurs ou les personnes en situation
+de vulnérabilité, obtenir un conseil spécialisé et concevoir des garanties
+adaptées ; en cas de doute non résolu, ne pas collecter.
+
+TABLEAU 4.1 — REGISTRE D'UN TRAITEMENT
+
+Champ | À documenter
+Finalité et usages exclus | [à compléter]
+Catégories, personnes concernées, volume prévu | [à compléter]
+Source et conditions de collecte | [à compléter]
+Responsables et contacts | [à compléter]
+Base et vérification juridique | [à compléter]
+Destinataires, transferts et sous-traitants | [à compléter]
+Accès, stockage, sauvegardes et mesures de sécurité | [à compléter]
+Durée ou critères de conservation et sort final | [à compléter]
+Risques, mesures, décision et date de révision | [à compléter]
+Demandes, incidents et contact de recours | [à compléter]
+
+[À ACTUALISER — contenu du registre à chaque changement de finalité,
+partenaire, lieu de stockage, destinataire ou règle applicable.]
+
+4.3 — Informer, recueillir un accord lorsqu'il convient
+
+Une notice utile décrit, dans une langue et un format compris par la
+personne, qui fait quoi, pourquoi, avec quelles données, pendant combien
+de temps, qui y aura accès et à qui s'adresser. Elle explique les
+conséquences prévisibles, les alternatives et les limites réelles de
+retrait. Il faut laisser le temps de poser des questions et vérifier la
+compréhension sans transformer la vérification en examen intimidant.
+Une traduction orale peut être nécessaire ; documenter le mode utilisé et
+la version de la notice, sans enregistrer la conversation par défaut.
+
+Lorsque le consentement est la base appropriée après vérification, organiser
+un choix libre, spécifique et informé pour chaque finalité pertinente.
+Séparer par exemple l'accès local, la publication, le partage et
+l'entraînement. Une case précochée ou une pression d'un supérieur ne
+permet pas de comprendre le choix réel. Expliquer comment refuser et
+retirer son accord, à qui s'adresser et ce qui peut ou ne peut pas être
+retiré. La preuve du choix doit être conservée avec un accès limité et
+seulement aussi longtemps que nécessaire selon le cadre applicable.
+
+ENCADRÉ — QUESTIONS DE COMPRÉHENSION
+
+« Pouvez-vous me dire avec vos mots ce que nous souhaitons faire ? »
+« Qui pourra accéder à votre contribution ? » « Que souhaitez-vous
+autoriser ou refuser parmi les usages proposés ? » « Comment nous
+contacter si vous changez d'avis ? » Si la réponse révèle un malentendu,
+reformuler et laisser du temps ; ne jamais déduire un accord du silence.
+
+Annoncer les conditions de rémunération avant la contribution et éviter
+qu'elles deviennent un moyen de pression. Le refus d'un usage ne doit
+pas être confondu avec le refus de tous les autres. Les effets d'un retrait
+sur une rémunération ou une conservation doivent être examinés selon le
+dispositif et les règles applicables, puis expliqués honnêtement ; ne
+promettre ni une sanction ni une absence de conséquence sans vérification.
+
+4.4 — Tenir le registre des sources et des choix
+
+Avant d'intégrer une source, relever son titre, son auteur ou titulaire
+connu, son origine, sa version, sa date, son responsable de mise à jour,
+les autorisations obtenues, les restrictions et la preuve correspondante.
+Vérifier séparément traduction, modification, redistribution, utilisation
+commerciale éventuelle et entraînement. Noter les dates d'expiration ou de
+révision lorsqu'elles existent. Si le titulaire ou les conditions restent
+incertains, placer la source en attente ; la présence d'un fichier dans
+un dossier partagé n'est pas une autorisation.
+
+TABLEAU 4.2 — FICHE DE SOURCE
+
+Identifiant interne et version : [à compléter]
+Origine, titulaire et contact autorisé : [à compléter]
+Date et personne chargée de la mise à jour : [à compléter]
+Consultation locale : [autorisation / restriction / inconnue]
+Traduction ou modification : [autorisation / restriction / inconnue]
+Publication et partage : [autorisation / restriction / inconnue]
+Entraînement ou adaptation : [autorisation / restriction / inconnue]
+Données personnelles et base vérifiée : [à compléter]
+Preuve, date de vérification, retrait et responsable : [à compléter]
+
+Le registre permet de retirer une source du service de recherche, de
+retrouver ses copies autorisées et de vérifier les réponses qui la citent.
+Il ne permet pas, à lui seul, d'effacer toute trace d'une information déjà
+publiée ou incorporée à un modèle. Avant un entraînement, documenter la
+possibilité technique et organisationnelle de retrait, les limites et
+les solutions envisagées : exclusion des futurs jeux, reconstruction à
+partir de données autorisées ou retrait de la version concernée, selon
+faisabilité. Ne pas promettre un « désapprentissage » parfait sans preuve.
+
+4.5 — Accès, sécurité, conservation et incidents
+
+Attribuer les accès selon les tâches : une personne chargée de relire une
+traduction n'a pas nécessairement besoin d'accéder à tous les justificatifs
+d'identité ou à tous les journaux. Nommer la personne qui autorise et
+révoque chaque accès ; revoir les droits lors des changements de rôle.
+Séparer les données identifiantes des contenus de travail lorsque cela
+réduit le risque, protéger les supports et les communications de manière
+adaptée, et conserver les clés ou moyens de récupération sous contrôle
+organisé. Chiffrer ne suffit pas si toute l'équipe partage le même compte
+ou si les copies et clés ne sont pas maîtrisées.
+
+Sauvegarder ce qui doit l'être, avec des accès distincts et une procédure
+de restauration testée. Documenter les copies, leur durée et la manière
+dont une demande de retrait y est traitée. Il peut être nécessaire de
+conserver provisoirement une sauvegarde intacte pour la reprise, selon les
+obligations et risques applicables : documenter la décision et empêcher
+qu'une restauration réintroduise silencieusement une source retirée.
+Une suppression du fichier actif n'est pas une suppression de toutes les
+copies ; un effacement ne doit être annoncé comme achevé qu'après les
+vérifications prévues et avec ses limites.
+
+Fixer dès l'origine une durée ou des critères de conservation justifiés,
+ainsi que la personne chargée de les réexaminer. À l'échéance, décider
+entre suppression, archivage justifié ou conservation fondée sur une
+obligation vérifiée ; documenter qui décide et pourquoi. Les journaux
+peuvent aider à enquêter sur un incident, mais ils peuvent aussi exposer
+des habitudes ou des questions privées : limiter leur contenu, leurs
+accès et leur durée.
+
+En cas d'incident, protéger d'abord les personnes et limiter l'exposition :
+isoler le système ou suspendre le partage si cela peut être fait sans
+aggraver la situation. Préserver les éléments nécessaires à l'analyse
+sans multiplier les copies ; alerter les responsables désignés. Évaluer
+ce qui s'est passé, quelles données et personnes peuvent être concernées,
+et les mesures de correction. Vérifier avec les personnes compétentes
+les notifications éventuellement requises et leurs modalités. Consigner
+les décisions, informer les personnes concernées lorsque cela est
+approprié ou requis, puis ne reprendre qu'après vérification.
+[À ACTUALISER — contacts, obligations et délais de notification applicables.]
+
+4.6 — Une gouvernance qui peut dire non
+
+Une charte communautaire décrit le mandat du groupe de gouvernance, sa
+composition et ses limites, les modalités de renouvellement, les sujets
+sur lesquels il décide et ceux pour lesquels il est consulté. Elle
+prévoit comment les personnes concernées sont représentées sans attribuer
+à une seule voix le pouvoir de parler pour toutes. Elle fixe la procédure
+de désaccord, les conflits d'intérêts, la fréquence de révision, le
+partage des bénéfices et la possibilité de suspendre une collecte ou un
+déploiement. Les décisions importantes et leurs motifs doivent pouvoir
+être expliqués dans les langues appropriées.
+
+Le recours ne doit pas exiger d'utiliser l'application contestée. Prévoir
+un contact humain et, lorsque possible, une autre voie accessible ; dire
+qui reçoit la demande, comment elle est enregistrée avec le minimum
+d'informations, qui vérifie l'identité si nécessaire, qui décide et comment
+la réponse est transmise. Un mécanisme de recours doit aussi permettre
+d'éviter un conflit d'intérêts. Les délais et droits précis sont à
+vérifier selon le cadre applicable ; en attendant, l'équipe fixe un délai
+interne de suivi sans le présenter comme un délai légal.
+
+  Demande → accusé de réception → vérification proportionnée
+          → recherche des usages et copies → décision motivée
+          → exécution et contrôle → réponse et possibilité de recours
+
+Si une demande ne peut pas être satisfaite entièrement, expliquer la
+raison vérifiée et les limites, proposer les mesures possibles et indiquer
+la voie de contestation appropriée. Suivre les demandes en attente et les
+retards sans exposer publiquement leur contenu. La gouvernance doit pouvoir
+ordonner une pause le temps d'examiner un usage contesté ; la continuité du
+projet ne prime pas automatiquement sur les personnes concernées.
+
+4.7 — Résultats mesurés
+
+[RÉSULTATS TOGO À INSÉRER] Version et date de la charte effectivement
+adoptée ; catégories de sources examinées, admises, refusées ou en attente ;
+nombre de personnes formées par fonction ; contrôles d'accès et tests de
+restauration effectués ; nombre de demandes reçues, traitées et en attente,
+délais observés et motifs agrégés ; incidents et mesures correctives
+publiables sans identifier les personnes ni exposer de vulnérabilité.
+
+Pour chaque indicateur, définir la période et le dénominateur. Par exemple,
+la proportion de sources admises avec preuve de droits complète est le
+nombre de sources admises dont les vérifications requises sont documentées,
+divisé par le nombre de sources admises ; présenter les deux nombres et
+les critères. Une proportion élevée ne rend pas licite une source litigieuse
+et ne mesure pas la qualité de la participation. Mesurer aussi les
+demandes en attente et les délais, sans interpréter l'absence de plainte
+comme une preuve d'absence de préjudice.
+
+Limites et échecs
+
+Un formulaire signé ne corrige pas un rapport de force et ne rend pas un
+usage acceptable à lui seul. Une charte peut exclure les personnes qui ne
+peuvent assister aux réunions. L'anonymisation peut échouer par recoupement,
+et le contrôle local peut être compromis par une copie externe ou un accès
+partagé. Un assistant peut citer une source périmée ou reproduire une
+interprétation blessante malgré des autorisations valides. Si une finalité
+change, si les droits sont contestés ou si un risque n'est pas maîtrisé,
+suspendre l'usage concerné, informer les responsables et personnes
+concernées selon le cas, puis réévaluer avant toute reprise.
+
+Check-list du chapitre 4
+
+□ Finalités, usages exclus et catégories de données sont définis.
+□ Nécessité, risques individuels et collectifs et alternatives ont été examinés.
+□ Responsables, base, droits sur les sources et transferts sont vérifiés.
+□ Les choix d'accès, publication, partage et entraînement sont distingués.
+□ Information, traduction, refus et retrait sont compréhensibles et accessibles.
+□ Accès, copies, sauvegardes, conservation et incident ont des responsables.
+□ Les limites du retrait après diffusion ou entraînement sont expliquées.
+□ Charte, désaccord, droit d'arrêt et recours indépendant sont organisés.
+□ Registres et décisions sont revus lors de tout changement important.
+
+
+PASSAGE VERS LA SUITE
+
+La partie A ne certifie pas qu'un site est prêt. Elle produit un dossier
+de décision : une fiche d'usage, un diagnostic daté, une répartition des
+rôles, des engagements vérifiés, un budget par scénario et un registre
+de données. Les points inconnus restent visibles. La suite du livre
+approfondit l'énergie, l'infrastructure et les usages ; elle ne dispense
+pas de revenir à ces documents si un choix technique modifie les risques,
+les coûts ou les personnes concernées.
+
+[RÉSULTATS TOGO À INSÉRER] Décision collective de passage, conditions
+éventuelles, éléments non résolus, personne chargée du suivi et date de
+réexamen, après validation des personnes et partenaires concernés.

@@ -1,0 +1,1007 @@
+PARTIE D — CONNECTER LE TERRITOIRE
+
+Observer sans confondre la carte et le lieu
+==========================================
+
+Un territoire n'est pas un ensemble de points sur un écran. C'est un espace
+habité, traversé, entretenu et interprété par des personnes qui n'y disposent
+pas toutes du même temps, de la même mobilité ni du même pouvoir de décision.
+Connecter ce territoire ne signifie donc pas commencer par installer des
+capteurs. Cela signifie d'abord convenir d'une question utile, vérifier qu'il
+est légitime de l'étudier, puis choisir les moyens les moins intrusifs et les
+plus soutenables pour y répondre.
+
+Les trois chapitres qui suivent forment une chaîne, mais ne prescrivent pas un
+parcours obligatoire. Le chapitre 11 traite de l'observation et de ses erreurs.
+Le chapitre 12 revient au lieu lui-même : un banc, un arbre ou une jardinière
+peuvent rendre service sans produire de données. Le chapitre 13 explique comment
+relier des observations et des documents sans donner à une représentation
+partielle l'apparence d'une vérité totale. Chaque étape peut conduire à s'arrêter
+ou à revenir en arrière.
+
+Le plan éditorial de Communalis réserve 44 pages à cette partie, dans un livre
+visant 300 pages hors index et bibliographie. Ce texte constitue un développement
+du manuscrit, pas la preuve que ces volumes ou les proportions de figures sont
+atteints : seul un travail de mise en page permettra de les apprécier.
+
+Les exemples ci-dessous sont des dispositifs de raisonnement, non des comptes
+rendus de terrain. Aucun site, résultat ou partenariat n'est présumé établi.
+Les marqueurs [RÉSULTATS TOGO À INSÉRER] réservent les observations réelles
+et leurs conditions de production. Les indications [À ACTUALISER — ...]
+signalent les informations dépendantes du moment, du lieu ou de l'équipement.
+Avant toute mise en œuvre, compléter ces dernières avec une source datée et
+une personne responsable de leur vérification.
+
+
+CHAPITRE 11 — CAPTEURS ET ACQUISITION DE DONNÉES
+================================================
+Maturité : expérimentale.
+
+Objectif
+--------
+
+Construire une observation située, utile à une question définie et
+compréhensible par les personnes qui l'utiliseront. L'objectif n'est pas de
+couvrir le plus de points possible, mais de savoir ce que l'instrument indique,
+dans quelles conditions, et ce qu'il ne permet pas de conclure. Une mesure peut
+justifier une enquête complémentaire ; elle ne suffit pas nécessairement à
+classer un lieu, à établir une exposition individuelle ou à déclencher une
+action.
+
+Matériel et compétences
+-----------------------
+
+Il faut une personne responsable de la question et des données, des personnes
+connaissant le lieu et ses usages, une compétence de mesure propre au phénomène
+choisi et, si une transmission est envisagée, une compétence réseau et sécurité.
+Une personne chargée de l'entretien doit être identifiée avant l'achat. Selon
+le projet, prévoir un instrument adapté et documenté, un moyen de comparaison
+à une référence appropriée, un support de fixation sûr, une alimentation
+protégée, une horloge vérifiable et un registre papier ou numérique.
+
+Un microcontrôleur tel qu'un ESP32, un stockage local ou un réseau ne sont que
+des options. Leur disponibilité, leurs caractéristiques et leur prix ne sont
+pas des acquis : [À ACTUALISER — modèles, documentation, disponibilité, coûts,
+compatibilités et conditions de support]. Une fiche commerciale ne dispense
+pas de tester l'ensemble dans son environnement réel.
+
+11.1 — Commencer par une question, pas par une boîte
+---------------------------------------------------
+
+« Fait-il chaud ici ? » semble simple, mais contient plusieurs questions. Une
+personne assise au soleil, une personne à l'ombre et une plante en jardinière
+ne subissent pas les mêmes conditions. Une sonde de température de l'air
+répond à une partie du problème ; elle ne mesure ni toute l'expérience du
+confort ni la température de la peau, des surfaces et du sol.
+
+La fiche de question oblige à choisir avant de voir les valeurs. Elle réduit le
+risque de chercher après coup une explication flatteuse à une série imprévue.
+Elle est discutée avec les usagers et la personne qui pourrait agir sur la
+base des résultats.
+
+Tableau 11.1 — Fiche de cadrage à remplir avant installation
+
+| Rubrique | Question à trancher |
+|---|---|
+| Décision envisagée | Quelle décision humaine pourrait être éclairée ? |
+| Phénomène | Quelle grandeur précise et dans quelle unité ? |
+| Population ou lieu | Qui utilise le lieu, qui pourrait être affecté ? |
+| Échelle | Quel emplacement, quelle période et quel intervalle ? |
+| Comparaison | À quoi comparer : état antérieur, site voisin, référence ? |
+| Qualité | Quelle incertitude serait trop grande pour cette décision ? |
+| Droits | Qui autorise l'installation, l'accès et les usages des données ? |
+| Ressources | Qui vérifie, entretient, finance et retire le dispositif ? |
+| Décision d'arrêt | Quelles conditions imposent suspension ou retrait ? |
+
+Une campagne peut commencer par une observation manuelle à heures convenues.
+Ce choix a des limites : il dépend de la présence des observateurs et peut
+manquer les variations entre passages. Mais il donne une référence de coût,
+de simplicité et d'utilité face à laquelle juger l'automatisation.
+
+Encadré — Une mesure n'est pas une personne
+
+Ne pas collecter d'identifiants, de trajectoires ou d'images de personnes
+pour répondre à une question environnementale qui ne les exige pas. Même
+une série apparemment anonyme peut révéler des habitudes lorsqu'elle est
+associée à un emplacement précis et à des horaires. Réduire résolution,
+durée de conservation et accès selon le risque ; informer les personnes
+concernées dans des langues et par des moyens accessibles. L'information
+sur place ne remplace ni une base juridique valable ni les autres autorisations.
+[À ACTUALISER — règles applicables aux données personnelles, autorité
+compétente, durée de conservation et procédure de réclamation, vérifiées
+localement avec un conseil compétent.]
+
+11.2 — De la grandeur au chiffre
+--------------------------------
+
+La grandeur est ce que l'on cherche à caractériser ; la valeur est le résultat
+d'une chaîne de mesure. Le capteur réagit à son environnement, l'électronique
+convertit cette réponse, le logiciel applique éventuellement une formule, et
+le stockage lui associe un lieu et une date. Une erreur peut apparaître à
+chacune de ces étapes. La répétition d'un même chiffre n'est donc pas une
+preuve qu'il est juste.
+
+La résolution est le plus petit pas affiché ou enregistré par le dispositif ;
+elle n'est pas son exactitude. Une valeur avec plusieurs décimales peut être
+plus détaillée que ne le permet la qualité de l'instrument. La fidélité décrit
+la proximité de résultats répétés dans des conditions précisées ; un appareil
+fidèle peut rester systématiquement décalé par rapport à une référence.
+L'incertitude qualifie l'étendue raisonnable des valeurs compatibles avec la
+mesure, selon une méthode et des hypothèses indiquées. Elle ne s'obtient pas
+en recopiant sans examen une précision annoncée par le fabricant.
+
+L'étalonnage compare les indications à une référence appropriée dans des
+conditions documentées. Un ajustement éventuel modifie la réponse ou sa
+correction ; il doit être distingué de la comparaison elle-même. La référence
+doit être adaptée à la grandeur et à la plage utilisées ; sa propre incertitude
+compte. Une comparaison ponctuelle ne prouve pas l'absence de dérive dans le
+temps. Lorsque l'équipe ne peut disposer d'une référence convenable, elle
+doit le dire et renoncer aux usages qui exigent cette garantie.
+
+Tableau 11.2 — Grandeurs et précautions de lecture
+
+| Grandeur | Ce qui est visé | Points de vigilance |
+|---|---|---|
+| Température de l'air | Air au voisinage de la sonde, en °C | Abri ventilé adapté, rayonnement, murs et hauteur |
+| Lumière | Éclairement au capteur, souvent en lux | Orientation, ombre, spectre et propreté |
+| PM2.5 | Concentration estimée de particules fines, en µg/m³ | Principe optique, humidité, composition, entretien et référence |
+| Niveau sonore | Niveau acoustique agrégé selon méthode indiquée | Pondération, durée, étalonnage et absence d'enregistrement vocal |
+| Surface thermique | Température apparente d'une surface | Émissivité, reflets, distance, angle et réglages |
+| Humidité du sol | Indication liée à l'eau dans une zone de sol | Nature du sol, contact, profondeur, salinité et calibration |
+
+Pour la température de l'air, une sonde chauffée par le soleil ou placée près
+d'une paroi chaude mesure aussi l'effet de ces conditions sur son boîtier.
+Un abri adapté limite le rayonnement tout en laissant circuler l'air ; il faut
+noter sa conception, son emplacement et son entretien. Si la question porte
+sur la chaleur ressentie, ajouter éventuellement d'autres observations et
+recueillir les expériences avec les protections appropriées ; ne pas rebaptiser
+la température de l'air « confort thermique ».
+
+Un capteur optique de particules estime une concentration à partir de la lumière
+diffusée. Son résultat dépend notamment des particules présentes et des
+conditions d'humidité. La comparaison à une référence appropriée et installée
+de façon comparable est indispensable avant de soutenir une interprétation
+forte. Une mesure exploratoire ne devient pas réglementaire parce qu'elle
+utilise la même unité qu'une norme. [À ACTUALISER — méthodes de référence,
+seuils, règles et recommandations applicables à la date et au lieu de l'étude.]
+
+Pour le bruit, définir la pondération, la durée de l'agrégation et la méthode
+avant de comparer des valeurs. Un niveau équivalent sur une période ne décrit
+pas à lui seul les pics, leur cause ou leur effet sur les personnes. Le
+dispositif doit calculer localement les indicateurs prévus sans conserver ni
+transmettre de conversations ou d'audio brut. Vérifier cette propriété dans
+la configuration et dans les données effectivement produites, pas seulement
+dans la description du fabricant.
+
+Une caméra thermique donne une estimation de température apparente de surface
+dont l'interprétation dépend de l'émissivité, des reflets, de la distance, de
+l'angle et des réglages. Le métal brillant peut refléter une autre source.
+Un cliché ne mesure pas directement l'air et ne constitue pas une carte
+exhaustive des îlots de chaleur. Cadrer des surfaces plutôt que des personnes,
+éviter les moments de passage et examiner aussi les métadonnées. Si une
+captation identifiable ne peut être évitée ou justifiée, renoncer.
+
+11.3 — Choisir et protéger la chaîne
+-----------------------------------
+
+Figure 11.1 — De la question à une observation exploitable
+
+  Question et autorisations
+            ↓
+  Phénomène → capteur → acquisition → contrôle local → stockage daté
+                           │                 │              │
+                           └── alimentation  └── défauts    └── accès limité
+                                     ↓
+                    transmission facultative → consultation
+                                     ↓
+                     décision humaine, hors de cette chaîne
+
+Chaque flèche mérite une question. Le capteur fonctionne-t-il dans la plage
+prévue ? L'électronique peut-elle reconnaître une valeur impossible ou un
+capteur débranché ? L'heure reste-t-elle correcte après une coupure ? La
+transmission peut-elle reprendre sans effacer les absences ? Le stockage
+survit-il à la panne d'une carte ? Une réponse inconnue n'est pas un détail :
+elle appartient au registre des risques.
+
+MQTT est un protocole de publication et d'abonnement ; il suppose un courtier
+et une gestion des clients et des sujets. LoRa est une technologie radio :
+elle ne fournit pas, à elle seule, toutes les fonctions de réseau, de stockage,
+de sécurité ou d'exploitation. Une solution fondée sur LoRaWAN, si elle est
+retenue, ajoute son architecture et ses propres contraintes. Ne pas supposer
+qu'un protocole est disponible, interopérable ou autorisé simplement parce
+qu'un module l'annonce.
+
+Comparer la collecte manuelle, le stockage local, un réseau local protégé et
+une liaison radio au regard de la distance, du relief, des bâtiments, du débit
+réel, des coupures et du budget d'entretien. Une liaison théoriquement longue
+portée peut échouer derrière un obstacle ou dans un boîtier mal placé. Tester
+sur site sans multiplier les émissions ; tenir compte des limites légales et
+des conditions d'utilisation. [À ACTUALISER — bandes, puissance, temps
+d'émission, homologations et autorisations radio applicables localement.]
+
+Le courtier MQTT ne doit pas être ouvert anonymement sur Internet. Prévoir des
+comptes ou identités distincts, des droits limités aux sujets nécessaires, des
+secrets stockés hors du code partagé, une protection du transport adaptée et
+des mises à jour maîtrisées. Révoquer les accès d'un appareil perdu. Si
+l'équipement ne peut assurer une protection suffisante pour les données
+concernées, changer d'architecture ou ne pas collecter ces données. Le
+chiffrement ne corrige ni une mauvaise mesure ni une collecte illégitime.
+
+L'alimentation est une partie du dispositif de mesure : une tension instable,
+une batterie dégradée ou une coupure peuvent créer des trous ou des valeurs
+aberrantes. Faire concevoir les protections électriques et le boîtier pour le
+matériel et le site par une personne compétente. Les composants exposés au
+public ne doivent pas présenter de risque de contact, d'incendie, d'infiltration
+ou de chute. Ne pas improviser de raccordement au réseau électrique.
+
+11.4 — Pas à pas : préparer une campagne de mesure
+-------------------------------------------------
+
+1. Délimiter le problème. Écrire la question, la décision possible et la
+   période d'observation. Choisir la grandeur et l'unité, le lieu, l'intervalle
+   et les critères de qualité qui rendraient la réponse utile. Faire relire la
+   fiche par des personnes qui fréquentent le lieu.
+
+2. Examiner le droit et les risques. Obtenir l'accord du responsable du site
+   et les autres autorisations nécessaires. Identifier données personnelles
+   éventuelles, risques de réidentification, accès, conservation, recours et
+   suppression. Si la finalité peut être satisfaite sans collecte sensible,
+   retenir cette solution. L'absence d'opposition n'est pas automatiquement
+   un consentement ; le consentement lui-même n'est pas toujours la base
+   appropriée. [À ACTUALISER — analyse juridique et contacts compétents.]
+
+3. Dessiner l'installation. Noter emplacement, hauteur, orientation, ombre,
+   distances pertinentes aux obstacles, protection contre pluie et soleil,
+   alimentation et accessibilité pour maintenance. Vérifier que le boîtier
+   ne gêne ni circulation ni secours et ne crée pas de danger. Photographier
+   seulement si nécessaire et autorisé, sans personnes identifiables.
+
+4. Préparer les instruments. Relever identifiant, modèle, version du logiciel,
+   unité et plage ; vérifier le fonctionnement hors site. Définir comparaison
+   à une référence, méthode de correction, fréquence de contrôle et tolérance
+   propre à la décision. Noter aussi les conditions où aucune correction fiable
+   ne pourra être calculée.
+
+5. Faire un essai court et réversible. Vérifier simultanément valeur, date,
+   unité, provenance, transmission, autonomie et lisibilité des données.
+   Simuler une coupure et une reprise sans mettre le public en danger. Un
+   message arrivé n'est pas nécessairement une mesure valide ; une absence de
+   message ne signifie pas que la grandeur vaut zéro.
+
+6. Installer seulement après validation. Consigner date, opérateur, état
+   initial et autorisations. Informer selon le cadre retenu. Protéger les accès
+   et vérifier physiquement la fixation. Une modification ultérieure du site,
+   de la hauteur ou de l'abri constitue un changement de méthode à dater.
+
+7. Exploiter et entretenir. À chaque visite, contrôler propreté, alimentation,
+   état du boîtier, horloge, données manquantes et dérive possible. Inscrire
+   les incidents, les interventions et les pièces changées. Si l'instrument
+   est douteux, marquer la période concernée plutôt que supprimer discrètement
+   les valeurs ou les présenter comme normales.
+
+8. Clore et restituer. Récupérer le matériel, remettre le lieu en état selon
+   l'accord, vérifier les sauvegardes autorisées et appliquer la durée de
+   conservation. Restituer aussi les limites et les échecs aux personnes
+   concernées, dans une forme accessible ; documenter la décision de poursuivre
+   ou non.
+
+11.5 — Journal d'une observation
+---------------------------------
+
+Une ligne utile ne se limite pas à « 31,2 ». Elle associe la valeur à la
+grandeur, à l'unité, au dispositif, à la méthode et à une période. Une mesure
+instantanée, une moyenne et un maximum ne sont pas interchangeables. Pour une
+moyenne, conserver les bornes de la fenêtre et la règle de calcul ; si elle
+contient trop peu de mesures, la marquer incomplète selon un critère défini
+avant l'analyse.
+
+Tableau 11.3 — Registre minimal, gabarit à compléter
+
+| Champ | Contenu attendu |
+|---|---|
+| Identifiant | Observation et instrument, sans identité de personne inutile |
+| Grandeur et résultat | Nom, valeur brute, unité et type d'agrégation |
+| Temps | Début et fin ou instant, fuseau, qualité de l'horloge |
+| Lieu | Identifiant du site et précision réellement nécessaire |
+| Méthode | Position, protection, version et référence de calibration |
+| Qualité | Valide, douteux, manquant ou non vérifié, avec motif |
+| Transmission | Réception, éventuel retard et numéro de séquence si utilisé |
+| Droits | Responsable, restriction d'accès et durée de conservation |
+
+Garder la valeur brute même lorsqu'une correction est appliquée, sauf obligation
+de suppression ou de minimisation. Conserver séparément le résultat corrigé,
+la formule, la version et le motif. Un contrôle automatique de plage détecte
+des valeurs impossibles ; il ne valide pas les valeurs plausibles. Une sonde
+coincée peut produire une série parfaitement stable et pourtant fausse.
+
+La disponibilité de la série se calcule sur une période et une cadence
+prédéfinies : nombre d'observations valides reçues divisé par nombre attendu.
+Indiquer à part les valeurs reçues mais douteuses, les retards et les trous.
+Le dénominateur doit tenir compte des arrêts planifiés explicitement exclus
+ou, mieux, être présenté avec et sans ces exclusions. Ce taux ne prouve rien
+sur l'exactitude des valeurs reçues.
+
+11.6 — Résultats mesurés et restitution
+---------------------------------------
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Renseigner uniquement après observation : question et sites autorisés ;
+dates et fuseau ; instrument et méthode ; référence et incertitude de
+comparaison ; nombre attendu, reçu, valide et douteux ; périodes manquantes ;
+changements de placement ; incidents ; ressources consommées ; interprétation
+et décision. Joindre les retours des personnes concernées lorsqu'ils peuvent
+être partagés. Distinguer une mesure réalisée d'un objectif de performance.
+
+Un tableau de restitution peut prendre cette forme :
+
+| Indicateur | Valeur observée et unité | Période / méthode | Limite |
+|---|---|---|---|
+| Couverture temporelle | [RÉSULTATS TOGO À INSÉRER] | [à documenter] | Trous et cadence |
+| Écart à la référence | [RÉSULTATS TOGO À INSÉRER] | [à documenter] | Conditions et incertitudes |
+| Incidents et temps d'entretien | [RÉSULTATS TOGO À INSÉRER] | [à documenter] | Travail éventuellement non enregistré |
+
+Si une série est trop lacunaire pour la question initiale, le résultat honnête
+est « non concluant ». Il peut néanmoins apprendre que l'alimentation ou la
+méthode d'entretien doit être revue. La publication d'une carte ou d'une
+moyenne n'est pas un objectif supérieur à la qualité et à la protection des
+personnes.
+
+11.7 — Limites, échecs et décisions
+-----------------------------------
+
+Un instrument non entretenu, déplacé ou modifié peut rendre deux périodes
+incomparables. Une panne intermittente peut sélectionner les seuls moments où
+l'alimentation est bonne ; les données manquantes ne sont alors pas forcément
+réparties au hasard. Une valeur extrême peut être un événement réel ou un
+défaut : la qualifier avant de l'écarter. Si l'on ne peut trancher, conserver
+le doute.
+
+Un emplacement unique ne représente pas tout un quartier. La proximité entre
+un capteur et une source supposée ne démontre ni l'origine de la pollution ni
+une relation de cause à effet. Une mesure environnementale ne permet pas
+d'évaluer individuellement la santé d'une personne. En cas de risque immédiat,
+alerter les services compétents par les procédures appropriées : un prototype
+exploratoire ne remplace pas un dispositif de sécurité ou de santé publique.
+
+Check-list du chapitre 11
+-------------------------
+
+□ La question et la décision possible sont formulées avant le choix technique.
+□ Grandeur, unité, lieu, période, cadence et qualité nécessaire sont définis.
+□ Les autorisations et l'analyse des données personnelles sont documentées.
+□ L'instrument, son placement et une référence adaptée sont décrits.
+□ Les limites de calibration, d'incertitude et de représentativité sont notées.
+□ Alimentation, fixation, maintenance et retrait sont confiés à des responsables.
+□ Les accès réseau sont limités et les règles radio vérifiées.
+□ Les absences, changements de méthode et incidents sont conservés.
+□ La restitution indique ce qui est connu, douteux ou non concluant.
+
+
+CHAPITRE 12 — MOBILIER URBAIN ET VÉGÉTATION INTELLIGENTS
+========================================================
+Maturité : accessible pour certains usages simples, à confirmer selon le site.
+
+Objectif
+--------
+
+Concevoir, avec les personnes concernées, une amélioration réelle de l'espace
+partagé : pouvoir s'asseoir, attendre, circuler ou bénéficier d'ombre et de
+végétation. Le mot « intelligent » désigne ici une attention aux usages, aux
+limites et à l'entretien ; il n'exige ni capteur ni connexion. L'électronique
+ne se justifie que si elle répond à une question supplémentaire et si les
+conditions de sécurité et de maintenance sont réunies.
+
+Matériel et compétences
+-----------------------
+
+Réunir des personnes qui utilisent et entretiennent le lieu, des artisans,
+une compétence d'accessibilité, une compétence horticole locale et une
+personne qualifiée pour évaluer la structure et les fixations. Les services
+ou propriétaires concernés doivent pouvoir examiner le projet. Prévoir des
+supports de dessin et de discussion, un relevé du site, des matériaux dont
+l'origine est connue, les équipements de protection adaptés et un budget
+couvrant entretien, remplacement et retrait. Un prototype destiné à des essais
+encadrés n'est pas automatiquement sûr pour une ouverture au public.
+
+12.1 — Partir d'un usage, puis discuter l'objet
+------------------------------------------------
+
+Un banc installé au mauvais endroit peut rester vide malgré une fabrication
+soignée. Il peut être trop exposé, gêner une circulation, donner un sentiment
+d'insécurité ou ne pas convenir aux personnes qui ont besoin d'appuis pour
+s'asseoir et se relever. À l'inverse, une assise modeste, bien placée et
+entretenue peut répondre au besoin sans application ni tableau de bord.
+
+Observer le lieu à différents moments pertinents, sans suivre les personnes :
+où passe-t-on, où attend-on, où se forme l'ombre, où l'eau s'accumule-t-elle ?
+Demander qui manque à la discussion : personnes âgées, enfants accompagnés,
+personnes handicapées, commerçants, riverains, agents d'entretien ou autres
+usagers selon le lieu. Une consultation ouverte peut favoriser ceux qui ont
+le temps de s'exprimer ; compléter par des échanges accessibles et ne pas
+présumer qu'un groupe parle pour tous.
+
+Le relevé doit décrire les usages et les contraintes, non constituer un fichier
+de fréquentation individuelle. Si des entretiens sont nécessaires, préciser
+leur finalité et la manière dont les propos seront restitués. Ne conserver les
+noms ou enregistrements que s'ils sont nécessaires et autorisés ; prévoir une
+façon de corriger ou retirer une contribution lorsque cela est possible.
+
+Tableau 12.1 — Comparer des options avant de fabriquer
+
+| Option | Service envisagé | Questions à vérifier |
+|---|---|---|
+| Ne rien installer et entretenir l'existant | Préserver le passage et réduire les coûts | L'existant répond-il au besoin ? |
+| Assise sans électronique | Repos ou attente | Ombre, accès, stabilité et entretien |
+| Végétation adaptée | Ombre, agrément, habitat possible | Sol, eau, racines et responsabilité |
+| Assise et végétation | Combiner repos et ombre | Circulation, interaction racines/structure |
+| Ajout d'une mesure | Documenter une question précise | Utilité, droits, sécurité et coût de maintenance |
+
+Le choix ne doit pas opposer mécaniquement technologie et absence de
+technologie. Une mesure temporaire peut aider à comprendre une exposition ;
+elle peut ensuite être retirée. À l'inverse, une installation durable avec
+capteur exige un budget durable et une raison de conserver les données.
+
+12.2 — Dessiner pour le lieu et pour la durée
+---------------------------------------------
+
+Un dessin de principe sert à discuter les fonctions, pas à autoriser la
+construction. Reporter les limites du site, les cheminements, les accès aux
+bâtiments et aux services, les réseaux connus, les zones d'écoulement et les
+obstacles. L'équipe vérifie les contraintes avec les autorités et personnes
+compétentes avant tout forage ou ancrage ; l'absence d'un réseau sur un croquis
+n'est pas la preuve de son absence sous le sol.
+
+Figure 12.1 — Schéma de discussion, non plan de construction
+
+        zone plantée envisagée          ombre à différentes heures ?
+       [choix et entretien]                 ↓
+    ┌──────────────────────┐       ┌───────────────────┐
+    │ sol / drainage       │       │ assise et appuis  │
+    └──────────────────────┘       └───────────────────┘
+             ↑                         ↑
+      racines et eau             accès et approche
+  =======================================================
+       cheminement continu : à vérifier sur place
+  =======================================================
+     [issues, réseaux et distances : à relever et valider]
+
+Le plan définitif doit porter des dimensions, des matériaux, des détails de
+fixation et les validations propres au site. Les dimensions d'accessibilité
+ne sont pas universelles : elles dépendent des règles applicables et des
+personnes concernées. [À ACTUALISER — prescriptions locales d'accessibilité,
+d'occupation de l'espace, de construction et exigences du gestionnaire.]
+Tester l'approche, le demi-tour, la possibilité de se relever et le maintien
+d'un passage praticable avec les usagers, sans substituer ces essais aux
+vérifications réglementaires.
+
+Une assise doit rester stable sous les charges et usages prévisibles, y compris
+des usages inattendus raisonnablement prévisibles. Les assemblages, appuis et
+ancrages doivent être conçus et contrôlés par une personne compétente. Une
+charge test improvisée ou le fait qu'un adulte s'y soit assis ne prouve pas la
+sécurité structurelle. Protéger les bords, les têtes de fixation et les zones
+de pincement ; éviter les surfaces qui peuvent devenir dangereusement chaudes.
+Prévoir évacuation de l'eau, corrosion, vandalisme possible et inspections,
+sans concevoir contre les personnes vulnérables ni rendre le lieu hostile.
+
+Encadré — Réemploi ne signifie pas absence de contrôle
+
+Identifier la provenance et les usages antérieurs des matériaux. Une palette
+ou un bois de provenance inconnue peut avoir été traité ou contaminé : ne pas
+la présumer sûre pour une assise ou une jardinière. Écarter les pièces dont
+l'état, le traitement ou la contamination ne peuvent être établis. Vérifier
+fissures, pourriture, échardes, corrosion et résistance des assemblages avec
+les compétences appropriées. Documenter les contrôles et les limites ; le
+réemploi ne justifie ni exposition à un produit inconnu ni fixation incertaine.
+
+12.3 — La végétation comme être vivant, pas comme indicateur
+-------------------------------------------------------------
+
+Un arbre ne produit pas immédiatement l'ombre d'un arbre adulte et sa survie
+dépend de la préparation du sol, de l'eau, des protections et du temps consacré
+à son entretien. Choisir avec des spécialistes locaux les espèces adaptées aux
+conditions réelles : climat, sol, saison, espace disponible, eau, biodiversité,
+risques d'invasion, toxicité éventuelle et usages du lieu. Prendre en compte
+les racines, la hauteur future, la chute de branches ou de fruits, les réseaux
+et les bâtiments. Vérifier les règles phytosanitaires et les autorisations.
+[À ACTUALISER — espèces disponibles, statut écologique, saison de plantation,
+restrictions locales et recommandations horticoles applicables.]
+
+La végétation peut apporter de l'ombre, mais son effet dépend de sa croissance,
+de son entretien et du lieu. Le nombre de plants ne mesure ni la réduction de
+la pollution ni celle du bruit. Une haie peut modifier localement les flux
+d'air de façon complexe ; il serait trompeur de garantir une amélioration de
+la qualité de l'air à partir de sa seule présence. De même, une comparaison
+de température entre avant et après plantation doit tenir compte des saisons,
+des heures, du rayonnement et d'autres changements du site.
+
+Une jardinière demande un volume de sol compatible avec la plante, un drainage
+approprié et un dispositif stable même lorsqu'elle est humide. Éviter les eaux
+stagnantes, les fuites sur le passage et les matériaux pouvant contaminer le
+sol. Faire vérifier le poids, les appuis et la résistance par une personne
+compétente : terre, eau et plante changent la charge. L'accès à l'entretien
+doit être prévu sans obliger à démonter une partie dangereuse du mobilier.
+
+12.4 — Eau et mesures : d'abord le soin, ensuite le capteur
+-----------------------------------------------------------
+
+Définir avec la personne chargée des plantes comment reconnaître un besoin
+d'eau, quelle eau peut être utilisée, qui l'apporte et comment éviter le
+gaspillage. La quantité appropriée varie avec l'espèce, le sol, le volume, la
+saison et la pluie. Une routine manuelle documentée constitue une solution
+de référence ; elle peut être préférable à une installation automatique.
+
+Une sonde d'humidité du sol répond dans une petite zone autour d'elle.
+L'indication dépend de sa profondeur, du contact avec le substrat, de la
+salinité et de sa calibration pour ce sol. Elle ne décrit pas nécessairement
+l'ensemble des racines et ne dit pas, à elle seule, si la plante va bien.
+Noter l'emplacement et comparer l'indication à des observations horticoles
+appropriées ; une valeur répétée ou hors plage peut signaler une panne, pas
+un besoin constant d'eau.
+
+Figure 12.2 — Choisir une aide à l'entretien
+
+  Besoin horticole documenté
+             ↓
+  Arrosage manuel possible et suivi ? ── oui ──→ comparer service et effort
+             │
+             ↓
+  Mesure complémentaire utile ? ── non ──→ rester sans capteur
+             │
+            oui
+             ↓
+  Mesure calibrée + responsable + maintenance ──→ lecture et décision humaine
+             │
+  Commande physique envisagée ?
+             ↓
+  Analyse de risques et chaîne indépendante : chapitres 14 et 15
+
+Une électrovanne n'est pas une simple extension d'un graphique. Avant toute
+commande, les chapitres 14 et 15 demandent notamment analyse du procédé,
+protections indépendantes, autorisation humaine adaptée, arrêt et état sûr
+définis pour le cas concret. Prévoir les conséquences d'une fuite, d'une
+rupture de tuyau, d'une coupure d'énergie ou d'un capteur bloqué ; aucune
+valeur fournie par un modèle de langage ne commande directement une vanne.
+Si ces conditions ne peuvent être satisfaites, maintenir l'arrosage manuel.
+
+12.5 — Pas à pas : du lieu au suivi
+-----------------------------------
+
+1. Formuler le service recherché et les personnes concernées. Écouter les
+   usages existants, les difficultés et les désaccords ; noter aussi les
+   conséquences possibles pour les personnes qui n'utiliseront pas l'objet.
+
+2. Relever le site et ses contraintes. Observer les passages et conditions
+   à plusieurs moments pertinents ; vérifier gestion du sol, accès, eau,
+   écoulement, réseaux, autorisations et possibilités de maintenance.
+
+3. Co-dessiner plusieurs solutions. Inclure l'entretien de l'existant et une
+   option sans électronique. Comparer accessibilité, sécurité, bénéfice
+   attendu, ressources et possibilité de retirer l'installation.
+
+4. Choisir matériaux et végétaux. Documenter origine, état et contrôles des
+   matériaux ; consulter les compétences locales pour les espèces, le sol
+   et l'eau. Ne pas promettre un effet environnemental non mesuré.
+
+5. Faire vérifier les plans. Soumettre structure, fixations, emplacement,
+   accessibilité et sécurité aux personnes qualifiées et aux responsables
+   compétents. Obtenir les accords nécessaires avant installation.
+
+6. Essayer un prototype dans des conditions encadrées. Observer la facilité
+   d'approche et d'usage, relever les remarques, contrôler les assemblages.
+   Modifier puis faire revalider si l'essai révèle un défaut. Ne pas ouvrir au
+   public un objet dont la sécurité n'est pas établie.
+
+7. Organiser l'exploitation. Attribuer explicitement inspection, nettoyage,
+   arrosage, réparation, budget, contact pour signalement et décision de
+   retrait. Prévoir l'absence du responsable habituel et les pièces nécessaires.
+
+8. Réexaminer dans le temps. Comparer l'usage attendu et observé sans identifier
+   les personnes ; suivre l'état des fixations et des plantes, l'eau et le
+   travail d'entretien. Corriger, déplacer ou retirer si le service ou la
+   sécurité ne sont pas au rendez-vous.
+
+12.6 — Résultats mesurés : apprendre de l'usage
+-----------------------------------------------
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Les résultats ne se limitent pas au nombre d'objets installés. Décrire la
+solution effectivement retenue, les dates, les lieux autorisés, les validations,
+les personnes ou groupes consultés sans exposer leurs identités, et les
+changements apportés après essai. Rendre compte des désaccords et de ceux qui
+n'ont pas pu participer, sans les attribuer à des individus sans autorisation.
+
+Tableau 12.2 — Suivi à compléter selon la question
+
+| Aspect | Mesure ou observation | Conditions et précautions |
+|---|---|---|
+| Usage | [RÉSULTATS TOGO À INSÉRER] | Méthode, périodes et limites du comptage non individuel |
+| Accessibilité | [RÉSULTATS TOGO À INSÉRER] | Situations testées, obstacles et validations |
+| Structure | [RÉSULTATS TOGO À INSÉRER] | Inspections, défauts et corrections |
+| Végétation | [RÉSULTATS TOGO À INSÉRER] | Espèces, état, dates et conditions |
+| Eau et entretien | [RÉSULTATS TOGO À INSÉRER] | Unité, période, travail et eau effectivement suivis |
+| Retours d'usage | [RÉSULTATS TOGO À INSÉRER] | Recueil autorisé, diversité et limites |
+
+Pour examiner la survie des plants, préciser le nombre initial, les dates
+d'observation et la définition d'un plant vivant ou remplacé ; présenter les
+remplacements séparément. Pour l'eau, préciser si l'on mesure l'eau distribuée
+ou seulement l'eau estimée, et sur quelle période. Une comparaison de confort
+demande une méthode explicite ; elle ne peut être déduite d'un nombre de
+places ou d'arbres. Les appréciations qualitatives ont leur place à côté des
+chiffres, avec leurs conditions de recueil.
+
+12.7 — Limites, échecs et réversibilité
+---------------------------------------
+
+Une plante morte n'établit pas à elle seule la cause de l'échec : manque
+d'eau, excès d'eau, espèce mal adaptée, sol, choc ou entretien peuvent
+intervenir. Il faut examiner les conditions avant de remplacer à l'identique.
+Un banc vide peut révéler un emplacement inadapté, mais aussi un horaire
+d'observation insuffisant. Une installation appréciée par certains peut
+gêner d'autres personnes ; restituer ces tensions sans les réduire à une
+moyenne.
+
+Si une fixation se desserre, une surface devient dangereuse ou un passage
+est entravé, mettre hors service et protéger le lieu selon la procédure du
+gestionnaire jusqu'à réparation et nouvelle vérification. Si l'entretien
+n'est plus financé, un retrait organisé peut être préférable à l'abandon.
+Le projet doit prévoir dès le début qui décide, paie et remet en état.
+
+Check-list du chapitre 12
+-------------------------
+
+□ Le besoin a été discuté avec des usagers divers et les responsables du lieu.
+□ Une solution sans électronique et l'entretien de l'existant ont été comparés.
+□ Circulation, accessibilité, drainage et réseaux ont été vérifiés.
+□ Matériaux, structure et fixations ont été contrôlés par des personnes compétentes.
+□ Les espèces, le sol, l'eau et les risques sont examinés localement.
+□ L'entretien, les inspections, le financement et le retrait ont un responsable.
+□ Un prototype a été essayé et revalidé avant ouverture au public.
+□ Les mesures éventuelles ne sont ni assimilées à un diagnostic horticole
+  complet ni reliées directement à un actionneur.
+□ Les retours, incidents et échecs peuvent modifier ou arrêter le projet.
+
+
+CHAPITRE 13 — DU FLUX DE DONNÉES À L'ÉTAT DU MONDE
+==================================================
+Maturité : expérimentale.
+
+Objectif
+--------
+
+Construire une représentation révisable qui relie des observations autorisées
+à des lieux, des périodes et des sources, puis permet de répondre à une
+question en montrant ses limites. « État du monde » est ici un nom pratique
+pour un ensemble de descriptions situées : ce n'est ni une copie exhaustive
+du territoire ni un arbitre qui tranche seul entre les personnes.
+
+Matériel et compétences
+-----------------------
+
+Il faut des données et documents dont les usages sont autorisés, un dictionnaire
+commun, un stockage avec contrôle d'accès et sauvegarde, une compétence de
+qualité des données et une compétence géographique. Un responsable décide des
+droits, de la conservation et des corrections ; des personnes connaissant les
+lieux examinent les interprétations. La recherche peut d'abord être manuelle
+ou fondée sur un tableau. Une base spatiale ou un modèle de langage n'est
+justifié que si le besoin et les moyens le permettent.
+
+13.1 — Une observation devient une proposition située
+------------------------------------------------------
+
+Un flux n'est pas encore une connaissance. Il fournit des événements, parfois
+répétés ou retardés, dont le sens dépend d'une méthode. Pour transformer une
+observation en élément utilisable, il faut savoir ce qui a été observé, où,
+quand, par qui ou par quoi, avec quelle qualité et avec quel droit d'usage.
+Une valeur sans unité ou sans date peut devenir plus dangereuse une fois
+affichée sur une belle carte.
+
+La date d'observation et la date de réception ne sont pas la même chose.
+Un capteur peut enregistrer pendant une coupure, puis transmettre plus tard.
+L'horloge peut aussi être fausse : le serveur qui reçoit le message à l'heure
+ne corrige pas magiquement l'heure de mesure. Conserver les deux temps et
+signaler leur qualité. Pour une moyenne sur une heure, garder le début, la fin
+et le fuseau, pas seulement l'instant où la moyenne a été calculée.
+
+Le lieu comporte lui aussi une incertitude. Une coordonnée précise peut être
+erronée, ou trop révélatrice pour l'usage prévu. Choisir une zone ou un
+identifiant de site lorsque cela suffit. Documenter le système de référence,
+la méthode de localisation et la précision ; ne pas supposer qu'un même nom
+désigne toujours le même périmètre. Une distance calculée entre deux points
+ne prouve pas qu'ils connaissent les mêmes conditions.
+
+Tableau 13.1 — Dictionnaire minimal d'une observation
+
+| Champ | Définition et contrôle |
+|---|---|
+| Identifiant | Identifiant stable de l'observation et de sa version |
+| Objet / lieu | Site ou zone autorisée, précision et système de référence |
+| Grandeur | Nom sans ambiguïté et unité ; méthode d'agrégation si applicable |
+| Valeur | Valeur brute ou absence explicitement codée, jamais absence = zéro |
+| Temps d'observation | Instant ou intervalle, fuseau et qualité de l'horloge |
+| Temps de réception | Date d'entrée dans le système, distincte de l'observation |
+| Source | Instrument ou document, responsable, méthode et version |
+| Qualité | Contrôles, incertitude connue, drapeau et motif |
+| Droits | Finalité, accès, durée et conditions de partage |
+| Transformation | Lien vers les données d'origine et la méthode appliquée |
+
+L'absence n'est pas une valeur numérique. Elle peut désigner une panne, une
+mesure non prévue, une donnée refusée pour qualité ou une donnée inaccessible
+pour des raisons de droits. Il est utile de distinguer ces motifs sans exposer
+plus d'informations que nécessaire. Ne pas remplir silencieusement les trous
+par une interpolation ; si une estimation est justifiée, la conserver séparée,
+avec sa méthode et son statut d'estimation.
+
+13.2 — Provenance, corrections et contradictions
+------------------------------------------------
+
+Figure 13.1 — Chaîne de provenance et de consultation
+
+  Instrument / document autorisé
+             ↓
+  Observation d'origine ─────→ contrôle et qualification
+             │                            ↓
+             └────────────→ correction ou agrégation versionnée
+                                          ↓
+                        état situé : lieu + période + qualité
+                                          ↓
+                   recherche autorisée → éléments et leurs sources
+                                          ↓
+                      réponse contrôlée ou absence de réponse
+
+Conserver l'original et les transformations séparément rend possible un
+réexamen : si une calibration change, on peut comprendre quelle version a
+servi à une réponse passée. Cette conservation reste soumise à la minimisation,
+aux droits de suppression et aux durées applicables ; « garder l'original »
+n'autorise pas une conservation illimitée ou illégale. Un journal de
+suppression peut conserver la trace nécessaire sans garder le contenu supprimé.
+
+Une correction devrait indiquer la formule ou la procédure, ses paramètres,
+sa version, la personne ou le processus responsable et la période de validité.
+Une agrégation devrait indiquer sa fenêtre, les observations retenues et
+exclues et la règle de couverture minimale. Une moyenne de moyennes n'est pas
+nécessairement la moyenne de toutes les observations : si les fenêtres ne
+contiennent pas le même nombre de valeurs, il faut tenir compte de leurs
+poids et de la méthode prévue.
+
+Deux sources contradictoires ne doivent pas être fusionnées par défaut. Elles
+peuvent observer des grandeurs différentes, des lieux voisins mais non
+équivalents, ou des périodes distinctes. Comparer les unités, la méthode,
+l'incertitude, les droits et les dates avant de conclure à une erreur. Si la
+contradiction demeure, afficher les deux éléments et expliquer pourquoi le
+système ne tranche pas. Une donnée ancienne n'est pas forcément fausse ; elle
+est simplement insuffisante pour décrire une situation actuelle sans autre
+vérification.
+
+Encadré — Exemple de raisonnement, sans résultat de terrain
+
+Un relevé hypothétique indique une température à l'ombre ; un autre, au même
+moment, provient d'une sonde exposée au soleil. Leur différence ne suffit pas
+à établir qu'un quartier est plus chaud qu'un autre : les emplacements et
+méthodes ne sont pas comparables. Avant de rapprocher les valeurs, il faut
+examiner les abris, les lieux, les horloges et les incertitudes. Si ces
+éléments manquent, la réponse correcte est que la comparaison n'est pas
+établie.
+
+13.3 — Construire un état plutôt qu'un chiffre unique
+-----------------------------------------------------
+
+Un état utile peut être formulé comme une proposition assortie de conditions :
+« pour telle zone, pendant telle période, ces observations autorisées indiquent
+ceci, sous réserve de telles limites ». Il peut comporter plusieurs valeurs
+ou aucun résultat. La fraîcheur acceptable dépend de la question : une donnée
+historique pertinente pour décrire une plantation passée peut être périmée
+pour savoir si un dispositif fonctionne maintenant.
+
+Définir, pour chaque usage, quand une observation devient trop ancienne, à
+partir de quels contrôles elle est utilisable et ce qui se passe si aucun
+élément ne satisfait ces conditions. Ce sont des règles de service à convenir,
+pas des propriétés universelles des données. [À ACTUALISER — seuils locaux
+de fraîcheur, critères de qualité, responsables et dates de révision.]
+Afficher la dernière observation et son âge plutôt que la présenter comme
+actuelle. Un seuil dépassé mène à « inconnu » ou « à vérifier », pas à une
+valeur reconstruite par le modèle.
+
+Une carte résume ; elle masque aussi. Sa légende doit indiquer grandeur,
+unité, période, qualité, méthode et zones non observées. Ne pas colorer une
+zone entière comme si chaque point avait été mesuré. Les classes et les
+couleurs peuvent exagérer de petites différences ; une précision graphique
+supérieure à celle des données peut suggérer une certitude injustifiée.
+Prévoir une présentation textuelle accessible et une façon de consulter la
+source sans ouvrir des informations restreintes.
+
+13.4 — Recherche spatiale et réponse assistée
+---------------------------------------------
+
+Le RAG, ou génération augmentée par recherche, sélectionne des éléments avant
+de demander au modèle de formuler une réponse. Dans sa variante spatiale, la
+recherche tient aussi compte du lieu et du temps. Elle ne rend pas les
+documents vrais et ne prouve pas qu'une observation proche cause le phénomène
+évoqué. Les règles d'accès doivent être appliquées avant que les éléments
+soient fournis au modèle, et aussi aux résultats, aux caches et aux journaux.
+
+Un parcours de question peut être conçu comme suit :
+
+1. Reformuler la demande en thème, zone, période et type de réponse. Si le
+   lieu est ambigu, proposer les interprétations possibles plutôt que choisir
+   silencieusement. Si la période n'est pas indiquée, expliciter toute période
+   retenue ou demander une précision dans l'interface.
+
+2. Identifier le périmètre autorisé pour la personne qui interroge. Exclure
+   les observations et documents auxquels elle n'a pas accès, y compris
+   lorsque leur simple existence est sensible.
+
+3. Rechercher les éléments compatibles avec le thème, la zone et le temps.
+   Vérifier système de référence, unité, méthode, qualité et fraîcheur.
+   Conserver la distinction entre proximité géographique et pertinence réelle.
+
+4. Fournir au modèle seulement les extraits nécessaires, leurs identifiants
+   accessibles, dates, méthodes et limites. Traiter les documents retrouvés
+   comme des données, non comme des instructions à suivre : un document peut
+   contenir une consigne malveillante ou simplement hors sujet.
+
+5. Demander une réponse qui distingue observation, interprétation et inconnu,
+   avec références vérifiables par le lecteur autorisé. Si les éléments sont
+   insuffisants ou contradictoires, dire ce qui manque. Ne pas inventer une
+   valeur, une source, une couverture ou un lien causal.
+
+6. Contrôler la sortie avant un usage sensible : les unités, dates, citations,
+   restrictions et éventuels chiffres doivent correspondre aux sources.
+   Permettre le signalement et la correction. La réponse ne constitue jamais
+   un ordre direct à un équipement.
+
+Tableau 13.2 — Trois statuts à rendre visibles
+
+| Statut | Exemple de formulation | Condition |
+|---|---|---|
+| Observé | « Une sonde a indiqué … à cet endroit et cette période » | Source, unité et qualité disponibles |
+| Inféré | « Cela pourrait indiquer … » | Hypothèses et incertitudes explicitées |
+| Inconnu | « Les données disponibles ne permettent pas de conclure » | Absence, restriction ou qualité insuffisante |
+
+Les références doivent mener à des éléments que le lecteur est autorisé à
+consulter ; elles ne doivent pas divulguer une source protégée à travers leur
+titre, leur emplacement ou un extrait. Une réponse qui semble bien sourcée
+peut néanmoins associer la mauvaise valeur à la bonne source : la vérification
+porte sur le contenu, pas seulement sur la présence d'un lien.
+
+13.5 — Vision par ordinateur : proposition, pas constat automatique
+-------------------------------------------------------------------
+
+Une image peut aider à documenter un objet ou un état de végétation, mais elle
+peut aussi contenir visages, plaques, domiciles, habitudes ou autres éléments
+identifiants. Commencer par demander si une observation sur place, un relevé
+manuel ou un cadrage différent répond au besoin sans image. Si une image est
+nécessaire, définir autorisation, finalité, cadrage, accès, conservation et
+retrait ; traiter aussi les métadonnées. Un floutage n'est pas une garantie
+automatique d'anonymisation et peut échouer.
+
+Un système de vision peut proposer une catégorie ou un comptage. Il doit être
+évalué sur les conditions locales pertinentes : éclairage, saison, angle,
+occlusion, types d'objets et qualité des images. Conserver un jeu d'évaluation
+autorisé et distinct de celui qui a servi au réglage, puis comparer les
+propositions à des annotations vérifiées. Présenter les erreurs et les cas
+non évalués, pas seulement une réussite globale. Un échantillon trop petit ou
+non représentatif ne permet pas de généraliser. Si l'accès aux images ne peut
+être justifié ou leur validation assurée, ne pas déployer cette fonction.
+
+13.6 — Pas à pas : du flux à une réponse vérifiable
+---------------------------------------------------
+
+1. Inventorier les sources et les droits. Pour chacune, identifier responsable,
+   finalité, licence ou autorisation, conservation, restrictions et contact.
+   Écarter les sources dont l'usage envisagé n'est pas autorisé.
+
+2. Définir le dictionnaire. Fixer noms de grandeurs, unités, formats de temps,
+   identifiants de lieux, précision et statuts de qualité. Convenir de la
+   signification des absences et des règles de correction.
+
+3. Importer sans effacer le contexte. Conserver l'origine autorisée, le temps
+   de réception et les versions ; détecter doublons, unités incompatibles,
+   horloges douteuses et coordonnées hors du périmètre attendu. Mettre à
+   l'écart pour examen plutôt que modifier silencieusement.
+
+4. Qualifier et transformer. Documenter les contrôles, corrections et
+   agrégations ; garder les liens de provenance. Appliquer les durées de
+   conservation et les demandes de suppression selon le cadre retenu.
+
+5. Construire une vue située. Choisir les données compatibles avec une
+   question précise, afficher période, couverture et incertitude ; marquer
+   les données périmées, contradictoires ou insuffisantes.
+
+6. Tester la recherche et la réponse. Préparer des questions dont certaines
+   n'ont pas de réponse dans les données, d'autres ont des lieux ambigus ou
+   des sources contradictoires. Vérifier que le système s'abstient lorsque
+   nécessaire et respecte les droits de chaque rôle.
+
+7. Faire relire et maintenir. Soumettre les sorties à des personnes compétentes
+   et connaissant le contexte. Enregistrer erreurs et corrections sans conserver
+   inutilement les requêtes personnelles ; réévaluer après changement de
+   source, méthode, périmètre ou modèle.
+
+13.7 — Résultats mesurés et protocole d'évaluation
+--------------------------------------------------
+
+[RÉSULTATS TOGO À INSÉRER]
+
+Décrire le périmètre réel des données autorisées, les périodes et lieux
+couverts, les contrôles effectués, les transformations, les limitations et
+les personnes responsables. Pour les tests de recherche et de réponse, noter
+la composition du jeu de questions, les droits simulés, les critères établis
+avant l'essai et les réponses examinées. Rapporter aussi les erreurs, les
+questions sans réponse et les désaccords entre évaluateurs.
+
+Tableau 13.3 — Évaluation à renseigner, sans seuil universel
+
+| Aspect | Indicateur possible | Précaution |
+|---|---|---|
+| Couverture | Observations valides sur observations attendues | Période, cadence et exclusions explicites |
+| Localisation | Écarts contrôlés sur points vérifiés | Référence et précision de localisation connues |
+| Recherche | Éléments pertinents retrouvés parmi les éléments attendus | Jeu de référence autorisé et limites d'échantillon |
+| Réponse | Réponses dont faits et citations ont été vérifiés | Compter séparément erreurs et abstentions |
+| Confidentialité | Tests d'accès indus empêchés / tentés | Tests par rôle ; ne prouve pas l'absence de faille |
+| Fraîcheur | Proportion de données utilisables selon la règle retenue | Règle datée et adaptée à chaque usage |
+
+Pour chaque proportion, publier numérateur, dénominateur et période. Une
+abstention correcte ne doit pas être comptée comme une réponse factuelle
+erronée, ni confondue avec un refus excessif : définir séparément les cas
+où une réponse était possible et ceux où elle ne l'était pas. Quelques
+questions choisies par les concepteurs ne démontrent pas la fiabilité en
+conditions réelles. Prévoir un examen indépendant lorsque l'enjeu le justifie.
+
+13.8 — Limites et échecs
+-------------------------
+
+Une chaîne complète peut donner une réponse fausse si la source est erronée,
+si la recherche manque l'élément pertinent ou si le modèle le déforme. Un
+contrôle d'accès réussi lors d'un test ne garantit pas la sécurité de tous
+les chemins. Un résumé peut omettre la réserve la plus importante. Le remède
+n'est pas d'ajouter une mention générale « l'IA peut se tromper », mais
+d'exposer les limites propres à chaque réponse et de permettre de remonter
+aux éléments autorisés.
+
+Si les coordonnées ne sont pas comparables, si l'horloge est douteuse ou si
+les droits sont incertains, suspendre le rapprochement concerné. Si la
+recherche ne trouve rien, distinguer absence de résultat et absence du
+phénomène. Si une publication menace des personnes ou révèle un lieu sensible,
+réduire la précision, restreindre l'accès ou renoncer ; une agrégation doit
+elle-même être examinée pour le risque de réidentification. Si l'information
+est trop ancienne ou contradictoire, rendre l'incertitude visible plutôt que
+choisir la réponse la plus fluide.
+
+Check-list du chapitre 13
+-------------------------
+
+□ Chaque source a une finalité, un responsable et des droits d'usage vérifiés.
+□ Grandeur, unité, lieu, période, provenance et qualité sont renseignés.
+□ Observation, réception, absence et zéro sont distingués.
+□ Corrections et agrégations sont traçables, sous réserve des règles de conservation.
+□ Coordonnées, précision et comparabilité sont vérifiées avant rapprochement.
+□ Les droits sont appliqués avant recherche, génération et restitution.
+□ Les documents retrouvés sont traités comme données, pas comme instructions.
+□ Les observations, inférences, contradictions et inconnues sont distinguées.
+□ Les tests incluent abstentions, erreurs, accès et conditions locales.
+□ Une personne peut contester, corriger ou suspendre la publication.
+
+
+CONCLUSION DE LA PARTIE D
+=========================
+
+Relier des capteurs, des lieux et des documents n'autorise pas à gouverner un
+territoire depuis un écran. La démarche réussit lorsqu'elle rend une question
+mieux posée, une limite plus visible ou un entretien plus responsable. Elle
+échoue si elle transforme une série lacunaire en verdict, un banc en obstacle
+ou une carte en surveillance.
+
+Les observations et les prototypes décrits ici doivent être confrontés aux
+personnes et aux conditions locales. [RÉSULTATS TOGO À INSÉRER] : consigner
+les essais réellement menés, leurs autorisations, leurs mesures, leurs coûts
+et leurs échecs, sans supposer de collaboration ou de déploiement. Toute
+intégration à HubCity, ou à un autre dispositif, exige une discussion et des
+accords vérifiés sur les formats, responsabilités, accès et maintenance ;
+elle n'est pas affirmée ici.
+
+La partie suivante traite de la décision et des actionneurs. Le passage de
+l'observation à l'action y reste conditionnel : protections indépendantes,
+analyse de risques, responsabilité humaine et arrêt adapté sont nécessaires.
+Un modèle de langage ne commande jamais directement un équipement.

@@ -1,0 +1,1085 @@
+COMMUNALIS
+Construire une intelligence territoriale, distribuée et frugale
+
+PARTIE F — DURER ET ESSAIMER
+
+Cette partie reprend et développe les chapitres 16 à 18 du manuscrit. Elle
+ne documente pas un déploiement déjà réalisé. Son fil conducteur est simple :
+un service territorial n'est durable que si les personnes qui en dépendent
+peuvent comprendre ses limites, le maintenir, le corriger et, au besoin, y
+renoncer. La réplication vient après cette capacité locale, non avant elle.
+
+Les indications de pagination du plan sont des réservations éditoriales pour
+un livre visant 300 pages, non une mesure de la longueur du présent texte.
+Les schémas sont des représentations de principe. Les gabarits et exemples
+chiffrés servent à préparer le travail ; ils ne décrivent pas des observations
+de terrain. Les éléments marqués [À ACTUALISER — ...] exigent une vérification
+datée avant emploi. Les emplacements [RÉSULTATS TOGO À INSÉRER] attendent
+des faits réellement observés et autorisés à être rapportés.
+
+                           Maintenir
+                 le service et ses conditions
+                              |
+                              v
+                    Apprendre avec prudence
+                des usages et de leurs effets
+                              |
+                              v
+                  Coopérer et transmettre
+               sans abandonner la décision locale
+
+Ces trois mouvements ne se succèdent pas une fois pour toutes. Une panne
+peut révéler une lacune de formation ; une correction peut rendre nécessaire
+une nouvelle sauvegarde ; un échange entre labs peut conduire à revoir une
+procédure locale. Dans chaque cas, les personnes concernées doivent pouvoir
+contester la décision, et un modèle de langage ne commande jamais directement
+un équipement.
+
+
+CHAPITRE 16 — MAINTENANCE ET DÉPANNAGE
+
+Objectif
+
+Maintenir un service utile dans des conditions de sécurité et de coût
+acceptables ; retrouver ses fonctions essentielles après une interruption ;
+et arrêter proprement ce qui ne peut plus être entretenu. L'objectif n'est
+pas de promettre une disponibilité permanente. Il est de savoir ce que l'on
+peut raisonnablement assurer, ce qui doit continuer sans machine et qui
+prend la décision lorsque les moyens manquent.
+
+Matériel et compétences
+
+Il faut un inventaire tenu à jour, les notices des équipements, une copie
+accessible des procédures essentielles, des sauvegardes protégées et
+restaurables, des moyens de diagnostic adaptés, des pièces ou des solutions
+de remplacement, ainsi qu'un budget de maintenance distinct du budget
+d'installation. Une horloge fiable ou une méthode explicite de datation,
+même imparfaite hors ligne, permet de rapprocher les événements.
+
+L'équipe réunit les compétences de l'usage, de l'administration des systèmes,
+de la gestion des données et de la coordination. Elle connaît ses limites :
+les interventions sur l'électricité, les batteries, les structures ou les
+dispositifs de commande relèvent des professionnels compétents et des
+autorisations applicables. Une personne de relève doit pouvoir agir lorsque
+la responsable habituelle est absente. La formation de cette relève fait
+partie du matériel de fonctionnement, au même titre qu'un disque de rechange.
+
+16.1 — Ce que signifie entretenir
+
+Un service peut tomber en panne sans qu'aucune machine ne soit cassée. Un
+document essentiel peut être périmé ; un compte peut devenir inaccessible ;
+un traducteur local peut quitter le projet ; une mise à jour peut empêcher
+l'ouverture d'une ancienne sauvegarde. Inversement, une machine arrêtée ne
+signifie pas toujours que tout le service est indisponible : une consultation
+sur papier, un entretien humain ou un autre poste peuvent assurer une fonction
+minimale. Il faut donc inventorier les fonctions avant les composants.
+
+La disponibilité dépend à la fois de la fréquence des interruptions et de
+leur durée. Réduire le temps de réparation peut être aussi important que
+réduire le nombre de pannes : conserver une procédure lisible et une copie de
+configuration peut éviter des heures de recherche. Toutefois, un retour
+rapide n'est pas une réparation réussie si les permissions ont disparu, si
+les documents sont incomplets ou si une commande physique repart sans
+autorisation.
+
+La maintenance préventive consiste à vérifier, nettoyer ou renouveler selon
+un calendrier justifié ; la maintenance corrective intervient après un
+défaut ; la maintenance évolutive adapte le service à un changement de besoin
+ou d'environnement. Les trois consomment du temps. Les confondre conduit
+souvent à consacrer tout le budget aux urgences, puis à repousser la formation
+et les essais de restauration.
+
+Tableau 16.1 — Partir des fonctions utiles
+
+Fonction | Dépendances à identifier | Mode dégradé à préparer
+Consultation documentaire | Poste, stockage, index, sources et droits |
+  Liste de documents autorisés disponible autrement ; relais humain
+Traduction assistée | Modèle, version, langue, personne de vérification |
+  Révision ou traduction humaine lorsque c'est possible
+Lecture de capteurs | Alimentation, capteur, liaison, date et stockage |
+  Indiquer « donnée indisponible », ne pas substituer une valeur inventée
+Action sur équipement | Règles indépendantes, opérateur, protections |
+  État sûr propre au dispositif et procédure humaine validée
+Administration | Comptes, clés, documentation et accès physique |
+  Relève habilitée et procédure d'accès d'urgence
+
+Un mode dégradé n'est acceptable que si les usagers le connaissent et s'il
+ne crée pas un risque supérieur à l'interruption. Pour un équipement physique,
+la position sûre dépend du contexte : l'arrêt, l'ouverture ou la fermeture
+d'un dispositif ne sont pas universellement interchangeables. Les chapitres
+14 et 15 imposent une analyse de risques, une validation humaine et des
+protections indépendantes ; la maintenance ne doit pas les contourner.
+
+16.2 — Inventorier pour pouvoir agir
+
+Commencer par une visite avec une personne qui utilise réellement le service.
+Suivre une demande depuis son entrée jusqu'à la réponse et noter chaque
+dépendance : alimentation, poste, réseau éventuel, logiciel, sources,
+autorisation, contact et espace de conservation. Inclure les services et
+licences externes, même lorsque leur coût initial est nul. Signaler les
+dépendances concentrées sur une seule personne, une seule clé ou un seul
+fournisseur.
+
+Une ligne d'inventaire utile indique un identifiant local, la fonction
+rendue, l'emplacement, le responsable et sa relève, la version ou référence,
+les conditions d'accès, la date de contrôle, le statut de garantie, la
+disponibilité d'une pièce ou d'un substitut et le lien vers la procédure.
+Ne pas placer les mots de passe dans cet inventaire. Les secrets sont stockés
+séparément avec des accès limités, une procédure de récupération et une
+trace des changements.
+
+Tableau 16.2 — Registre minimal, à remplir pour chaque élément
+
+Champ | Question à laquelle il répond
+Identifiant et fonction | Quel élément, pour quel usage ?
+Responsable et relève | Qui peut décider et qui peut intervenir ?
+Version et configuration | Que faut-il retrouver après remplacement ?
+Source et droits | Peut-on installer, copier ou utiliser cette ressource ?
+Sauvegarde et restauration | Qu'est-ce qui est récupérable et où ?
+Dépendances et criticité | Quelles fonctions cessent si cet élément manque ?
+Entretien et prochaine revue | Quoi vérifier, selon quelle notice et quand ?
+Coût, pièce et délai | Comment financer et obtenir le remplacement ?
+Statut de retrait | Comment désactiver, restituer ou éliminer sans fuite ?
+
+[À ACTUALISER — références des matériels et logiciels, versions prises en
+charge, notices, garanties, prix, délais, contacts et conditions de licence.]
+Une date d'inventaire est indispensable : un registre non revu donne une
+impression trompeuse de maîtrise. Après chaque intervention ou changement de
+responsable, mettre à jour la ligne concernée, puis faire relire périodiquement
+les dépendances critiques par l'équipe.
+
+16.3 — Organiser le travail avant l'urgence
+
+Le calendrier préventif découle de l'inventaire, des notices et des conditions
+réelles du site ; il n'existe pas de fréquence universelle. Il peut inclure
+l'inspection visuelle des locaux et accès, le contrôle de l'espace de stockage,
+la vérification des sauvegardes, la revue des comptes, la recherche de
+documents périmés et les essais de restauration. Le nettoyage ou toute
+intervention physique suivent les consignes du fabricant et les règles de
+sécurité du site.
+
+Pour chaque tâche, inscrire une périodicité décidée localement, un responsable,
+une relève, la durée prévue, les conditions d'arrêt éventuel et une preuve
+simple d'exécution. En cas de report, noter la raison, une nouvelle date et
+le risque accepté. Un tableau rempli de cases vertes sans contrôle effectif
+n'est pas une preuve de maintenance.
+
+Encadré — Une réunion de maintenance utile
+
+À une date fixée par l'équipe, examiner les incidents ouverts, les tâches
+reportées, la capacité de stockage, les sauvegardes et les changements
+prévus. Choisir quelques actions, chacune avec une personne, une échéance et
+un critère de clôture. Signaler séparément les risques qui exigent un arrêt
+ou une expertise. La réunion se termine par une décision sur les ressources,
+pas seulement par une liste de souhaits.
+
+Le budget comprend le travail humain, y compris les traductions et la
+médiation, les contrôles professionnels, les consommables, le remplacement
+des supports, les licences nécessaires, la connectivité choisie, la formation,
+la gestion des déchets et une réserve pour les incidents. Une contribution
+bénévole incertaine ne doit pas être présentée comme une capacité garantie.
+[À ACTUALISER — devis locaux, taxes, monnaie, durée de validité, délais
+d'approvisionnement et conditions de prise en charge.] Pour comparer deux
+solutions, additionner les dépenses initiales et récurrentes sur une durée
+annoncée, sans masquer les coûts portés par les personnes ou les partenaires.
+Documenter les hypothèses et refaire le calcul lorsqu'elles changent.
+
+16.4 — Sauvegarder ce que l'on peut réellement restaurer
+
+Une sauvegarde est une copie destinée à une récupération déterminée, pas
+simplement un deuxième exemplaire sur la même machine. Le plan distingue les
+documents autorisés, leurs métadonnées et droits, les configurations, les
+versions du logiciel et des modèles, les index que l'on peut reconstruire,
+les journaux nécessaires et les secrets indispensables à la reprise. Ces
+derniers requièrent un stockage et des droits distincts. Il faut aussi noter
+ce qui n'est volontairement pas sauvegardé : données dont la conservation
+n'est pas justifiée, copies temporaires, données interdites de reproduction.
+
+Définir deux cibles de reprise, sans les confondre. La perte de données
+acceptable correspond à l'ancienneté maximale de la copie que le service
+accepte de restaurer ; le temps de reprise acceptable est le délai entre
+l'interruption et le rétablissement de la fonction définie. Ces cibles sont
+des décisions locales, pas des performances acquises. Si les moyens ne
+permettent pas de les respecter, l'équipe le dit aux usagers et négocie soit
+des moyens supplémentaires, soit un service moins exigeant.
+
+Schéma 16.1 — Cycle de sauvegarde et de preuve
+
+  Données et configuration autorisées
+                 |
+       sélection + droits documentés
+                 v
+  Copie protégée, séparée du système de production
+                 |
+       contrôle d'intégrité et accès autorisé
+                 v
+  Restauration en environnement isolé
+                 |
+       vérifier contenu, droits et fonction
+                 v
+  Compte rendu daté + corrections + nouveau test
+
+Une séparation réelle protège contre la panne ou l'erreur qui affecte la
+source ; elle ne garantit pas à elle seule une protection contre tous les
+incidents. Prévoir des copies suffisamment distinctes pour le risque
+considéré, y compris une copie déconnectée lorsque c'est faisable, et tester
+l'accès à la clé de déchiffrement par les personnes habilitées. Une copie
+chiffrée dont la clé est perdue est inutilisable ; une copie accessible à
+toute l'équipe peut exposer des données sensibles. Le plan doit traiter les
+deux risques.
+
+Tester la restauration sans écraser la production. Dans un environnement
+isolé, une personne autre que l'auteur de la procédure, si possible, suit
+les instructions. Elle vérifie l'ouverture de fichiers représentatifs, la
+cohérence de versions et de dates, les droits d'accès, la reconstruction ou
+la présence des index et une consultation de bout en bout. Si un modèle ou
+une licence n'est pas récupérable, le documenter. Mesurer le temps écoulé,
+identifier les données manquantes et corriger la procédure avant un nouvel
+essai. Un simple message « sauvegarde réussie » ne démontre aucun de ces
+points.
+
+Le retrait d'une donnée impose d'examiner aussi les sauvegardes, leurs
+durées de conservation et les contraintes de restauration. Une stratégie
+peut conserver une liste protégée des retraits à réappliquer avant toute
+remise en service d'une ancienne copie. Cette liste ne dispense pas de
+respecter les obligations applicables ni ne prouve l'effacement de toutes
+les copies déjà diffusées. [À ACTUALISER — règles de conservation, retrait,
+notification et transfert applicables, avec validation compétente.]
+
+16.5 — Du symptôme à la décision
+
+Lorsqu'une personne signale une panne, l'objectif immédiat est de protéger
+les personnes et de limiter les conséquences, non de trouver un coupable.
+Identifier le service touché, le moment constaté, les utilisateurs affectés
+et ce qui fonctionne encore. Si une situation physique paraît dangereuse,
+suivre la procédure d'urgence du site et faire intervenir une personne
+qualifiée ; ne pas ouvrir un équipement sous tension, improviser une
+réparation de batterie ni neutraliser une protection.
+
+Classer ensuite l'incident selon ses effets : sécurité des personnes, données,
+service essentiel ou gêne limitée. Une exposition possible de données, un
+compte suspect ou une modification inexpliquée ne sont pas une simple panne
+de disponibilité. Préserver les éléments utiles sans les diffuser, limiter
+les accès selon la procédure approuvée et mobiliser le responsable compétent.
+Les obligations et délais éventuels de notification sont à vérifier pour la
+situation réelle, sans attendre la fin d'une enquête technique.
+[À ACTUALISER — contacts, procédure et obligations de notification applicables.]
+
+Schéma 16.2 — Triage sans improvisation
+
+  Signalement -> danger immédiat ? -- oui --> procédure d'urgence / professionnel
+                       |
+                      non
+                       v
+       données ou accès compromis ? -- possible --> contenir et alerter
+                       |
+                       v
+       identifier la fonction touchée et activer le mode dégradé autorisé
+                       |
+                       v
+       diagnostic documenté -> correction contrôlée -> vérification
+                       |
+                       v
+       information des usagers -> bilan -> action préventive ou retrait
+
+Pour un stockage plein, commencer par vérifier l'espace et les alertes, puis
+identifier les éléments qu'une politique autorise à supprimer ou déplacer.
+Ne pas effacer au hasard des journaux, documents ou sauvegardes. Pour une
+perte de réseau, distinguer la panne de connexion d'une panne du service
+local et expliquer quelles fonctions restent disponibles hors ligne. Pour
+une source périmée, suspendre ou marquer la réponse concernée, retrouver
+une source autorisée à jour et faire valider la correction. Pour un capteur
+hors plage, signaler la valeur comme suspecte, vérifier l'alimentation et
+les conditions d'observation sans assimiler d'emblée une valeur extrême à
+une erreur ; aucune valeur de remplacement ne doit être fabriquée.
+
+Après correction, vérifier la fonction de bout en bout et les droits associés,
+pas seulement le redémarrage du logiciel. Si une action physique est
+concernée, la reprise passe par les contrôles et autorisations prévus aux
+chapitres 14 et 15 ; le redémarrage ne doit pas déclencher une action
+automatique. Communiquer aux usagers ce qui est rétabli, ce qui reste
+incertain et qui contacter. Un incident reste ouvert tant que l'effet
+principal n'est pas vérifié ou que la décision d'accepter un risque résiduel
+n'est pas documentée.
+
+16.6 — Réparer, remplacer ou retirer
+
+Une réparation se justifie si les compétences, les pièces, la sécurité, les
+droits d'utilisation et le coût complet sont acceptables. Un remplacement
+doit être comparé à la réparation, mais aussi au maintien d'un mode manuel.
+Examiner l'énergie nécessaire, la compatibilité des données, la possibilité
+de récupérer les configurations et la disponibilité d'une relève. La pièce
+la moins chère à l'achat peut coûter davantage si personne ne sait la
+remplacer ou si elle rend toute récupération impossible.
+
+Le retrait est une décision légitime lorsque la sécurité, la confiance ou
+les ressources ne permettent plus de maintenir le service. Prévenir les
+personnes concernées, fixer une date et un responsable, organiser une
+alternative proportionnée, puis désactiver les accès et les interfaces de
+commande selon la procédure validée. Restituer ou supprimer les données selon
+les accords et les règles applicables ; traiter séparément les sauvegardes,
+les supports et les secrets. Confier l'effacement et la gestion des matériels,
+notamment batteries et déchets particuliers, à des personnes compétentes.
+Conserver uniquement les preuves et archives autorisées. Vérifier ensuite que
+les anciens comptes, connexions et tâches automatiques ne restent pas actifs.
+
+Pas à pas — Mettre en place une première routine
+
+1. Choisir avec les usagers une fonction prioritaire et décrire son mode
+   dégradé. Nommer une responsable, une relève et le décideur d'arrêt.
+2. Suivre les dépendances de cette fonction et remplir le registre 16.2.
+   Identifier les points uniques de défaillance et les interventions qui
+   exigent un professionnel.
+3. Fixer les cibles de perte et de délai acceptables, puis définir les copies,
+   les droits et les moyens de récupérer les clés. Vérifier que le budget et
+   les personnes disponibles correspondent à ces cibles.
+4. Faire une restauration isolée, chronométrée et contrôlée de bout en bout.
+   Noter les écarts ; corriger le plan et répéter l'essai si nécessaire.
+5. Préparer une fiche d'incident accessible sans réseau : contact, sécurité,
+   fonction touchée, symptômes, impact, décision, action, vérification et
+   communication. Éviter les données personnelles non nécessaires.
+6. Planifier les contrôles à partir des notices et des risques ; réserver
+   temps, pièces et fonds. Tester une transmission entre responsable et relève.
+7. Revoir périodiquement l'utilité du service et les coûts. Décider de
+   poursuivre, réduire, remplacer ou arrêter ; informer les usagers.
+
+Résultats mesurés
+
+Un tableau de bord ne remplace ni les récits d'incident ni l'avis des
+personnes affectées. Il précise la période, le périmètre et la source de
+chaque chiffre. Une interruption commence quand la fonction définie devient
+indisponible et se termine quand cette fonction est vérifiée de nouveau ;
+indiquer si ces moments sont constatés ou estimés. Les interruptions qui
+touchent seulement une partie des usagers sont comptées et décrites à part.
+
+Tableau 16.3 — Mesures à recueillir
+
+Indicateur | Calcul ou preuve | Interprétation et précaution
+Incidents | Nombre par fonction et gravité pendant la période |
+  Ajouter les incidents non détectés tardivement et les causes incertaines
+Durée d'interruption | Fin vérifiée moins début constaté ou estimé |
+  Ne pas additionner deux fois les plages simultanées d'une même fonction
+Disponibilité observée | Temps de service prévu moins temps indisponible,
+  divisé par temps de service prévu | Définir horaires et exclusions ;
+  ne pas traiter une absence de mesure comme une disponibilité parfaite
+Restauration | Essais réussis / essais réalisés ; durée et données retrouvées |
+  Un essai partiel est décrit comme partiel, pas comme une réussite complète
+Entretien | Tâches exécutées / tâches prévues, avec reports |
+  La quantité ne prouve pas la qualité de l'intervention
+Coût | Dépenses et heures par période et par fonction |
+  Inclure les contributions non facturées et les dépenses exceptionnelles
+
+Exemple fictif de calcul : sur 100 heures de service prévues, deux heures
+indisponibles, sans chevauchement ni exclusion, donnent une disponibilité
+observée de 98 / 100, soit 98 %. Ce nombre ne dit rien du nombre de personnes
+touchées, de la sécurité ni de la qualité des réponses. Si aucune mesure
+n'existe, écrire « non mesuré », pas zéro.
+
+[RÉSULTATS TOGO À INSÉRER] Période, fonctions et horaires observés ; incidents
+et durée ; essais de restauration et données récupérées ou manquantes ;
+contrôles réalisés et reportés ; heures et coûts justifiés ; effets sur les
+usagers ; décisions prises. Indiquer les sources et autorisations de
+publication, ainsi que les mesures absentes.
+
+Limites et échecs
+
+Une sauvegarde peut être corrompue, trop ancienne ou inaccessible ; une
+relève peut ne pas avoir le temps promis ; un fournisseur peut cesser de
+proposer une pièce. Une panne répétée peut traduire un mauvais choix initial
+plutôt qu'un défaut de discipline. Une correction urgente peut rétablir un
+service tout en introduisant une régression : il faut donc la revoir et la
+tester. Si l'on ne peut plus garantir la sécurité ou l'accès autorisé aux
+données, réduire ou arrêter le service est préférable à la poursuite silencieuse.
+
+Check-list du chapitre 16
+
+□ Fonctions prioritaires et modes dégradés discutés avec les usagers
+□ Inventaire, dépendances, notices, responsable et relève à jour
+□ Interventions réservées aux personnes compétentes et arrêt connu
+□ Budget incluant travail humain, pièces, formation et retrait
+□ Cibles de reprise décidées et écarts aux moyens explicités
+□ Copies protégées ; clés récupérables par les personnes habilitées
+□ Restauration isolée vérifiée de bout en bout et compte rendu conservé
+□ Procédure de triage, contacts et notification vérifiés
+□ Incidents, interruptions et tâches reportées documentés
+□ Réparation, remplacement ou retrait décidés et communiqués
+
+
+CHAPITRE 17 — APPRENTISSAGE CONTINU ET MÉMOIRE D'EXPÉRIENCE
+
+Objectif
+
+Tirer des leçons des usages et de leurs conséquences sans transformer
+automatiquement chaque interaction en donnée d'entraînement. Rendre les
+changements compréhensibles, contestables et réversibles autant que possible,
+en distinguant ce qui est observé, ce qui est interprété et ce qui est décidé.
+
+Matériel et compétences
+
+L'équipe a besoin de canaux de retour accessibles, y compris sans accès
+numérique ; d'un registre protégé ; d'une politique de conservation et de
+retrait ; d'un espace d'essai distinct de la production ; de versions
+identifiées des ressources ; et de personnes compétentes pour vérifier les
+sources, les langues, les usages et les risques. Les personnes touchées par
+une erreur doivent pouvoir participer à son examen sans être obligées
+d'exposer publiquement leur situation.
+
+L'apprentissage continu demande du temps rémunéré ou explicitement prévu :
+recevoir, traduire, vérifier, arbitrer, tester et répondre aux personnes
+ayant signalé un problème. Un formulaire ne constitue pas à lui seul un
+processus d'écoute. [À ACTUALISER — règles applicables aux données,
+licences et conditions d'utilisation des modèles et sources.]
+
+17.1 — Se souvenir pour décider, non pour tout conserver
+
+La mémoire d'expérience est un ensemble organisé de questions, de décisions
+et de conséquences documentées. Elle peut contenir le constat qu'une réponse
+renvoyait vers un document périmé, la source vérifiée qui a permis de la
+corriger, la décision de modifier l'index et le résultat d'un test. Elle n'a
+pas besoin de conserver toutes les conversations, l'identité de chaque
+personne ni le détail intime d'une situation.
+
+La mémoire a plusieurs objets qu'il faut séparer. Une observation rapporte
+ce qui a été constaté ; une interprétation propose une explication ; une
+correction indique ce qui devrait changer ; une décision autorise ou refuse
+ce changement. Un désaccord peut rester ouvert : si deux personnes compétentes
+ne s'accordent pas sur une traduction, la mémoire conserve le contexte et
+les positions autorisées au lieu d'imposer une seule variante comme vérité
+universelle. Les sources, la langue, le lieu et la date peuvent être
+nécessaires à l'interprétation, à condition d'être proportionnés et autorisés.
+
+Encadré — Ce qu'un retour ne dit pas nécessairement
+
+« Cette réponse est fausse » peut signaler une source périmée, une ambiguïté,
+une erreur de traduction, un désaccord sur la question ou une conséquence
+que l'équipe n'avait pas anticipée. Le retour justifie un examen ; il ne
+devient pas automatiquement une instruction à intégrer au système. Une
+absence de plainte ne démontre pas non plus que le service fonctionne bien
+pour les personnes qui n'ont pas accès au canal de retour.
+
+17.2 — Recueillir sans capter plus que nécessaire
+
+Avant la collecte, expliquer dans une langue et un format accessibles à quoi
+sert le retour, qui peut le lire, combien de temps il sera conservé, s'il
+pourra être partagé ou utilisé pour un entraînement, comment demander une
+correction ou un retrait et quelles limites pratiques existent. La base
+juridique appropriée doit être déterminée pour chaque usage ; le consentement
+n'est pas une formule magique et ne convient pas automatiquement à toute
+situation. Les choix relatifs au partage, à la publication et à l'entraînement
+doivent être distincts lorsque cela est pertinent.
+
+Un signalement peut être recueilli oralement par une personne de confiance,
+sur papier, par téléphone ou sur une interface, selon les moyens locaux.
+Prévoir une voie qui n'exige ni lecture aisée ni connexion et une autre qui
+permette de demander une réponse sans rendre son identité publique. Informer
+de ce que l'anonymat permet et ne permet pas : une combinaison de contexte,
+de date et de lieu peut identifier une personne même sans nom. Limiter les
+accès, retirer les détails non nécessaires et ne promettre une confidentialité
+absolue que si elle peut réellement être assurée.
+
+Tableau 17.1 — Fiche de retour minimale
+
+Champ | Contenu et précaution
+Identifiant | Numéro de suivi sans nom dans la fiche de travail ordinaire
+Date et canal | Date de réception et moyen employé ; précision disponible
+Fonction et contexte | Version du service, langue et conditions pertinentes,
+  sans détail personnel superflu
+Fait signalé | Réponse ou comportement concerné, extrait minimal nécessaire
+Effet et gravité | Conséquence constatée ou risque rapporté ; incertitudes
+Source de vérification | Référence, date, droits et personne compétente
+Décision | Accepter, refuser, différer ou examiner ; justification
+Suivi | Responsable, échéance, test, réponse au signalant si possible
+Conservation et retrait | Durée, accès et action requise en cas de retrait
+
+Un identifiant ne rend pas automatiquement un dossier anonyme. Si une
+coordonnée est nécessaire pour répondre, la conserver séparément avec un
+accès plus restreint et supprimer le lien lorsqu'il n'est plus nécessaire
+ou lorsque les règles applicables l'exigent. Si le signalement révèle un
+danger immédiat ou une violation possible des données, appliquer d'abord
+la procédure d'incident du chapitre 16 ; ne pas attendre la prochaine
+réunion d'apprentissage.
+
+17.3 — Vérifier, contester, arbitrer
+
+Le tri commence par la gravité et le contexte, non par la facilité de
+correction. Une erreur susceptible d'entraîner un dommage exige une
+protection rapide : suspendre la fonction concernée, afficher une limite ou
+orienter vers une personne compétente, selon le risque. Le retrait temporaire
+d'une source peut être préférable à une correction improvisée.
+
+Pour un retour ordinaire, vérifier que l'extrait décrit bien le comportement
+de la version en question. Rechercher la source primaire autorisée lorsque
+c'est possible, sa date et son champ de validité. Demander l'avis d'une
+personne qui connaît l'usage et, pour une question linguistique, d'une
+personne compétente dans la variante et le contexte concernés. Prendre soin
+de ne pas transformer une consultation en transfert non autorisé du
+signalement. Si la source ne peut être vérifiée, conserver le statut
+« incertain » ou « à examiner ».
+
+La décision comporte une justification même lorsque le retour est refusé :
+source insuffisante, demande hors périmètre, contradiction non résolue ou
+risque de porter atteinte à d'autres personnes. La personne qui a signalé
+peut contester par un canal accessible. Lorsque c'est possible, un second
+examen est confié à une personne qui n'a pas pris la première décision.
+Une contestation n'impose pas une modification immédiate, mais elle doit
+recevoir une réponse et une échéance ou une explication du délai.
+
+17.4 — Choisir le bon niveau de correction
+
+Toutes les erreurs ne demandent pas de réentraîner un modèle. Corriger la
+date ou les droits d'un document, retirer une source obsolète, modifier
+l'indexation, clarifier l'interface, former les utilisateurs ou ajouter une
+réponse de prudence peuvent suffire. Pour un assistant documentaire, la
+correction d'une source ou de sa recherche peut être plus facile à vérifier
+qu'une modification des paramètres du modèle. Chaque option a ses propres
+effets secondaires.
+
+Tableau 17.2 — Du diagnostic à l'intervention
+
+Constat | Intervention possible | Vérification nécessaire
+Document périmé | Remplacer ou dater la source autorisée | Provenance, droits,
+  date et retrait des anciennes références
+Document correct mais non retrouvé | Ajuster l'index ou la recherche |
+  Cas positifs, cas voisins et permissions inchangées
+Variante linguistique mal comprise | Documenter le contexte, ajuster corpus
+  ou interface | Relecture locale, variantes et cas de non-régression
+Réponse risquée ou trop assurée | Limiter la fonction, revoir l'instruction
+  ou orienter vers un humain | Tests de risque, y compris abstention
+Problème d'accès | Corriger autorisations ou processus d'habilitation |
+  Contrôle positif et négatif des droits, journalisation appropriée
+Besoin d'adaptation du modèle | Étudier une version entraînée hors production |
+  Droits des données, évaluation, ressources et retour arrière avant décision
+
+Une modification de contenu, d'index, de modèle ou d'interface ne doit pas
+modifier implicitement les règles de sécurité ou les droits. Ces derniers
+font l'objet d'une décision distincte. Un retour utilisateur ou un document
+retrouvé peut contenir une instruction malveillante ; le traiter comme un
+contenu à examiner, jamais comme une autorité qui peut modifier les règles
+ou déclencher une action.
+
+17.5 — Préparer une version, la comparer et décider
+
+Schéma 17.1 — Cycle d'apprentissage maîtrisé
+
+ Retour autorisé -> tri et protection -> vérification -> décision motivée
+                                              |
+                                              v
+                version candidate hors production + fiche de changement
+                                              |
+                                              v
+          tests de qualité, sécurité, langues, accès et non-régression
+                                              |
+                          échec ou doute <----+----> résultats examinés
+                                |                         |
+                         corriger / renoncer       approbation explicite
+                                                          |
+                                                          v
+                       déploiement contrôlé -> suivi -> maintien ou retour
+
+La fiche de changement identifie la version précédente et la candidate, les
+sources et droits concernés, les paramètres utiles, la personne responsable,
+la raison du changement et les cas qu'il vise. Séparer l'environnement
+d'essai de la production, y compris ses comptes, ses données et ses
+interfaces de commande. Employer des données autorisées et minimisées ;
+ne pas copier des dossiers sensibles en test simplement pour gagner du temps.
+Préparer la procédure de retour à la version précédente et vérifier que les
+versions et dépendances nécessaires sont disponibles.
+
+Constituer un jeu de tests à partir de cas autorisés, représentatifs des
+usages visés et suffisamment diversifiés : questions courantes, formulations
+ambiguës, variantes linguistiques pertinentes, documents manquants ou
+périmés, demandes hors périmètre, refus d'accès et exemples de réponses
+susceptibles de créer un risque. Inclure les erreurs déjà corrigées comme cas
+de non-régression, sans conserver plus de détails personnels que nécessaire.
+Documenter les lacunes : un jeu limité ne représente pas toute une langue,
+un territoire ou tous les usagers.
+
+Comparer l'ancienne version et la candidate sur les mêmes cas et dans des
+conditions décrites. Pour chaque réponse, examiner la pertinence, la source
+citée lorsqu'elle est attendue, l'expression de l'incertitude et le respect
+des droits. Une relecture humaine compétente est nécessaire lorsque la
+qualité linguistique ou les conséquences ne se réduisent pas à une mesure
+automatique. Conserver les désaccords d'évaluation et les cas non évaluables.
+Une moyenne globale ne doit pas cacher une dégradation grave pour une
+variante ou un groupe peu présent dans le jeu.
+
+Avant le test, fixer les critères de passage avec les responsables : par
+exemple, absence d'échec critique non résolu, non-dégradation des contrôles
+d'accès et niveau de qualité jugé acceptable pour les usages retenus. Les
+seuils sont des décisions locales à justifier, non des garanties universelles.
+En cas d'échec, corriger et retester ou renoncer ; ne pas changer les critères
+après coup sans enregistrer la décision et sa raison.
+
+Une approbation désigne la personne qui accepte les risques résiduels et
+précise le périmètre, la date et les conditions de suivi. Déployer d'abord
+sur le périmètre convenu ; surveiller les incidents et prévoir un arrêt.
+Un retour arrière remet en service une version connue, mais ne supprime pas
+nécessairement toutes les conséquences d'une exposition ou d'une réponse
+erronée. Si une source ou une donnée a été retirée, vérifier qu'une ancienne
+version ne la réintroduit pas avant de la remettre en service.
+
+17.6 — Mémoire, retrait et transmission
+
+La mémoire elle-même vieillit. Prévoir une revue des entrées ouvertes, des
+sources dont la validité expire, des permissions et des durées de
+conservation. Conserver les décisions utiles sous une forme proportionnée :
+la raison d'un retrait peut être nécessaire alors que l'extrait personnel
+initial ne l'est plus. Lorsque le retrait est demandé ou obligatoire,
+identifier les copies, corpus, index, sauvegardes et versions concernés,
+documenter ce qui a été supprimé ou rendu inaccessible, puis communiquer
+les limites de l'opération.
+
+Un modèle déjà entraîné et des copies déjà transmises peuvent rendre le
+retrait plus complexe qu'une suppression dans un fichier. Ne pas promettre
+un effacement technique complet sans pouvoir le démontrer ; définir avant
+l'entraînement les options réalistes, les obligations et les personnes à
+contacter. Un registre de provenance aide à retrouver les usages, mais ne
+constitue pas une garantie de suppression. Les droits et instructions de
+retrait doivent accompagner une transmission autorisée à un autre nœud.
+
+La mémoire doit aussi survivre à la rotation de l'équipe. Prévoir une
+passation qui explique les décisions, les désaccords, les cas exclus et les
+limites, pas seulement les commandes techniques. La personne entrante
+s'exerce à retrouver une décision et à appliquer la procédure de contestation
+avec un dossier de démonstration dépourvu de données réelles.
+
+Pas à pas — Installer un cycle d'apprentissage
+
+1. Définir la finalité du registre, ses accès, ses durées et les voies de
+   retrait ; faire vérifier le cadre applicable. Expliquer le dispositif
+   aux personnes concernées dans des formats accessibles.
+2. Ouvrir au moins un canal adapté aux usages locaux et un moyen de demander
+   une réponse ou de contester. Désigner qui reçoit les retours et sa relève.
+3. Enregistrer un fait minimal, son contexte et son effet ; classer l'urgence.
+   Traiter immédiatement les risques graves selon la procédure d'incident.
+4. Vérifier la source et les droits avec les compétences pertinentes ;
+   distinguer fait, interprétation et décision. Répondre au signalement
+   lorsque le contact et les autorisations le permettent.
+5. Choisir une intervention proportionnée. Préparer une candidate isolée,
+   identifier toutes ses composantes et conserver une procédure de retour.
+6. Fixer les critères de passage, comparer les versions sur des cas autorisés
+   et examiner les résultats, y compris les échecs et les différences entre
+   variantes. Faire approuver séparément toute modification des droits.
+7. Décider, déployer dans le périmètre convenu, suivre les effets et revenir
+   en arrière ou suspendre si nécessaire. Mettre à jour la mémoire, les
+   sauvegardes et la documentation ; réexaminer ensuite la conservation.
+
+Résultats mesurés
+
+La mesure doit rendre visibles les retours qui n'aboutissent pas autant que
+les corrections publiées. Pour chaque période, compter les retours reçus,
+recevables, en attente, acceptés, refusés et retirés, en explicitant les
+catégories et les changements de statut. Ne pas additionner des statuts
+successifs comme s'il s'agissait de personnes distinctes. Mesurer le délai
+entre réception et première réponse, puis celui de clôture ; signaler les
+dossiers encore ouverts au lieu de les exclure silencieusement.
+
+Tableau 17.3 — Évaluation d'une version candidate
+
+Mesure | Définition | Lecture
+Cas conformes | Cas conformes / cas évaluables pour un critère défini |
+  Publier aussi le nombre de cas non évaluables et les désaccords
+Régressions | Cas auparavant conformes devenus non conformes |
+  Examiner chaque échec grave ; une moyenne ne l'annule pas
+Accès | Nombre de contrôles positifs et négatifs réussis / tentés |
+  Vérifier les deux types ; un jeu incomplet ne prouve pas la sécurité
+Variantes | Résultats séparés par langue ou contexte si éthique et pertinent |
+  Indiquer les petits effectifs et ne pas identifier les personnes
+Retours | Reçus et décisions par période, avec dossiers en attente |
+  Un nombre élevé peut refléter un meilleur accès au signalement
+Retrait | Demandes, actions, délais et copies traitées ou non |
+  Ne pas confondre action engagée et effacement complet démontré
+
+Exemple fictif : si 18 cas sont jugés conformes sur 20 cas évaluables, le
+taux est 90 %. Si deux autres cas prévus n'ont pas pu être évalués, ils sont
+rapportés séparément ; le résultat n'est pas « 18 sur 22 » sans expliquer
+ce changement de dénominateur. Un seul échec critique peut conduire au refus
+de la version malgré ce taux. Lorsqu'aucun cas n'est évaluable, le taux est
+indéterminé, non 0 % ni 100 %.
+
+[RÉSULTATS TOGO À INSÉRER] Canaux effectivement utilisés, période et limites
+de couverture ; retours et délais ; corrections acceptées, refusées ou
+contestées ; jeux de tests autorisés, résultats par contexte et désaccords ;
+versions déployées ou rejetées ; conséquences observées et demandes de
+retrait. Aucune identité ni citation sans autorisation appropriée.
+
+Limites et échecs
+
+Les retours viennent souvent des personnes qui savent déjà accéder au
+service ; ils ne constituent pas un échantillon représentatif. Une majorité
+de commentaires positifs peut coexister avec un dommage rare mais grave. Les
+sources peuvent se contredire, les langues varier et les évaluateurs ne pas
+être d'accord. Un jeu de tests trop proche des exemples utilisés pour
+préparer la version peut surestimer sa qualité. Un registre trop détaillé
+devient lui-même un risque ; un registre trop pauvre ne permet pas
+d'expliquer les décisions. L'équipe doit ajuster ces compromis et admettre
+les questions sans réponse.
+
+Check-list du chapitre 17
+
+□ Finalités, accès, conservation et retrait définis avant collecte
+□ Canaux accessibles et possibilité de contester sans exposition publique
+□ Données minimisées ; contact séparé lorsque nécessaire
+□ Urgences traitées comme incidents, sans attendre le cycle ordinaire
+□ Sources, droits, langue et contexte vérifiés par des personnes compétentes
+□ Faits, interprétations, désaccords et décisions distingués
+□ Aucune intégration ou aucun entraînement automatique sur les retours bruts
+□ Candidate isolée, versions identifiées et retour arrière préparé
+□ Tests comparatifs, cas critiques, droits et non-régression examinés
+□ Approbation, suivi, réponse aux signalants et limites de retrait documentés
+
+
+CHAPITRE 18 — RÉSEAU DE NŒUDS ET RÉPLICATION
+
+Objectif
+
+Permettre à plusieurs labs de coopérer et de transmettre des méthodes sans
+imposer une base centrale, une organisation unique ou la circulation de
+toutes les données. Un nœud reste capable de décider de ses ressources,
+d'expliquer ses engagements et de se retirer selon des conditions convenues.
+La réplication désigne ici une appropriation locale, pas la reproduction
+automatique d'une machine ou d'une communauté.
+
+Matériel et compétences
+
+Il faut des interlocuteurs locaux et leurs suppléants, un inventaire des
+ressources et des droits, des moyens de communication convenus, des
+procédures d'identification et de sécurité adaptées, du temps de traduction
+et de coordination, ainsi que des budgets distincts pour chaque nœud et
+pour les activités communes. La coopération demande des compétences
+techniques, juridiques, linguistiques, de médiation et de gestion ; elles
+peuvent être réparties entre personnes, mais les responsabilités restent
+explicites. Aucun partenariat particulier n'est présumé conclu.
+
+18.1 — Relier des autonomies, pas additionner des machines
+
+Un nœud est ici une équipe située, des usages, des ressources et des règles
+de décision ; un serveur seul n'est pas un nœud au sens organisationnel.
+Deux nœuds peuvent partager un guide de maintenance sans partager leurs
+corpus, comparer des protocoles sans transmettre de mesures brutes, ou
+coopérer sur un logiciel tout en utilisant des versions et des langues
+différentes. L'intérêt de la fédération dépend de la valeur de ces échanges,
+pas du nombre de connexions.
+
+La décentralisation ne supprime pas le pouvoir : celui qui finance,
+héberge le registre commun, maintient un logiciel ou contrôle la langue
+de travail peut influencer les autres. Une convention doit rendre ces
+asymétries visibles et prévoir des voies de contestation. Un nœud qui n'a
+pas la capacité matérielle de quitter le réseau sans perdre ses archives
+n'est pas réellement libre de partir.
+
+Schéma 18.1 — Partager par choix, conserver la maîtrise locale
+
+   Nœud A                         Nœud B
+   usages, équipe,                usages, équipe,
+   données et règles A            données et règles B
+        |                               |
+        +---- méthodes autorisées ------+
+        +---- versions convenues -------+
+        +---- données ? seulement si autorisées et nécessaires
+        |
+   capacité locale maintenue, y compris en cas de déconnexion
+
+Une fédération peut fonctionner sans serveur central pour les contenus,
+mais elle a besoin d'un minimum de coordination : savoir à qui parler,
+quelle version d'un document est valide pour un échange et comment réagir
+à un incident. Ce registre de contacts et de conventions peut lui-même
+être partagé sous une forme limitée et protégée. Sa détention et sa mise à
+jour ne doivent pas devenir une autorité cachée sur les données locales.
+
+18.2 — Négocier ce qui circule et ce qui reste
+
+Commencer par décrire les services, les ressources et les limites de chaque
+nœud, puis formuler un objectif commun assez précis pour être évalué. Un
+accord général d'entraide ne suffit pas à autoriser tous les transferts.
+Pour chaque objet partagé, préciser sa finalité, son origine, ses droits,
+ses destinataires, son format, sa durée d'utilisation et les conditions
+de modification ou de redistribution. Une documentation, un logiciel, un
+modèle et un jeu de données peuvent être soumis à des règles différentes.
+
+Tableau 18.1 — Décisions distinctes pour chaque catégorie
+
+Objet | Questions avant échange | Action prudente
+Méthode ou procédure | Auteur, licence, contexte et limites ? | Partager une
+  version datée, avec ses conditions de réutilisation
+Logiciel et configuration | Licence, dépendances, secrets, compatibilité ? |
+  Fournir une configuration expurgée et des instructions de vérification
+Modèle ou adaptation | Droit de distribution et usages permis ? | Vérifier
+  séparément les conditions du modèle de base et des adaptations
+Corpus ou document | Finalité, droits, données personnelles et retrait ? |
+  Ne partager que le contenu autorisé et nécessaire ; garder la provenance
+Mesures et indicateurs | Risque de réidentification, qualité, comparabilité ? |
+  Examiner l'agrégation et les métadonnées sans présumer l'anonymat
+Contacts et clés | Qui doit les connaître et comment vérifier leur identité ? |
+  Limiter l'accès et prévoir remplacement et révocation
+
+[À ACTUALISER — licences, conditions des modèles, règles de protection des
+données, transferts entre territoires, exigences sectorielles et contacts
+compétents pour chaque juridiction concernée.] L'autorisation d'utiliser
+localement une ressource n'implique pas automatiquement le droit de la
+transmettre ou de l'entraîner ailleurs. Une personne peut accepter une
+consultation locale et refuser une publication. Les accords doivent rendre
+ces choix compréhensibles et opérationnels.
+
+Une convention précise également qui finance la coordination et la
+maintenance, comment les contributions sont reconnues, qui décide des
+versions communes et ce qui se passe en cas de désaccord. Prévoir un contact
+de sécurité, une méthode de notification, une procédure de suspension
+d'échange et un calendrier de revue. Les personnes absentes de la négociation
+mais concernées par les données ne disparaissent pas du problème : leurs
+droits et possibilités de recours doivent être pris en compte.
+
+Encadré — Une convention n'est pas une preuve d'activité
+
+Un projet de convention, une invitation à échanger ou une intention de
+coopération ne prouvent ni qu'un partenariat existe ni qu'un nœud fonctionne.
+Avant toute publication, distinguer proposition, accord signé, activité
+réalisée et résultat vérifié. Demander l'accord des personnes ou organisations
+concernées pour les nommer et décrire leur contribution.
+
+18.3 — Concevoir des échanges supportant l'interruption
+
+Une liaison intermittente peut retarder la réception d'un correctif ou d'un
+retrait. Chaque paquet échangé doit donc porter un identifiant, une version,
+une date ou un ordre de révision, l'origine, la description du contenu, les
+droits et la personne ou le rôle responsable. Une somme de contrôle peut
+aider à détecter une altération accidentelle ; elle ne prouve pas à elle
+seule l'identité de l'expéditeur. Pour cela, utiliser un mécanisme
+d'authentification adapté, des clés ou des canaux vérifiés selon les moyens
+et les risques, et documenter qui les contrôle.
+
+Schéma 18.2 — Réception contrôlée d'un paquet
+
+  Préparer et autoriser -> identifier version et provenance -> transmettre
+                                                           |
+                                                           v
+  Accusé ou constat d'échec <- vérifier identité, intégrité, droits et contenu
+                                                           |
+                                              quarantaine / refus si doute
+                                                           |
+                                                           v
+                                    décision locale d'importer ou non
+                                                           |
+                                                           v
+                                  journal de décision et version retenue
+
+Ne pas importer automatiquement un paquet non vérifié dans un corpus de
+production. La zone de réception est séparée du service actif ; les fichiers
+exécutables ou configurations sont examinés selon une procédure appropriée.
+Limiter les droits du compte d'échange et protéger le transport et le stockage
+en fonction de la sensibilité. Un support physique peut être une solution
+en contexte de connexion faible, mais il doit lui aussi être identifié,
+protégé, contrôlé et remis à une personne habilitée.
+
+Si l'échange échoue, conserver l'état « non confirmé » et reprendre selon une
+procédure évitant les doublons. Un accusé de réception prouve au plus qu'un
+paquet a été reçu dans les conditions définies ; il ne prouve pas son
+adoption ni la qualité de son contenu. Prévoir une liste des versions
+attendues et un rapprochement après reconnexion pour repérer les paquets
+manquants. Comparer les identifiants avant de renvoyer ; un même paquet
+reçu deux fois ne doit pas créer deux décisions ou deux actions.
+
+Un nœud peut être hors ligne lorsqu'une autorisation est retirée ou qu'une
+clé est compromise. La convention précise comment diffuser l'alerte, suspendre
+les échanges, remplacer et vérifier les clés, retrouver les destinataires
+et confirmer la réception de l'avis. Avant de reprendre, chaque nœud
+réexamine les messages en attente et les versions qu'il a pu manquer. Aucun
+protocole ne garantit une révocation instantanée sur un site déconnecté :
+ce délai est un risque à accepter explicitement ou une raison de ne pas
+partager la ressource.
+
+18.4 — Versions, conflits et décisions locales
+
+Deux nœuds peuvent modifier le même guide alors qu'ils sont déconnectés.
+Écraser l'une des versions par la plus récente en apparence peut perdre une
+correction utile, surtout si les horloges diffèrent. Conserver les deux
+propositions, leurs auteurs ou rôles, leurs versions parentes et leur
+contexte. Une personne ou un groupe désigné examine les différences,
+consulte les personnes concernées et décide d'une version commune, de
+variantes locales ou d'un désaccord maintenu. La décision et les droits
+restent attachés à la version retenue.
+
+Il ne faut pas fusionner silencieusement des données dont les finalités ou
+les permissions diffèrent. Une règle de partage plus large dans un nœud ne
+supprime pas une restriction attachée à une source provenant d'un autre.
+Lorsque les droits ne sont pas clairs, suspendre l'importation et demander
+une clarification. Pour une correction urgente de sécurité, le responsable
+local peut suspendre une fonction sans attendre un consensus général ;
+la coordination est informée selon la procédure convenue.
+
+Tableau 18.2 — Traiter les divergences
+
+Situation | Décision possible | Trace à conserver
+Deux corrections compatibles | Proposer une version commune vérifiée |
+  Versions parentes, tests et approbation
+Variantes linguistiques différentes | Maintenir plusieurs variantes situées |
+  Contexte d'emploi, auteurs autorisés et incertitudes
+Permissions incompatibles ou inconnues | Ne pas fusionner ; clarifier |
+  Restriction, interlocuteur et statut
+Correctif de sécurité contesté | Protéger localement, puis arbitrer |
+  Risque, mesure provisoire et décision
+Retrait reçu pendant une déconnexion | Suspendre l'usage concerné à réception,
+  examiner les copies | Horodatage connu, actions et limites
+
+18.5 — Répliquer par diagnostic et apprentissage
+
+La première question d'un deuxième lab n'est pas « comment obtenir la même
+machine ? », mais « quel problème local veut-on résoudre et pour qui ? ».
+Refaire le diagnostic du chapitre 1 avec les personnes qui utiliseront ou
+subiront le service. Examiner les langues, l'accessibilité, les pratiques
+existantes, les ressources, la sécurité physique, les contraintes d'énergie
+et de connectivité, ainsi que les institutions concernées. L'équipe peut
+conclure qu'un outil non numérique ou un service plus simple est préférable.
+
+Documenter ensuite ce que l'on reprend : une méthode, un logiciel, une
+formation ou une architecture de principe. Pour chaque élément, vérifier
+les droits et les dépendances ; remplacer les paramètres propres au site
+de départ par des décisions locales. Ne pas copier des comptes, clés,
+secrets ou données personnelles avec une image logicielle. Vérifier que
+les données de démonstration sont fictives ou explicitement autorisées et
+ne cachent pas d'informations réelles dans des journaux ou sauvegardes.
+
+L'appropriation se juge dans la pratique. Les personnes locales doivent
+pouvoir expliquer le service, effectuer les tâches pour lesquelles elles
+sont habilitées, restaurer une sauvegarde d'essai, signaler une erreur et
+prendre part à une décision d'arrêt. Un accompagnement extérieur peut aider,
+mais il ne remplace ni la formation de relève ni les ressources récurrentes.
+Tester le fonctionnement avec l'aide extérieure temporairement indisponible,
+dans un exercice convenu et sûr ; consigner ce qui reste impossible sans
+cette aide.
+
+Pour un éventuel pont Caraïbes–Afrique de l'Ouest, commencer par une
+proposition de dialogue entre acteurs qui le souhaitent, sans présumer
+d'accord ni de financement. Comparer les besoins, les langues et variantes,
+les cadres juridiques, les conditions climatiques, les coûts de transport
+et les capacités de maintenance au lieu de transférer une recette. Un atelier
+sur les méthodes peut être utile sans échange de données. Les noms,
+engagements et résultats ne sont publiés qu'après vérification et accord.
+
+18.6 — Gouverner, financer et permettre la sortie
+
+Une organisation commune indique qui peut proposer un changement, qui
+l'examine, comment les voix locales sont représentées et comment un désaccord
+est traité. Distinguer une décision sur un standard volontaire d'une décision
+sur les données d'un nœud : la première ne doit pas donner automatiquement
+autorité sur la seconde. Consigner le quorum ou la méthode de décision
+choisie, les personnes consultées, les objections et la date de révision.
+Prévoir un canal de recours accessible en dehors de la personne mise en cause.
+
+Le budget pluriannuel distingue les coûts locaux des coûts communs : temps
+de coordination et de traduction, maintenance, renouvellement des équipements,
+transfert sécurisé, formation, vérification juridique, accès et participation
+des personnes concernées. Pour chaque ligne, indiquer qui paie, pendant
+combien de temps et ce qui arrive si le financement cesse. Chiffrer avec des
+devis et hypothèses datés, puis comparer plusieurs scénarios plutôt que
+d'annoncer un total sans incertitude.
+[À ACTUALISER — montants, monnaies, financeurs confirmés, engagements et
+conditions de financement.] Ne jamais présenter un financement envisagé
+comme acquis.
+
+Une sortie prévue dès l'entrée réduit les dépendances forcées. Fixer un
+contact, une procédure de notification et les délais applicables ; dresser
+la liste des ressources propres, des contributions communes et des copies
+détenues ailleurs. Restituer les ressources selon les droits, révoquer les
+accès et clés concernés, suspendre les échanges et documenter le traitement
+des copies, sauvegardes et demandes de retrait. Vérifier que le nœud sortant
+dispose de ses propres documents, configurations, droits et moyens de
+fonctionnement autorisés. La sortie ne peut pas effacer rétroactivement tous
+les usages déjà faits : les limites et obligations subsistantes doivent
+être explicitées.
+
+Pas à pas — D'un premier échange à une coopération vérifiable
+
+1. Identifier un besoin commun et les personnes habilitées à discuter pour
+   chaque nœud. Décrire ce que chacun peut offrir et ce qu'il souhaite
+   conserver localement ; ne pas annoncer un partenariat à ce stade.
+2. Réaliser un diagnostic propre à chaque site, avec les usagers et personnes
+   concernées. Documenter les compétences, coûts, langues, contraintes et
+   alternatives, y compris la possibilité de ne pas déployer.
+3. Choisir un premier objet peu sensible, par exemple une procédure fictive
+   ou un guide autorisé. Vérifier ses droits et établir une convention
+   distincte avant tout échange de données ou de modèle.
+4. Définir identifiants, versions, provenance, canaux, vérification
+   d'identité, réception isolée, accusés, gestion des erreurs et contacts
+   d'incident. Tester une déconnexion, un doublon et une version concurrente.
+5. Examiner l'objet reçu localement, décider de l'adopter, l'adapter ou le
+   refuser, puis consigner la décision. Tester la maintenance et la relève
+   sans transmettre de secrets ou de données non autorisées.
+6. Évaluer les bénéfices et coûts réels ; décider si d'autres échanges sont
+   nécessaires. Toute nouvelle catégorie d'objet demande une vérification
+   de droits et de risques adaptée.
+7. Tester la procédure de retrait et de sortie sur un exercice sans données
+   sensibles. Réviser l'accord, le budget et les responsabilités à l'échéance
+   convenue ou après un incident significatif.
+
+Résultats mesurés
+
+La taille d'un réseau ne suffit pas à évaluer sa qualité. Un nœud actif doit
+être défini pour la période étudiée, par exemple comme une équipe ayant
+assuré une activité convenue et documentée, et non comme un nom figurant
+sur une liste. Les critères sont décidés avant le comptage. Un échange
+autorisé doit pouvoir être relié à un objet, une décision et une preuve de
+réception ou d'échec ; il ne doit pas être compté plusieurs fois à cause
+d'une retransmission.
+
+Tableau 18.3 — Suivi de la coopération
+
+Mesure | Source | Limite
+Nœuds effectivement actifs | Activités documentées sur une période définie |
+  Le nombre ne mesure ni autonomie ni qualité de participation
+Accords en vigueur | Conventions et périmètres vérifiés | Un accord ne
+  prouve pas qu'un échange a eu lieu
+Échanges autorisés | Registre des paquets et décisions locales | Réception
+  ne signifie pas adoption ; signaler les échecs et doublons
+Autonomie de reprise | Exercice local de restauration et passation |
+  Décrire l'aide reçue, les fonctions non testées et les ressources manquantes
+Incidents et retraits | Registre protégé, délais et actions | Tenir compte
+  des déconnexions et des confirmations non reçues
+Coûts et contributions | Comptabilité et heures documentées par nœud |
+  Ne pas oublier traduction, bénévolat et coûts de coordination
+Participation | Qui a pu contribuer ou contester, selon données autorisées |
+  Les personnes absentes ne sont pas représentées par défaut
+
+[RÉSULTATS TOGO À INSÉRER] Sites et période réellement observés, avec
+autorisation de les nommer ; accords effectivement conclus ; objets échangés
+et droits ; exercices de déconnexion et de reprise ; incidents et retraits ;
+coûts, contributions, décisions locales et résultats inattendus. Décrire
+séparément les propositions de coopération non réalisées. Aucun partenaire
+ni financement n'est présumé.
+
+Limites et échecs
+
+Un réseau peut rester asymétrique malgré des règles formellement égales :
+une équipe qui maîtrise seule le logiciel ou la langue commune peut décider
+de fait pour les autres. La charge de coordination peut dépasser le bénéfice
+des échanges. Des différences juridiques peuvent interdire un transfert
+envisagé ; un nœud déconnecté peut recevoir trop tard un retrait ; des
+variantes locales peuvent être incompatibles avec une version commune.
+L'adaptation peut échouer faute de formation, de pièces ou de confiance.
+Dans ces situations, réduire l'échange, conserver des versions distinctes
+ou arrêter la coopération peut être une décision responsable.
+
+Check-list du chapitre 18
+
+□ Besoin commun et diagnostics locaux établis avec les personnes concernées
+□ Interlocuteurs, suppléants, décisions et recours identifiés
+□ Méthodes, logiciels, modèles et données soumis à des accords distincts
+□ Provenance, licences, droits, finalité et transferts vérifiés
+□ Échanges authentifiés et contrôlés ; accès et secrets protégés
+□ Versions, conflits, doublons et déconnexions traités explicitement
+□ Retraits et compromissions transmis, avec limites hors ligne reconnues
+□ Formation, restauration et maintien local testés
+□ Coûts locaux et communs financés ou lacunes déclarées
+□ Sortie, restitution et révocation prévues ; aucun partenariat supposé
+
+
+CONCLUSION DE LA PARTIE F
+
+Durer ne signifie pas conserver indéfiniment le même dispositif. C'est
+organiser la possibilité de l'entretenir, de le corriger, de le transformer
+ou de l'arrêter sans abandonner les personnes qui en dépendent. Essaimer ne
+signifie pas exporter un modèle achevé : c'est rendre des méthodes
+compréhensibles et discutables, puis laisser chaque territoire décider de
+leur intérêt et de leurs conditions d'emploi. Les résultats manquants restent
+à observer, mesurer et faire valider ; ils ne sont pas remplacés par des
+promesses.

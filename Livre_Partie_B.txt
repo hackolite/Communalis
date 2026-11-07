@@ -3,11 +3,8 @@ Construire une intelligence territoriale, distribuée et frugale
 
 PARTIE B — ÉNERGIE ET INFRASTRUCTURE PHYSIQUE
 
-Cette partie développe les chapitres 5 et 6 du plan de Communalis. Le livre
-vise 300 pages, dont 32 sont réservées à cette partie dans le plan éditorial :
-ces chiffres sont des objectifs de mise en page, non une description du volume
-atteint ici. Les tableaux et schémas sont des outils de travail ; leur présence
-ne prouve pas qu'une proportion donnée de la maquette finale est atteinte.
+Cette partie développe les chapitres 5 et 6 du plan de Communalis. Les
+tableaux et schémas sont des outils de travail à adapter au contexte.
 
 Les chiffres explicitement présentés comme hypothèses servent uniquement à
 illustrer un calcul. Ils ne décrivent ni une installation existante, ni un

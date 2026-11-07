@@ -9,8 +9,6 @@ un service territorial n'est durable que si les personnes qui en dépendent
 peuvent comprendre ses limites, le maintenir, le corriger et, au besoin, y
 renoncer. La réplication vient après cette capacité locale, non avant elle.
 
-Les indications de pagination du plan sont des réservations éditoriales pour
-un livre visant 300 pages, non une mesure de la longueur du présent texte.
 Les schémas sont des représentations de principe. Les gabarits et exemples
 chiffrés servent à préparer le travail ; ils ne décrivent pas des observations
 de terrain. Les éléments marqués [À ACTUALISER — ...] exigent une vérification

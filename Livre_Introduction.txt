@@ -15,45 +15,16 @@ observations, qu'elles confirment ou non les hypothèses initiales. Une
 absence de résultat est une information à expliquer, non une invitation
 à inventer.
 
-Le plan éditorial vise 300 pages pour le corps du livre et 6 à 10 pages
-supplémentaires pour l'index et la bibliographie. Une page n'est cependant
-une unité fiable qu'après choix du format, de la police, des marges, des
-figures et de la mise en page. Les nombres ci-dessous sont des objectifs,
-non une certification de la pagination de cette version.
-
 PLAN DU LIVRE
 
-Avant-propos et introduction : 20 pages
-  Avant-propos et mode d'emploi : 6
-  Introduction : une IA territoriale, distribuée et frugale : 14
-Partie A — Préparer : 46 pages
-  1. Évaluer son lab : 12 ; 2. Équipe, rôles et partenaires : 10 ;
-  3. Budget et approvisionnement : 12 ; 4. Éthique, droit et données : 12.
-Partie B — Énergie et infrastructure physique : 32 pages
-  5. Énergie autonome : 20 ; 6. Matériel de calcul en périphérie : 12.
-Partie C — Couche linguistique : 68 pages
-  7. Assistant documentaire et RAG : 18 ; 8. Corpus communautaire : 18 ;
-  9. Adaptation linguistique et QLoRA : 20 ; 10. Traduction : 12.
-Partie D — Connecter le territoire : 44 pages
-  11. Capteurs : 16 ; 12. Mobilier et végétation : 16 ;
-  13. Du flux de données à l'état du monde : 12.
-Partie E — Agir en sécurité : 24 pages
-  14. Chaîne de décision : 12 ; 15. Actionneurs : 12.
-Partie F — Durer et essaimer : 30 pages
-  16. Maintenance : 12 ; 17. Mémoire d'expérience : 8 ;
-  18. Réseau de nœuds : 10.
-Annexes A à H : 36 pages
-  Calendrier 3 ; matériel et coûts 5 ; schémas et plans 8 ; ressources
-  techniques 3 ; check-lists 5 ; gabarits 6 ; glossaire 3 ; ressources 3.
-
-L'objectif est de consacrer environ 30 % de chaque chapitre aux schémas,
-tableaux et encadrés. Les proportions et le total devront être mesurés dans
-une maquette, sans augmenter artificiellement les espaces ou multiplier les
-pages vides. Les chapitres expérimentaux 6, 9 à 11, 13 à 15, 17 et 18
-totalisent 114 pages dans la répartition proposée ; l'estimation initiale
-d'environ 130 pages demande donc un arbitrage éditorial si d'autres
-sections doivent être comptées. Les chapitres 5 et 12 ont un niveau de
-maturité à confirmer.
+Avant-propos et introduction : mode d'emploi et principes du projet.
+Partie A — Préparer : diagnostic, équipe, budget et données.
+Partie B — Énergie et infrastructure physique.
+Partie C — Couche linguistique : documentation, corpus et traduction.
+Partie D — Connecter le territoire : capteurs, lieux et observations.
+Partie E — Agir en sécurité : décisions et actionneurs.
+Partie F — Durer et essaimer : maintenance, mémoire et coopération.
+Annexes : outils, glossaire, bibliographie et suivi éditorial.
 
 AVANT-PROPOS — UN LIVRE QUI ACCOMPAGNE UN PROJET
 

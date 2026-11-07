@@ -10,7 +10,7 @@ from xml.sax.saxutils import escape
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.lib.pagesizes import A5
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
@@ -20,6 +20,7 @@ from reportlab.platypus import (
     BaseDocTemplate,
     Flowable,
     Frame,
+    PageBreak,
     PageTemplate,
     Paragraph,
     Preformatted,
@@ -27,6 +28,7 @@ from reportlab.platypus import (
     Table,
     TableStyle,
 )
+from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parent
 SOURCES = (
@@ -60,6 +62,7 @@ def register_fonts() -> None:
     pdfmetrics.registerFont(
         TTFont("Communalis-Italic", str(FONT_DIR / "FreeSerifItalic.ttf"))
     )
+    pdfmetrics.registerFont(TTFont("Communalis-Mono", str(FONT_DIR / "FreeMono.ttf")))
     pdfmetrics.registerFontFamily(
         "Communalis",
         normal="Communalis",
@@ -75,8 +78,8 @@ class BookDocTemplate(BaseDocTemplate):
         frame = Frame(
             19 * mm,
             18 * mm,
-            A5[0] - 38 * mm,
-            A5[1] - 36 * mm,
+            A4[0] - 38 * mm,
+            A4[1] - 36 * mm,
             leftPadding=0,
             rightPadding=0,
             topPadding=0,
@@ -87,16 +90,23 @@ class BookDocTemplate(BaseDocTemplate):
             PageTemplate(id="book", frames=frame, onPage=draw_page_number)
         )
 
+    def afterFlowable(self, flowable: Flowable) -> None:
+        if isinstance(flowable, Paragraph) and hasattr(flowable, "toc_level"):
+            self.notify(
+                "TOCEntry",
+                (flowable.toc_level, flowable.getPlainText(), self.page),
+            )
+
 
 def draw_page_number(canvas: Canvas, doc: BookDocTemplate) -> None:
     canvas.saveState()
     if doc.page > 1:
         canvas.setFont("Communalis", 8)
         canvas.setFillColor(colors.HexColor("#5D6670"))
-        canvas.drawCentredString(A5[0] / 2, 9 * mm, str(doc.page))
+        canvas.drawCentredString(A4[0] / 2, 9 * mm, str(doc.page))
         canvas.setStrokeColor(colors.HexColor("#D7DCE0"))
         canvas.setLineWidth(0.35)
-        canvas.line(19 * mm, 14 * mm, A5[0] - 19 * mm, 14 * mm)
+        canvas.line(19 * mm, 14 * mm, A4[0] - 19 * mm, 14 * mm)
     canvas.restoreState()
 
 
@@ -107,8 +117,8 @@ def styles() -> dict[str, ParagraphStyle]:
             "BookBody",
             parent=base["BodyText"],
             fontName="Communalis",
-            fontSize=12.4,
-            leading=18.925,
+            fontSize=11.5,
+            leading=17,
             textColor=colors.HexColor("#20272E"),
             alignment=TA_LEFT,
             spaceAfter=7.5,
@@ -172,8 +182,8 @@ def styles() -> dict[str, ParagraphStyle]:
             "Placeholder",
             parent=base["BodyText"],
             fontName="Communalis-Bold",
-            fontSize=11.2,
-            leading=15,
+            fontSize=11.5,
+            leading=17,
             textColor=colors.HexColor("#7A3515"),
             backColor=colors.HexColor("#FFF0D7"),
             borderColor=colors.HexColor("#D78735"),
@@ -233,29 +243,65 @@ def is_heading(line: str) -> bool:
 def build_table(lines: list[str], available_width: float) -> Table:
     rows = []
     for line in lines:
-        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if line.startswith("  ") and rows:
+            continuation = line.strip().split("|")
+            rows[-1][-1] += " " + continuation[0].strip()
+            rows[-1].extend(cell.strip() for cell in continuation[1:])
+            continue
+        if "|" not in line:
+            if rows:
+                rows[-1][-1] += " " + line.strip()
+            continue
+        text = line.strip()
+        if text.startswith("|"):
+            text = text[1:]
+        if text.endswith("|") and line.strip().startswith("|"):
+            text = text[:-1]
+        cells = [cell.strip() for cell in text.split("|")]
         if cells and all(re.fullmatch(r":?-{2,}:?", cell) for cell in cells):
             continue
-        rows.append(
-            [Paragraph(paragraph_markup(cell), ParagraphStyle(
-                "TableCell",
-                fontName="Communalis",
-                fontSize=8.5,
-                leading=11,
-                textColor=colors.HexColor("#24343A"),
-            )) for cell in cells]
-        )
+        rows.append(cells)
     if not rows:
         return Table([[""]])
     col_count = max(map(len, rows))
     for row in rows:
         row.extend([""] * (col_count - len(row)))
-    widths = [available_width / col_count] * col_count
-    table = Table(rows, colWidths=widths, repeatRows=1, hAlign="LEFT")
+    cell_style = ParagraphStyle(
+        "TableCell",
+        fontName="Communalis",
+        fontSize=10.2,
+        leading=14,
+        textColor=colors.HexColor("#24343A"),
+    )
+    if col_count > 3:
+        headers, *data = rows
+        # Wide source tables become labelled records instead of tiny columns.
+        rendered = []
+        for row in data:
+            for header, cell in zip(headers, row):
+                rendered.append([
+                    Paragraph(paragraph_markup(header), cell_style),
+                    Paragraph(paragraph_markup(cell), cell_style),
+                ])
+            rendered.append(["", ""])
+        if not rendered:
+            rendered = [[Paragraph(paragraph_markup(c), cell_style), ""] for c in headers]
+        widths = [available_width * 0.32, available_width * 0.68]
+        repeat_rows = 0
+    else:
+        rendered = [
+            [Paragraph(paragraph_markup(cell), cell_style) for cell in row]
+            for row in rows
+        ]
+        widths = [available_width / col_count] * col_count
+        repeat_rows = 1
+    table = Table(rendered, colWidths=widths, repeatRows=repeat_rows, hAlign="LEFT")
     table.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#E6EFF0")),
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#E6EFF0"))
+                if repeat_rows else
+                ("BACKGROUND", (0, 0), (0, -1), colors.HexColor("#E6EFF0")),
                 ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#163D4B")),
                 ("FONTNAME", (0, 0), (-1, -1), "Communalis"),
                 ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#B8C6C9")),
@@ -290,49 +336,26 @@ def parse_source(path: Path, style: dict[str, ParagraphStyle], width: float) -> 
             flush_paragraph()
             index += 1
             continue
-        if set(stripped) == {"-"} and len(stripped) >= 20:
+        if re.fullmatch(r"[-=]{3,}", stripped):
             flush_paragraph()
             story.append(Spacer(1, 5))
             index += 1
             continue
-        if "|" in stripped:
-            flush_paragraph()
-            table_lines = []
-            while index < len(lines) and "|" in lines[index]:
-                table_lines.append(lines[index])
-                index += 1
-            story.append(build_table(table_lines, width))
-            story.append(Spacer(1, 7))
-            continue
-        if is_heading(stripped):
-            flush_paragraph()
-            level = "part" if HEADING.match(stripped) else "chapter"
-            if re.match(r"^\d+(?:\.\d+)?\s*[—–-]", stripped) or stripped.isupper():
-                level = "subheading"
-            story.append(Paragraph(paragraph_markup(stripped), style[level]))
-            index += 1
-            continue
-        if stripped.startswith(("•", "□")) or re.match(r"^\d+\.\s", stripped):
-            flush_paragraph()
-            story.append(make_paragraph(stripped, style))
-            index += 1
-            continue
-        if line.startswith("  ") and (
-            "→" in line or "↓" in line or "┌" in line or "│" in line
-        ):
+        if line.startswith("  ") and any(c in line for c in "→←↑↓┌└├─│"):
             flush_paragraph()
             diagram = []
-            while index < len(lines) and lines[index].startswith("  "):
+            while index < len(lines) and lines[index].startswith("  ") and lines[index].strip():
                 diagram.append(lines[index].rstrip())
                 index += 1
+            diagram_font = min(9, max(6, (width - 20) / (max(map(len, diagram)) * 0.6)))
             story.append(
                 Preformatted(
                     "\n".join(diagram),
                     ParagraphStyle(
                         "Diagram",
-                        fontName="Communalis",
-                        fontSize=8.5,
-                        leading=11,
+                        fontName="Communalis-Mono",
+                        fontSize=diagram_font,
+                        leading=diagram_font * 1.35,
                         leftIndent=6,
                         textColor=colors.HexColor("#2D4B54"),
                         backColor=colors.HexColor("#F2F6F6"),
@@ -340,10 +363,47 @@ def parse_source(path: Path, style: dict[str, ParagraphStyle], width: float) -> 
                         borderWidth=0.4,
                         borderPadding=5,
                     ),
-                    maxLineLength=100,
                 )
             )
             story.append(Spacer(1, 7))
+            continue
+        if "|" in stripped:
+            flush_paragraph()
+            table_lines = []
+            while index < len(lines) and lines[index].strip():
+                current = lines[index]
+                if "|" in current or (current.startswith("  ") and table_lines):
+                    table_lines.append(current)
+                    index += 1
+                else:
+                    break
+            story.append(build_table(table_lines, width))
+            story.append(Spacer(1, 7))
+            continue
+        if is_heading(stripped):
+            flush_paragraph()
+            if re.match(r"^(PARTIE [A-F]\b|ANNEXES\b)", stripped):
+                level, toc_level = "part", 0
+            elif re.match(r"^(CHAPITRE \d+\b|ANNEXE [A-H]\b)", stripped):
+                level, toc_level = "chapter", 1
+            elif re.match(r"^(INTRODUCTION\b|AVANT-PROPOS\b|MODE D'EMPLOI\b|REGISTRE DE SUIVI\b)", stripped):
+                level, toc_level = "chapter", 0
+            else:
+                level, toc_level = "subheading", None
+            heading = Paragraph(paragraph_markup(stripped), style[level])
+            if toc_level is not None:
+                heading.toc_level = toc_level
+            story.append(heading)
+            index += 1
+            continue
+        if stripped.startswith(("•", "□")) or re.match(r"^\d+\.\s", stripped):
+            flush_paragraph()
+            item = [stripped]
+            index += 1
+            while index < len(lines) and lines[index].startswith("  ") and lines[index].strip():
+                item.append(lines[index].strip())
+                index += 1
+            story.append(make_paragraph(" ".join(item), style))
             continue
         paragraph.append(line)
         index += 1
@@ -355,10 +415,10 @@ def parse_source(path: Path, style: dict[str, ParagraphStyle], width: float) -> 
 def build(output: Path) -> int:
     register_fonts()
     style = styles()
-    width = A5[0] - 38 * mm
+    width = A4[0] - 38 * mm
     doc = BookDocTemplate(
         str(output),
-        pagesize=A5,
+        pagesize=A4,
         title="Communalis — Construire une intelligence territoriale",
         author="Projet Communalis",
         subject="Édition de travail annotée pour intégration des données réelles du projet",
@@ -376,7 +436,6 @@ def build(output: Path) -> int:
         ),
         Spacer(1, 14 * mm),
         Paragraph("ÉDITION DE TRAVAIL — CAHIER TERRAIN", style["chapter"]),
-        Paragraph("Manuscrit paginé · 300 pages", style["small"]),
         Spacer(1, 22 * mm),
         Paragraph(
             "Les repères surlignés indiquent les données, décisions, preuves et "
@@ -385,8 +444,6 @@ def build(output: Path) -> int:
             style["small"],
         ),
     ]
-    from reportlab.platypus import PageBreak
-
     story.append(PageBreak())
     story.extend(
         [
@@ -480,12 +537,20 @@ def build(output: Path) -> int:
             PageBreak(),
         ]
     )
+    toc = TableOfContents()
+    toc.levelStyles = [
+        ParagraphStyle("ContentsPart", fontName="Communalis-Bold", fontSize=11,
+                       leading=16, spaceBefore=5, leftIndent=0, firstLineIndent=0),
+        ParagraphStyle("ContentsChapter", fontName="Communalis", fontSize=10.5,
+                       leading=15, leftIndent=14, firstLineIndent=0),
+    ]
+    story.extend([Paragraph("SOMMAIRE", style["part"]), toc, PageBreak()])
     for filename in SOURCES:
         story.extend(parse_source(ROOT / filename, style, width))
         if filename != SOURCES[-1]:
             story.append(PageBreak())
     output.parent.mkdir(parents=True, exist_ok=True)
-    doc.build(story)
+    doc.multiBuild(story)
     data = output.read_bytes()
     return len(re.findall(rb"/Type\s*/Page\b", data))
 
@@ -495,18 +560,11 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "Communalis_Cahier_Terrain_300p.pdf",
+        default=ROOT / "Communalis_Cahier_Terrain.pdf",
     )
-    parser.add_argument("--target-pages", type=int, default=300)
-    parser.add_argument("--allow-different-page-count", action="store_true")
     args = parser.parse_args()
     page_count = build(args.output)
     print(f"PDF généré : {args.output} ({page_count} pages)")
-    if page_count != args.target_pages and not args.allow_different_page_count:
-        raise SystemExit(
-            f"Pagination inattendue : {page_count} pages, "
-            f"{args.target_pages} attendues. Ajuster la maquette."
-        )
 
 
 if __name__ == "__main__":

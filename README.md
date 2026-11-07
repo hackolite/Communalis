@@ -19,9 +19,11 @@ disponibles. Le registre de suivi, en fin d'annexes, précise les responsables
 à désigner, les déclencheurs et les preuves à réunir. Il ne crée pas de
 notification automatique.
 
-Le [cahier terrain PDF](Communalis_Cahier_Terrain_300p.pdf) est une édition
-de travail paginée sur **300 pages**, couverture et fiches d'annotation
-comprises. Les champs colorés signalent les données, décisions, preuves et
+Le [cahier terrain PDF](Communalis_Cahier_Terrain.pdf) est une édition
+de travail au format A4, avec un sommaire paginé, des titres hiérarchisés,
+des schémas en police à chasse fixe et des tableaux lisibles. Les tableaux
+de plus de trois colonnes sont présentés en fiches avec des champs étiquetés,
+sans réduction excessive de la police. Les champs colorés signalent les données, décisions, preuves et
 autorisations réelles à fournir par l'équipe. Aucun résultat de terrain n'a
 été inventé : le livre ne pourra devenir un récit factuel achevé qu'après
 validation de ces éléments. Le [manuscrit initial](Manuscrit_Communalis.txt)
@@ -35,4 +37,13 @@ python3 -m venv .venv-pdf
 .venv-pdf/bin/python build_book.py
 ```
 
-Le générateur vérifie que le PDF final compte exactement 300 pages.
+La pagination découle du contenu : aucun nombre de pages n'est imposé.
+L'annexe G contient le glossaire ; l'annexe H propose une bibliographie
+à compléter avec les sources effectivement utilisées et les preuves de terrain.
+L'ancien export suffixé `300p` est remplacé par le PDF ci-dessus.
+
+Les contrôles du générateur peuvent être lancés avec :
+
+```sh
+.venv-pdf/bin/python -m unittest discover -s tests
+```

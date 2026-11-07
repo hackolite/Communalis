@@ -5,10 +5,8 @@ PARTIE C — LA COUCHE LINGUISTIQUE
 
 Texte de travail en français
 
-Cette partie développe les chapitres 7 à 10 du plan de Communalis. L'ouvrage
-vise 300 pages hors index et bibliographie ; le présent fichier n'est ni une
-mise en pages ni la preuve que cette cible est atteinte. Les figures, tableaux
-et encadrés sont des propositions éditoriales et des instruments de travail.
+Cette partie développe les chapitres 7 à 10 du plan de Communalis. Les
+figures, tableaux et encadrés sont des instruments de travail à adapter.
 
 La couche linguistique relie des personnes, des documents, des langues et des
 outils. Elle ne commence pas par le choix d'un modèle : elle commence par la

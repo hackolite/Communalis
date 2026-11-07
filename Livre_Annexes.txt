@@ -1,11 +1,10 @@
 COMMUNALIS — ANNEXES ET SUIVI ÉDITORIAL
 
 Les annexes sont des outils à adapter, pas des preuves d'un déploiement.
-Les 36 pages annoncées dans le plan sont une réservation de mise en page.
 Les données, dates, noms, coûts, accords et mesures restent à compléter
 après vérification et avec les autorisations nécessaires.
 
-ANNEXE A — CALENDRIER TYPE DE DÉPLOIEMENT (3 PAGES CIBLES)
+ANNEXE A — CALENDRIER TYPE DE DÉPLOIEMENT
 
 Le calendrier suit des décisions plutôt qu'une durée imposée. Chaque phase
 se termine par une revue qui peut décider de revenir en arrière ou d'arrêter.
@@ -35,7 +34,7 @@ Preuves consultées, restrictions et prochaine revue : [à compléter].
 concernée, sans présumer l'année ; jalons atteints, reports, décisions et
 personnes autorisées à valider leur publication.
 
-ANNEXE B — LISTES DE MATÉRIEL ET COÛTS (5 PAGES CIBLES)
+ANNEXE B — LISTES DE MATÉRIEL ET COÛTS
 
 La liste est une base de comparaison et non un bon de commande. Les devis
 datés, la disponibilité et la compatibilité effective priment.
@@ -74,7 +73,7 @@ Formation et sécurité | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
 [À ACTUALISER — devis, tarifs, taux de change et budget de remplacement.]
 [RÉSULTATS TOGO À INSÉRER] Dépenses réelles, écarts et motifs.
 
-ANNEXE C — SCHÉMAS ET PLANS (8 PAGES CIBLES)
+ANNEXE C — SCHÉMAS ET PLANS
 
 Ces figures sont conceptuelles. Les plans de puissance, les protections,
 les ancrages et les dimensions destinés à une installation doivent être
@@ -123,7 +122,7 @@ C4. Mobilier — emplacement de plan à établir
 [RÉSULTATS TOGO À INSÉRER] Plans réalisés, retours d'usage et contrôles,
 uniquement après accord de publication.
 
-ANNEXE D — CODE, NOTEBOOKS ET DONNÉES (3 PAGES CIBLES)
+ANNEXE D — CODE, NOTEBOOKS ET DONNÉES
 
 Fiche de ressource
 Nom et fonction : [à compléter].
@@ -141,7 +140,7 @@ redistribution. Un lien vers un dépôt ou un modèle ne confirme ni son
 maintien, ni sa licence future, ni son adéquation à une langue.
 [À ACTUALISER — liens et identifiants réellement utilisés par le projet.]
 
-ANNEXE E — CHECK-LISTS (5 PAGES CIBLES)
+ANNEXE E — CHECK-LISTS
 
 Avant le lancement
 □ Le problème est formulé avec les personnes concernées.
@@ -179,7 +178,7 @@ Avant une action physique
 □ Documents, licences et logiciels revus.
 □ Procédure de mise hors service disponible.
 
-ANNEXE F — GABARITS DE GOUVERNANCE (6 PAGES CIBLES)
+ANNEXE F — GABARITS DE GOUVERNANCE
 
 Ces modèles doivent être adaptés et vérifiés au regard du droit applicable.
 Ils ne constituent pas un avis juridique et ne garantissent pas la validité
@@ -216,7 +215,7 @@ Décisions, suivi, communication et traitement des différends : [à compléter]
 Fin de l'accord, restitution, conservation et sortie : [à compléter].
 Date, validation juridique et signatures : [à compléter].
 
-ANNEXE G — GLOSSAIRE (3 PAGES CIBLES)
+ANNEXE G — GLOSSAIRE
 
 Actionneur : dispositif transformant une commande en effet physique.
 Adapter : ensemble de paramètres supplémentaires servant à adapter un modèle.
@@ -228,6 +227,8 @@ Corpus : ensemble organisé de documents ou de données linguistiques.
 Edge : calcul réalisé près du lieu de collecte ou d'utilisation.
 État sûr : comportement défini par une analyse des risques pour un procédé.
 LLM : modèle de langage capable de générer ou transformer du texte.
+LoRA : adaptation d'un modèle par l'apprentissage de matrices de faible
+rang, sans réentraîner tous ses paramètres. À distinguer de LoRa, la radio.
 LoRa : technologie radio longue portée ; ne décrit pas à elle seule toute
 une architecture réseau.
 MQTT : protocole de publication et d'abonnement à des messages.
@@ -235,10 +236,14 @@ PM2.5 : particules en suspension de diamètre aérodynamique jusqu'à 2,5 µm.
 QLoRA : méthode d'adaptation utilisant une base quantifiée et des adapters.
 Quantification : représentation numérique moins précise de paramètres.
 RAG : recherche de sources pertinentes suivie d'une génération contextualisée.
+RAG spatial : recherche contextualisée par des critères de lieu, de temps
+et de provenance ; elle ne rend pas une observation plus certaine.
+Souveraineté progressive : capacité construite dans la durée à décider des
+outils, des données, de l'architecture et de leur gouvernance.
 Traçabilité : possibilité de relier une donnée ou une décision à son origine
 et aux opérations qu'elle a subies.
 
-ANNEXE H — RESSOURCES ET BIBLIOGRAPHIE À COMPLÉTER (3 PAGES CIBLES)
+ANNEXE H — RESSOURCES ET BIBLIOGRAPHIE
 
 Les ressources suivantes constituent des points de départ, non une
 certification du projet. Vérifier les versions, licences et conditions
@@ -250,8 +255,17 @@ d'accès à la date de chaque utilisation.
   https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
 • Gebru et al., Datasheets for Datasets :
   https://arxiv.org/abs/1803.09010
+• Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive
+  NLP Tasks (2020) — principe du RAG :
+  https://arxiv.org/abs/2005.11401
+• Hu et al., LoRA: Low-Rank Adaptation of Large Language Models (2021) —
+  adaptation par paramètres de faible rang :
+  https://arxiv.org/abs/2106.09685
 • Dettmers et al., QLoRA :
   https://arxiv.org/abs/2305.14314
+• Mitchell et al., Model Cards for Model Reporting (2019) — documentation
+  des usages, des limites et de l'évaluation des modèles :
+  https://arxiv.org/abs/1810.03993
 • FLORES, ressource d'évaluation multilingue :
   https://github.com/facebookresearch/flores
   Le dépôt indique ne plus être mis à jour et renvoie vers l'Open Language
@@ -262,8 +276,9 @@ d'accès à la date de chaque utilisation.
 
 [À ACTUALISER — références officielles applicables au Togo, sources
 primaires WoeLab et HubCity, licences et références effectivement utilisées.]
-Une bibliographie détaillée et un index sont prévus hors des 300 pages
-cibles ; chaque résultat de terrain doit renvoyer à une preuve autorisée.
+Cette bibliographie est un point de départ à compléter selon les sources
+effectivement utilisées ; elle ne prouve pas les résultats du projet. Chaque
+résultat de terrain doit renvoyer à une preuve autorisée.
 
 REGISTRE DE SUIVI DES PASSAGES ÉVOLUTIFS
 

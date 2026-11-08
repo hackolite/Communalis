@@ -34,7 +34,6 @@ ROOT = Path(__file__).resolve().parent
 PRODUCT_SOURCES = (
     "Livre_Introduction.txt",
     "Livre_Parcours_Produit.txt",
-    "Livre_Annexes.txt",
 )
 TECHNICAL_SOURCES = (
     "Livre_Partie_A.txt",
@@ -43,9 +42,11 @@ TECHNICAL_SOURCES = (
     "Livre_Partie_D.txt",
     "Livre_Partie_E.txt",
     "Livre_Partie_F.txt",
+)
+ANNEX_SOURCES = (
     "Livre_Annexes.txt",
 )
-SOURCES = PRODUCT_SOURCES
+SOURCES = PRODUCT_SOURCES + TECHNICAL_SOURCES + ANNEX_SOURCES
 PLACEHOLDER = re.compile(
     r"\[(?:À ACTUALISER|À CONFIRMER|RÉSULTATS TOGO À INSÉRER|"
     r"à compléter|à remplir|à désigner)[^]]*\]",

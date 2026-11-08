@@ -677,13 +677,12 @@ N° | Idée de service | Premier résultat à tester
 POUR ALLER PLUS LOIN
 ====================
 
-Le volume complémentaire « Communalis — Dossiers techniques » détaille les
-ressources possibles pour l'énergie, le calcul, les langues, les capteurs,
-les recherches spatiales, la sécurité, la maintenance et la réplication.
-Utiliser uniquement les chapitres utiles au cas d'usage retenu. Les
-recommandations de méthode ne remplacent ni les règles applicables au Togo,
-ni l'avis de professionnels qualifiés, ni les décisions des institutions
-et communautés concernées.
+Les parties techniques qui suivent détaillent les ressources possibles
+pour l'énergie, le calcul, les langues, les capteurs, les recherches
+spatiales, la sécurité, la maintenance et la réplication. Utiliser uniquement
+les chapitres utiles au cas d'usage retenu. Les recommandations de méthode
+ne remplacent ni les règles applicables au Togo, ni l'avis de professionnels
+qualifiés, ni les décisions des institutions et communautés concernées.
 
 AVANT DE PASSER AU PROTOTYPE
 ============================

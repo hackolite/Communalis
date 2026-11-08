@@ -13,17 +13,14 @@ borné, un essai avec le public et une décision de maintien, de correction
 ou d'arrêt. Les dossiers techniques viennent soutenir ce parcours lorsqu'un
 cas d'usage les nécessite.
 
-ORGANISATION DES DEUX VOLUMES
+ORGANISATION DU CAHIER
 
-Cahier produit et terrain — avant-propos, parcours produit, adoption,
-bootcamp, déploiement, annexes pratiques et registre de suivi.
-Dossiers techniques — préparation, énergie, services linguistiques,
-capteurs, décisions en sécurité, maintenance et réplication.
-
-Le sommaire de chaque volume reflète son contenu. Le parcours produit est
-à lire en premier par les équipes de bootcamp et les décideurs. Le volume
-technique séparé sert de dossier de référence, uniquement lorsque le cas
-d'usage l'exige.
+Le volume complet suit un seul fil : introduction et parcours produit,
+préparation, énergie, services linguistiques, capteurs, décisions en
+sécurité, maintenance, réplication et annexes pratiques. Le parcours
+produit est à lire en premier par les équipes de bootcamp et les décideurs.
+Les dossiers techniques approfondissent les choix nécessaires au cas
+d'usage ; ils ne sont pas un préalable à la découverte ou au test du service.
 Une association peut se concentrer sur l'écoute, l'inclusion et les retours.
 Une institution peut examiner les responsabilités, les coûts, les critères
 de passage et la procédure d'arrêt.
@@ -157,7 +154,7 @@ les abandons, les plaintes et les données manquantes sont utiles pour
 améliorer ou arrêter le service.
 
 Le parcours produit des pages suivantes transforme ces principes en
-ateliers, tests, gabarits et portes de décision. Le volume technique
-complémentaire approfondit les méthodes de données, de capteurs, d'énergie,
-de langue et de sécurité ; il ne remplace jamais l'écoute du public ni la
+ateliers, tests, gabarits et portes de décision. Les parties techniques
+approfondissent les méthodes de données, de capteurs, d'énergie, de langue
+et de sécurité ; elles ne remplacent jamais l'écoute du public ni la
 responsabilité des institutions.

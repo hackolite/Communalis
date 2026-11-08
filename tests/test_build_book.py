@@ -5,6 +5,7 @@ from pathlib import Path
 from reportlab.platypus import Paragraph, Preformatted, Table
 
 from build_book import (
+    ANNEX_SOURCES,
     SOURCES,
     TECHNICAL_SOURCES,
     build_table,
@@ -38,10 +39,10 @@ class BookLayoutTests(unittest.TestCase):
 
     def test_product_path_is_first_and_has_contents_entries(self):
         self.assertEqual(SOURCES[1], "Livre_Parcours_Produit.txt")
-        self.assertEqual(SOURCES[-1], "Livre_Annexes.txt")
-        self.assertEqual(len(TECHNICAL_SOURCES), 7)
-        self.assertEqual(TECHNICAL_SOURCES[-1], "Livre_Annexes.txt")
-        self.assertNotIn("Livre_Partie_A.txt", SOURCES)
+        self.assertEqual(len(TECHNICAL_SOURCES), 6)
+        self.assertEqual(ANNEX_SOURCES, ("Livre_Annexes.txt",))
+        self.assertEqual(SOURCES[-1], ANNEX_SOURCES[0])
+        self.assertEqual(SOURCES[2], "Livre_Partie_A.txt")
         story = self.parse(
             "PARCOURS PRODUIT — DE L'IDÉE À L'ADOPTION\n"
             "CHAPITRE P1 — LE SERVICE AVANT LA TECHNOLOGIE\n"

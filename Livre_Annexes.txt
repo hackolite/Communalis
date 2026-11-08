@@ -273,6 +273,18 @@ d'accès à la date de chaque utilisation.
   langues et les conditions du jeu retenu avant toute comparaison.
 • OMS, pollution de l'air :
   https://www.who.int/health-topics/air-pollution
+• OpenStreetMap, données contributives, attribution et licence ODbL :
+  https://www.openstreetmap.org/copyright
+• Humanitarian OpenStreetMap Team, LearnOSM — guides de cartographie :
+  https://learnosm.org/
+• QGIS, documentation du système d'information géographique :
+  https://docs.qgis.org/
+• Open Data Kit, documentation de collecte de données :
+  https://docs.getodk.org/
+• Sutton et Barto, Reinforcement Learning: An Introduction :
+  http://incompleteideas.net/book/the-book-2nd.html
+  Référence théorique ; elle ne remplace pas l'évaluation de sécurité,
+  l'expertise métier ou la gouvernance d'une décision publique.
 
 [À ACTUALISER — références officielles applicables au Togo, sources
 primaires WoeLab et HubCity, licences et références effectivement utilisées.]

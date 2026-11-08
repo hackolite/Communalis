@@ -1,0 +1,699 @@
+PARCOURS PRODUIT — DE L'IDÉE À L'ADOPTION
+========================================================
+
+Ce parcours est le point d'entrée du cahier terrain. Il aide une équipe,
+une institution et des habitants à transformer un besoin prioritaire en un
+service compris, utilisé, maintenu et évalué. Les dossiers techniques des
+parties A à F viennent ensuite soutenir les choix réellement nécessaires ;
+ils ne sont ni des prérequis au premier atelier ni une invitation à
+commencer par acheter du matériel.
+
+Le parcours propose une méthode pour Baguida, au Togo, et pour sa
+réutilisation dans d'autres communes. Les exemples et cibles restent des
+hypothèses à valider localement. Aucun usage, partenaire, résultat de
+terrain ou accord n'est réputé acquis sans preuve datée.
+
+CHAPITRE P1 — LE SERVICE AVANT LA TECHNOLOGIE
+=============================================
+
+P1.1 — La promesse Communalis
+-----------------------------
+
+Communalis aide les acteurs locaux à mieux repérer une difficulté
+collective, à choisir une réponse proportionnée et à vérifier si cette
+réponse améliore réellement le quotidien. Le service met en relation les
+habitants, les chefs de quartier, les services municipaux, les associations,
+les équipes HubCity et les partenaires techniques autour d'un problème
+défini et d'une décision possible.
+
+La valeur du service n'est pas le nombre de capteurs, de cartes ou de
+réponses d'IA. Sa valeur tient à une boucle complète :
+
+  Besoin vécu → observation compréhensible → option utile
+       ↓                                  ↓
+  retour accessible ← résultat vérifié ← décision responsable
+
+Une recommandation qui n'a ni responsable, ni budget, ni délai, ni moyen
+de suivi n'est pas encore un service. Une collecte qui ne modifie aucune
+décision et ne rend aucun compte aux personnes concernées n'est pas une
+réussite produit.
+
+P1.2 — Pour qui, et pour accomplir quoi ?
+-----------------------------------------
+
+La conception commence par des tâches réelles, pas par des profils
+théoriques. Selon le cas d'usage, les personnes à consulter peuvent inclure :
+
+• les habitants qui utilisent ou traversent les lieux concernés ;
+• les chefs de quartier et personnes mandatées pour relayer ou suivre une
+  demande ;
+• les agents et services qui peuvent instruire ou réaliser une intervention ;
+• les jardiniers, associations, commerçants et responsables d'espaces ;
+• les opérateurs des points SocialHub et les équipes Urbanatic, PLUS et
+  SPATIOTEMP_RAG ;
+• les personnes qui utilisent peu le numérique, parlent une autre langue,
+  ont des besoins d'accessibilité ou ne souhaitent pas contribuer.
+
+Pour chaque groupe, préciser une tâche et un résultat attendu. Exemples à
+valider : « signaler qu'un point d'eau du jardin ne fonctionne plus »,
+« comprendre où trouver un lieu culturel » ou « transmettre au bon service
+une demande d'ombre à un endroit et à une heure déterminés ». Ne pas
+supposer qu'un même écran, une même langue ou un même canal convient à tous.
+
+Fiche de promesse produit
+
+Public prioritaire : [à confirmer avec les personnes concernées]
+Besoin concret : [formulé dans leurs mots, sans donnée nominative]
+Situation actuelle et solution de contournement : [à documenter]
+Service proposé : [ce que la personne peut effectivement faire]
+Bénéfice attendu : [observable, sans promesse non vérifiée]
+Responsable de la réponse : [service / rôle à confirmer]
+Délai ou fréquence de réponse annoncée : [à convenir et financer]
+Canal numérique et alternative hors ligne : [à définir]
+Limites et recours : [à rendre visibles avant usage]
+
+P1.3 — Un produit de confiance
+--------------------------------
+
+L'adoption se construit quand le service est pertinent, compréhensible,
+accessible, fiable et digne de confiance. Elle se perd si les retours
+disparaissent, si les informations sont périmées, si l'accès est compliqué,
+si le service promet une intervention qu'aucun acteur ne peut réaliser ou
+si les personnes pensent être surveillées.
+
+Les règles produit sont les suivantes :
+
+1. Répondre à une difficulté que les personnes reconnaissent comme réelle.
+2. Afficher ce qui se passe après un signalement : reçu, à vérifier,
+   transmis, traité ou clôturé.
+3. Dire qui gère le service et comment faire corriger une erreur.
+4. Offrir un accès équivalent sans smartphone et sans compte lorsque c'est
+   possible.
+5. Ne jamais conditionner l'accès au Wi-Fi gratuit à un questionnaire, à un
+   consentement ou à la transmission d'informations personnelles.
+6. Demander le minimum de données et expliquer leur usage en termes simples.
+7. Respecter les variantes linguistiques et vérifier les traductions avec
+   des locuteurs concernés.
+8. Ne pas confondre consultation, utilisation, satisfaction et impact.
+9. Ne publier ni carte, ni photo, ni témoignage permettant l'identification
+   sans évaluation et autorisation appropriées.
+10. Prévoir une réponse humaine lorsque le service ne sait pas ou ne peut
+    pas agir.
+
+P1.4 — Découvrir avant de construire
+-------------------------------------
+
+Avant le développement, mener de courtes séances d'écoute et d'observation
+avec des personnes concernées, dans des conditions sûres et annoncées.
+Demander comment elles résolvent déjà le problème, ce qui prend du temps,
+ce qu'elles considèrent comme une bonne réponse et ce qui les ferait
+renoncer au service. Ne recueillir que les notes nécessaires ; les noms,
+voix, photos et coordonnées ne sont pas des notes de terrain par défaut.
+
+Questions d'entretien :
+
+• Racontez la dernière fois où cette situation s'est présentée.
+• Que s'est-il passé ensuite ? Qui a pu aider, et qu'est-ce qui a bloqué ?
+• Comment sauriez-vous que le problème est mieux résolu ?
+• Quel canal utilisez-vous facilement ? Quel canal préférez-vous éviter ?
+• Qu'est-ce qui ne devrait pas être collecté ou rendu public ?
+
+À la fin de chaque séance, reformuler les constats et demander à la personne
+si l'équipe a bien compris. Présenter les désaccords comme des résultats de
+recherche, pas comme un défaut de participation. Les consultations, les
+tests de compréhension et les usages du service ont des finalités et des
+autorisations distinctes à examiner.
+
+P1.5 — Choisir un premier cas d'usage
+-------------------------------------
+
+Ne pas lancer simultanément un assistant culturel, des capteurs de qualité
+de l'air, un système énergétique et une plateforme agricole. Choisir un cas
+d'usage limité avec :
+
+• un public et une situation suffisamment précis ;
+• une personne ou une institution qui peut répondre ;
+• un résultat observable dans un délai réaliste ;
+• une méthode de référence simple à comparer ;
+• des risques proportionnés et une voie hors ligne ;
+• un coût complet et un responsable d'entretien ;
+• une possibilité réelle de suspendre et de retirer le service.
+
+Grille de décision — noter 1 à 5 et justifier chaque note
+
+Critère | Question à documenter
+Importance | Les personnes concernées priorisent-elles ce problème ?
+Capacité d'agir | Qui peut effectivement prendre la décision ou répondre ?
+Utilité | Quel travail, délai ou obstacle le service réduit-il ?
+Inclusion | Qui ne pourrait pas utiliser la solution proposée ?
+Qualité | Peut-on obtenir des informations suffisamment fiables pour cette décision ?
+Soutenabilité | Qui finance, entretient et met à jour le service ?
+Réversibilité | Peut-on arrêter le service et supprimer les données devenues inutiles ?
+Risque | Une erreur peut-elle porter atteinte aux droits, à la santé ou aux moyens d'existence ?
+
+Un premier pilote devrait favoriser l'information utile, l'inventaire
+participatif ou le signalement vérifié par une personne, plutôt qu'une
+décision automatisée ou une commande physique. Un problème prioritaire sans
+responsable d'action appelle d'abord un accord institutionnel, pas un
+prototype logiciel.
+
+CHAPITRE P2 — LE SERVICE DANS LE QUOTIDIEN DE BAGUIDA
+====================================================
+
+P2.1 — Territoire et thèmes à valider
+-------------------------------------
+
+Baguida est le territoire pilote proposé, non un diagnostic déjà établi.
+Le périmètre, les quartiers et lieux, les compétences administratives et
+les partenaires doivent être confirmés avec les habitants et institutions
+concernés. Les thèmes proposés sont la santé et l'environnement quotidien,
+la ville habitable, l'agriculture urbaine et la continuité énergétique des
+services. Ils deviennent des priorités seulement après écoute locale.
+
+Les premières questions peuvent concerner :
+
+• Où et à quels moments les habitants recherchent-ils de l'ombre ou un lieu
+  de repos ?
+• Quels espaces et parcours méritent une observation de la chaleur ou de
+  l'accessibilité ?
+• Où une mesure indicative du bruit ou de l'air aiderait-elle à décider
+  d'une enquête ou d'une médiation ?
+• Quels jardins collectifs ont besoin d'information, d'eau, de suivi ou
+  d'organisation ?
+• Quels équipements partagés sont affectés par les coupures et qui peut
+  décider de leur entretien ou de leurs priorités ?
+• Comment les personnes trouvent-elles des informations culturelles et
+  comment signalent-elles une erreur ou une mise à jour ?
+
+La mesure de température, de particules ou de bruit ne constitue pas un
+diagnostic médical, une mesure réglementaire ou une preuve d'exposition
+individuelle. Avant achat, définir la grandeur, le protocole, l'incertitude,
+la référence de comparaison et la personne compétente qui interprétera les
+résultats.
+
+P2.2 — Une boucle de service dynamique
+--------------------------------------
+
+Le quartier évolue : usages, météo, équipements, saisons, ressources et
+décisions changent. La boucle Communalis doit donc conserver le contexte et
+permettre de revoir les choix.
+
+  Besoin / tâche
+       ↓
+  Observation : capteur, enquête volontaire, registre, source ouverte
+       ↓
+  Qualité + date + lieu + provenance + droits + incertitude
+       ↓
+  Vue de situation et options compréhensibles
+       ↓
+  Décision humaine : responsable, budget, délai, motif
+       ↓
+  Service ou intervention autorisé
+       ↓
+  Retour au public, résultat et révision de la solution
+
+Les données chaudes (capteurs, événements récents, retours de service) et
+les données froides (par exemple des objets OpenStreetMap ou documents
+publics) ont des rythmes et des incertitudes différents. Ajouter à chaque
+observation sa date, son unité, son origine, son niveau de qualité et son
+droit d'usage. OSM est une source contributive utile, mais sa couverture
+locale, son actualité et sa licence doivent être vérifiées.
+
+Une action temps réel demande une information suffisamment fraîche, une
+procédure d'escalade et un responsable disponible. Une action de long terme
+— aménagement, ombrage, plantation ou entretien — nécessite des observations
+répétées, un budget, une consultation et un calendrier de suivi. Si une
+donnée est absente, périmée ou contradictoire, afficher « à vérifier » ;
+ne pas combler le manque par une prédiction présentée comme un fait.
+
+P2.3 — Répartir le rôle des services HubCity
+--------------------------------------------
+
+Le périmètre fonctionnel et les conditions réelles d'intégration de chaque
+service sont à confirmer auprès de leurs équipes. Chaque application doit
+procurer une valeur directe à son utilisateur, même si Communalis n'existait
+pas. La remontée vers Communalis est une possibilité séparée, minimisée et
+expliquée, jamais une condition d'accès au service.
+
+Service | Valeur côté utilisateur | Contribution possible à Communalis
+Urbanatic | Information et pratiques d'agriculture urbaine | Retours volontaires sur jardins et ressources, après vérification des droits et des fonctions.
+SocialHub | Accès Wi-Fi gratuit en points partagés | Information et formulaire facultatif ; aucun suivi individuel du trafic pour l'analyse territoriale.
+PLUS | Découverte de lieux et informations socioculturelles ouest-africaines | Corrections facultatives et besoins agrégés ; sources, date et langues visibles.
+SPATIOTEMP_RAG | Recherche contextualisée par lieu et temps, fonctions à confirmer | Sources autorisées, provenance, fraîcheur et incertitude explicites.
+
+Avant toute connexion, faire approuver une fiche d'interface par les
+responsables : propriétaire, versions, données effectivement disponibles,
+finalités, format, fréquence, qualité, sécurité, rétention, coût, droits,
+support, procédure de révocation et personne à contacter. Ne pas supposer
+que les conversations PLUS, journaux Wi-Fi ou identifiants Urbanatic sont
+réutilisables pour l'analyse ou l'entraînement.
+
+P2.4 — Concevoir l'adoption, pas seulement l'inscription
+--------------------------------------------------------
+
+L'équipe suit un parcours complet :
+
+1. **Découverte** — la personne comprend que le service existe et ce qu'il
+   peut réellement faire.
+2. **Premier usage** — elle accomplit une tâche utile, sans formulaire
+   disproportionné ni obligation de créer un compte si ce n'est pas requis.
+3. **Réponse** — elle reçoit un accusé compréhensible et peut suivre la
+   suite promise.
+4. **Retour** — elle peut corriger, contester ou signaler un problème par
+   un canal accessible.
+5. **Usage répété** — elle revient parce que le service apporte une valeur
+   régulière, pas parce qu'elle est poussée par une récompense trompeuse.
+6. **Confiance** — l'équipe rend compte des décisions et des changements.
+
+Améliorations de conception à tester pour les applications HubCity :
+
+• page d'accueil orientée vers les tâches les plus fréquentes, avec une
+  option de contact humain ;
+• langage clair, consignes courtes et disponibilité des langues pertinentes
+  validée par les locuteurs ;
+• mode faible débit ou hors ligne, faible consommation de données et reprise
+  après interruption ;
+• confirmations et statuts compréhensibles pour les formulaires ;
+• correction des horaires, lieux, informations culturelles et fiches de
+  jardin par une procédure identifiable ;
+• notices publiques au SocialHub et permanence en personne pour les
+  personnes sans smartphone ;
+• affichage de la date, de la source et du degré de vérification des
+  informations ;
+• retours facultatifs sur le service, séparés des données de fonctionnement.
+
+Pour réduire la fatigue des demandes, ne pas multiplier les sondages,
+notifications ou sollicitations sur un même groupe. Mesurer aussi les
+abandons, les demandes sans réponse, les problèmes d'accessibilité et les
+personnes qui préfèrent ne pas participer.
+
+P2.5 — Cibles et indicateurs de service
+----------------------------------------
+
+Avant de fixer une cible d'impact, établir une mesure de référence datée.
+Une cible se définit avec les personnes concernées et inclut un propriétaire,
+un délai, une méthode, une couverture et une règle de révision. Aucun seuil
+de santé ou de sécurité n'est inventé par ce cahier.
+
+Familles d'indicateurs possibles :
+
+Objectif | Indicateurs à préciser localement
+Adoption | Tâches utiles accomplies et retours répétés ; canal/langue uniquement si nécessaire, autorisé et agrégé.
+Réponse | Demandes reçues et résolues, délai et motifs de non-résolution.
+Inclusion | Compréhension, disponibilité hors ligne, obstacles signalés et corrections.
+Confiance | Erreurs corrigées, plaintes traitées, finalités claires et incidents suivis.
+Utilité | Décisions ou interventions permises ; effort évité si mesurable de manière appropriée.
+Fiabilité | Disponibilité, fraîcheur, complétude, pannes, coût et temps de maintenance.
+Résultat territorial | Indicateur physique adapté avec protocole, référence, saison, lieux et limites.
+
+Ne pas optimiser seulement les téléchargements, clics, sessions ou volumes
+de contributions. Une hausse de demandes non traitées peut détériorer la
+confiance. Publier le dénominateur, les données manquantes, le canal de
+collecte et les limites de comparaison. Les cibles numériques sont
+proposées après la mesure de départ et approuvées par les responsables.
+
+CHAPITRE P3 — CONSTRUIRE UN PRODUIT UTILE ET MAINTENABLE
+=======================================================
+
+P3.1 — Délimitation Code — Hardware — Design
+---------------------------------------------
+
+**Design** définit la tâche, les parcours, les langues, l'accessibilité,
+l'information, les erreurs possibles et les moyens de recours avec les
+personnes concernées.
+
+**Code** collecte et traite uniquement les informations autorisées, relie
+les sources, présente les résultats et fournit une assistance. La collecte
+doit fonctionner avec une connexion intermittente si le contexte le
+nécessite. Les accès, sauvegardes, versions, mises à jour et procédures
+d'incident ont un responsable.
+
+**Hardware** comprend capteurs, alimentation, communication, boîtier,
+installation, vérification, pièces de rechange, maintenance et fin de vie.
+Un capteur n'est acheté qu'après rédaction du protocole et identification
+d'une personne capable de l'entretenir. Dimensionnement et raccordement
+électriques relèvent de professionnels qualifiés.
+
+  DESIGN : besoin, parcours, accessibilité et confiance
+      ↓                                      ↑
+  CODE : données et aide à la décision → retour du service
+      ↑                                      ↓
+  HARDWARE : observation, énergie et communication
+
+La grid énergétique commence par un inventaire et un tableau de suivi en
+lecture seule : services alimentés, charges, disponibilité, coupures,
+consommation lorsque mesurable, maintenance et dépendances. Toute action
+sur un réseau électrique exige une étude et une validation professionnelles.
+Un algorithme ne répartit pas l'électricité de manière autonome.
+
+P3.2 — Une architecture au service du parcours
+-----------------------------------------------
+
+  Urbanatic / SocialHub / PLUS / observations / OSM autorisé
+                    ↓
+       collecte minimale et interfaces documentées
+                    ↓
+       contrôles qualité, provenance et droits
+                    ↓
+       vue de service / recherche / options explicables
+                    ↓
+       validation humaine et décision tracée
+                    ↓
+       réponse au public, suivi et apprentissage produit
+
+Le système doit préserver la différence entre observation brute, correction,
+agrégation, estimation, proposition et décision. Une carte ou un résumé
+montre la date, la couverture, la source et les limites. Un système de
+recherche augmentée (RAG) peut citer des passages retrouvés ; il ne garantit
+pas que la source soit actuelle ou correcte. Une réponse incertaine doit
+pouvoir s'abstenir et proposer une vérification humaine.
+
+P3.3 — Apprentissage par renforcement : une option tardive
+-----------------------------------------------------------
+
+L'apprentissage par renforcement (RL) n'est pas nécessaire pour lancer
+Communalis et ne constitue pas une condition d'innovation. L'envisager
+uniquement pour une décision répétée, dans un environnement suffisamment
+compris, lorsque les objectifs et les contraintes ont été définis avec les
+institutions et les personnes concernées.
+
+Commencer avec une règle simple ou la pratique actuelle comme référence.
+Si un modèle est étudié, tester d'abord dans une simulation documentée, puis
+en mode observation où il recommande sans agir. Examiner les erreurs, les
+groupes affectés, les données manquantes, les changements saisonniers et
+les effets secondaires. Une récompense unique (coût, clics ou rendement)
+ne représente pas l'intérêt public.
+
+Ne pas apprendre en ligne par essai-erreur sur l'accès à la santé, l'eau,
+l'électricité, des droits sociaux ou des équipements de sécurité. Le modèle
+ne commande jamais directement un actionneur. Toute action physique ou
+dépense publique requiert une chaîne distincte de règles, d'autorisation,
+de protections et de responsabilité. En l'absence de preuve de bénéfice
+par rapport à la référence, ne pas déployer le modèle.
+
+P3.4 — Tester un service avec de vraies tâches
+-----------------------------------------------
+
+Un test d'utilisabilité n'est pas une démonstration guidée par l'équipe.
+Demander à la personne d'accomplir une tâche, observer sans la conduire,
+noter les blocages et lui demander ce qu'elle s'attend à voir ensuite.
+Tester avec des appareils et une connectivité représentatifs, en respectant
+les accords et la protection des personnes.
+
+Fiche de test
+
+Version du service et date : [à renseigner]
+Tâche testée et raison du choix : [à renseigner]
+Langue, canal et contexte : [à renseigner]
+Participants et méthode de recrutement agrégée : [à renseigner]
+Réussite définie avant le test : [à renseigner]
+Temps/effort, erreurs et abandons : [à renseigner]
+Paroles ou observations publiables avec autorisation : [à renseigner]
+Limites, biais et personnes non représentées : [à renseigner]
+Décision produit : conserver / corriger / retester / retirer
+Responsable, échéance et preuve de correction : [à renseigner]
+
+Ne pas convertir automatiquement les conversations en données
+d'entraînement. La correction d'une fiche, d'une source, d'une traduction
+ou d'un parcours est souvent plus simple et vérifiable qu'un réentraînement.
+Toute nouvelle finalité de traitement est examinée séparément.
+
+CHAPITRE P4 — BOOTCAMP ET LIVRABLE DES ÉQUIPES
+==============================================
+
+P4.1 — Préparer un bootcamp orienté livraison
+----------------------------------------------
+
+Format proposé : cinq jours, précédés d'une préparation avec les partenaires.
+Adapter la durée aux langues, aux disponibilités et aux besoins d'accessibilité.
+Ne pas organiser de collecte ou de visite sans autorisations, information et
+conditions de sécurité appropriées.
+
+Temps | Travail | Livrable attendu
+Préparation | Mandat, rôles, langues, participation, rémunération, risques et autorisations | Cadre validé et information publique
+Jour 1 | Écoute, parcours et tâche prioritaire | Problème, public et carte des acteurs
+Jour 2 | Sources, données, droits et qualité | Registre des sources et dictionnaire minimal
+Jour 3 | Idées low-tech et prototype Design/Code/Hardware | Maquette ou proposition testable
+Jour 4 | Tests, référence, indicateurs, risques et coûts | Protocole, résultats et limites
+Jour 5 | Restitution publique et revue institutionnelle | Décision, responsable, feuille de route et plan d'arrêt
+
+Chaque équipe doit tester une tâche réelle, présenter une alternative sans
+IA, définir comment une personne obtient une réponse, et produire un support
+compréhensible par les acteurs qui devront gérer le service. La qualité de
+la présentation ne compense pas l'absence d'une décision exploitable.
+
+P4.2 — Gabarit de livrable participant
+---------------------------------------
+
+Fiche à dupliquer pour chaque équipe. Les champs inconnus restent
+explicitement à compléter ; les résultats, partenariats, coûts et
+autorisations ne doivent jamais être inventés.
+
+IDENTIFICATION
+Nom du projet : [à renseigner]
+Équipe, rôles et contacts professionnels autorisés : [à renseigner]
+Date, version, langue(s) : [à renseigner]
+Site et périmètre autorisés : [à renseigner]
+Statut : idée / prototype / essai autorisé / en pause / arrêté
+
+1. PUBLIC ET BESOIN
+Personnes concernées et personnes risquant d'être absentes : [à renseigner]
+Tâche à accomplir : [à renseigner]
+Solution actuelle et difficulté observée : [à renseigner]
+Preuve du besoin, date, méthode et limites : [à renseigner]
+Qui peut décider ou répondre ? [à renseigner]
+
+2. PROMESSE ET CIBLE
+Bénéfice attendu, formulé sans promesse non vérifiée : [à renseigner]
+Indicateur, unité, couverture et fréquence : [à renseigner]
+Valeur de référence / méthode pour l'établir : [à renseigner]
+Cible, échéance et personne responsable : [à renseigner]
+Effets indésirables et équité à surveiller : [à renseigner]
+
+3. PARCOURS ET PROTOTYPE
+Étapes de la découverte à la réponse : [à renseigner]
+Code, versions, hébergement, accès et licences : [à renseigner]
+Hardware, protocole, énergie, maintenance ou « aucun » : [à renseigner]
+Langues, accessibilité et solution hors ligne : [à renseigner]
+Alternative low-tech : [à renseigner]
+Fonctions explicitement exclues : [à renseigner]
+
+4. DONNÉES ET DROITS
+Sources, propriétaire, date, licence et finalité : [à renseigner]
+Champs strictement nécessaires et justification : [à renseigner]
+Précision temporelle et spatiale : [à renseigner]
+Qualité, incertitude, données manquantes et corrections : [à renseigner]
+Accès, conservation, suppression, retrait et réutilisation : [à renseigner]
+Autorisations, information et validation locale à obtenir : [à renseigner]
+
+5. TEST ET APPRENTISSAGE
+Tâches testées, protocole, version et contexte : [à renseigner]
+Résultats avec dénominateurs, dates et limites : [à renseigner]
+Erreurs, abandons, plaintes et résultats négatifs : [à renseigner]
+Retours des personnes et changements décidés : [à renseigner]
+Référence utilisée pour comparer : [à renseigner]
+
+6. EXPLOITATION ET RESPONSABILITÉ
+Qui propose, valide, répond, entretient et peut arrêter ? [à renseigner]
+Risques, personnes exposées et mesures de réduction : [à renseigner]
+Coûts initiaux et récurrents, devis, date et monnaie : [à renseigner]
+Responsable et suppléant, temps et compétences : [à renseigner]
+Critères de poursuite, modification, suspension et arrêt : [à renseigner]
+Retour à la procédure antérieure et sortie des données : [à renseigner]
+
+7. RESTITUTION ET RÉPLICATION
+Résumé public relu, langues et autorisations : [à renseigner]
+Code, données et documentation publiables / non publiables : [à renseigner]
+Attribution et rémunération convenues : [à renseigner]
+Instructions de reproduction et adaptations locales : [à renseigner]
+Prochaine décision, responsable et date : [à renseigner]
+
+P4.3 — Revue de fin de bootcamp
+--------------------------------
+
+La restitution répond clairement à cinq questions : qui bénéficie du
+service ? quelle tâche a été testée ? qu'a-t-on réellement observé ?
+qu'est-ce qui n'est pas encore démontré ? quelle décision est demandée
+à qui ? Une équipe peut conclure à l'arrêt si le besoin est faible, le
+risque disproportionné, le responsable absent ou la solution simple
+meilleure. Un arrêt argumenté est un résultat utile.
+
+CHAPITRE P5 — DÉPLOYER, FAIRE CONNAÎTRE ET FAIRE DURER
+=====================================================
+
+P5.1 — Jalons avec décision de passage
+--------------------------------------
+
+Jalon | Activité | Preuve avant de poursuivre
+0. Mandat | Périmètre, rôles, accord et financement | Responsable, suppléant, budget et arrêt
+1. Découverte | Écoute et validation | Besoins, groupes concernés, désaccords et alternatives
+2. Faisabilité | Droits, données, référence, coût | Risques traités et acteur capable d'agir
+3. Prototype | Maquette et tests limités | Tâche compréhensible, données proportionnées, erreurs visibles
+4. Essai | Service borné, support et recours | Utilité, inclusion, maintenance et retour public examinés
+5. Décision | Poursuivre, corriger, étendre ou arrêter | Motif, responsable et ressources disponibles
+6. Réplication | Diagnostic et accords locaux | Adaptation, compétences, budget et sortie financés
+
+Ne pas poursuivre uniquement parce que du matériel ou des fonds sont déjà
+engagés. Les critères de suspension et d'arrêt sont définis avant l'essai.
+La réplication reprend la méthode, jamais l'hypothèse que les priorités
+ou les seuils sont identiques dans toutes les communes.
+
+P5.2 — Interaction publique
+-----------------------------
+
+Avant le lancement, annoncer le service, son propriétaire, son objectif,
+ses limites, les données collectées et exclues, les dates, les lieux, les
+canaux alternatifs et le contact de recours. Au SocialHub, afficher
+l'information dans un format accessible ; ne pas exiger d'inscription ni
+de questionnaire pour l'accès au Wi-Fi.
+
+Pendant l'essai, organiser un point de contact et des horaires connus,
+répondre aux retours selon un délai réaliste, publier des mises à jour
+agrégées et signaler les incidents ou changements de finalité. Éviter la
+sur-sollicitation. Ne pas annoncer qu'une demande est traitée avant
+confirmation par le service compétent.
+
+À la restitution, présenter ensemble les résultats, limites, erreurs,
+données manquantes, désaccords et décisions. Permettre aux personnes de
+corriger les faits et de contester une interprétation. Prévoir une version
+orale, papier, radio ou réunion locale selon les moyens et les choix des
+partenaires.
+
+P5.3 — Conditions de réussite des décideurs
+--------------------------------------------
+
+Avant de financer ou d'étendre le service, vérifier :
+
+• un mandat et des responsabilités légitimes et compréhensibles ;
+• un besoin validé, une tâche de service précise et une solution simple
+  comparée ;
+• une baseline, des cibles révisables, une méthode et des limites annoncées ;
+• la participation équitable, des canaux hors ligne et la reconnaissance du
+  travail des contributeurs ;
+• les droits, la protection des données, l'information du public et un
+  mécanisme de correction et de plainte ;
+• les sources et versions, la qualité des mesures et les tests du produit ;
+• un budget de cycle de vie incluant personnel, formation, connexion,
+  énergie, maintenance, traduction, remplacement et fin de vie ;
+• un propriétaire opérationnel, un suppléant, une procédure de panne et un
+  plan de sortie ;
+• une séparation entre recommandation, décision administrative et action
+  physique ;
+• une publication des résultats défavorables autant que des résultats
+  favorables.
+
+Signaux d'arrêt ou de retour à l'étude : absence de personne responsable,
+Wi-Fi conditionné à la collecte, source ou licence inconnue, promesse
+sanitaire issue d'un capteur non validé, modèle testé seulement en
+démonstration, actionneur commandé directement par un modèle, absence de
+voie de plainte, coût d'exploitation non financé, ou impossibilité de
+retirer le service.
+
+P5.4 — Communication et publication sociotechnique
+----------------------------------------------------
+
+Toute communication distingue le réalisé, le proposé, le testé et le
+mesuré. Ne pas affirmer qu'une application a amélioré la santé ou réduit la
+pollution sans méthode appropriée et preuve. Une formulation prudente peut
+indiquer qu'un prototype organise des observations et que son effet sur les
+décisions ou les conditions de vie reste à évaluer.
+
+Conserver pour chaque version : décisions, rôles, sources, autorisations,
+protocoles, versions de code et de matériel, résultats, échecs, coûts,
+retours, incidents, corrections, maintenance, licences et plan d'arrêt.
+Ne publier aucune donnée personnelle, savoir culturel restreint, photo ou
+citation sans vérification des droits et autorisations.
+
+Parcours de publication recommandé :
+
+1. restituer les résultats aux participants et partenaires locaux ;
+2. faire relire les faits, traductions, limites et crédits ;
+3. produire une note technique reproductible avec versions et méthode ;
+4. préparer un article sociotechnique décrivant le contexte, la méthode,
+   les rôles, les limites, les résultats négatifs et la gouvernance ;
+5. vérifier les exigences locales d'éthique, de droit, de confidentialité,
+   de licence et de la revue choisie ;
+6. archiver les versions et publier corrections et mises à jour.
+
+Les personnes qui contribuent au terrain participent, selon les accords
+convenus, à l'interprétation, à l'attribution et à la rédaction. La
+publication académique complète la restitution publique ; elle ne la
+remplace pas. Ne pas promettre l'acceptation d'un article ni financer une
+revue sans examiner sa politique éditoriale.
+
+P5.5 — Reproductibilité dans les communes du Togo
+-------------------------------------------------
+
+Le kit de réplication comprend : fiche de découverte, grille de priorisation,
+agenda d'atelier, charte de gouvernance à valider, dictionnaire de données,
+protocoles, maquettes, code et versions, licences, gabarit de bootcamp,
+indicateurs, budget, journal de maintenance, procédure d'incident et critères
+d'arrêt. Les formulaires peuvent être réutilisés ; les priorités, langues,
+responsabilités, saisons, sources, seuils et parcours sont redéfinis dans
+chaque commune.
+
+Pour chaque site, documenter les adaptations, ce qui n'a pas été transféré,
+les décisions locales et le coût complet. Un modèle technique partagé ne
+doit pas centraliser par défaut les données des habitants. Une comparaison
+entre communes nécessite une méthode cohérente, des sources comparables et
+une interprétation locale.
+
+CHAPITRE P6 — PORTEFEUILLE D'IDÉES À CO-CONSTRUIRE
+==================================================
+
+Les projets suivants sont des pistes de brainstorming, pas des promesses,
+des engagements ni un diagnostic de Baguida. Sélectionner un petit nombre
+après consultation, vérification des rôles et évaluation du coût, des droits
+et des risques.
+
+N° | Idée de service | Premier résultat à tester
+01 | Carte participative des zones d'ombre | lieux et heures à examiner
+02 | Suivi indicatif de la chaleur des espaces publics | protocole et options d'ombrage
+03 | Inventaire des arbres et de leur entretien | registre et calendrier discuté
+04 | Itinéraires piétons ombragés vers les services | parcours évalués avec les usagers
+05 | Journal de bruit et de nuisances | périodes et lieux à vérifier
+06 | Observations indicatives de poussières/particules | campagne non médicale avec limites visibles
+07 | Fiches de jardins collectifs dans Urbanatic | calendrier et pratiques relus par les jardiniers
+08 | Suivi de l'eau pour les jardins | registre et plan d'entretien sans pilotage automatique
+09 | Prototype d'ombre et d'assise | maquette réversible et retour d'usage
+10 | Inventaire participatif des équipements de proximité | carte datée, corrigible et attribuée
+11 | Audit de l'accessibilité des cheminements | obstacles priorisés avec les personnes concernées
+12 | Découverte culturelle via PLUS | réponses sourcées et procédure de correction
+13 | Répertoire de lieux culturels ouest-africains | fiches vérifiées, datées et créditées
+14 | SocialHub comme point d'information et de retour | parcours hors ligne sans collecte imposée
+15 | Suivi énergétique des stands | journal technique agrégé et causes de panne
+16 | Tableau de bord en lecture seule de la grid énergétique | priorités discutées avec les gestionnaires
+17 | Carnet de maintenance des équipements partagés | délais et coûts de réparation suivis
+18 | Répertoire de lieux de fraîcheur et de repos | horaires et critères vérifiés
+19 | Signalement de déchets ou d'eaux stagnantes | demande vérifiée avant transmission
+20 | Diagnostic participatif de collecte des déchets | ajustements avec les équipes opérationnelles
+21 | Relais communautaire d'informations météo officielles | diffusion et correction
+22 | Recherche spatio-temporelle SPATIOTEMP_RAG | réponse avec source, période, zone et incertitude
+23 | Observatoire volontaire des usages HubCity | retours agrégés et feuille de route produit
+24 | Aide à la planification de maintenance | recommandation comparée à une règle simple
+25 | Simulation d'horaires selon la disponibilité énergétique | options simulées et arbitrage humain
+26 | Parcours de patrimoine et d'initiatives locales | contenu autorisé accessible via PLUS ou SocialHub
+
+POUR ALLER PLUS LOIN
+====================
+
+Les parties techniques qui suivent détaillent les ressources possibles
+pour l'énergie, le calcul, les langues, les capteurs, les recherches
+spatiales, la sécurité, la maintenance et la réplication. Utiliser uniquement
+les chapitres utiles au cas d'usage retenu. Les recommandations de méthode
+ne remplacent ni les règles applicables au Togo, ni l'avis de professionnels
+qualifiés, ni les décisions des institutions et communautés concernées.
+
+AVANT DE PASSER AU PROTOTYPE
+============================
+
+□ Le problème et le public sont confirmés avec des personnes concernées.
+□ Une tâche utile et la réponse attendue sont définies.
+□ Un responsable de décision et un responsable de service sont identifiés.
+□ Une solution simple et une voie hors ligne ont été comparées.
+□ Les données nécessaires, leurs droits et leur durée sont justifiés.
+□ Les indicateurs et la méthode de référence sont définis avant le test.
+□ Le coût de maintenance et les critères d'arrêt sont discutés.
+□ Le public sait où poser une question, signaler une erreur ou se plaindre.
+□ Aucun modèle ne déclenche seul une décision conséquente ou une action physique.
+□ Les résultats seront restitués, y compris si le pilote s'arrête.

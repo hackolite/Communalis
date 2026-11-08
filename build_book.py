@@ -31,8 +31,12 @@ from reportlab.platypus import (
 from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parent
-SOURCES = (
+PRODUCT_SOURCES = (
     "Livre_Introduction.txt",
+    "Livre_Parcours_Produit.txt",
+    "Livre_Annexes.txt",
+)
+TECHNICAL_SOURCES = (
     "Livre_Partie_A.txt",
     "Livre_Partie_B.txt",
     "Livre_Partie_C.txt",
@@ -41,15 +45,17 @@ SOURCES = (
     "Livre_Partie_F.txt",
     "Livre_Annexes.txt",
 )
+SOURCES = PRODUCT_SOURCES
 PLACEHOLDER = re.compile(
     r"\[(?:À ACTUALISER|À CONFIRMER|RÉSULTATS TOGO À INSÉRER|"
     r"à compléter|à remplir|à désigner)[^]]*\]",
     re.IGNORECASE,
 )
 HEADING = re.compile(
-    r"^(?:PARTIE [A-F]\b|CHAPITRE \d+\b|ANNEXE [A-H]\b|"
+    r"^(?:PARTIE [A-F]\b|PARCOURS PRODUIT\b|CHAPITRE (?:P\d+|\d+)\b|ANNEXE [A-H]\b|"
     r"INTRODUCTION\b|AVANT-PROPOS\b|MODE D'EMPLOI\b|"
-    r"ANNEXES\b|REGISTRE DE SUIVI\b)"
+    r"ANNEXES\b|REGISTRE DE SUIVI\b|STATUT ET MODE D'EMPLOI\b|"
+    r"PLAN DU LIVRE\b|POUR ALLER PLUS LOIN\b|AVANT DE PASSER AU PROTOTYPE\b)"
 )
 FONT_DIR = Path("/usr/share/fonts/truetype/freefont")
 
@@ -382,9 +388,9 @@ def parse_source(path: Path, style: dict[str, ParagraphStyle], width: float) -> 
             continue
         if is_heading(stripped):
             flush_paragraph()
-            if re.match(r"^(PARTIE [A-F]\b|ANNEXES\b)", stripped):
+            if re.match(r"^(PARTIE [A-F]\b|PARCOURS PRODUIT\b|ANNEXES\b)", stripped):
                 level, toc_level = "part", 0
-            elif re.match(r"^(CHAPITRE \d+\b|ANNEXE [A-H]\b)", stripped):
+            elif re.match(r"^(CHAPITRE (?:P\d+|\d+)\b|ANNEXE [A-H]\b)", stripped):
                 level, toc_level = "chapter", 1
             elif re.match(r"^(INTRODUCTION\b|AVANT-PROPOS\b|MODE D'EMPLOI\b|REGISTRE DE SUIVI\b)", stripped):
                 level, toc_level = "chapter", 0
@@ -412,16 +418,48 @@ def parse_source(path: Path, style: dict[str, ParagraphStyle], width: float) -> 
     return story
 
 
-def build(output: Path) -> int:
+def build(
+    output: Path,
+    sources: tuple[str, ...] = SOURCES,
+    technical: bool = False,
+) -> int:
     register_fonts()
     style = styles()
     width = A4[0] - 38 * mm
+    title = (
+        "Communalis — Dossiers techniques"
+        if technical else
+        "Communalis — Cahier produit et terrain pour le Togo"
+    )
+    subtitle = (
+        "Énergie, langues, capteurs,<br/>données et sécurité"
+        if technical else
+        "Des services territoriaux utiles,<br/>adoptés et maintenables"
+    )
+    cover_label = (
+        "DOSSIERS TECHNIQUES — RESSOURCE COMPLÉMENTAIRE"
+        if technical else
+        "CAHIER DE RÉFÉRENCE — INSTITUTIONS ET ACTEURS DE TERRAIN"
+    )
+    cover_note = (
+        "Chapitres de conception à consulter selon le cas d'usage. "
+        "Ils complètent le parcours produit et ne remplacent pas les "
+        "validations locales ou professionnelles."
+        if technical else
+        "Parcours produit, adoption par le public, bootcamp et outils de "
+        "déploiement. Les résultats et décisions de terrain restent à "
+        "valider par les personnes et institutions concernées."
+    )
     doc = BookDocTemplate(
         str(output),
         pagesize=A4,
-        title="Communalis — Construire une intelligence territoriale",
+        title=title,
         author="Projet Communalis",
-        subject="Édition de travail annotée pour intégration des données réelles du projet",
+        subject=(
+            "Dossiers de conception technique"
+            if technical else
+            "Guide institutionnel et support de bootcamp — pilote proposé à Baguida"
+        ),
         leftMargin=19 * mm,
         rightMargin=19 * mm,
         topMargin=18 * mm,
@@ -430,113 +468,107 @@ def build(output: Path) -> int:
     story: list[Flowable] = [
         Spacer(1, 42 * mm),
         Paragraph("COMMUNALIS", style["title"]),
-        Paragraph(
-            "Construire une intelligence territoriale,<br/>distribuée et frugale",
-            style["subtitle"],
-        ),
+        Paragraph(subtitle, style["subtitle"]),
         Spacer(1, 14 * mm),
-        Paragraph("ÉDITION DE TRAVAIL — CAHIER TERRAIN", style["chapter"]),
+        Paragraph(cover_label, style["chapter"]),
+        Paragraph("Pilote proposé à Baguida, Togo", style["small"]),
         Spacer(1, 22 * mm),
-        Paragraph(
-            "Les repères surlignés indiquent les données, décisions, preuves et "
-            "autorisations réelles à intégrer. Aucun résultat de terrain n'est "
-            "inventé dans cette édition.",
-            style["small"],
-        ),
+        Paragraph(cover_note, style["small"]),
     ]
     story.append(PageBreak())
-    story.extend(
-        [
-            Paragraph("LIRE LES ANNOTATIONS", style["part"]),
-            make_paragraph(
-                "[RÉSULTATS TOGO À INSÉRER] — observations, mesures, dates, "
-                "lieux autorisés, protocole, effectifs, limites et preuve de "
-                "publication à fournir par l'équipe du projet.",
-                style,
-            ),
-            make_paragraph(
-                "[À ACTUALISER] — information datée à vérifier (prix, droit, "
-                "version, disponibilité, contacts ou statut d'un partenaire).",
-                style,
-            ),
-            make_paragraph(
-                "[À CONFIRMER] — hypothèse ou décision qui exige une validation "
-                "explicite des personnes responsables et concernées.",
-                style,
-            ),
-            make_paragraph(
-                "[à compléter] / [à remplir] / [à désigner] — champ de fiche "
-                "à renseigner avec une information réelle, un responsable ou "
-                "une décision. Ne pas remplacer un champ par une estimation "
-                "présentée comme un fait.",
-                style,
-            ),
-            make_paragraph(
-                "Pour chaque ajout, conserver la date, la source ou la preuve, "
-                "les conditions de collecte, les incertitudes, les droits et "
-                "la personne ayant validé la publication. Si l'information "
-                "n'existe pas encore, garder le repère et expliquer pourquoi.",
-                style,
-            ),
-            PageBreak(),
-            Paragraph("FICHE DE SITUATION DU PROJET", style["part"]),
-            make_paragraph(
-                "À valider par l'équipe avant toute diffusion comme récit du "
-                "projet. Cette fiche n'affirme aucun fait à sa place.",
-                style,
-            ),
-            make_paragraph(
-                "Nom retenu et périmètre exact : [à compléter — intitulé et sites].",
-                style,
-            ),
-            make_paragraph(
-                "Période couverte et date d'arrêt des informations : "
-                "[à compléter — dates vérifiées].",
-                style,
-            ),
-            make_paragraph(
-                "État réel de chaque activité : [à compléter — réalisé, en cours, "
-                "prévu, suspendu ou non engagé, avec preuve].",
-                style,
-            ),
-            make_paragraph(
-                "Partenaires, rôles confirmés et autorisation de les nommer : "
-                "[à compléter — validation des personnes concernées].",
-                style,
-            ),
-            make_paragraph(
-                "Langues, variantes et personnes habilitées à relire : "
-                "[à compléter — noms seulement avec accord].",
-                style,
-            ),
-            make_paragraph(
-                "Sources de terrain, protocoles et droits de publication : "
-                "[à compléter — référence, date, consentements et restrictions].",
-                style,
-            ),
-            make_paragraph(
-                "Matériel effectivement utilisé et versions : "
-                "[à compléter — inventaire vérifié, pas la liste envisagée].",
-                style,
-            ),
-            make_paragraph(
-                "Résultats, échecs et limites autorisés à publier : "
-                "[à compléter — données, dénominateurs et validation].",
-                style,
-            ),
-            make_paragraph(
-                "Budget réellement dépensé et monnaie : "
-                "[à compléter — pièces vérifiées et période].",
-                style,
-            ),
-            make_paragraph(
-                "Responsable de validation éditoriale et date : "
-                "[à compléter — accord avant diffusion].",
-                style,
-            ),
-            PageBreak(),
-        ]
-    )
+    if not technical:
+        story.extend(
+            [
+                Paragraph("LIRE LES ANNOTATIONS", style["part"]),
+                make_paragraph(
+                    "[RÉSULTATS TOGO À INSÉRER] — observations, mesures, dates, "
+                    "lieux autorisés, protocole, effectifs, limites et preuve de "
+                    "publication à fournir par l'équipe du projet.",
+                    style,
+                ),
+                make_paragraph(
+                    "[À ACTUALISER] — information datée à vérifier (prix, droit, "
+                    "version, disponibilité, contacts ou statut d'un partenaire).",
+                    style,
+                ),
+                make_paragraph(
+                    "[À CONFIRMER] — hypothèse ou décision qui exige une validation "
+                    "explicite des personnes responsables et concernées.",
+                    style,
+                ),
+                make_paragraph(
+                    "[à compléter] / [à remplir] / [à désigner] — champ de fiche "
+                    "à renseigner avec une information réelle, un responsable ou "
+                    "une décision. Ne pas remplacer un champ par une estimation "
+                    "présentée comme un fait.",
+                    style,
+                ),
+                make_paragraph(
+                    "Pour chaque ajout, conserver la date, la source ou la preuve, "
+                    "les conditions de collecte, les incertitudes, les droits et "
+                    "la personne ayant validé la publication. Si l'information "
+                    "n'existe pas encore, garder le repère et expliquer pourquoi.",
+                    style,
+                ),
+                PageBreak(),
+                Paragraph("FICHE DE SITUATION DU PROJET", style["part"]),
+                make_paragraph(
+                    "À valider par l'équipe avant toute diffusion comme récit du "
+                    "projet. Cette fiche n'affirme aucun fait à sa place.",
+                    style,
+                ),
+                make_paragraph(
+                    "Nom retenu et périmètre exact : [à compléter — intitulé et sites].",
+                    style,
+                ),
+                make_paragraph(
+                    "Période couverte et date d'arrêt des informations : "
+                    "[à compléter — dates vérifiées].",
+                    style,
+                ),
+                make_paragraph(
+                    "État réel de chaque activité : [à compléter — réalisé, en cours, "
+                    "prévu, suspendu ou non engagé, avec preuve].",
+                    style,
+                ),
+                make_paragraph(
+                    "Partenaires, rôles confirmés et autorisation de les nommer : "
+                    "[à compléter — validation des personnes concernées].",
+                    style,
+                ),
+                make_paragraph(
+                    "Langues, variantes et personnes habilitées à relire : "
+                    "[à compléter — noms seulement avec accord].",
+                    style,
+                ),
+                make_paragraph(
+                    "Sources de terrain, protocoles et droits de publication : "
+                    "[à compléter — référence, date, consentements et restrictions].",
+                    style,
+                ),
+                make_paragraph(
+                    "Matériel effectivement utilisé et versions : "
+                    "[à compléter — inventaire vérifié, pas la liste envisagée].",
+                    style,
+                ),
+                make_paragraph(
+                    "Résultats, échecs et limites autorisés à publier : "
+                    "[à compléter — données, dénominateurs et validation].",
+                    style,
+                ),
+                make_paragraph(
+                    "Budget réellement dépensé et monnaie : "
+                    "[à compléter — pièces vérifiées et période].",
+                    style,
+                ),
+                make_paragraph(
+                    "Responsable de validation éditoriale et date : "
+                    "[à compléter — accord avant diffusion].",
+                    style,
+                ),
+                PageBreak(),
+            ]
+        )
     toc = TableOfContents()
     toc.levelStyles = [
         ParagraphStyle("ContentsPart", fontName="Communalis-Bold", fontSize=11,
@@ -545,9 +577,9 @@ def build(output: Path) -> int:
                        leading=15, leftIndent=14, firstLineIndent=0),
     ]
     story.extend([Paragraph("SOMMAIRE", style["part"]), toc, PageBreak()])
-    for filename in SOURCES:
+    for filename in sources:
         story.extend(parse_source(ROOT / filename, style, width))
-        if filename != SOURCES[-1]:
+        if filename != sources[-1]:
             story.append(PageBreak())
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.multiBuild(story)
@@ -562,9 +594,23 @@ def main() -> None:
         type=Path,
         default=ROOT / "Communalis_Cahier_Terrain.pdf",
     )
+    parser.add_argument(
+        "--technical-output",
+        type=Path,
+        default=ROOT / "Communalis_Dossiers_Techniques.pdf",
+    )
     args = parser.parse_args()
     page_count = build(args.output)
     print(f"PDF généré : {args.output} ({page_count} pages)")
+    technical_pages = build(
+        args.technical_output,
+        sources=TECHNICAL_SOURCES,
+        technical=True,
+    )
+    print(
+        f"PDF généré : {args.technical_output} "
+        f"({technical_pages} pages)"
+    )
 
 
 if __name__ == "__main__":

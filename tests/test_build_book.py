@@ -4,7 +4,14 @@ from pathlib import Path
 
 from reportlab.platypus import Paragraph, Preformatted, Table
 
-from build_book import build_table, parse_source, register_fonts, styles
+from build_book import (
+    SOURCES,
+    TECHNICAL_SOURCES,
+    build_table,
+    parse_source,
+    register_fonts,
+    styles,
+)
 
 
 class BookLayoutTests(unittest.TestCase):
@@ -26,6 +33,22 @@ class BookLayoutTests(unittest.TestCase):
         headings = [item for item in story if isinstance(item, Paragraph)]
         self.assertEqual([item.style.name for item in headings],
                          ["PartHeading", "ChapterHeading", "SubHeading"])
+        self.assertEqual(headings[0].toc_level, 0)
+        self.assertEqual(headings[1].toc_level, 1)
+
+    def test_product_path_is_first_and_has_contents_entries(self):
+        self.assertEqual(SOURCES[1], "Livre_Parcours_Produit.txt")
+        self.assertEqual(SOURCES[-1], "Livre_Annexes.txt")
+        self.assertEqual(len(TECHNICAL_SOURCES), 7)
+        self.assertEqual(TECHNICAL_SOURCES[-1], "Livre_Annexes.txt")
+        self.assertNotIn("Livre_Partie_A.txt", SOURCES)
+        story = self.parse(
+            "PARCOURS PRODUIT — DE L'IDÉE À L'ADOPTION\n"
+            "CHAPITRE P1 — LE SERVICE AVANT LA TECHNOLOGIE\n"
+        )
+        headings = [item for item in story if isinstance(item, Paragraph)]
+        self.assertEqual([item.style.name for item in headings],
+                         ["PartHeading", "ChapterHeading"])
         self.assertEqual(headings[0].toc_level, 0)
         self.assertEqual(headings[1].toc_level, 1)
 

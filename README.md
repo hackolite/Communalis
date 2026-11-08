@@ -1,5 +1,14 @@
 # Communalis
 
+## Guide de référence pour le Togo
+
+Le [Guide de référence Communalis au Togo](Guide_Reference_Communalis_Togo.md)
+complète le livre de terrain par un cadre opérationnel pour un pilote à
+Baguida : services HubCity, architecture Code–Hardware–Design, indicateurs,
+apprentissage par renforcement sous contrôle, catalogue de projets,
+bootcamp, déploiement, gouvernance et réplication. Il distingue les méthodes
+proposées des résultats qui restent à établir sur le terrain.
+
 ## Livre et édition PDF
 
 Le livre est organisé en fichiers texte modifiables, à lire dans cet ordre :

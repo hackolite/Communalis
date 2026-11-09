@@ -95,5 +95,34 @@ class BookLayoutTests(unittest.TestCase):
         self.assertIn("https://arxiv.org/abs/2005.11401", paragraphs[0].getPlainText())
 
 
+    def test_form_lines_become_fill_in_table(self):
+        story = self.parse(
+            "Fiche de test\n\nVersion du service : [à compléter]\n"
+            "Décision produit : conserver / corriger\n"
+        )
+        labels = [item for item in story if isinstance(item, Paragraph)]
+        self.assertEqual(labels[0].style.name, "Label")
+        form = next(item for item in story if isinstance(item, Table))
+        self.assertEqual(len(form._cellvalues), 2)
+        self.assertEqual(form._cellvalues[0][0].getPlainText(), "Version du service")
+
+    def test_caption_keeps_unindented_diagram(self):
+        story = self.parse("Schéma 7.1 — Chemin\n\nQuestion\n   |\n   v\nRéponse\n")
+        self.assertFalse(any(isinstance(item, Table) for item in story))
+        caption = next(item for item in story if isinstance(item, Paragraph))
+        self.assertEqual(caption.style.name, "Caption")
+        self.assertEqual(sum(isinstance(item, Preformatted) for item in story), 1)
+
+    def test_underlined_line_is_subheading_and_part_tagline(self):
+        story = self.parse(
+            "PARTIE D — CONNECTER\n\nObserver sans confondre\n=====\n\n"
+            "Partir d'une tâche\n------\n\nTexte.\n"
+        )
+        headings = [item for item in story if isinstance(item, Paragraph)]
+        self.assertEqual(headings[0].subtitle, "Observer sans confondre")
+        self.assertEqual(headings[1].style.name, "SubHeading")
+        self.assertEqual(headings[2].getPlainText(), "Texte.")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -45,7 +45,23 @@ reste disponible comme ressource complémentaire. Le
 [manuscrit initial](Manuscrit_Communalis.txt) est conservé comme version
 antérieure.
 
-Pour régénérer le PDF avec les polices FreeSerif installées :
+### Édition imprimable
+
+Le cahier est mis en page pour l'impression recto verso au format A4 :
+couverture, sommaire cliquable et signets, ouverture de chaque partie sur une
+page de droite avec un bandeau, chapitres sur une nouvelle page, en-têtes
+courants et numéros de page côté extérieur. Le texte est justifié avec césure
+française ; les tableaux, fiches « Champ : [à compléter] », check-lists et
+grilles vierges offrent de l'espace pour écrire à la main. Les pages blanches
+éventuelles sont volontaires (alignement recto verso). Si une fin de chapitre
+ne laisse que quelques lignes sur une page, le générateur resserre légèrement
+ce chapitre et relance la mise en page.
+
+Pour imprimer : A4, recto verso (reliure bord long), échelle 100 % sans
+« ajuster à la page ».
+
+Pour régénérer le PDF avec les polices FreeFont (FreeSerif, FreeSans,
+FreeMono) installées :
 
 ```sh
 python3 -m venv .venv-pdf
